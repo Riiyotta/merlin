@@ -1,0 +1,108 @@
+{
+  "id": "proof.company-logos",
+  "category": "proof",
+  "description": "'Used by professionals at' monochrome logo row (opacity .48, grayscale). Every mark is a REAL third-party company logo: the generator must never draw or approximate them. Use placeholder:neutral.",
+  "evidenceLevel": "measured",
+  "domAnchor": "section.companies",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "heading",
+      "logos"
+    ],
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 4
+      },
+      "logos": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 5,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "name",
+            "mark"
+          ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 3
+            },
+            "mark": {
+              "$ref": "#/definitions/assetRef",
+              "x-allowedRoles": [
+                "logo.third-party-wordmark"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {},
+    "motionEvidence": {
+      "measuredFrom": [
+        "CLONE_SPEC.md:149"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:149",
+          "contains": "- Motion: none."
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "699",
+      "change": "logo row wraps (box 342x83 at 390); heading 14px/21px",
+      "measuredFrom": [
+        "CLONE_SPEC.md:148"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:148",
+          "contains": "At 390 the row wraps"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [],
+    "components": []
+  },
+  "measuredFrom": [
+    "src/components/Companies.jsx:4",
+    "CLONE_SPEC.md:145"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/Companies.jsx:4",
+      "contains": "<section className=\"companies\" aria-label=\"Used by professionals at\">"
+    },
+    {
+      "cite": "CLONE_SPEC.md:145",
+      "contains": "## 4. Section: Companies"
+    }
+  ],
+  "implementedBy": [
+    "src/components/Companies.jsx"
+  ]
+}

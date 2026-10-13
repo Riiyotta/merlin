@@ -1,0 +1,123 @@
+{
+  "id": "legal.heading",
+  "category": "legal",
+  "description": "Legal heading: Privacy/Terms tab pill (aria-current on the active tab), serif H1, optional intro paragraph (/privacy has one, /terms has none), 'Last updated · date'.",
+  "evidenceLevel": "measured",
+  "domAnchor": "header.legal-heading",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "activeTab",
+      "title",
+      "lastUpdated"
+    ],
+    "properties": {
+      "activeTab": {
+        "type": "string",
+        "enum": [
+          "privacy",
+          "terms"
+        ]
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 3
+      },
+      "intro": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 19
+      },
+      "lastUpdated": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 3
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-transition"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {
+      "tabHover": "color/background .16s ease"
+    },
+    "motionEvidence": {
+      "measuredFrom": [
+        "src/styles/original/e261c04d0a2d5dfe.css:1"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/styles/original/e261c04d0a2d5dfe.css:1",
+          "contains": "prefers-reduced-motion:reduce){#top .legal-contents a,#top .legal-tabs a{transition:none;transform:none}}"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "900",
+      "change": "heading margin-left 0",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:342"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:342",
+          "contains": "**≤900px**: heading margin-left 0"
+        }
+      ]
+    },
+    {
+      "query": "max-width",
+      "breakpoint": "640",
+      "change": "h1 44px; intro 16px; margin-bottom 36px",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:342"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:342",
+          "contains": "**≤640px**: nav 144px"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [
+      "tab-pill"
+    ],
+    "components": []
+  },
+  "measuredFrom": [
+    "src/components/legal/LegalPage.jsx:89",
+    "src/components/legal/LegalPage.jsx:98",
+    "CLONE_SPEC_PAGES_B.md:358"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/legal/LegalPage.jsx:89",
+      "contains": "<header className=\"legal-heading\">"
+    },
+    {
+      "cite": "src/components/legal/LegalPage.jsx:98",
+      "contains": "{page.intro && <p className=\"legal-intro\">{page.intro}</p>}"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_B.md:358",
+      "contains": "**No `p.legal-intro`**"
+    }
+  ],
+  "implementedBy": [
+    "src/components/legal/LegalPage.jsx"
+  ]
+}

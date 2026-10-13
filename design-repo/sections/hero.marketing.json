@@ -1,0 +1,188 @@
+{
+  "id": "hero.marketing",
+  "category": "hero",
+  "description": "Marketing hero: embedded corner nav, two-line serif H1 (second line muted), subtitle, and (home only) the download button. Variants: `home` (chroma sweep on load, CTA) and `pricing` (server-rendered title: NO chroma sweep, NO button).",
+  "evidenceLevel": "measured",
+  "domAnchor": "section.story-hero",
+  "variants": [
+    "home",
+    "pricing"
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustBeFirst": true
+  },
+  "variantRules": [
+    {
+      "variant": "home",
+      "required": [
+        "cta"
+      ],
+      "forbidden": [],
+      "note": "home hero carries the download button"
+    },
+    {
+      "variant": "pricing",
+      "forbidden": [
+        "cta"
+      ],
+      "forbiddenPatterns": [
+        "hero-title-chroma-sweep"
+      ],
+      "note": "pricing hero has no button (hero-bottom p only, CLONE_SPEC_PAGES_A.md 2.1) and no chroma sweep (section 1 table)"
+    }
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "titleLine1",
+      "titleLine2",
+      "subtitle"
+    ],
+    "properties": {
+      "titleLine1": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 3
+      },
+      "titleLine2": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 5
+      },
+      "subtitle": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 22
+      },
+      "cta": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "href",
+          "variant"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 4
+          },
+          "href": {
+            "type": "string",
+            "pattern": "^/download\\?start=1$",
+            "x-sample": "/download?start=1"
+          },
+          "variant": {
+            "type": "string",
+            "enum": [
+              "primary"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hero-title-chroma-sweep",
+      "nav-dot-spring",
+      "brand-hover-sweep",
+      "cta-wipe-hover",
+      "none"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {
+      "chromaSweep": "1.5s cubic-bezier(.4,0,.2,1), class removed after 1500ms",
+      "navDotRest": {
+        "home": "brand link",
+        "pricing": "Pricing link"
+      }
+    },
+    "motionEvidence": {
+      "measuredFrom": [
+        "src/components/Hero.jsx:13",
+        "src/styles/original/a5f02e9d0c6db7af.css:1"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/Hero.jsx:13",
+          "contains": "window.setTimeout(() => setChroma(false), 1500)"
+        },
+        {
+          "cite": "src/styles/original/a5f02e9d0c6db7af.css:1",
+          "contains": "prefers-reduced-motion:reduce){#top .hero-title-chroma{animation:none"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "1023",
+      "change": "h1 clamp(50px,6vw,56px) at 768-1023; content width 91.666667%",
+      "measuredFrom": [
+        "CLONE_SPEC.md:114"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:114",
+          "contains": "768–1023 `clamp(50px,6vw,56px)`"
+        }
+      ]
+    },
+    {
+      "query": "max-width",
+      "breakpoint": "767",
+      "change": "h1 clamp(40px,12.5vw,64px); nav dot hidden; hero padding 136px 8px 64px",
+      "measuredFrom": [
+        "CLONE_SPEC.md:114"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:114",
+          "contains": "≤767 `clamp(40px,12.5vw,64px)`"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [
+      "download-button"
+    ],
+    "components": [
+      "hero-corner-nav"
+    ]
+  },
+  "measuredFrom": [
+    "src/components/Hero.jsx:22",
+    "src/pages/Pricing.jsx:22",
+    "CLONE_SPEC.md:104",
+    "CLONE_SPEC_PAGES_A.md:43"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/Hero.jsx:22",
+      "contains": "<section className=\"story-hero\">"
+    },
+    {
+      "cite": "src/pages/Pricing.jsx:22",
+      "contains": "<section className=\"story-hero\" aria-labelledby=\"pricing-title\">"
+    },
+    {
+      "cite": "CLONE_SPEC.md:104",
+      "contains": "## 3. Section: Hero"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_A.md:43",
+      "contains": "**no load chroma sweep**"
+    }
+  ],
+  "implementedBy": [
+    "src/components/Hero.jsx",
+    "src/pages/Pricing.jsx",
+    "src/components/hero/HeroNav.jsx"
+  ]
+}

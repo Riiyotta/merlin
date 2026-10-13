@@ -1,0 +1,36 @@
+{
+  "id": "download-button",
+  "kind": "primitive",
+  "description": "The shared CTA pill: label 'Get Merlin for Mac' + arrow cell; cyan wipe on hover/focus. Variants primary (black), secondary (white with grey wipe), light.",
+  "props": {
+    "variant": "primary|secondary|light",
+    "className": "string",
+    "ariaLabel": "string"
+  },
+  "variants": [
+    "primary",
+    "secondary",
+    "light"
+  ],
+  "domAnchor": "a.download-button",
+  "measuredFrom": [
+    "src/components/shared/DownloadButton.jsx:5",
+    "CLONE_SPEC.md:119"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/shared/DownloadButton.jsx:5",
+      "contains": "export default function DownloadButton({ light = false, variant = 'primary'"
+    },
+    {
+      "cite": "CLONE_SPEC.md:119",
+      "contains": "### Download button (shared by hero and footer)"
+    }
+  ],
+  "motion": {
+    "patterns": [
+      "cta-wipe-hover"
+    ],
+    "reducedMotionFallback": "no-animation"
+  }
+}

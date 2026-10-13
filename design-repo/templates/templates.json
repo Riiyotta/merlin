@@ -1,0 +1,477 @@
+{
+  "_note": "One entry per distinct PAGE SHAPE. nodes are structured {section, required, repeatable[, variant]} objects in DOM order. Manifesto lists manifesto.photo three times with distinct variants (a section legitimately repeating with different variants).",
+  "templates": {
+    "home": {
+      "title": "Home (long-scroll marketing)",
+      "routes": [
+        "/"
+      ],
+      "pageFile": "src/pages/Home.jsx",
+      "evidenceLevel": "measured",
+      "rootSelector": "main#top.merlin-story.site-layout",
+      "stylesheetKey": "home",
+      "nodes": [
+        {
+          "section": "hero.marketing",
+          "required": true,
+          "repeatable": false,
+          "variant": "home"
+        },
+        {
+          "section": "hero.landscape",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "proof.company-logos",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "story.context-routines",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "story.browser-tasks",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "story.meetings-projects",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "story.companion",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "scene.privacy-trust",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "faq.accordion",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer-closing",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.floating-nav",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "chrome": {
+        "nav": "embedded in hero.marketing",
+        "footer": true,
+        "floatingNav": true
+      },
+      "skipLink": {
+        "label": "Skip to product examples",
+        "href": "#routines"
+      },
+      "measuredFrom": [
+        "src/pages/Home.jsx:17-26",
+        "CLONE_SPEC.md:81"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/pages/Home.jsx:17-26",
+          "contains": "<Hero />"
+        },
+        {
+          "cite": "CLONE_SPEC.md:81",
+          "contains": "## 2. Page structure (DOM order, 1440 boxes)"
+        }
+      ],
+      "id": "home"
+    },
+    "pricing": {
+      "title": "Pricing",
+      "routes": [
+        "/pricing"
+      ],
+      "pageFile": "src/pages/Pricing.jsx",
+      "evidenceLevel": "measured",
+      "rootSelector": "main#top.merlin-story.site-layout.pricing-page",
+      "stylesheetKey": "pricing",
+      "nodes": [
+        {
+          "section": "hero.marketing",
+          "required": true,
+          "repeatable": false,
+          "variant": "pricing"
+        },
+        {
+          "section": "pricing.plans",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "pricing.included",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "pricing.faq",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer-closing",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "chrome": {
+        "nav": "embedded in hero.marketing",
+        "footer": true,
+        "floatingNav": false
+      },
+      "skipLink": {
+        "label": "Skip to plans",
+        "href": "#plans"
+      },
+      "measuredFrom": [
+        "src/pages/Pricing.jsx:22-42",
+        "CLONE_SPEC_PAGES_A.md:60"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/pages/Pricing.jsx:22-42",
+          "contains": "<section className=\"story-hero\" aria-labelledby=\"pricing-title\">"
+        },
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:60",
+          "contains": "### 2.1 Structure (1440)"
+        }
+      ],
+      "id": "pricing"
+    },
+    "install": {
+      "title": "Install / download",
+      "routes": [
+        "/download"
+      ],
+      "evidenceLevel": "measured",
+      "rootSelector": "main.install-page",
+      "stylesheetKey": "download",
+      "nodes": [
+        {
+          "section": "shell.install-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "install.intro",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "install.steps",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "chrome": {
+        "nav": "none (own brand-only header)",
+        "footer": false,
+        "floatingNav": false
+      },
+      "skipLink": null,
+      "notes": "No #top, no corner nav, no footer; `/download?start=1` is the same page (the hero and footer CTAs link to it) and the page strips `start` from the URL via history.replaceState.",
+      "measuredFrom": [
+        "src/pages/Download.jsx:47-91",
+        "CLONE_SPEC_PAGES_A.md:166"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/pages/Download.jsx:47-91",
+          "contains": "<main className=\"install-page\">"
+        },
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:166",
+          "contains": "The route uses **no** homepage chrome"
+        }
+      ],
+      "id": "install"
+    },
+    "manifesto": {
+      "title": "Manifesto (editorial poster)",
+      "routes": [
+        "/manifesto"
+      ],
+      "evidenceLevel": "measured",
+      "rootSelector": "main#top.merlin-story.site-layout.manifesto-page",
+      "stylesheetKey": "manifesto",
+      "nodes": [
+        {
+          "section": "shell.corner-nav",
+          "required": true,
+          "repeatable": false,
+          "variant": "manifesto"
+        },
+        {
+          "section": "manifesto.opening",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "manifesto.photo",
+          "required": true,
+          "repeatable": false,
+          "variant": "after-opening"
+        },
+        {
+          "section": "manifesto.understanding",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "manifesto.photo",
+          "required": true,
+          "repeatable": false,
+          "variant": "after-understanding"
+        },
+        {
+          "section": "manifesto.action",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "manifesto.photo",
+          "required": true,
+          "repeatable": false,
+          "variant": "after-action"
+        },
+        {
+          "section": "manifesto.ending",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer-closing",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "chrome": {
+        "nav": "shell.corner-nav (manifesto variant)",
+        "footer": true,
+        "floatingNav": false
+      },
+      "skipLink": {
+        "label": "Read the manifesto",
+        "href": "#manifesto"
+      },
+      "measuredFrom": [
+        "src/pages/Manifesto.jsx:47-124",
+        "CLONE_SPEC_PAGES_A.md:238"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/pages/Manifesto.jsx:47-124",
+          "contains": "<article id=\"manifesto\""
+        },
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:238",
+          "contains": "### 4.1 Structure (1440)"
+        }
+      ],
+      "id": "manifesto"
+    },
+    "blog-index": {
+      "title": "Blog index",
+      "routes": [
+        "/blog"
+      ],
+      "evidenceLevel": "measured",
+      "rootSelector": "main#top.merlin-story.site-layout.blog_page__bLGfe",
+      "stylesheetKey": "blog",
+      "nodes": [
+        {
+          "section": "shell.corner-nav",
+          "required": true,
+          "repeatable": false,
+          "variant": "blog"
+        },
+        {
+          "section": "blog.intro",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "blog.featured",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "blog.story-list",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "blog.manifesto-aside",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer-closing",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "chrome": {
+        "nav": "shell.corner-nav (blog variant)",
+        "footer": true,
+        "floatingNav": false
+      },
+      "skipLink": {
+        "label": "Read the blog",
+        "href": "#blog-content"
+      },
+      "measuredFrom": [
+        "src/pages/Blog.jsx:24-80",
+        "CLONE_SPEC_PAGES_B.md:64"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/pages/Blog.jsx:24-80",
+          "contains": "<BlogLayout>"
+        },
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:64",
+          "contains": "### 1.1 DOM (1440 boxes)"
+        }
+      ],
+      "id": "blog-index"
+    },
+    "blog-post": {
+      "title": "Blog post (article)",
+      "routes": [
+        "/blog/:slug"
+      ],
+      "evidenceLevel": "measured-sample",
+      "rootSelector": "main#top.merlin-story.site-layout.blog_page__bLGfe",
+      "stylesheetKey": "blog",
+      "nodes": [
+        {
+          "section": "shell.corner-nav",
+          "required": true,
+          "repeatable": false,
+          "variant": "blog"
+        },
+        {
+          "section": "blog.article-header",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "blog.prose",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "blog.article-end",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer-closing",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "chrome": {
+        "nav": "shell.corner-nav (blog variant)",
+        "footer": true,
+        "floatingNav": false
+      },
+      "skipLink": {
+        "label": "Read the blog",
+        "href": "#blog-content"
+      },
+      "notes": "Measured on 2 of the 20 posts; the other 18 are the same template by the spec's own check. 20 posts = 19 in the live sitemap + 1 featured post (the-future-of-work-is-autonomous-...) that is on the index but not in the sitemap and has no cover image.",
+      "measuredFrom": [
+        "src/pages/BlogPost.jsx:14-37",
+        "CLONE_SPEC_PAGES_B.md:157"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/pages/BlogPost.jsx:14-37",
+          "contains": "<article id=\"blog-content\" className=\"blog_article__Uk9MF\">"
+        },
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:157",
+          "contains": "I measured `/blog/how-to-write-a-formal-email`"
+        }
+      ],
+      "id": "blog-post"
+    },
+    "legal": {
+      "title": "Legal (privacy + terms)",
+      "routes": [
+        "/privacy",
+        "/terms"
+      ],
+      "evidenceLevel": "measured",
+      "rootSelector": "main#top.merlin-story.site-layout.legal-page",
+      "stylesheetKey": "legal",
+      "nodes": [
+        {
+          "section": "shell.corner-nav",
+          "required": true,
+          "repeatable": false,
+          "variant": "legal"
+        },
+        {
+          "section": "legal.heading",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "legal.body",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "shell.footer-closing",
+          "required": true,
+          "repeatable": false
+        }
+      ],
+      "chrome": {
+        "nav": "shell.corner-nav (legal variant)",
+        "footer": true,
+        "floatingNav": false
+      },
+      "skipLink": {
+        "label": "Read privacy and control",
+        "href": "#legal-content"
+      },
+      "notes": "/privacy and /terms are grouped after a REAL comparison (extraction/derive_template_comparison.py -> extraction/legal-template-comparison.json): identical top-level main children; the only differing element kinds are optional (p.legal-intro on /privacy; h3, ul, li on /terms).",
+      "measuredFrom": [
+        "src/components/legal/LegalPage.jsx:79-135",
+        "CLONE_SPEC_PAGES_B.md:356"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/legal/LegalPage.jsx:79-135",
+          "contains": "<main className=\"merlin-story site-layout legal-page\" id=\"top\">"
+        },
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:356",
+          "contains": "Same template and CSS as /privacy (same page chunk"
+        }
+      ],
+      "id": "legal"
+    }
+  }
+}

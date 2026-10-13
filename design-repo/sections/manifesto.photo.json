@@ -1,0 +1,92 @@
+{
+  "id": "manifesto.photo",
+  "category": "manifesto",
+  "description": "Full-width rounded felt-scene figure between poster sections. Appears exactly three times with different variants (after-opening, after-understanding, after-action); (section, variant) is the unit that must be unique.",
+  "evidenceLevel": "measured",
+  "domAnchor": "figure.manifesto-photo",
+  "variants": [
+    "after-opening",
+    "after-understanding",
+    "after-action"
+  ],
+  "constraints": {
+    "onePerPagePerVariant": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "image",
+      "alt"
+    ],
+    "properties": {
+      "image": {
+        "$ref": "#/definitions/assetRef",
+        "x-allowedRoles": [
+          "illustration.felt-scene"
+        ]
+      },
+      "alt": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 15
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {},
+    "motionEvidence": {
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:317"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:317",
+          "contains": "No floating nav, parallax or other scroll effects."
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "600",
+      "change": "photo width calc(100% - 48px), radius 16px, margin-top 32px",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:306"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:306",
+          "contains": "Photos `calc(100% - 48px)`"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [],
+    "components": []
+  },
+  "measuredFrom": [
+    "src/pages/Manifesto.jsx:12",
+    "CLONE_SPEC_PAGES_A.md:299"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/pages/Manifesto.jsx:12",
+      "contains": "function Photo({ src, alt })"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_A.md:299",
+      "contains": ".manifesto-photo`: `width:min(82%,880px)"
+    }
+  ],
+  "implementedBy": [
+    "src/pages/Manifesto.jsx"
+  ]
+}

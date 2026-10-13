@@ -1,0 +1,437 @@
+{
+  "duration": {
+    "0_12": {
+      "$type": "duration",
+      "$value": "0.12s",
+      "histogramCount": 5,
+      "measuredFrom": [
+        "CLONE_SPEC.md:257"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:257",
+          "contains": ".12s"
+        }
+      ]
+    },
+    "0_14": {
+      "$type": "duration",
+      "$value": "0.14s",
+      "histogramCount": 4,
+      "measuredFrom": [
+        "CLONE_SPEC.md:195"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:195",
+          "contains": ".14s"
+        }
+      ]
+    },
+    "0_15": {
+      "$type": "duration",
+      "$value": "0.15s",
+      "histogramCount": 10,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    },
+    "0_16": {
+      "$type": "duration",
+      "$value": "0.16s",
+      "histogramCount": 16,
+      "measuredFrom": [
+        "CLONE_SPEC.md:256"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:256",
+          "contains": ".16s"
+        }
+      ]
+    },
+    "0_18": {
+      "$type": "duration",
+      "$value": "0.18s",
+      "histogramCount": 34,
+      "measuredFrom": [
+        "CLONE_SPEC.md:160"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:160",
+          "contains": ".18s"
+        }
+      ]
+    },
+    "0_2": {
+      "$type": "duration",
+      "$value": "0.2s",
+      "histogramCount": 25,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    },
+    "0_22": {
+      "$type": "duration",
+      "$value": "0.22s",
+      "histogramCount": 6,
+      "measuredFrom": [
+        "CLONE_SPEC.md:195"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:195",
+          "contains": ".22s"
+        }
+      ]
+    },
+    "0_25": {
+      "$type": "duration",
+      "$value": "0.25s",
+      "histogramCount": 4,
+      "measuredFrom": [
+        "CLONE_SPEC.md:356"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:356",
+          "contains": "duration .25"
+        }
+      ]
+    },
+    "0_28": {
+      "$type": "duration",
+      "$value": "0.28s",
+      "histogramCount": 1,
+      "measuredFrom": [
+        "CLONE_SPEC.md:195"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:195",
+          "contains": ".28s"
+        }
+      ]
+    },
+    "0_3": {
+      "$type": "duration",
+      "$value": "0.3s",
+      "histogramCount": 5,
+      "measuredFrom": [
+        "CLONE_SPEC.md:186"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:186",
+          "contains": ".3s"
+        }
+      ]
+    },
+    "0_36": {
+      "$type": "duration",
+      "$value": "0.36s",
+      "histogramCount": 1,
+      "measuredFrom": [
+        "CLONE_SPEC.md:120"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:120",
+          "contains": ".36s"
+        }
+      ]
+    },
+    "0_45": {
+      "$type": "duration",
+      "$value": "0.45s",
+      "histogramCount": 1,
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:146"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:146",
+          "contains": ".45s"
+        }
+      ]
+    },
+    "0_55": {
+      "$type": "duration",
+      "$value": "0.55s",
+      "histogramCount": 1,
+      "measuredFrom": [
+        "CLONE_SPEC.md:122"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:122",
+          "contains": ".55s"
+        }
+      ]
+    },
+    "0_7": {
+      "$type": "duration",
+      "$value": "0.7s",
+      "histogramCount": 1,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    },
+    "0_8": {
+      "$type": "duration",
+      "$value": "0.8s",
+      "histogramCount": 1,
+      "measuredFrom": [
+        "CLONE_SPEC.md:182"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:182",
+          "contains": ".8s"
+        }
+      ]
+    },
+    "0_9": {
+      "$type": "duration",
+      "$value": "0.9s",
+      "histogramCount": 1,
+      "measuredFrom": [
+        "CLONE_SPEC.md:138"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:138",
+          "contains": ".9s"
+        }
+      ]
+    },
+    "1_6": {
+      "$type": "duration",
+      "$value": "1.6s",
+      "histogramCount": 1,
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:316"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:316",
+          "contains": "1.6s"
+        }
+      ]
+    }
+  },
+  "easing": {
+    "standard": {
+      "$type": "easing",
+      "$value": "ease",
+      "$description": "default transition easing (most common in histogram)",
+      "histogramCount": 44,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    },
+    "out-expo-soft": {
+      "$type": "cubicBezier",
+      "$value": "cubic-bezier(.22,1,.36,1)",
+      "$description": "wipe, entrance, stage reveal",
+      "histogramCount": 3,
+      "measuredFrom": [
+        "CLONE_SPEC.md:122"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:122",
+          "contains": "cubic-bezier(.22,1,.36,1)"
+        }
+      ]
+    },
+    "out-quint": {
+      "$type": "cubicBezier",
+      "$value": "cubic-bezier(.23,1,.32,1)",
+      "$description": "hover lifts, panel swaps",
+      "histogramCount": 8,
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:146"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:146",
+          "contains": "cubic-bezier(.23,1,.32,1)"
+        }
+      ]
+    },
+    "in-out-material": {
+      "$type": "cubicBezier",
+      "$value": "cubic-bezier(.4,0,.2,1)",
+      "$description": "chroma sweep",
+      "histogramCount": 2,
+      "measuredFrom": [
+        "CLONE_SPEC.md:137"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:137",
+          "contains": "cubic-bezier(.4,0,.2,1)"
+        }
+      ]
+    },
+    "ease-out": {
+      "$type": "easing",
+      "$value": "ease-out",
+      "$description": "rt-sequence fade",
+      "histogramCount": 11,
+      "measuredFrom": [
+        "CLONE_SPEC.md:141"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:141",
+          "contains": "ease-out"
+        }
+      ]
+    },
+    "linear": {
+      "$type": "easing",
+      "$value": "linear",
+      "$description": "spinner, bird cross",
+      "histogramCount": 4,
+      "measuredFrom": [
+        "CLONE_SPEC.md:195"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:195",
+          "contains": "linear infinite"
+        }
+      ]
+    }
+  },
+  "spring": {
+    "nav-dot": {
+      "$type": "spring",
+      "$value": {
+        "stiffness": 170,
+        "damping": 15,
+        "mass": 0.8
+      },
+      "$description": "hero corner nav dot",
+      "measuredFrom": [
+        "src/components/hero/HeroNav.jsx:9"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/hero/HeroNav.jsx:9",
+          "contains": "const SPRING = { stiffness: 170, damping: 15, mass: 0.8 }"
+        }
+      ]
+    },
+    "transcript-pill": {
+      "$type": "spring",
+      "$value": {
+        "stiffness": 550,
+        "damping": 38,
+        "mass": 0.7
+      },
+      "$description": "transcript tab pill",
+      "measuredFrom": [
+        "src/components/meetings/MeetingLandscape.jsx:111"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/meetings/MeetingLandscape.jsx:111",
+          "contains": "stiffness: 550, damping: 38, mass: 0.7"
+        }
+      ]
+    },
+    "companion-indicator": {
+      "$type": "spring",
+      "$value": {
+        "stiffness": 380,
+        "damping": 32
+      },
+      "$description": "companion app tab indicator",
+      "measuredFrom": [
+        "src/components/companion/CompanionShowcase.jsx:153"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/companion/CompanionShowcase.jsx:153",
+          "contains": "stiffness: 380, damping: 32"
+        }
+      ]
+    },
+    "demo-overlay": {
+      "$type": "spring",
+      "$value": {
+        "stiffness": 440,
+        "damping": 34,
+        "mass": 0.8
+      },
+      "$description": "companion demo overlays",
+      "measuredFrom": [
+        "src/components/companion/playback.jsx:11"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/companion/playback.jsx:11",
+          "contains": "stiffness: 440, damping: 34, mass: 0.8"
+        }
+      ]
+    },
+    "notification-arrival": {
+      "$type": "spring",
+      "$value": {
+        "stiffness": 620,
+        "durationMs": 480
+      },
+      "$description": "hero notification FLIP arrival (documented approximation in spec)",
+      "measuredFrom": [
+        "CLONE_SPEC.md:141"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:141",
+          "contains": "stiffness 620, 480ms"
+        }
+      ]
+    }
+  },
+  "preset": {
+    "reveal": {
+      "$type": "transition",
+      "$value": {
+        "y": 20,
+        "durationS": 0.75,
+        "ease": [
+          0.22,
+          1,
+          0.36,
+          1
+        ],
+        "once": true,
+        "viewportAmount": 0.15
+      },
+      "$description": "Reveal wrapper (eL): slide-up entrance",
+      "measuredFrom": [
+        "src/lib/companion-motion.jsx:30",
+        "src/lib/companion-motion.jsx:31"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/lib/companion-motion.jsx:30",
+          "contains": "viewport={{ once: true, amount: 0.15 }}"
+        },
+        {
+          "cite": "src/lib/companion-motion.jsx:31",
+          "contains": "transition={{ duration: 0.75"
+        }
+      ]
+    }
+  },
+  "_note": "histogramCount for duration is the number of transition/animation declarations using that duration; springs/presets come from framer-motion code, not CSS."
+}

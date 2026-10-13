@@ -31,7 +31,7 @@ VENDOR = {"437c25afc566ca52.css"}
 
 DECL = re.compile(r"(--[\w-]+|[a-z-]+)\s*:\s*([^;{}]+)")
 HEX = re.compile(r"#(?:[0-9a-fA-F]{8}|[0-9a-fA-F]{6}|[0-9a-fA-F]{3,4})\b")
-RGB = re.compile(r"rgba?\([^)]*\)")
+RGB = re.compile(r"rgba?\(\s*\d[^)]*\)")
 MEDIA = re.compile(r"@media[^{]*")
 BP = re.compile(r"(max|min)-width\s*:\s*([\d.]+)(px|em)")
 EASE = re.compile(r"cubic-bezier\([^)]*\)|\bease-in-out\b|\bease-out\b|\bease-in\b|\bease\b|\blinear\b|\bstep-end\b")
@@ -115,7 +115,7 @@ def main():
         "_note": "DERIVED by extraction/derive_histograms.py (no histogram shipped with the source). Counts are declaration occurrences in compiled CSS, not element counts.",
         "files": {"site": [os.path.basename(f) for f in site], "vendor": [os.path.basename(f) for f in vendor],
                   "routeImportLists": [os.path.basename(f) for f in wrapper]},
-        "site": {k: (top(v, 40) if isinstance(v, collections.Counter) else v) for k, v in site_h.items()},
+        "site": {k: (top(v, 5000 if k == "color" else 80) if isinstance(v, collections.Counter) else v) for k, v in site_h.items()},
         "vendor": {k: top(v, 8) for k, v in vend_h.items() if isinstance(v, collections.Counter) and k in ("fontFamily", "borderRadius")},
     }
     text = json.dumps(result, indent=1, ensure_ascii=False)

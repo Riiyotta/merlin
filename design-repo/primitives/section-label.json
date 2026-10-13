@@ -1,0 +1,34 @@
+{
+  "id": "section-label",
+  "kind": "primitive",
+  "description": "36px colored line icon + label ('Routines', 'Browser tasks', 'Meetings', 'Projects', 'Companion'); also supplies the icons used by pricing features and manifesto mentions.",
+  "props": {
+    "section": "routine|browser|meeting|project|companion|context",
+    "label": "string"
+  },
+  "variants": [
+    "routine",
+    "browser",
+    "meeting",
+    "project",
+    "companion"
+  ],
+  "domAnchor": "div.story-section-label",
+  "measuredFrom": [
+    "src/components/routines/SectionLabel.jsx:55",
+    "CLONE_SPEC.md:175"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/routines/SectionLabel.jsx:55",
+      "contains": "export function SectionIcon"
+    },
+    {
+      "cite": "CLONE_SPEC.md:175",
+      "contains": "This label component is reused"
+    }
+  ],
+  "assetRoles": [
+    "art.line-illustration"
+  ]
+}

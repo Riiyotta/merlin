@@ -1,0 +1,143 @@
+{
+  "id": "install.intro",
+  "category": "install",
+  "description": "Install page intro: H1 'Thanks for choosing Merlin.' + muted second line, state-dependent description, retry link, alternative-architecture link, hidden installer iframe. INSTALLER LINKS POINT AT A LOCAL STUB (/download-stub.txt); the live site's real installer host is never contacted.",
+  "evidenceLevel": "measured",
+  "domAnchor": "section.install-intro",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "headingLine1",
+      "headingLine2",
+      "description",
+      "retryPrefix",
+      "retryLabel",
+      "alternativeLabel",
+      "installerSource",
+      "installerHref"
+    ],
+    "properties": {
+      "headingLine1": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 4
+      },
+      "headingLine2": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 5
+      },
+      "description": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 14
+      },
+      "retryPrefix": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 3
+      },
+      "retryLabel": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 3
+      },
+      "alternativeLabel": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 4
+      },
+      "installerSource": {
+        "type": "string",
+        "enum": [
+          "local-stub"
+        ]
+      },
+      "installerHref": {
+        "type": "string",
+        "pattern": "^/download-stub\\.txt(\\?arch=(arm64|x64))?$",
+        "x-sample": "/download-stub.txt?arch=arm64"
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {},
+    "motionEvidence": {
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:228"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:228",
+          "contains": "No animations or transitions on this page apart from link underlines"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "620",
+      "change": "margin 40px auto 45px; h1 42px/45.36; description 15px/24 max 310",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:217"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:217",
+          "contains": "Intro margin 40 auto 45"
+        }
+      ]
+    },
+    {
+      "query": "max-width",
+      "breakpoint": "900",
+      "change": "intro margin-top 40",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:216"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:216",
+          "contains": "intro margin-top 40"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [],
+    "components": []
+  },
+  "measuredFrom": [
+    "src/components/download/InstallIntro.jsx:36",
+    "src/components/download/InstallIntro.jsx:2",
+    "CLONE_SPEC_PAGES_A.md:227"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/download/InstallIntro.jsx:36",
+      "contains": "const installerUrl = (arch) => `/download-stub.txt?arch=${arch}`"
+    },
+    {
+      "cite": "src/components/download/InstallIntro.jsx:2",
+      "contains": "Clone deviation (by design)"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_A.md:227",
+      "contains": "**Clone recommendation:** reproduce the state machine but point the iframe and links at a stub"
+    }
+  ],
+  "implementedBy": [
+    "src/components/download/InstallIntro.jsx"
+  ]
+}

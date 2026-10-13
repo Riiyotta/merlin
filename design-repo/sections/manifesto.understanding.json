@@ -1,0 +1,104 @@
+{
+  "id": "manifesto.understanding",
+  "category": "manifesto",
+  "description": "'We know that day. We’ve lived it too.' with three placeholder paragraphs (one has a 'meeting' mention) and a Caveat handwritten note.",
+  "evidenceLevel": "measured",
+  "domAnchor": "section.manifesto-poster-understanding",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "titleLine1",
+      "titleLine2",
+      "paragraphs",
+      "note"
+    ],
+    "properties": {
+      "titleLine1": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 4
+      },
+      "titleLine2": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 4
+      },
+      "paragraphs": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 3,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 36
+        }
+      },
+      "note": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 4
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {},
+    "motionEvidence": {
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:317"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:317",
+          "contains": "No floating nav, parallax or other scroll effects."
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "1023",
+      "change": "padding 90px 0 70px; column re-centered",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:305"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:305",
+          "contains": "understanding/action padding 90 0 70"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [],
+    "components": []
+  },
+  "measuredFrom": [
+    "src/pages/Manifesto.jsx:68",
+    "CLONE_SPEC_PAGES_A.md:254"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/pages/Manifesto.jsx:68",
+      "contains": "aria-labelledby=\"manifesto-understanding-title\""
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_A.md:254",
+      "contains": "section.manifesto-poster-understanding"
+    }
+  ],
+  "implementedBy": [
+    "src/pages/Manifesto.jsx"
+  ]
+}

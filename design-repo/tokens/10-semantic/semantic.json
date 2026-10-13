@@ -1,0 +1,931 @@
+{
+  "_note": "Semantic color roles and composite type styles built from foundation tokens. `$ref` points at a foundation token id.",
+  "color": {
+    "text.primary": {
+      "$type": "color",
+      "$ref": "color.ink.primary",
+      "$description": "default ink",
+      "measuredFrom": [
+        "CLONE_SPEC.md:64"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:64",
+          "contains": "Ink primary"
+        }
+      ]
+    },
+    "text.story": {
+      "$type": "color",
+      "$ref": "color.ink.story",
+      "$description": "merlin-story base ink",
+      "measuredFrom": [
+        "CLONE_SPEC.md:49"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:49",
+          "contains": "color:#2b3027"
+        }
+      ]
+    },
+    "text.muted": {
+      "$type": "color",
+      "$ref": "color.muted.body",
+      "$description": "muted body copy",
+      "measuredFrom": [
+        "CLONE_SPEC.md:66"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:66",
+          "contains": "Body muted"
+        }
+      ]
+    },
+    "text.muted-hero": {
+      "$type": "color",
+      "$ref": "color.muted.hero",
+      "$description": "hero second title line",
+      "measuredFrom": [
+        "CLONE_SPEC.md:65"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:65",
+          "contains": "Muted heading line"
+        }
+      ]
+    },
+    "text.muted-section": {
+      "$type": "color",
+      "$ref": "color.muted.section",
+      "$description": "section heading em",
+      "measuredFrom": [
+        "CLONE_SPEC.md:65"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:65",
+          "contains": "Muted heading line"
+        }
+      ]
+    },
+    "text.on-dark": {
+      "$type": "color",
+      "$ref": "color.text.privacy-heading",
+      "$description": "text on the black privacy scene",
+      "measuredFrom": [
+        "CLONE_SPEC.md:75"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:75",
+          "contains": "Privacy text"
+        }
+      ]
+    },
+    "text.link": {
+      "$type": "color",
+      "$ref": "color.accent.link-teal",
+      "$description": "prose and legal links",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:383"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:383",
+          "contains": "#12889a` hover accent"
+        }
+      ]
+    },
+    "text.handwriting": {
+      "$type": "color",
+      "$ref": "color.accent.cyan-hand",
+      "$description": "handwritten notes (home/blog)",
+      "measuredFrom": [
+        "CLONE_SPEC.md:69"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:69",
+          "contains": "Accent cyan (handwriting"
+        }
+      ]
+    },
+    "text.handwriting-manifesto": {
+      "$type": "color",
+      "$ref": "color.accent.link-teal",
+      "$description": "manifesto handwriting overlays",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:291"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:291",
+          "contains": "#12889a`, absolute"
+        }
+      ]
+    },
+    "text.page-blog": {
+      "$type": "color",
+      "$ref": "color.ink.blog",
+      "$description": "blog page ink",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:107"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:107",
+          "contains": "#343630"
+        }
+      ]
+    },
+    "text.page-legal": {
+      "$type": "color",
+      "$ref": "color.ink.legal",
+      "$description": "legal page ink",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:285"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:285",
+          "contains": "#41463c"
+        }
+      ]
+    },
+    "text.page-manifesto": {
+      "$type": "color",
+      "$ref": "color.ink.manifesto",
+      "$description": "manifesto page ink",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:240"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:240",
+          "contains": "#171717"
+        }
+      ]
+    },
+    "text.page-install": {
+      "$type": "color",
+      "$ref": "color.ink.install",
+      "$description": "install page ink",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:200"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:200",
+          "contains": "#262626"
+        }
+      ]
+    },
+    "surface.page": {
+      "$type": "color",
+      "$ref": "color.neutral.white",
+      "$description": "page background",
+      "measuredFrom": [
+        "CLONE_SPEC.md:48"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:48",
+          "contains": "background:#fff"
+        }
+      ]
+    },
+    "surface.paper": {
+      "$type": "color",
+      "$ref": "color.surface.paper",
+      "$description": "product paper",
+      "measuredFrom": [
+        "CLONE_SPEC.md:49"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:49",
+          "contains": "--product-paper:#fafaf9"
+        }
+      ]
+    },
+    "surface.subtle": {
+      "$type": "color",
+      "$ref": "color.surface.product",
+      "$description": "product surface",
+      "measuredFrom": [
+        "CLONE_SPEC.md:49"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:49",
+          "contains": "--product-surface:#f5f5f5"
+        }
+      ]
+    },
+    "surface.band": {
+      "$type": "color",
+      "$ref": "color.surface.browser-band",
+      "$description": "browser tasks band",
+      "measuredFrom": [
+        "CLONE_SPEC.md:56"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:56",
+          "contains": "#f6f6f6"
+        }
+      ]
+    },
+    "surface.footer": {
+      "$type": "color",
+      "$ref": "color.surface.footer",
+      "$description": "closing footer",
+      "measuredFrom": [
+        "CLONE_SPEC.md:56"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:56",
+          "contains": "footer.closing-footer` (bg"
+        }
+      ]
+    },
+    "surface.scene-dark": {
+      "$type": "color",
+      "$ref": "color.neutral.black",
+      "$description": "privacy scene",
+      "measuredFrom": [
+        "CLONE_SPEC.md:56"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:56",
+          "contains": "#privacy` (bg `#000`)"
+        }
+      ]
+    },
+    "surface.install": {
+      "$type": "color",
+      "$ref": "color.surface.install",
+      "$description": "install page",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:170"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:170",
+          "contains": "#fafaf7"
+        }
+      ]
+    },
+    "surface.cta": {
+      "$type": "color",
+      "$ref": "color.neutral.black",
+      "$description": "download button fill",
+      "measuredFrom": [
+        "CLONE_SPEC.md:120"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:120",
+          "contains": "border:6px solid #000"
+        }
+      ]
+    },
+    "surface.cta-wipe": {
+      "$type": "color",
+      "$ref": "color.accent.cyan-fill",
+      "$description": "download button wipe",
+      "measuredFrom": [
+        "CLONE_SPEC.md:122"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:122",
+          "contains": "background:#73e7f5"
+        }
+      ]
+    },
+    "border.default": {
+      "$type": "color",
+      "$ref": "color.line.default",
+      "$description": "default line",
+      "measuredFrom": [
+        "CLONE_SPEC.md:49"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:49",
+          "contains": "--line:#ebebeb"
+        }
+      ]
+    },
+    "border.card": {
+      "$type": "color",
+      "$ref": "color.line.card",
+      "$description": "card border",
+      "measuredFrom": [
+        "CLONE_SPEC.md:168"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:168",
+          "contains": "border:1px solid #e4e4e7"
+        }
+      ]
+    },
+    "border.product": {
+      "$type": "color",
+      "$ref": "color.line.product",
+      "$description": "product border",
+      "measuredFrom": [
+        "CLONE_SPEC.md:49"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:49",
+          "contains": "--product-border:#e6e6e6"
+        }
+      ]
+    },
+    "border.hairline": {
+      "$type": "color",
+      "$ref": "color.line.hairline",
+      "$description": "companies hairline",
+      "measuredFrom": [
+        "CLONE_SPEC.md:147"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:147",
+          "contains": "#c6c6c3"
+        }
+      ]
+    },
+    "border.on-dark": {
+      "$type": "color",
+      "$ref": "color.line.privacy-divider",
+      "$description": "privacy dividers",
+      "measuredFrom": [
+        "CLONE_SPEC.md:303"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:303",
+          "contains": "#ffffff12"
+        }
+      ]
+    },
+    "signal.nav-dot": {
+      "$type": "color",
+      "$ref": "color.accent.nav-dot",
+      "$description": "hero nav dot",
+      "measuredFrom": [
+        "CLONE_SPEC.md:72"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:72",
+          "contains": "#00c8e0"
+        }
+      ]
+    },
+    "signal.badge": {
+      "$type": "color",
+      "$ref": "color.accent.badge-red",
+      "$description": "notification badge",
+      "measuredFrom": [
+        "CLONE_SPEC.md:78"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:78",
+          "contains": "#ff3b30"
+        }
+      ]
+    },
+    "highlight.cyan": {
+      "$type": "color",
+      "$ref": "color.accent.cyan-fill",
+      "$description": "green-labelled highlight",
+      "measuredFrom": [
+        "CLONE_SPEC.md:239"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:239",
+          "contains": "bg `#73e7f5`"
+        }
+      ]
+    },
+    "highlight.orange": {
+      "$type": "color",
+      "$ref": "color.accent.orange",
+      "$description": "orange highlight",
+      "measuredFrom": [
+        "CLONE_SPEC.md:247"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:247",
+          "contains": "bg `#ff9e53`"
+        }
+      ]
+    },
+    "focus.ring-home": {
+      "$type": "color",
+      "$ref": "color.accent.focus-ring",
+      "$description": "focus ring on home",
+      "measuredFrom": [
+        "CLONE_SPEC.md:50"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:50",
+          "contains": "focus ring `2px solid #58959d`"
+        }
+      ]
+    },
+    "focus.ring-input": {
+      "$type": "color",
+      "$ref": "color.accent.input-focus",
+      "$description": "ask-form focus-within",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:146"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:146",
+          "contains": "focus-within `#2798a8`"
+        }
+      ]
+    },
+    "plan.sage": {
+      "$type": "color",
+      "$ref": "color.accent.plan-sage",
+      "$description": "Pro",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:101"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:101",
+          "contains": "#72886c"
+        }
+      ]
+    },
+    "plan.lavender": {
+      "$type": "color",
+      "$ref": "color.accent.plan-lavender",
+      "$description": "Ultra",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:102"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:102",
+          "contains": "#9082b1"
+        }
+      ]
+    },
+    "plan.peach": {
+      "$type": "color",
+      "$ref": "color.accent.plan-peach",
+      "$description": "Max",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:103"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:103",
+          "contains": "#c9916c"
+        }
+      ]
+    }
+  },
+  "typography": {
+    "display.hero": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{fontFamily.serif}",
+        "fontWeight": "{fontWeight.regular}",
+        "fontSize": "64px",
+        "lineHeight": "1.06",
+        "letterSpacing": "-.01em"
+      },
+      "$description": "hero h1",
+      "measuredFrom": [
+        "CLONE_SPEC.md:112"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:112",
+          "contains": "Exposure 64px/67.84px"
+        }
+      ]
+    },
+    "display.section": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{fontFamily.serif}",
+        "fontWeight": "{fontWeight.regular}",
+        "fontSize": "64px",
+        "lineHeight": "1.03",
+        "letterSpacing": "-.02em"
+      },
+      "$description": "section h2 (65.92px line)",
+      "measuredFrom": [
+        "CLONE_SPEC.md:158"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:158",
+          "contains": "Exposure 64px/65.92px"
+        }
+      ]
+    },
+    "display.faq": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{fontFamily.serif}",
+        "fontWeight": "{fontWeight.regular}",
+        "fontSize": "clamp(36px,3.5vw,52px)",
+        "lineHeight": "1.08",
+        "letterSpacing": "-.04em"
+      },
+      "$description": "faq h2",
+      "measuredFrom": [
+        "CLONE_SPEC.md:323"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:323",
+          "contains": "clamp(36px,3.5vw,52px)/1.08"
+        }
+      ]
+    },
+    "display.privacy": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{fontFamily.serif}",
+        "fontWeight": "{fontWeight.regular}",
+        "fontSize": "44.48px",
+        "lineHeight": "1.02",
+        "letterSpacing": "-.055em"
+      },
+      "$description": "privacy h2",
+      "measuredFrom": [
+        "CLONE_SPEC.md:302"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:302",
+          "contains": "Exposure 44.48px/45.37px"
+        }
+      ]
+    },
+    "display.plan-name": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{fontFamily.serif}",
+        "fontWeight": "{fontWeight.regular}",
+        "fontSize": "43px",
+        "lineHeight": "1.1",
+        "letterSpacing": "-.025em"
+      },
+      "$description": "plan name",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:126"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:126",
+          "contains": "Plan name h2"
+        }
+      ]
+    },
+    "display.price": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{fontFamily.serif}",
+        "fontWeight": "{fontWeight.regular}",
+        "fontSize": "48px",
+        "lineHeight": "1",
+        "letterSpacing": "-.04em"
+      },
+      "$description": "price",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:128"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:128",
+          "contains": "Price amount"
+        }
+      ]
+    },
+    "display.manifesto": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{fontFamily.sans}",
+        "fontWeight": "{fontWeight.semibold}",
+        "fontSize": "clamp(38px,4.4vw,64px)",
+        "lineHeight": "1.15",
+        "letterSpacing": "-.025em"
+      },
+      "$description": "manifesto h1/h2",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:289"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:289",
+          "contains": "clamp(38px,4.4vw,64px)/1.15"
+        }
+      ]
+    },
+    "display.blog-intro": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{fontFamily.serif}",
+        "fontWeight": "{fontWeight.regular}",
+        "fontSize": "clamp(48px,5.6vw,76px)",
+        "lineHeight": "1.05",
+        "letterSpacing": "-.035em"
+      },
+      "$description": "blog index h1",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:107"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:107",
+          "contains": "clamp(48px,5.6vw,76px)/1.05"
+        }
+      ]
+    },
+    "display.blog-post": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{fontFamily.serif}",
+        "fontWeight": "{fontWeight.regular}",
+        "fontSize": "clamp(36px,4.8vw,60px)",
+        "lineHeight": "1.12",
+        "letterSpacing": "-.03em"
+      },
+      "$description": "blog post h1",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:211"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:211",
+          "contains": "clamp(36px,4.8vw,60px)/1.12"
+        }
+      ]
+    },
+    "display.legal": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{fontFamily.serif}",
+        "fontWeight": "{fontWeight.regular}",
+        "fontSize": "clamp(44px,5vw,64px)",
+        "lineHeight": "1.08",
+        "letterSpacing": "-.035em"
+      },
+      "$description": "legal h1",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:328"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:328",
+          "contains": "clamp(44px,5vw,64px)/1.08"
+        }
+      ]
+    },
+    "display.install": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{fontFamily.serif}",
+        "fontWeight": "{fontWeight.regular}",
+        "fontSize": "clamp(42px,4.5vw,66px)",
+        "lineHeight": "1.08",
+        "letterSpacing": "-.035em"
+      },
+      "$description": "install h1",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:202"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:202",
+          "contains": "clamp(42px,4.5vw,66px)/1.08"
+        }
+      ]
+    },
+    "body.base": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{fontFamily.sans}",
+        "fontWeight": "{fontWeight.regular}",
+        "fontSize": "15px",
+        "lineHeight": "1.6",
+        "letterSpacing": "normal"
+      },
+      "$description": "merlin-story base",
+      "measuredFrom": [
+        "CLONE_SPEC.md:49"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:49",
+          "contains": "font: 15px/1.6"
+        }
+      ]
+    },
+    "body.hero-sub": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{fontFamily.sans}",
+        "fontWeight": "{fontWeight.regular}",
+        "fontSize": "20px",
+        "lineHeight": "1.35",
+        "letterSpacing": "-.2px"
+      },
+      "$description": "hero subtitle",
+      "measuredFrom": [
+        "CLONE_SPEC.md:116"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:116",
+          "contains": "Open Runde 20px/27px"
+        }
+      ]
+    },
+    "body.section": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{fontFamily.sans}",
+        "fontWeight": "{fontWeight.regular}",
+        "fontSize": "16px",
+        "lineHeight": "1.65",
+        "letterSpacing": "normal"
+      },
+      "$description": "section copy 16/26.4",
+      "measuredFrom": [
+        "CLONE_SPEC.md:164"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:164",
+          "contains": "16px/26.4px"
+        }
+      ]
+    },
+    "body.prose-blog": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{fontFamily.sans}",
+        "fontWeight": "{fontWeight.regular}",
+        "fontSize": "17px",
+        "lineHeight": "1.8",
+        "letterSpacing": "normal"
+      },
+      "$description": "blog prose",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:190"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:190",
+          "contains": "Open Runde 17px / 30.6px (1.8)"
+        }
+      ]
+    },
+    "body.legal": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{fontFamily.sans}",
+        "fontWeight": "{fontWeight.regular}",
+        "fontSize": "16px",
+        "lineHeight": "1.8",
+        "letterSpacing": "normal"
+      },
+      "$description": "legal body 16/28.8",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:335"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:335",
+          "contains": "p / li"
+        }
+      ]
+    },
+    "body.manifesto": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{fontFamily.sans}",
+        "fontWeight": "{fontWeight.medium}",
+        "fontSize": "clamp(23px,2.55vw,36px)",
+        "lineHeight": "1.45",
+        "letterSpacing": "-.01em"
+      },
+      "$description": "manifesto paragraphs",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:290"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:290",
+          "contains": "clamp(23px,2.55vw,36px)/1.45"
+        }
+      ]
+    },
+    "label.cta-mono": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{fontFamily.mono-cta}",
+        "fontWeight": "{fontWeight.bold}",
+        "fontSize": "14px",
+        "lineHeight": "1.2",
+        "letterSpacing": ".065em"
+      },
+      "$description": "download CTA label",
+      "measuredFrom": [
+        "CLONE_SPEC.md:120"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:120",
+          "contains": "font:700 14px/1.2"
+        }
+      ]
+    },
+    "label.section": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{fontFamily.sans}",
+        "fontWeight": "{fontWeight.semibold}",
+        "fontSize": "17px",
+        "lineHeight": "1.3",
+        "letterSpacing": ".025em"
+      },
+      "$description": "section label",
+      "measuredFrom": [
+        "CLONE_SPEC.md:175"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:175",
+          "contains": "17px/22.1px 600"
+        }
+      ]
+    },
+    "note.handwriting": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{fontFamily.handwriting}",
+        "fontWeight": "{fontWeight.semibold}",
+        "fontSize": "44px",
+        "lineHeight": "1.15",
+        "letterSpacing": "normal"
+      },
+      "$description": "handwritten note",
+      "measuredFrom": [
+        "CLONE_SPEC.md:176"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:176",
+          "contains": "caveat 44px/50.6px 600"
+        }
+      ]
+    },
+    "note.manifesto-overlay": {
+      "$type": "typography",
+      "$value": {
+        "fontFamily": "{fontFamily.handwriting}",
+        "fontWeight": "{fontWeight.medium}",
+        "fontSize": "clamp(160px,24vw,380px)",
+        "lineHeight": "0.8",
+        "letterSpacing": "-.065em"
+      },
+      "$description": "manifesto overlay",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:291"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:291",
+          "contains": "clamp(160px,24vw,380px)/.8"
+        }
+      ]
+    }
+  }
+}

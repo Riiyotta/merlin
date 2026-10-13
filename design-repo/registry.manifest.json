@@ -1,0 +1,72 @@
+{
+  "repositoryId": "merlin-clone-design-repo",
+  "repositoryVersion": "1.0.0",
+  "pageSpecVersion": "1.0.0",
+  "allowlistVersion": "1.0.0",
+  "versionFieldNote": "allowlistVersion is MACHINE-CHECKED: extraction/verify_all.py fails if it differs from tokens/llm/component-allowlist.json. repositoryVersion and pageSpecVersion are documentation-only, hand-maintained markers that nothing checks automatically - do not read them as an enforcement guarantee.",
+  "status": "design-review-pending",
+  "productionApproved": false,
+  "notForPublicRedistribution": true,
+  "sourceSnapshot": "A snapshot of a LOCAL CLONE of a real company's site (https://www.merlin.computer), React 18 + Vite; not a living mirror. Re-diff counts and framework versions against the source after any upgrade (extraction/verify_all.py does when the source tree is present).",
+  "defaultTheme": "light",
+  "schemaValidatedThemes": [
+    "light"
+  ],
+  "counts": {
+    "tokens": {
+      "foundation": 249,
+      "semantic": 57,
+      "component": 20,
+      "layout": 26,
+      "total": 352
+    },
+    "primitives": 13,
+    "components": 21,
+    "sections": 32,
+    "templates": 7,
+    "routes": 8,
+    "routingBehaviors": 2,
+    "assetRoles": 14,
+    "registeredAssets": 73,
+    "graphRules": 19,
+    "motionPatterns": 26,
+    "reducedMotionFallbacks": 5,
+    "jsonFiles": 88
+  },
+  "entryPoints": {
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md",
+    "schema": "schema/pagespec.schema.json",
+    "example": "schema/example.pagespec.json",
+    "semanticValidator": "schema/semantic_validate.py",
+    "adversarialTests": "schema/tests/adversarial_test.py",
+    "verifyAll": "extraction/verify_all.py",
+    "proveDrift": "extraction/prove_drift.py",
+    "measuredValues": "extraction/measured-values.json",
+    "histogramDerivation": "extraction/derive_histograms.py",
+    "derivedHistograms": "extraction/derived-histograms.json",
+    "templateComparison": "extraction/derive_template_comparison.py",
+    "templateComparisonResult": "extraction/legal-template-comparison.json",
+    "templates": "templates/templates.json",
+    "routes": "templates/routes.json",
+    "compatibilityGraph": "compatibility/graph.json",
+    "allowlist": "tokens/llm/component-allowlist.json",
+    "assetRoles": "tokens/llm/asset-roles.json",
+    "theme": "tokens/themes/light.json",
+    "tokens": [
+      "tokens/00-foundation/color.json",
+      "tokens/00-foundation/typography.json",
+      "tokens/00-foundation/radius.json",
+      "tokens/00-foundation/breakpoint.json",
+      "tokens/00-foundation/elevation.json",
+      "tokens/00-foundation/motion.json",
+      "tokens/00-foundation/motion-patterns.json",
+      "tokens/10-semantic/semantic.json",
+      "tokens/20-component/component.json",
+      "tokens/30-layout/layout.json"
+    ],
+    "primitives": "primitives/",
+    "components": "components/",
+    "sections": "sections/"
+  }
+}

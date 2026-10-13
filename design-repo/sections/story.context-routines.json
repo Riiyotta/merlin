@@ -1,0 +1,342 @@
+{
+  "id": "story.context-routines",
+  "category": "story",
+  "description": "'First, a little [app tiles] context.' heading, copy column, a Gmail email preview card, then the Routines row (handwritten note, intro, auto-playing 'Weekly studio update' timeline, felt-scene figure). The timeline internals (tool steps, durations) are a scripted walkthrough.",
+  "evidenceLevel": "measured",
+  "domAnchor": "section#routines",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "headingLead",
+      "headingEmphasis",
+      "appTiles",
+      "contextParagraphs",
+      "emailPreview",
+      "routine"
+    ],
+    "properties": {
+      "headingLead": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 3
+      },
+      "headingEmphasis": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 1
+      },
+      "appTiles": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 6,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "name",
+            "icon"
+          ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 1
+            },
+            "icon": {
+              "$ref": "#/definitions/assetRef",
+              "x-allowedRoles": [
+                "icon.third-party-app"
+              ]
+            }
+          }
+        }
+      },
+      "contextParagraphs": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 2,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 16
+        }
+      },
+      "emailPreview": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "subject",
+          "senderName",
+          "senderInitials",
+          "time",
+          "body"
+        ],
+        "properties": {
+          "subject": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 5
+          },
+          "senderName": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 2
+          },
+          "senderInitials": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}$",
+            "x-sample": "SH"
+          },
+          "time": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 2
+          },
+          "body": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 5,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 31
+            }
+          }
+        }
+      },
+      "routine": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "note",
+          "intro",
+          "schedule",
+          "tools",
+          "finalCard",
+          "figure"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 1
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 5
+          },
+          "intro": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 12
+          },
+          "schedule": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 5
+          },
+          "tools": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 5,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "app",
+                "action",
+                "result",
+                "duration"
+              ],
+              "properties": {
+                "app": {
+                  "type": "string",
+                  "enum": [
+                    "Gmail",
+                    "Notion",
+                    "Calendar"
+                  ]
+                },
+                "action": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 5
+                },
+                "result": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 3
+                },
+                "duration": {
+                  "type": "string",
+                  "pattern": "^[0-9.]+s$",
+                  "x-sample": "0.8s"
+                }
+              }
+            }
+          },
+          "finalCard": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "title",
+              "badge",
+              "summary",
+              "bullets"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 4
+              },
+              "badge": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 3
+              },
+              "summary": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 14
+              },
+              "bullets": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 3,
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 11
+                }
+              }
+            }
+          },
+          "figure": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "image",
+              "caption"
+            ],
+            "properties": {
+              "image": {
+                "$ref": "#/definitions/assetRef",
+                "x-allowedRoles": [
+                  "illustration.felt-scene"
+                ]
+              },
+              "caption": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 22
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "routine-walkthrough-steps",
+      "hover-transition"
+    ],
+    "reducedMotionFallback": "final-state-static",
+    "timing": {
+      "steps": "0..12; delays 200ms / tool duration (800,400,600,500,300ms) / 120ms / 480ms",
+      "playsWhen": ">=10% in view, tab visible, not paused",
+      "reducedShows": "final step (LAST)"
+    },
+    "motionEvidence": {
+      "measuredFrom": [
+        "src/components/routines/RoutineTimeline.jsx:99",
+        "src/components/routines/RoutineTimeline.jsx:105"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/routines/RoutineTimeline.jsx:99",
+          "contains": "const inView = useInView(ref, { amount: 0.1 })"
+        },
+        {
+          "cite": "src/components/routines/RoutineTimeline.jsx:105",
+          "contains": "const shown = reduced ? LAST : step"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "699",
+      "change": "12-col grid becomes display:block with padding 80px 16px; columns stack; heading 6.5vw; tiles 31x35 radius 9px",
+      "measuredFrom": [
+        "CLONE_SPEC.md:55"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:55",
+          "contains": "Below 700px they become `display:block`"
+        }
+      ]
+    },
+    {
+      "query": "max-width",
+      "breakpoint": "1023",
+      "change": "content width 91.666667%",
+      "measuredFrom": [
+        "CLONE_SPEC.md:53"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:53",
+          "contains": "@media (max-width:1023px)` width becomes 91.666667%"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [
+      "section-label",
+      "handwritten-note",
+      "inline-identity",
+      "avatar-initials",
+      "icon"
+    ],
+    "components": [
+      "app-tile-row",
+      "email-preview-card",
+      "routine-timeline"
+    ]
+  },
+  "measuredFrom": [
+    "src/components/Routines.jsx:67",
+    "CLONE_SPEC.md:153",
+    "src/components/routines/RoutineTimeline.jsx:95"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/Routines.jsx:67",
+      "contains": "id=\"routines\""
+    },
+    {
+      "cite": "CLONE_SPEC.md:153",
+      "contains": "## 5. Section: Context + Routines"
+    },
+    {
+      "cite": "src/components/routines/RoutineTimeline.jsx:95",
+      "contains": "const LAST = 2 * TOOLS.length + 2"
+    }
+  ],
+  "implementedBy": [
+    "src/components/Routines.jsx"
+  ]
+}

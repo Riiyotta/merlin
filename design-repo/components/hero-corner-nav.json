@@ -1,0 +1,36 @@
+{
+  "id": "hero-corner-nav",
+  "kind": "component",
+  "description": "Absolute corner nav: merlin-dock icon + 'merlin.computer', Pricing, Manifesto links and a spring-driven 6px dot that follows hover/focus and rests on the current page's link. Sets aria-current only for /, /pricing, /manifesto.",
+  "props": {
+    "currentPath": "derived from location.pathname once per load"
+  },
+  "variants": [],
+  "domAnchor": "nav.hero-corner-nav",
+  "measuredFrom": [
+    "src/components/hero/HeroNav.jsx:93",
+    "src/components/hero/HeroNav.jsx:11",
+    "CLONE_SPEC.md:139"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/hero/HeroNav.jsx:93",
+      "contains": "export default function HeroNav()"
+    },
+    {
+      "cite": "src/components/hero/HeroNav.jsx:11",
+      "contains": "const PATHNAME = window.location.pathname"
+    },
+    {
+      "cite": "CLONE_SPEC.md:139",
+      "contains": "**Nav dot:** framer springs"
+    }
+  ],
+  "motion": {
+    "patterns": [
+      "nav-dot-spring",
+      "brand-hover-sweep"
+    ],
+    "reducedMotionFallback": "instant-no-spring"
+  }
+}

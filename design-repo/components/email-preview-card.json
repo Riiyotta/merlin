@@ -1,0 +1,26 @@
+{
+  "id": "email-preview-card",
+  "kind": "component",
+  "description": "Hard-offset-shadow Gmail-style email card (header, toolbar, subject, sender row, body paragraphs).",
+  "props": {
+    "subject": "string",
+    "sender": "string",
+    "body": "string[]"
+  },
+  "variants": [],
+  "domAnchor": "div#context-source-preview",
+  "measuredFrom": [
+    "src/components/Routines.jsx:114",
+    "CLONE_SPEC.md:167"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/Routines.jsx:114",
+      "contains": "className=\"context-source\" id=\"context-source-preview\""
+    },
+    {
+      "cite": "CLONE_SPEC.md:167",
+      "contains": "### 5c. Gmail preview card"
+    }
+  ]
+}

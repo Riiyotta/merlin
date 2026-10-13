@@ -1,0 +1,167 @@
+{
+  "id": "pricing.plans",
+  "category": "pricing",
+  "description": "Three plan cards (Pro, Ultra, Max) with subgrid alignment, a hard-offset shadow, a per-plan accent, and a Download CTA each. MONTHLY ONLY: there is NO monthly/annual toggle on the real page (annual billing is only mentioned in an FAQ answer).",
+  "evidenceLevel": "measured",
+  "domAnchor": "section#plans.pricing-plans",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "ariaLabel",
+      "plans"
+    ],
+    "properties": {
+      "ariaLabel": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 2
+      },
+      "plans": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 3,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "name",
+            "tone",
+            "description",
+            "price",
+            "ctaVariant",
+            "credits"
+          ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 1
+            },
+            "tone": {
+              "type": "string",
+              "enum": [
+                "sage",
+                "lavender",
+                "peach"
+              ]
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 12
+            },
+            "price": {
+              "type": "string",
+              "pattern": "^[0-9]+$",
+              "x-sample": "99"
+            },
+            "ctaVariant": {
+              "type": "string",
+              "enum": [
+                "primary",
+                "secondary"
+              ]
+            },
+            "credits": {
+              "type": "string",
+              "pattern": "^[0-9,]+$",
+              "x-sample": "85,000"
+            }
+          }
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "cta-wipe-hover"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {
+      "ctaWipe": ".55s cubic-bezier(.22,1,.36,1), text color .36s"
+    },
+    "motionEvidence": {
+      "measuredFrom": [
+        "src/styles/original/2abce9a6dc03269b.css:1",
+        "CLONE_SPEC_PAGES_A.md:157"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/styles/original/2abce9a6dc03269b.css:1",
+          "contains": "prefers-reduced-motion:reduce){.pricing-page *,.pricing-page :before{scroll-behavior:auto;transition:none}"
+        },
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:157",
+          "contains": "CTA hover/focus: `::before` slides"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "700",
+      "change": "plan grid single column, gap 18px; cards flex column, padding 24px 27px",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:152"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:152",
+          "contains": "`.pricing-plan-grid` is a single column with gap 18"
+        }
+      ]
+    },
+    {
+      "query": "max-width",
+      "breakpoint": "1000",
+      "change": "card padding 24px 20px",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:151"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:151",
+          "contains": "**≤1000:** card padding 24px 20px"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [
+      "download-button",
+      "icon"
+    ],
+    "components": [
+      "plan-card"
+    ]
+  },
+  "measuredFrom": [
+    "src/components/pricing/PricingPlans.jsx:8",
+    "CLONE_SPEC_PAGES_A.md:58",
+    "src/components/pricing/pricingData.js:7"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/pricing/PricingPlans.jsx:8",
+      "contains": "<section id=\"plans\" className=\"pricing-plans\" aria-label=\"Monthly plans\">"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_A.md:58",
+      "contains": "**No monthly/annual toggle exists.**"
+    },
+    {
+      "cite": "src/components/pricing/pricingData.js:7",
+      "contains": "tone: 'sage'"
+    }
+  ],
+  "implementedBy": [
+    "src/components/pricing/PricingPlans.jsx"
+  ]
+}

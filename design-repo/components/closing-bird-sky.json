@@ -1,0 +1,31 @@
+{
+  "id": "closing-bird-sky",
+  "kind": "component",
+  "description": "Three ASCII-bird tracks flying across the footer with independent CSS keyframe loops (cross 23s, glide 37s reverse, dart 13s).",
+  "props": {},
+  "variants": [],
+  "domAnchor": "div.closing-sky",
+  "measuredFrom": [
+    "src/components/Footer.jsx:32",
+    "CLONE_SPEC.md:346"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/Footer.jsx:32",
+      "contains": "closing-bird-track closing-bird-track-${n}"
+    },
+    {
+      "cite": "CLONE_SPEC.md:346",
+      "contains": "Birds (CSS, infinite):"
+    }
+  ],
+  "motion": {
+    "patterns": [
+      "css-bird-loop"
+    ],
+    "reducedMotionFallback": "no-animation"
+  },
+  "assetRoles": [
+    "art.footer-ascii"
+  ]
+}

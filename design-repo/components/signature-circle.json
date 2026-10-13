@@ -1,0 +1,35 @@
+{
+  "id": "signature-circle",
+  "kind": "component",
+  "description": "'Yours' with a hand-drawn circle path (pathLength 1, dash draw 1.6s) + ', Merlin' + mascot mark; draws once at 50% in view.",
+  "props": {
+    "circledWord": "string",
+    "name": "string",
+    "mark": "assetRef"
+  },
+  "variants": [],
+  "domAnchor": "div.manifesto-signature",
+  "measuredFrom": [
+    "src/components/manifesto/Signature.jsx:5",
+    "CLONE_SPEC_PAGES_A.md:316"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/manifesto/Signature.jsx:5",
+      "contains": "export default function Signature()"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_A.md:316",
+      "contains": "Signature circle draw (module `50047`)"
+    }
+  ],
+  "motion": {
+    "patterns": [
+      "signature-circle-draw"
+    ],
+    "reducedMotionFallback": "final-state-static"
+  },
+  "assetRoles": [
+    "brand.merlin-mascot-art"
+  ]
+}

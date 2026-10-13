@@ -1,0 +1,31 @@
+{
+  "id": "story-row",
+  "kind": "component",
+  "description": "Blog story row (grid 140px 1fr 36px): category, title + meta, arrow.",
+  "props": {
+    "slug": "string",
+    "title": "string"
+  },
+  "variants": [],
+  "domAnchor": "a.blog_story__uUvdL",
+  "measuredFrom": [
+    "src/pages/Blog.jsx:60",
+    "CLONE_SPEC_PAGES_B.md:124"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/pages/Blog.jsx:60",
+      "contains": "className=\"blog_story__uUvdL\""
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_B.md:124",
+      "contains": "### 1.3 Story row geometry"
+    }
+  ],
+  "motion": {
+    "patterns": [
+      "hover-transition"
+    ],
+    "reducedMotionFallback": "no-animation"
+  }
+}

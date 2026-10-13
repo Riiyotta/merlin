@@ -1,0 +1,35 @@
+{
+  "id": "link-arrow",
+  "kind": "primitive",
+  "description": "Text link with a Feather arrow-up-right (blog read link, story arrow, manifesto link, privacy eyebrow) or arrow-left (back links); arrow translates (2px,-2px) on hover.",
+  "props": {
+    "label": "string",
+    "href": "string",
+    "direction": "up-right|left"
+  },
+  "variants": [
+    "up-right",
+    "left"
+  ],
+  "domAnchor": "a",
+  "measuredFrom": [
+    "src/components/blog/Icons.jsx:15",
+    "CLONE_SPEC_PAGES_B.md:34"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/blog/Icons.jsx:15",
+      "contains": "ArrowUpRight"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_B.md:34",
+      "contains": "arrow-up-right: `<line x1=7 y1=17"
+    }
+  ],
+  "motion": {
+    "patterns": [
+      "hover-transition"
+    ],
+    "reducedMotionFallback": "no-animation"
+  }
+}

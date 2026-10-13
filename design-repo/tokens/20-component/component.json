@@ -1,0 +1,259 @@
+{
+  "_note": "Component-scoped measured values; `$ref` (when present) points at a foundation token.",
+  "component": {
+    "download-button.min-height": {
+      "$value": "68px",
+      "measuredFrom": [
+        "CLONE_SPEC.md:120"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:120",
+          "contains": "min-height:68px"
+        }
+      ]
+    },
+    "download-button.border": {
+      "$value": "6px solid",
+      "measuredFrom": [
+        "CLONE_SPEC.md:120"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:120",
+          "contains": "border:6px solid #000"
+        }
+      ],
+      "$ref": "color.neutral.black"
+    },
+    "download-button.radius": {
+      "$value": "22px",
+      "measuredFrom": [
+        "CLONE_SPEC.md:120"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:120",
+          "contains": "border-radius:22px"
+        }
+      ],
+      "$ref": "radius.22"
+    },
+    "download-button.arrow-cell": {
+      "$value": "56px",
+      "measuredFrom": [
+        "CLONE_SPEC.md:121"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:121",
+          "contains": "56x56 grid"
+        }
+      ]
+    },
+    "download-button.wipe-fill": {
+      "$value": "{surface.cta-wipe}",
+      "measuredFrom": [
+        "CLONE_SPEC.md:122"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:122",
+          "contains": "background:#73e7f5; transform:translateX(calc(100% - 56px))"
+        }
+      ],
+      "$ref": "color.accent.cyan-fill"
+    },
+    "hero-nav.dot-size": {
+      "$value": "6px",
+      "measuredFrom": [
+        "CLONE_SPEC.md:111"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:111",
+          "contains": "span.hero-nav-dot`: absolute 6x6"
+        }
+      ]
+    },
+    "hero-nav.dot-color": {
+      "$value": "{signal.nav-dot}",
+      "measuredFrom": [
+        "CLONE_SPEC.md:111"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:111",
+          "contains": "radius 50%, `#00c8e0`"
+        }
+      ],
+      "$ref": "color.accent.nav-dot"
+    },
+    "plan-card.padding": {
+      "$value": "28px 30px",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:142"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:142",
+          "contains": "padding:28px 30px"
+        }
+      ]
+    },
+    "plan-card.radius": {
+      "$value": "12px",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:142"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:142",
+          "contains": "border-radius:12px; box-shadow:5px 5px 0 #d9d9d9"
+        }
+      ],
+      "$ref": "radius.12"
+    },
+    "context-source-card.radius": {
+      "$value": "20px",
+      "measuredFrom": [
+        "CLONE_SPEC.md:168"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:168",
+          "contains": "border-radius:20px; box-shadow:3px 4px 0 #e4e4e7"
+        }
+      ],
+      "$ref": "radius.20"
+    },
+    "notification-card.radius": {
+      "$value": "26px",
+      "measuredFrom": [
+        "CLONE_SPEC.md:130"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:130",
+          "contains": "border-radius:26px; background:linear-gradient"
+        }
+      ],
+      "$ref": "radius.26"
+    },
+    "browser-card.radius": {
+      "$value": "32px",
+      "measuredFrom": [
+        "CLONE_SPEC.md:210"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:210",
+          "contains": "radius 32px (24px"
+        }
+      ],
+      "$ref": "radius.32"
+    },
+    "hero-landscape.radius": {
+      "$value": "36px",
+      "measuredFrom": [
+        "CLONE_SPEC.md:126"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:126",
+          "contains": "border-radius:36px"
+        }
+      ],
+      "$ref": "radius.36"
+    },
+    "companion-showcase.radius": {
+      "$value": "28px",
+      "measuredFrom": [
+        "CLONE_SPEC.md:277"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:277",
+          "contains": "border-radius:28px"
+        }
+      ],
+      "$ref": "radius.28"
+    },
+    "project-folder-item.radius": {
+      "$value": "12px",
+      "measuredFrom": [
+        "CLONE_SPEC.md:248"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:248",
+          "contains": "border:1px solid #d6d6d6; border-radius:12px"
+        }
+      ],
+      "$ref": "radius.12"
+    },
+    "trust-card.padding": {
+      "$value": "24px 22px 28px",
+      "measuredFrom": [
+        "CLONE_SPEC.md:303"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:303",
+          "contains": "padding `24px 22px 28px`"
+        }
+      ]
+    },
+    "floating-nav.size": {
+      "$value": "370px x 46px, radius 1.5rem, bg rgba(0,0,0,.7), blur 5px",
+      "measuredFrom": [
+        "CLONE_SPEC.md:357"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:357",
+          "contains": "width:37rem (370px)"
+        }
+      ]
+    },
+    "install-art.radius": {
+      "$value": "16px",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:209"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:209",
+          "contains": "radius 16, overflow hidden"
+        }
+      ],
+      "$ref": "radius.16"
+    },
+    "legal-tabs.radius": {
+      "$value": "24px",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:290"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:290",
+          "contains": "radius 24px; bg #f5f6f3"
+        }
+      ],
+      "$ref": "radius.24"
+    },
+    "blog-featured-image.radius": {
+      "$value": "20px",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:76"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:76",
+          "contains": "radius 20px; bg #f2f2ef"
+        }
+      ],
+      "$ref": "radius.20"
+    }
+  }
+}

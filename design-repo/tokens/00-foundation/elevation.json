@@ -1,0 +1,173 @@
+{
+  "_note": "Shadows measured as computed values in the specs. Hard-offset shadows (3px 4px 0, 2px 3px 0, 5px 5px 0) are a signature of the cards on this site.",
+  "elevation": {
+    "product": {
+      "$type": "shadow",
+      "$value": "0 1px 3px #00000005,0 16px 36px -24px #00000024",
+      "$description": "product/browser frame shadow",
+      "measuredFrom": [
+        "CLONE_SPEC.md:49"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:49",
+          "contains": "--product-shadow:0 1px 3px #00000005,0 16px 36px -24px #00000024"
+        }
+      ]
+    },
+    "card-offset": {
+      "$type": "shadow",
+      "$value": "3px 4px 0 #e4e4e7",
+      "$description": "Gmail preview card hard offset",
+      "measuredFrom": [
+        "CLONE_SPEC.md:168"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:168",
+          "contains": "box-shadow:3px 4px 0 #e4e4e7"
+        }
+      ]
+    },
+    "folder-offset": {
+      "$type": "shadow",
+      "$value": "2px 3px 0 #d6d6d6",
+      "$description": "project folder item",
+      "measuredFrom": [
+        "CLONE_SPEC.md:248"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:248",
+          "contains": "box-shadow:2px 3px 0 #d6d6d6"
+        }
+      ]
+    },
+    "plan-offset": {
+      "$type": "shadow",
+      "$value": "5px 5px 0 #d9d9d9",
+      "$description": "pricing plan card",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:142"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:142",
+          "contains": "box-shadow:5px 5px 0 #d9d9d9"
+        }
+      ]
+    },
+    "tile": {
+      "$type": "shadow",
+      "$value": "0 5px 12px rgba(0,0,0,.016)",
+      "$description": "context app tile",
+      "measuredFrom": [
+        "CLONE_SPEC.md:160"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:160",
+          "contains": "box-shadow:0 5px 12px rgba(0,0,0,.016)"
+        }
+      ]
+    },
+    "rt-card": {
+      "$type": "shadow",
+      "$value": "0 2px 5px rgba(24,24,27,.024)",
+      "$description": "routine card",
+      "measuredFrom": [
+        "CLONE_SPEC.md:189"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:189",
+          "contains": "box-shadow:0 2px 5px rgba(24,24,27,.024)"
+        }
+      ]
+    },
+    "notification": {
+      "$type": "shadow",
+      "$value": "0 14px 36px -16px #0e181a66, inset 0 1px 0 #ffffff26",
+      "$description": "hero notification card",
+      "measuredFrom": [
+        "CLONE_SPEC.md:130"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:130",
+          "contains": "box-shadow:0 14px 36px -16px #0e181a66"
+        }
+      ]
+    },
+    "badge": {
+      "$type": "shadow",
+      "$value": "0 2px 5px rgba(0,0,0,.08)",
+      "$description": "notification counter",
+      "measuredFrom": [
+        "CLONE_SPEC.md:132"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:132",
+          "contains": "0 2px 5px rgba(0,0,0,.08)"
+        }
+      ]
+    },
+    "transcript-window": {
+      "$type": "shadow",
+      "$value": "0 22px 44px -14px rgba(36,51,75,.35), inset 0 1px 0 rgba(255,255,255,.75)",
+      "$description": "meeting transcript window",
+      "measuredFrom": [
+        "CLONE_SPEC.md:241"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:241",
+          "contains": "box-shadow:0 22px 44px -14px rgba(36,51,75,.35)"
+        }
+      ]
+    },
+    "popover": {
+      "$type": "shadow",
+      "$value": "0 8px 30px rgba(20,22,29,.15), inset 0 1px 0 rgba(255,255,255,.05)",
+      "$description": "companion selection popover",
+      "measuredFrom": [
+        "CLONE_SPEC.md:272"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:272",
+          "contains": "box-shadow:0 8px 30px rgba(20,22,29,.15)"
+        }
+      ]
+    },
+    "demo-viewport": {
+      "$type": "shadow",
+      "$value": "0 0 0 1px rgba(0,0,0,.08), 0 1px 3px rgba(0,0,0,.02), 0 16px 36px -24px rgba(0,0,0,.14)",
+      "$description": "companion demo viewport",
+      "measuredFrom": [
+        "CLONE_SPEC.md:279"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:279",
+          "contains": "box-shadow:0 0 0 1px rgba(0,0,0,.08)"
+        }
+      ]
+    },
+    "tab-pill": {
+      "$type": "shadow",
+      "$value": "0 1px 4px rgba(0,0,0,.05)",
+      "$description": "companion tab indicator",
+      "measuredFrom": [
+        "CLONE_SPEC.md:280"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:280",
+          "contains": "shadow `0 1px 4px rgba(0,0,0,.05)`"
+        }
+      ]
+    }
+  }
+}

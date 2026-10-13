@@ -1,0 +1,162 @@
+{
+  "id": "scene.privacy-trust",
+  "category": "scene",
+  "description": "Black privacy scene: eyebrow link, 2-line headline that 'decodes' glyph-by-glyph, intro copy, and 4 trust cards with hover-only line-art animation. Dark surface (surface.scene-dark) is a section-local scheme, not a theme.",
+  "evidenceLevel": "measured",
+  "domAnchor": "section#privacy.privacy-scene",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "eyebrow",
+      "eyebrowHref",
+      "headingLine1",
+      "headingLine2",
+      "intro",
+      "cards"
+    ],
+    "properties": {
+      "eyebrow": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 3
+      },
+      "eyebrowHref": {
+        "type": "string",
+        "pattern": "^/privacy$",
+        "x-sample": "/privacy"
+      },
+      "headingLine1": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 2
+      },
+      "headingLine2": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 3
+      },
+      "intro": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 22
+      },
+      "cards": {
+        "type": "array",
+        "minItems": 4,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "art",
+            "title",
+            "body"
+          ],
+          "properties": {
+            "art": {
+              "$ref": "#/definitions/assetRef",
+              "x-allowedRoles": [
+                "art.line-illustration"
+              ]
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 5
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 13
+            }
+          }
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "decode-headline",
+      "entrance-reveal",
+      "card-hover-illustration"
+    ],
+    "reducedMotionFallback": "final-state-static",
+    "timing": {
+      "decode": "55ms interval, char i resolves at frame >= 10 + i, start at >=18% in view (once)",
+      "reveal": "y 20 -> 0, .75s, once, amount .15"
+    },
+    "motionEvidence": {
+      "measuredFrom": [
+        "src/components/Privacy.jsx:10",
+        "src/components/Privacy.jsx:21",
+        "src/styles/original/fc1769f629488e8f.css:1"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/Privacy.jsx:10",
+          "contains": "useInView(ref, { once: true, amount: 0.18 })"
+        },
+        {
+          "cite": "src/components/Privacy.jsx:21",
+          "contains": "}, 55)"
+        },
+        {
+          "cite": "src/styles/original/fc1769f629488e8f.css:1",
+          "contains": "prefers-reduced-motion:reduce){#top .privacy-trust-card svg [class*=privacy-]{animation:none}"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "699",
+      "change": "single-column cards (100px/186px grid each); padding 100px 24px 88px; h2 25.35px",
+      "measuredFrom": [
+        "CLONE_SPEC.md:303"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:303",
+          "contains": "390: single column, each card a 100px/186px grid"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [
+      "link-arrow"
+    ],
+    "components": [
+      "trust-card"
+    ]
+  },
+  "measuredFrom": [
+    "src/components/Privacy.jsx:26",
+    "CLONE_SPEC.md:296",
+    "src/components/privacy/DecodingHeadline.jsx:4"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/Privacy.jsx:26",
+      "contains": "id=\"privacy\""
+    },
+    {
+      "cite": "CLONE_SPEC.md:296",
+      "contains": "## 9. Section: Privacy"
+    },
+    {
+      "cite": "src/components/privacy/DecodingHeadline.jsx:4",
+      "contains": "const GLYPHS = '01A9F3C7#8E2B6D4'"
+    }
+  ],
+  "implementedBy": [
+    "src/components/Privacy.jsx"
+  ]
+}

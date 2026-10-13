@@ -1,0 +1,145 @@
+{
+  "id": "manifesto.ending",
+  "category": "manifesto",
+  "description": "Poster ending: paragraph eight, the time-of-day 'finish' paragraph, H2 'Your time. Yours to spend.', and the signature ('Yours' circled by a drawn path, ', Merlin', mascot mark). The circle draws once when 50% in view.",
+  "evidenceLevel": "measured",
+  "domAnchor": "section.manifesto-poster-ending",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "paragraphEight",
+      "finish",
+      "titleLine1",
+      "titleLine2",
+      "signature"
+    ],
+    "properties": {
+      "paragraphEight": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 34
+      },
+      "finish": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 36
+      },
+      "titleLine1": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 2
+      },
+      "titleLine2": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 3
+      },
+      "signature": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "circledWord",
+          "name",
+          "mark"
+        ],
+        "properties": {
+          "circledWord": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 1
+          },
+          "mark": {
+            "$ref": "#/definitions/assetRef",
+            "x-allowedRoles": [
+              "brand.merlin-mascot-art"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "time-of-day-swap",
+      "signature-circle-draw",
+      "none"
+    ],
+    "reducedMotionFallback": "final-state-static",
+    "timing": {
+      "circleDraw": "1.6s ease-in-out, IntersectionObserver threshold .5, once"
+    },
+    "motionEvidence": {
+      "measuredFrom": [
+        "src/components/manifesto/Signature.jsx:19",
+        "src/styles/original/ae725ea36c48b431.css:1"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/manifesto/Signature.jsx:19",
+          "contains": "{ threshold: 0.5 }"
+        },
+        {
+          "cite": "src/styles/original/ae725ea36c48b431.css:1",
+          "contains": "prefers-reduced-motion:reduce){.manifesto-circled-yours path"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "600",
+      "change": "signature 52px, margin-top 42; mark 112px wide",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:306"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:306",
+          "contains": "Signature 52px, margin-top 42"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [
+      "handwritten-note"
+    ],
+    "components": [
+      "signature-circle"
+    ]
+  },
+  "measuredFrom": [
+    "src/pages/Manifesto.jsx:112",
+    "src/components/manifesto/Signature.jsx:26",
+    "CLONE_SPEC_PAGES_A.md:271"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/pages/Manifesto.jsx:112",
+      "contains": "<section className=\"manifesto-poster-ending\""
+    },
+    {
+      "cite": "src/components/manifesto/Signature.jsx:26",
+      "contains": "manifesto-signature"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_A.md:271",
+      "contains": "section.manifesto-poster-ending"
+    }
+  ],
+  "implementedBy": [
+    "src/pages/Manifesto.jsx"
+  ]
+}

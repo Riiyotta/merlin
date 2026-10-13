@@ -1,0 +1,31 @@
+{
+  "id": "hover-text-roll-link",
+  "kind": "primitive",
+  "description": "Floating-nav link whose text rolls up on hover (data-hover pseudo-element).",
+  "props": {
+    "text": "string",
+    "href": "string"
+  },
+  "variants": [],
+  "domAnchor": "a.hover-text_hoverText__JouUr",
+  "measuredFrom": [
+    "src/components/FloatingNav.jsx:15",
+    "CLONE_SPEC.md:358"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/FloatingNav.jsx:15",
+      "contains": "function HoverText"
+    },
+    {
+      "cite": "CLONE_SPEC.md:358",
+      "contains": ".hover-text_hoverText__JouUr{display:inline-flex"
+    }
+  ],
+  "motion": {
+    "patterns": [
+      "hover-text-roll"
+    ],
+    "reducedMotionFallback": "no-animation"
+  }
+}

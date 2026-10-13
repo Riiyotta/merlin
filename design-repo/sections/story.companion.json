@@ -1,0 +1,262 @@
+{
+  "id": "story.companion",
+  "category": "story",
+  "description": "'And when you’re working somewhere else…' handwritten bridge, 'No need to leave what you’re doing.' headline styled as a text selection (Ask Merlin / Rephrase word popover that cycles 3 headline pairs), intro copy, felt-scene figure, and the tabbed auto-playing Photoshop / Slack / Chrome Companion demo.",
+  "evidenceLevel": "measured",
+  "domAnchor": "section#companion",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "bridgeNote",
+      "label",
+      "headlines",
+      "popover",
+      "introParagraphs",
+      "figure",
+      "tabs"
+    ],
+    "properties": {
+      "bridgeNote": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 6
+      },
+      "label": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 1
+      },
+      "headlines": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 3,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "line1",
+            "line2"
+          ],
+          "properties": {
+            "line1": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 4
+            },
+            "line2": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 4
+            }
+          }
+        }
+      },
+      "popover": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "askLabel",
+          "rephraseLabel"
+        ],
+        "properties": {
+          "askLabel": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 2
+          },
+          "rephraseLabel": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 2
+          }
+        }
+      },
+      "introParagraphs": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 2,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 22
+        }
+      },
+      "figure": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "image",
+          "caption"
+        ],
+        "properties": {
+          "image": {
+            "$ref": "#/definitions/assetRef",
+            "x-allowedRoles": [
+              "illustration.felt-scene"
+            ]
+          },
+          "caption": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 10
+          }
+        }
+      },
+      "tabs": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 3,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "app",
+            "icon",
+            "caption"
+          ],
+          "properties": {
+            "app": {
+              "type": "string",
+              "enum": [
+                "Photoshop",
+                "Slack",
+                "Chrome"
+              ]
+            },
+            "icon": {
+              "$ref": "#/definitions/assetRef",
+              "x-allowedRoles": [
+                "icon.third-party-app"
+              ]
+            },
+            "caption": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 7
+            }
+          }
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "demo-autoplay-timeline",
+      "indicator-spring",
+      "typed-headline-swap",
+      "word-stagger-title",
+      "entrance-reveal"
+    ],
+    "reducedMotionFallback": "still-frame",
+    "timing": {
+      "demoClockMs": {
+        "Photoshop": 22000,
+        "Slack": 17000,
+        "Chrome": 18500
+      },
+      "reducedStillFrameMs": {
+        "Photoshop": 21000,
+        "Slack": 14000,
+        "Chrome": 15000
+      },
+      "indicatorSpring": "stiffness 380 damping 32",
+      "typed": "28ms per character",
+      "playsWhen": ">=15% in view"
+    },
+    "motionEvidence": {
+      "measuredFrom": [
+        "src/components/companion/playback.jsx:19",
+        "src/components/companion/PhotoshopDemo.jsx:1",
+        "src/components/companion/SlackDemo.jsx:1",
+        "src/components/companion/ChromeDemo.jsx:1"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/companion/playback.jsx:19",
+          "contains": "const inView = useInView(viewport, { amount: 0.15 })"
+        },
+        {
+          "cite": "src/components/companion/PhotoshopDemo.jsx:1",
+          "contains": "22s timeline, 21s reduced-motion still frame"
+        },
+        {
+          "cite": "src/components/companion/SlackDemo.jsx:1",
+          "contains": "17s timeline, 14s reduced-motion still frame"
+        },
+        {
+          "cite": "src/components/companion/ChromeDemo.jsx:1",
+          "contains": "18.5s timeline, 15s reduced-motion still frame"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "699",
+      "change": "grid becomes block, padding 80px 16px; showcase padding 16px radius 20px; 'See the details' toggle shown; title 25.35px",
+      "measuredFrom": [
+        "CLONE_SPEC.md:277"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:277",
+          "contains": "(390: padding 16px, radius 20px)"
+        }
+      ]
+    },
+    {
+      "query": "max-width",
+      "breakpoint": "699",
+      "change": "tab bar horizontal scroll with detail mode focus offsets Photoshop 430, Slack 265, Chrome 380",
+      "measuredFrom": [
+        "CLONE_SPEC.md:292"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:292",
+          "contains": "**Detail mode (mobile):**"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [
+      "section-label",
+      "handwritten-note",
+      "inline-identity",
+      "icon"
+    ],
+    "components": [
+      "companion-showcase"
+    ]
+  },
+  "measuredFrom": [
+    "src/components/Companion.jsx:40",
+    "CLONE_SPEC.md:263",
+    "src/components/companion/CompanionShowcase.jsx:15"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/Companion.jsx:40",
+      "contains": "id=\"companion\""
+    },
+    {
+      "cite": "CLONE_SPEC.md:263",
+      "contains": "## 8. Section: Companion"
+    },
+    {
+      "cite": "src/components/companion/CompanionShowcase.jsx:15",
+      "contains": "name: 'Photoshop'"
+    }
+  ],
+  "implementedBy": [
+    "src/components/Companion.jsx"
+  ]
+}

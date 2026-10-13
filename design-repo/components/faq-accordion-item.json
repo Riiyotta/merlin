@@ -1,0 +1,31 @@
+{
+  "id": "faq-accordion-item",
+  "kind": "component",
+  "description": "Single-open accordion item: h3 > button with chevron, hidden answer region.",
+  "props": {
+    "question": "string",
+    "answer": "string"
+  },
+  "variants": [],
+  "domAnchor": "div.merlin-faq-item",
+  "measuredFrom": [
+    "src/components/Faq.jsx:23",
+    "CLONE_SPEC.md:324"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/Faq.jsx:23",
+      "contains": "className=\"merlin-faq-item\""
+    },
+    {
+      "cite": "CLONE_SPEC.md:324",
+      "contains": "Single-open accordion"
+    }
+  ],
+  "motion": {
+    "patterns": [
+      "accordion-chevron"
+    ],
+    "reducedMotionFallback": "no-animation"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "id": "blog.article-end",
+  "category": "blog",
+  "description": "Article end rule with a thank-you line and a 'Back to all stories' link.",
+  "evidenceLevel": "measured",
+  "domAnchor": "footer.blog_articleEnd__zI6hK",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "thanks",
+      "backLabel"
+    ],
+    "properties": {
+      "thanks": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 8
+      },
+      "backLabel": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 4
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-transition"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {},
+    "motionEvidence": {
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:229"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:229",
+          "contains": "Hover: back links → #12889a"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "760",
+      "change": "wraps; back link on its own row",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:224"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:224",
+          "contains": "wraps; back link on its own row"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [],
+    "components": []
+  },
+  "measuredFrom": [
+    "src/pages/BlogPost.jsx:31"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/pages/BlogPost.jsx:31",
+      "contains": "<footer className=\"blog_articleEnd__zI6hK\">"
+    }
+  ],
+  "implementedBy": [
+    "src/pages/BlogPost.jsx"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "notification-card",
+  "kind": "component",
+  "description": "Glassy notification button: 40px merlin icon, title, description, chevron, red unread counter; older cards stack behind at 12px offsets.",
+  "props": {
+    "title": "string",
+    "description": "string",
+    "kind": "meeting-brief|launch-deck|email-draft"
+  },
+  "variants": [],
+  "domAnchor": "button.hn-card",
+  "measuredFrom": [
+    "src/components/hero/HeroNotifications.jsx:13",
+    "CLONE_SPEC.md:130"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/hero/HeroNotifications.jsx:13",
+      "contains": "const NOTIFICATIONS = ["
+    },
+    {
+      "cite": "CLONE_SPEC.md:130",
+      "contains": "`button.hn-card` (notification)"
+    }
+  ],
+  "motion": {
+    "patterns": [
+      "notification-stack-flip"
+    ],
+    "reducedMotionFallback": "instant-no-spring"
+  },
+  "assetRoles": [
+    "brand.merlin-app-icon",
+    "screenshot.product-output"
+  ]
+}

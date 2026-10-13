@@ -1,0 +1,285 @@
+{
+  "_note": "Radius scale. 7px/9px/11px/13px appear in scene mock-ups only and are not tokenized.",
+  "radius": {
+    "2": {
+      "$type": "dimension",
+      "$value": "2px",
+      "histogramCount": 9,
+      "measuredFrom": [
+        "CLONE_SPEC.md:271"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:271",
+          "contains": "radius 2px"
+        }
+      ]
+    },
+    "3": {
+      "$type": "dimension",
+      "$value": "3px",
+      "histogramCount": 15,
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:211"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:211",
+          "contains": "radius 3px"
+        }
+      ]
+    },
+    "4": {
+      "$type": "dimension",
+      "$value": "4px",
+      "histogramCount": 21,
+      "measuredFrom": [
+        "CLONE_SPEC.md:211"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:211",
+          "contains": "radius 4px"
+        }
+      ]
+    },
+    "5": {
+      "$type": "dimension",
+      "$value": "5px",
+      "histogramCount": 21,
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:110"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:110",
+          "contains": "radius 5px"
+        }
+      ]
+    },
+    "6": {
+      "$type": "dimension",
+      "$value": "6px",
+      "histogramCount": 45,
+      "measuredFrom": [
+        "CLONE_SPEC.md:179"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:179",
+          "contains": "radius 6px"
+        }
+      ]
+    },
+    "8": {
+      "$type": "dimension",
+      "$value": "8px",
+      "histogramCount": 28,
+      "measuredFrom": [
+        "CLONE_SPEC.md:242"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:242",
+          "contains": "radius 8px"
+        }
+      ]
+    },
+    "10": {
+      "$type": "dimension",
+      "$value": "10px",
+      "histogramCount": 11,
+      "measuredFrom": [
+        "CLONE_SPEC.md:358"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:358",
+          "contains": "radius:10px"
+        }
+      ]
+    },
+    "12": {
+      "$type": "dimension",
+      "$value": "12px",
+      "histogramCount": 23,
+      "measuredFrom": [
+        "CLONE_SPEC.md:212"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:212",
+          "contains": "radius:12px"
+        }
+      ]
+    },
+    "14": {
+      "$type": "dimension",
+      "$value": "14px",
+      "histogramCount": 5,
+      "measuredFrom": [
+        "CLONE_SPEC.md:189"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:189",
+          "contains": "radius:14px"
+        }
+      ]
+    },
+    "16": {
+      "$type": "dimension",
+      "$value": "16px",
+      "histogramCount": 7,
+      "measuredFrom": [
+        "CLONE_SPEC.md:245"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:245",
+          "contains": "radius 16px"
+        }
+      ]
+    },
+    "18": {
+      "$type": "dimension",
+      "$value": "18px",
+      "histogramCount": 6,
+      "measuredFrom": [
+        "CLONE_SPEC.md:242"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:242",
+          "contains": "radius 18px"
+        }
+      ]
+    },
+    "20": {
+      "$type": "dimension",
+      "$value": "20px",
+      "histogramCount": 21,
+      "measuredFrom": [
+        "CLONE_SPEC.md:168"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:168",
+          "contains": "radius:20px"
+        }
+      ]
+    },
+    "22": {
+      "$type": "dimension",
+      "$value": "22px",
+      "histogramCount": 6,
+      "measuredFrom": [
+        "CLONE_SPEC.md:120"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:120",
+          "contains": "radius:22px"
+        }
+      ]
+    },
+    "24": {
+      "$type": "dimension",
+      "$value": "24px",
+      "histogramCount": 9,
+      "measuredFrom": [
+        "CLONE_SPEC.md:246"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:246",
+          "contains": "radius:24px"
+        }
+      ]
+    },
+    "26": {
+      "$type": "dimension",
+      "$value": "26px",
+      "histogramCount": 3,
+      "measuredFrom": [
+        "CLONE_SPEC.md:130"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:130",
+          "contains": "radius:26px"
+        }
+      ]
+    },
+    "28": {
+      "$type": "dimension",
+      "$value": "28px",
+      "histogramCount": 3,
+      "measuredFrom": [
+        "CLONE_SPEC.md:277"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:277",
+          "contains": "radius:28px"
+        }
+      ]
+    },
+    "32": {
+      "$type": "dimension",
+      "$value": "32px",
+      "histogramCount": 1,
+      "measuredFrom": [
+        "CLONE_SPEC.md:210"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:210",
+          "contains": "radius 32px"
+        }
+      ]
+    },
+    "36": {
+      "$type": "dimension",
+      "$value": "36px",
+      "histogramCount": 1,
+      "measuredFrom": [
+        "CLONE_SPEC.md:126"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:126",
+          "contains": "radius:36px"
+        }
+      ]
+    },
+    "pill": {
+      "$type": "dimension",
+      "$value": "999px",
+      "histogramCount": 7,
+      "measuredFrom": [
+        "CLONE_SPEC.md:133"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:133",
+          "contains": "radius:999px"
+        }
+      ]
+    },
+    "circle": {
+      "$type": "dimension",
+      "$value": "50%",
+      "histogramCount": 64,
+      "measuredFrom": [
+        "CLONE_SPEC.md:111"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:111",
+          "contains": "radius 50%"
+        }
+      ]
+    }
+  }
+}

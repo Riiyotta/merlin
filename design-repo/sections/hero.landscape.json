@@ -1,0 +1,146 @@
+{
+  "id": "hero.landscape",
+  "category": "hero",
+  "description": "Rounded photo landscape under the hero with a parallax photo and the notification stack (3 FLIP-animated notification cards; sound toggle; replay). Clicking a card opens a detail sheet (meeting brief / launch-deck slider / email draft) - those detail views are fixed scenes, not generator-editable.",
+  "evidenceLevel": "measured",
+  "domAnchor": "section.hero-life.hero-landscape",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "sectionLabel",
+      "image",
+      "notifications"
+    ],
+    "properties": {
+      "sectionLabel": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 4
+      },
+      "image": {
+        "$ref": "#/definitions/assetRef",
+        "x-allowedRoles": [
+          "illustration.felt-scene"
+        ]
+      },
+      "notifications": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 3,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "title",
+            "description"
+          ],
+          "properties": {
+            "kind": {
+              "type": "string",
+              "enum": [
+                "meeting-brief",
+                "launch-deck",
+                "email-draft"
+              ]
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 7
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 8
+            }
+          }
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "scroll-parallax-photo",
+      "notification-stack-flip"
+    ],
+    "reducedMotionFallback": "instant-no-spring",
+    "timing": {
+      "parallax": "y -3% -> 3%, scale 1.07",
+      "sequence": "start >=60% in view; first card 180ms, then every 430ms; FLIP spring stiffness 620, 480ms"
+    },
+    "motionEvidence": {
+      "measuredFrom": [
+        "src/components/Hero.jsx:18",
+        "src/components/hero/HeroNotifications.jsx:25",
+        "src/lib/hero-flip.js:166"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/Hero.jsx:18",
+          "contains": "const y = useTransform(scrollYProgress, [0, 1], ['-3%', '3%'])"
+        },
+        {
+          "cite": "src/components/hero/HeroNotifications.jsx:25",
+          "contains": "useInView(sceneRef, { amount: 0.6 })"
+        },
+        {
+          "cite": "src/lib/hero-flip.js:166",
+          "contains": "if (reduced || signal.aborted) return"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "767",
+      "change": "height fixed 800px, radius 24px, object-position 24%",
+      "measuredFrom": [
+        "CLONE_SPEC.md:126"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:126",
+          "contains": "800 fixed ≤767"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [
+      "icon"
+    ],
+    "components": [
+      "notification-card"
+    ]
+  },
+  "measuredFrom": [
+    "src/components/Hero.jsx:36",
+    "src/components/hero/HeroNotifications.jsx:13",
+    "CLONE_SPEC.md:125"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/Hero.jsx:36",
+      "contains": "className=\"hero-life hero-landscape\""
+    },
+    {
+      "cite": "src/components/hero/HeroNotifications.jsx:13",
+      "contains": "const NOTIFICATIONS = ["
+    },
+    {
+      "cite": "CLONE_SPEC.md:125",
+      "contains": "### Hero landscape"
+    }
+  ],
+  "implementedBy": [
+    "src/components/Hero.jsx"
+  ]
+}

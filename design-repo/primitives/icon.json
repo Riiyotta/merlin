@@ -1,0 +1,29 @@
+{
+  "id": "icon",
+  "kind": "primitive",
+  "description": "Inline SVG glyph (Feather / Ionicons / simple-icons ids keyed in reference/icons.json). Generic glyphs may be generated; brand glyphs may not.",
+  "props": {
+    "name": "string",
+    "size": "1em"
+  },
+  "variants": [],
+  "domAnchor": "svg",
+  "measuredFrom": [
+    "src/components/hero/icons.jsx:26",
+    "src/lib/companion-icons.js:11"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/hero/icons.jsx:26",
+      "contains": "FiArrowRight"
+    },
+    {
+      "cite": "src/lib/companion-icons.js:11",
+      "contains": "export const FI"
+    }
+  ],
+  "assetRoles": [
+    "icon.generic-ui",
+    "logo.third-party-wordmark"
+  ]
+}

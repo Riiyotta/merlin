@@ -1,0 +1,114 @@
+{
+  "id": "manifesto.action",
+  "category": "manifesto",
+  "description": "'And there it is. A little room.' with paragraph six (one 'browser' mention), the time-of-day 'return' paragraph (a fixed 6-word sentence + 3 artifact mentions: deck, spreadsheet, website) and a handwritten note.",
+  "evidenceLevel": "measured",
+  "domAnchor": "section.manifesto-poster-action",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "titleLine1",
+      "titleLine2",
+      "paragraphSix",
+      "returnSentence",
+      "paragraphSeven",
+      "note"
+    ],
+    "properties": {
+      "titleLine1": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 4
+      },
+      "titleLine2": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 3
+      },
+      "paragraphSix": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 34
+      },
+      "returnSentence": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 6
+      },
+      "paragraphSeven": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 31
+      },
+      "note": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 4
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "time-of-day-swap",
+      "none"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {
+      "returnToIdea": "same sentence in every time-of-day set"
+    },
+    "motionEvidence": {
+      "measuredFrom": [
+        "src/components/manifesto/copy.js:14"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/manifesto/copy.js:14",
+          "contains": "const RETURN = 'Your own plan gets a turn.'"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "1023",
+      "change": "padding 90px 0 70px",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:305"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:305",
+          "contains": "understanding/action padding 90 0 70"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [],
+    "components": []
+  },
+  "measuredFrom": [
+    "src/pages/Manifesto.jsx:91",
+    "CLONE_SPEC_PAGES_A.md:263"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/pages/Manifesto.jsx:91",
+      "contains": "aria-labelledby=\"manifesto-action-title\""
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_A.md:263",
+      "contains": "section.manifesto-poster-action"
+    }
+  ],
+  "implementedBy": [
+    "src/pages/Manifesto.jsx"
+  ]
+}

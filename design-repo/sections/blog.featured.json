@@ -1,0 +1,142 @@
+{
+  "id": "blog.featured",
+  "category": "blog",
+  "description": "The 'Latest story' card: 4:3 image (scales 1.025 on hover), eyebrow + pill, serif title, meta, 'Read the story' link. The featured post has NO cover; the index uses the static felt-scene hero-beach-reading image instead. The featured post is NOT repeated in the story list.",
+  "evidenceLevel": "measured",
+  "domAnchor": "a.blog_featured__dQvxo",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "slug",
+      "category",
+      "pillLabel",
+      "title",
+      "author",
+      "date",
+      "readLabel",
+      "image"
+    ],
+    "properties": {
+      "slug": {
+        "type": "string",
+        "pattern": "^[a-z0-9-]+$",
+        "x-sample": "how-to-write-a-formal-email"
+      },
+      "category": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 1
+      },
+      "pillLabel": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 2
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 17
+      },
+      "author": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 2
+      },
+      "date": {
+        "type": "string",
+        "pattern": "^[A-Z][a-z]{2,8} [0-9]{1,2}, [0-9]{4}$",
+        "x-sample": "May 13, 2025"
+      },
+      "readLabel": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 3
+      },
+      "image": {
+        "$ref": "#/definitions/assetRef",
+        "x-allowedRoles": [
+          "illustration.felt-scene"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-transition"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {
+      "imageScale": "1.025 .45s cubic-bezier(.23,1,.32,1)",
+      "arrow": "translate(2px,-2px) .18s"
+    },
+    "motionEvidence": {
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:146",
+        "src/styles/original/ea3e27f6a69b5df4.css:1"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:146",
+          "contains": "Featured card hover (`a.blog_featured:hover`)"
+        },
+        {
+          "cite": "src/styles/original/ea3e27f6a69b5df4.css:1",
+          "contains": "prefers-reduced-motion:reduce){#top.blog_page__bLGfe .blog_featuredImage__DhF7y img"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "760",
+      "change": "single column, gap 26px; image 4/3 radius 16px; title 32px/37.44",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:136"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:136",
+          "contains": "single column, gap 26px"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [
+      "badge",
+      "link-arrow"
+    ],
+    "components": [
+      "featured-story"
+    ]
+  },
+  "measuredFrom": [
+    "src/pages/Blog.jsx:21",
+    "src/pages/Blog.jsx:37",
+    "CLONE_SPEC_PAGES_B.md:100"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/pages/Blog.jsx:21",
+      "contains": "const [featured, ...stories] = data.posts"
+    },
+    {
+      "cite": "src/pages/Blog.jsx:37",
+      "contains": "className=\"blog_featured__dQvxo\""
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_B.md:100",
+      "contains": "The featured image is the static `hero-beach-reading.webp`"
+    }
+  ],
+  "implementedBy": [
+    "src/pages/Blog.jsx"
+  ]
+}

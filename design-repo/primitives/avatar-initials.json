@@ -1,0 +1,24 @@
+{
+  "id": "avatar-initials",
+  "kind": "primitive",
+  "description": "24-34px gradient circle with two initials (SH).",
+  "props": {
+    "initials": "2 capital letters"
+  },
+  "variants": [],
+  "domAnchor": "span.context-inline-initials",
+  "measuredFrom": [
+    "src/components/Routines.jsx:98",
+    "CLONE_SPEC.md:164"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/Routines.jsx:98",
+      "contains": "className=\"context-inline-initials\""
+    },
+    {
+      "cite": "CLONE_SPEC.md:164",
+      "contains": "`span.context-inline-initials` \"SH\""
+    }
+  ]
+}

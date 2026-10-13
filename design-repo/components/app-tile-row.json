@@ -1,0 +1,33 @@
+{
+  "id": "app-tile-row",
+  "kind": "component",
+  "description": "Row of 6 rounded app tiles (Gmail, Calendar, Slack, Notion, Granola, Linear) in the context heading.",
+  "props": {
+    "tiles": "array of {name, icon}"
+  },
+  "variants": [],
+  "domAnchor": "span.context-apps",
+  "measuredFrom": [
+    "src/components/Routines.jsx:7",
+    "CLONE_SPEC.md:160"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/Routines.jsx:7",
+      "contains": "const APPS = ["
+    },
+    {
+      "cite": "CLONE_SPEC.md:160",
+      "contains": "Each `span.context-app-tile > span`"
+    }
+  ],
+  "motion": {
+    "patterns": [
+      "hover-transition"
+    ],
+    "reducedMotionFallback": "no-animation"
+  },
+  "assetRoles": [
+    "icon.third-party-app"
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "id": "install.steps",
+  "category": "install",
+  "description": "Numbered ordered list of 3 install steps: step number + title, a macOS screenshot in a bordered art box, and a one-line instruction.",
+  "evidenceLevel": "measured",
+  "domAnchor": "ol.install-steps",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "ariaLabel",
+      "steps"
+    ],
+    "properties": {
+      "ariaLabel": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 5
+      },
+      "steps": {
+        "type": "array",
+        "minItems": 3,
+        "maxItems": 3,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "number",
+            "title",
+            "body",
+            "image"
+          ],
+          "properties": {
+            "number": {
+              "type": "string",
+              "pattern": "^0[1-9]$",
+              "x-sample": "01"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 3
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 12
+            },
+            "image": {
+              "$ref": "#/definitions/assetRef",
+              "x-allowedRoles": [
+                "screenshot.os-install-step"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {},
+    "motionEvidence": {
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:228"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:228",
+          "contains": "Nothing animates on load or scroll."
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "620",
+      "change": "single column, gap 40px, max-width 360",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:217"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:217",
+          "contains": "Steps single column, gap 40"
+        }
+      ]
+    },
+    {
+      "query": "max-width",
+      "breakpoint": "900",
+      "change": "page padding 0 5vw 64px, steps gap 18, h2 14px",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:216"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:216",
+          "contains": "≤900: page padding 0 5vw 64px"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [],
+    "components": []
+  },
+  "measuredFrom": [
+    "src/pages/Download.jsx:67",
+    "src/pages/Download.jsx:6"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/pages/Download.jsx:67",
+      "contains": "<ol className=\"install-steps\" aria-label=\"Install Merlin in three steps\">"
+    },
+    {
+      "cite": "src/pages/Download.jsx:6",
+      "contains": "const STEPS = ["
+    }
+  ],
+  "implementedBy": [
+    "src/pages/Download.jsx"
+  ]
+}

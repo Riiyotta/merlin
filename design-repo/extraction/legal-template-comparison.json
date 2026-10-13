@@ -1,0 +1,39 @@
+{
+ "_note": "DERIVED by extraction/derive_template_comparison.py from the hydrated live DOM captures; no copy text is stored.",
+ "mainChildrenPrivacy": [
+  "a.skip-link",
+  "div.site-container",
+  "div.legal-document",
+  "footer.closing-footer"
+ ],
+ "mainChildrenTerms": [
+  "a.skip-link",
+  "div.site-container",
+  "div.legal-document",
+  "footer.closing-footer"
+ ],
+ "sameTopLevelSequence": true,
+ "pairsOnlyInPrivacy": [
+  "p.legal-intro"
+ ],
+ "pairsOnlyInTerms": [
+  "h3",
+  "li",
+  "ul"
+ ],
+ "sharedPairCount": 45,
+ "countsPrivacy": {
+  "h2": 9,
+  "p.legal-date": 1,
+  "p.legal-intro": 1,
+  "section.legal-section": 8
+ },
+ "countsTerms": {
+  "h2": 15,
+  "h3": 19,
+  "p.legal-date": 1,
+  "section.legal-section": 14,
+  "ul": 2
+ },
+ "verdict": "SAME_TEMPLATE"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "text-highlight",
+  "kind": "primitive",
+  "description": "Colored text highlight span inside an h3 (green 'Merlin handles the notes.', orange 'Merlin brings them to life.').",
+  "props": {
+    "tone": "green|orange",
+    "text": "string"
+  },
+  "variants": [
+    "green",
+    "orange"
+  ],
+  "domAnchor": "span.handoff-title-highlight",
+  "measuredFrom": [
+    "src/components/Meetings.jsx:116",
+    "src/components/Meetings.jsx:130"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/Meetings.jsx:116",
+      "contains": "handoff-title-highlight handoff-title-highlight-green"
+    },
+    {
+      "cite": "src/components/Meetings.jsx:130",
+      "contains": "handoff-title-highlight handoff-title-highlight-orange"
+    }
+  ]
+}

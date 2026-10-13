@@ -1,0 +1,149 @@
+{
+  "id": "pricing.included",
+  "category": "pricing",
+  "description": "'All the places your day takes you.' intro + 6 feature cards (section-label icon, title, body) in a 2-column grid.",
+  "evidenceLevel": "measured",
+  "domAnchor": "section.pricing-included",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "headingLine1",
+      "headingLine2",
+      "intro",
+      "features"
+    ],
+    "properties": {
+      "headingLine1": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 3
+      },
+      "headingLine2": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 4
+      },
+      "intro": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 15
+      },
+      "features": {
+        "type": "array",
+        "minItems": 6,
+        "maxItems": 6,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "icon",
+            "title",
+            "body"
+          ],
+          "properties": {
+            "icon": {
+              "type": "string",
+              "enum": [
+                "context",
+                "browser",
+                "companion",
+                "meeting",
+                "project",
+                "routine"
+              ]
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 6
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 17
+            }
+          }
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {},
+    "motionEvidence": {
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:155"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:155",
+          "contains": "No entrance or scroll animations on pricing-specific content"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "700",
+      "change": "one column, gap 40px, padding 76px 0; feature grid one column gap 36px",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:152"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:152",
+          "contains": "`.pricing-included` is one column, gap 40"
+        }
+      ]
+    },
+    {
+      "query": "max-width",
+      "breakpoint": "1000",
+      "change": "included gap 6%, feature gap 32/22",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:151"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:151",
+          "contains": "included gap 6%, feature gap 32/22"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [
+      "icon"
+    ],
+    "components": [
+      "feature-card"
+    ]
+  },
+  "measuredFrom": [
+    "src/components/pricing/PricingIncluded.jsx:7",
+    "CLONE_SPEC_PAGES_A.md:82"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/pricing/PricingIncluded.jsx:7",
+      "contains": "<section className=\"pricing-included\" aria-labelledby=\"included-title\">"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_A.md:82",
+      "contains": "section.pricing-included[aria-labelledby=included-title]"
+    }
+  ],
+  "implementedBy": [
+    "src/components/pricing/PricingIncluded.jsx"
+  ]
+}

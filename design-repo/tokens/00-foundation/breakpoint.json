@@ -1,0 +1,405 @@
+{
+  "_note": "Breakpoints: every distinct min-/max-width px value found in the site CSS (histogramCount = occurrences, recomputed by verify_all.py). The most used: max-width 699px (20), 700px (15), min-width 1000px (12), max-width 767px (11), 1023px (10). Route-specific values: 760 blog, 640/900 legal, 620/900/1500 install, 600/1023/1600 manifesto, 700/1000 pricing.",
+  "breakpoint": {
+    "380": {
+      "$type": "dimension",
+      "$value": "380px",
+      "histogramCount": 2,
+      "measuredFrom": [
+        "CLONE_SPEC.md:59"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:59",
+          "contains": "380"
+        }
+      ]
+    },
+    "399": {
+      "$type": "dimension",
+      "$value": "399px",
+      "histogramCount": 1,
+      "measuredFrom": [
+        "CLONE_SPEC.md:59"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:59",
+          "contains": "399"
+        }
+      ]
+    },
+    "420": {
+      "$type": "dimension",
+      "$value": "420px",
+      "histogramCount": 1,
+      "measuredFrom": [
+        "CLONE_SPEC.md:59"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:59",
+          "contains": "420"
+        }
+      ]
+    },
+    "430": {
+      "$type": "dimension",
+      "$value": "430px",
+      "histogramCount": 1,
+      "measuredFrom": [
+        "CLONE_SPEC.md:59"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:59",
+          "contains": "430"
+        }
+      ]
+    },
+    "540": {
+      "$type": "dimension",
+      "$value": "540px",
+      "histogramCount": 2,
+      "measuredFrom": [
+        "CLONE_SPEC.md:59"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:59",
+          "contains": "540"
+        }
+      ]
+    },
+    "560": {
+      "$type": "dimension",
+      "$value": "560px",
+      "histogramCount": 1,
+      "measuredFrom": [
+        "CLONE_SPEC.md:59"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:59",
+          "contains": "560"
+        }
+      ]
+    },
+    "600": {
+      "$type": "dimension",
+      "$value": "600px",
+      "histogramCount": 8,
+      "measuredFrom": [
+        "CLONE_SPEC.md:59"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:59",
+          "contains": "600"
+        }
+      ]
+    },
+    "601": {
+      "$type": "dimension",
+      "$value": "601px",
+      "histogramCount": 1,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    },
+    "620": {
+      "$type": "dimension",
+      "$value": "620px",
+      "histogramCount": 1,
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:217"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:217",
+          "contains": "≤620"
+        }
+      ]
+    },
+    "640": {
+      "$type": "dimension",
+      "$value": "640px",
+      "histogramCount": 2,
+      "measuredFrom": [
+        "CLONE_SPEC.md:59"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:59",
+          "contains": "640"
+        }
+      ]
+    },
+    "699": {
+      "$type": "dimension",
+      "$value": "699px",
+      "histogramCount": 20,
+      "measuredFrom": [
+        "CLONE_SPEC.md:59"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:59",
+          "contains": "699"
+        }
+      ]
+    },
+    "700": {
+      "$type": "dimension",
+      "$value": "700px",
+      "histogramCount": 18,
+      "measuredFrom": [
+        "CLONE_SPEC.md:59"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:59",
+          "contains": "700"
+        }
+      ]
+    },
+    "701": {
+      "$type": "dimension",
+      "$value": "701px",
+      "histogramCount": 1,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    },
+    "760": {
+      "$type": "dimension",
+      "$value": "760px",
+      "histogramCount": 4,
+      "measuredFrom": [
+        "CLONE_SPEC.md:59"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:59",
+          "contains": "760"
+        }
+      ]
+    },
+    "761": {
+      "$type": "dimension",
+      "$value": "761px",
+      "histogramCount": 1,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    },
+    "767": {
+      "$type": "dimension",
+      "$value": "767px",
+      "histogramCount": 11,
+      "measuredFrom": [
+        "CLONE_SPEC.md:59"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:59",
+          "contains": "767"
+        }
+      ]
+    },
+    "768": {
+      "$type": "dimension",
+      "$value": "768px",
+      "histogramCount": 8,
+      "measuredFrom": [
+        "CLONE_SPEC.md:59"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:59",
+          "contains": "768"
+        }
+      ]
+    },
+    "800": {
+      "$type": "dimension",
+      "$value": "800px",
+      "histogramCount": 1,
+      "measuredFrom": [
+        "CLONE_SPEC.md:59"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:59",
+          "contains": "800"
+        }
+      ]
+    },
+    "900": {
+      "$type": "dimension",
+      "$value": "900px",
+      "histogramCount": 7,
+      "measuredFrom": [
+        "CLONE_SPEC.md:59"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:59",
+          "contains": "900"
+        }
+      ]
+    },
+    "999": {
+      "$type": "dimension",
+      "$value": "999px",
+      "histogramCount": 8,
+      "measuredFrom": [
+        "CLONE_SPEC.md:59"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:59",
+          "contains": "999"
+        }
+      ]
+    },
+    "1000": {
+      "$type": "dimension",
+      "$value": "1000px",
+      "histogramCount": 20,
+      "measuredFrom": [
+        "CLONE_SPEC.md:59"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:59",
+          "contains": "1000"
+        }
+      ]
+    },
+    "1023": {
+      "$type": "dimension",
+      "$value": "1023px",
+      "histogramCount": 10,
+      "measuredFrom": [
+        "CLONE_SPEC.md:59"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:59",
+          "contains": "1023"
+        }
+      ]
+    },
+    "1050": {
+      "$type": "dimension",
+      "$value": "1050px",
+      "histogramCount": 3,
+      "measuredFrom": [
+        "CLONE_SPEC.md:59"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:59",
+          "contains": "1050"
+        }
+      ]
+    },
+    "1100": {
+      "$type": "dimension",
+      "$value": "1100px",
+      "histogramCount": 3,
+      "measuredFrom": [
+        "CLONE_SPEC.md:59"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:59",
+          "contains": "1100"
+        }
+      ]
+    },
+    "1400": {
+      "$type": "dimension",
+      "$value": "1400px",
+      "histogramCount": 2,
+      "measuredFrom": [
+        "CLONE_SPEC.md:59"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:59",
+          "contains": "1400"
+        }
+      ]
+    },
+    "1450": {
+      "$type": "dimension",
+      "$value": "1450px",
+      "histogramCount": 1,
+      "measuredFrom": [
+        "CLONE_SPEC.md:59"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:59",
+          "contains": "1450"
+        }
+      ]
+    },
+    "1500": {
+      "$type": "dimension",
+      "$value": "1500px",
+      "histogramCount": 1,
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:214"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:214",
+          "contains": "≥1500"
+        }
+      ]
+    },
+    "1600": {
+      "$type": "dimension",
+      "$value": "1600px",
+      "histogramCount": 4,
+      "measuredFrom": [
+        "CLONE_SPEC.md:59"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:59",
+          "contains": "1600"
+        }
+      ]
+    },
+    "1700": {
+      "$type": "dimension",
+      "$value": "1700px",
+      "histogramCount": 2,
+      "measuredFrom": [
+        "CLONE_SPEC.md:59"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:59",
+          "contains": "1700"
+        }
+      ]
+    },
+    "1800": {
+      "$type": "dimension",
+      "$value": "1800px",
+      "histogramCount": 1,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    }
+  }
+}

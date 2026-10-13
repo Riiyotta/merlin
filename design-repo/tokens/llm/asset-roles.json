@@ -1,0 +1,708 @@
+{
+  "_note": "Closed assetRole registry built from a grep of real <img>/asset usage in src/**/*.jsx. NOT FOR PUBLIC REDISTRIBUTION: the source is a real company's site; the logos, felt-character art, product screenshots and photographs belong to Merlin or third parties.",
+  "version": "1.0.0",
+  "generationPolicies": {
+    "must-reuse-exact": "Use only a registered exact file (assetRef reuse:<id>) or the neutral placeholder. Never regenerate, redraw, recolour or approximate it.",
+    "must-not-fabricate": "Real third-party / real-person / proprietary-capture content. Use a registered exact file only for an internal, licensed reproduction, otherwise use the neutral placeholder. Never generate a logo, face, screenshot, photograph or recording that imitates it.",
+    "may-generate-new": "Generic or decorative; a generator may create a new original asset (assetRef generate:<short brief>) or reuse a registered one."
+  },
+  "pinnedPolicies": {
+    "logo.third-party-wordmark": "must-not-fabricate",
+    "icon.third-party-app": "must-not-fabricate",
+    "brand.merlin-app-icon": "must-reuse-exact",
+    "brand.merlin-mascot-art": "must-reuse-exact",
+    "illustration.felt-scene": "must-reuse-exact",
+    "screenshot.os-install-step": "must-not-fabricate",
+    "screenshot.product-output": "must-not-fabricate",
+    "photo.stock-cover": "must-not-fabricate",
+    "photo.person-portrait": "must-not-fabricate",
+    "photo.mock-product": "must-not-fabricate",
+    "media.audio-sample": "must-not-fabricate",
+    "art.footer-ascii": "must-reuse-exact",
+    "icon.generic-ui": "may-generate-new",
+    "art.line-illustration": "may-generate-new"
+  },
+  "pinnedPoliciesNote": "Load-bearing: verify_all.py and the adversarial suite pin each role to EXACTLY this policy (membership in the 3-value enum is necessary but not sufficient; e.g. flipping logo.third-party-wordmark to may-generate-new is still a valid enum value and must fail).",
+  "refKinds": {
+    "reuse": "reuse:<assetId> - id must exist in `assets` and its registered role must equal the declared assetRole",
+    "generate": "generate:<brief> - allowed only for may-generate-new roles",
+    "placeholder": "placeholder:neutral - always allowed; renders a neutral empty box/label, the safe choice for must-not-fabricate roles"
+  },
+  "hardBans": [
+    "Do not reproduce, redraw, trace or approximate any real third-party logo (Notion, Salesforce, Harvard, HubSpot, McKinsey, Qatar Airways, DoorDash, Instacart, Ashby, Google, Slack, Adobe, Zoom, Apple).",
+    "Do not reproduce the Merlin logo, dock icon, face mark or felt mascot art, and do not generate look-alike felt-character scenes.",
+    "Do not fabricate photographs, names or likenesses of real people (blog author, stock-photo subjects).",
+    "Do not fabricate product screenshots, macOS UI captures or recordings.",
+    "This design-repo is not for public redistribution. Do not publish the repository or the zip."
+  ],
+  "roles": [
+    {
+      "id": "logo.third-party-wordmark",
+      "generationPolicy": "must-not-fabricate",
+      "description": "Real third-party company/brand logos and wordmarks: the companies logo row (Notion, Salesforce, Harvard, HubSpot, McKinsey) and the brand logos inside the browser-task mock sites (Qatar Airways, Instacart, Ashby).",
+      "guidance": "Real third-party / real-person / proprietary-capture content. Use a registered exact file only for an internal, licensed reproduction, otherwise use the neutral placeholder. Never generate a logo, face, screenshot, photograph or recording that imitates it.",
+      "measuredFrom": [
+        "src/components/Companies.jsx:8",
+        "src/components/Companies.jsx:12",
+        "src/components/Browser.jsx:6",
+        "src/components/browser/MockSites.jsx:19"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/Companies.jsx:8",
+          "contains": "aria-label=\"Salesforce\""
+        },
+        {
+          "cite": "src/components/Companies.jsx:12",
+          "contains": "/assets/harvard.svg"
+        },
+        {
+          "cite": "src/components/Browser.jsx:6",
+          "contains": "SiQYV"
+        },
+        {
+          "cite": "src/components/browser/MockSites.jsx:19",
+          "contains": "/assets/qatar-logo.webp"
+        }
+      ]
+    },
+    {
+      "id": "icon.third-party-app",
+      "generationPolicy": "must-not-fabricate",
+      "description": "Real third-party app icons (Gmail, Google Calendar, Slack, Notion, Granola, Linear, Google Meet, Zoom, Chrome, Finder, Photoshop, DoorDash, Ashby favicon).",
+      "guidance": "Real third-party / real-person / proprietary-capture content. Use a registered exact file only for an internal, licensed reproduction, otherwise use the neutral placeholder. Never generate a logo, face, screenshot, photograph or recording that imitates it.",
+      "measuredFrom": [
+        "src/components/Routines.jsx:8",
+        "src/components/Meetings.jsx:81",
+        "src/components/companion/CompanionShowcase.jsx:15",
+        "src/components/Browser.jsx:13"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/Routines.jsx:8",
+          "contains": "logo: '/assets/gmail.png'"
+        },
+        {
+          "cite": "src/components/Meetings.jsx:81",
+          "contains": "/assets/zoom-camera.svg"
+        },
+        {
+          "cite": "src/components/companion/CompanionShowcase.jsx:15",
+          "contains": "/assets/photoshop.png"
+        },
+        {
+          "cite": "src/components/Browser.jsx:13",
+          "contains": "/assets/doordash.png"
+        }
+      ]
+    },
+    {
+      "id": "brand.merlin-app-icon",
+      "generationPolicy": "must-reuse-exact",
+      "description": "The Merlin dock/app icon and the inline Merlin face mark. First-party brand marks of a real company.",
+      "guidance": "Use only a registered exact file (assetRef reuse:<id>) or the neutral placeholder. Never regenerate, redraw, recolour or approximate it.",
+      "measuredFrom": [
+        "src/components/hero/HeroNav.jsx:152",
+        "src/pages/Download.jsx:59",
+        "src/components/Routines.jsx:20"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/hero/HeroNav.jsx:152",
+          "contains": "/assets/merlin-dock-32.png"
+        },
+        {
+          "cite": "src/pages/Download.jsx:59",
+          "contains": "/assets/merlin-dock.png"
+        },
+        {
+          "cite": "src/components/Routines.jsx:20",
+          "contains": "function MerlinMark()"
+        }
+      ]
+    },
+    {
+      "id": "brand.merlin-mascot-art",
+      "generationPolicy": "must-reuse-exact",
+      "description": "The felt Merlin mascot artwork (mark.webp) used as the manifesto signature mark and as the artwork opened in the Photoshop demo.",
+      "guidance": "Use only a registered exact file (assetRef reuse:<id>) or the neutral placeholder. Never regenerate, redraw, recolour or approximate it.",
+      "measuredFrom": [
+        "src/components/manifesto/Signature.jsx:44",
+        "src/components/companion/PhotoshopDemo.jsx:8"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/manifesto/Signature.jsx:44",
+          "contains": "/assets/mark.webp"
+        },
+        {
+          "cite": "src/components/companion/PhotoshopDemo.jsx:8",
+          "contains": "const ART = '/assets/mark.webp'"
+        }
+      ]
+    },
+    {
+      "id": "illustration.felt-scene",
+      "generationPolicy": "must-reuse-exact",
+      "description": "Merlin's commissioned felt-character scene art (lakeside landscape, armchair, meeting, studio, beach). Proprietary brand art: reuse the exact file or use a neutral placeholder; never regenerate a look-alike.",
+      "guidance": "Use only a registered exact file (assetRef reuse:<id>) or the neutral placeholder. Never regenerate, redraw, recolour or approximate it.",
+      "measuredFrom": [
+        "src/components/Hero.jsx:40",
+        "src/pages/Manifesto.jsx:88",
+        "src/components/Routines.jsx:197",
+        "src/components/meetings/MeetingLandscape.jsx:101"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/Hero.jsx:40",
+          "contains": "/assets/quiet-lakeside.webp"
+        },
+        {
+          "cite": "src/pages/Manifesto.jsx:88",
+          "contains": "/assets/meeting-scene.webp"
+        },
+        {
+          "cite": "src/components/Routines.jsx:197",
+          "contains": "/assets/studio.webp"
+        },
+        {
+          "cite": "src/components/meetings/MeetingLandscape.jsx:101",
+          "contains": "/assets/meeting.webp"
+        }
+      ]
+    },
+    {
+      "id": "screenshot.os-install-step",
+      "generationPolicy": "must-not-fabricate",
+      "description": "macOS screenshots of the install steps (Dock/Downloads, Applications drag, launch). They reproduce Apple operating-system UI.",
+      "guidance": "Real third-party / real-person / proprietary-capture content. Use a registered exact file only for an internal, licensed reproduction, otherwise use the neutral placeholder. Never generate a logo, face, screenshot, photograph or recording that imitates it.",
+      "measuredFrom": [
+        "src/pages/Download.jsx:10",
+        "src/pages/Download.jsx:30"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/pages/Download.jsx:10",
+          "contains": "img: '/assets/open-download.png'"
+        },
+        {
+          "cite": "src/pages/Download.jsx:30",
+          "contains": "img: '/assets/launch-merlin.png'"
+        }
+      ]
+    },
+    {
+      "id": "screenshot.product-output",
+      "generationPolicy": "must-not-fabricate",
+      "description": "Real product-output screenshots: the six launch-deck slide images shown in the hero notification detail.",
+      "guidance": "Real third-party / real-person / proprietary-capture content. Use a registered exact file only for an internal, licensed reproduction, otherwise use the neutral placeholder. Never generate a logo, face, screenshot, photograph or recording that imitates it.",
+      "measuredFrom": [
+        "src/components/hero/NotificationDetail.jsx:83"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/hero/NotificationDetail.jsx:83",
+          "contains": "/assets/launch-deck-${slide.file}.png"
+        }
+      ]
+    },
+    {
+      "id": "photo.stock-cover",
+      "generationPolicy": "must-not-fabricate",
+      "description": "Blog article cover photographs (third-party stock imagery served from the CMS CDN in the live site).",
+      "guidance": "Real third-party / real-person / proprietary-capture content. Use a registered exact file only for an internal, licensed reproduction, otherwise use the neutral placeholder. Never generate a logo, face, screenshot, photograph or recording that imitates it.",
+      "measuredFrom": [
+        "src/pages/BlogPost.jsx:29"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/pages/BlogPost.jsx:29",
+          "contains": "post.cover && <img className=\"blog_articleImage__wj3kN\""
+        }
+      ]
+    },
+    {
+      "id": "photo.person-portrait",
+      "generationPolicy": "must-not-fabricate",
+      "description": "Photographs of a real, named person (the blog author avatar). Never fabricate or substitute a person's likeness.",
+      "guidance": "Real third-party / real-person / proprietary-capture content. Use a registered exact file only for an internal, licensed reproduction, otherwise use the neutral placeholder. Never generate a logo, face, screenshot, photograph or recording that imitates it.",
+      "measuredFrom": [
+        "src/pages/BlogPost.jsx:22"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/pages/BlogPost.jsx:22",
+          "contains": "post.authorAvatar"
+        }
+      ]
+    },
+    {
+      "id": "photo.mock-product",
+      "generationPolicy": "must-not-fabricate",
+      "description": "Food and grocery product photographs inside the DoorDash/Instacart mock sites (third-party imagery).",
+      "guidance": "Real third-party / real-person / proprietary-capture content. Use a registered exact file only for an internal, licensed reproduction, otherwise use the neutral placeholder. Never generate a logo, face, screenshot, photograph or recording that imitates it.",
+      "measuredFrom": [
+        "src/components/browser/MockSites.jsx:139",
+        "src/components/browser/MockSites.jsx:189"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/browser/MockSites.jsx:139",
+          "contains": "/assets/grain-bowls.webp"
+        },
+        {
+          "cite": "src/components/browser/MockSites.jsx:189",
+          "contains": "image: 'avocado.webp'"
+        }
+      ]
+    },
+    {
+      "id": "media.audio-sample",
+      "generationPolicy": "must-not-fabricate",
+      "description": "The recorded audio clip played by the meeting transcript player (merlin-introduction.mp3). A recording; never synthesize or imitate it.",
+      "guidance": "Real third-party / real-person / proprietary-capture content. Use a registered exact file only for an internal, licensed reproduction, otherwise use the neutral placeholder. Never generate a logo, face, screenshot, photograph or recording that imitates it.",
+      "measuredFrom": [
+        "src/components/meetings/MeetingLandscape.jsx:65"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/meetings/MeetingLandscape.jsx:65",
+          "contains": "src=\"/assets/merlin-introduction.mp3\""
+        }
+      ]
+    },
+    {
+      "id": "art.footer-ascii",
+      "generationPolicy": "must-reuse-exact",
+      "description": "The ASCII bird and beach SVGs of the closing footer (Merlin's own art). Reuse exact files.",
+      "guidance": "Use only a registered exact file (assetRef reuse:<id>) or the neutral placeholder. Never regenerate, redraw, recolour or approximate it.",
+      "measuredFrom": [
+        "src/components/Footer.jsx:35",
+        "src/styles/original/ea3e27f6a69b5df4.css:1"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/Footer.jsx:35",
+          "contains": "closing-bird-shape"
+        },
+        {
+          "cite": "src/styles/original/ea3e27f6a69b5df4.css:1",
+          "contains": "footer-bird-ascii.svg"
+        }
+      ]
+    },
+    {
+      "id": "icon.generic-ui",
+      "generationPolicy": "may-generate-new",
+      "description": "Generic interface glyphs (Feather/Ionicons arrows, chevrons, check, clock, play). Not brand marks; a generator may pick any permissively licensed generic glyph by name.",
+      "guidance": "Generic or decorative; a generator may create a new original asset (assetRef generate:<short brief>) or reuse a registered one.",
+      "measuredFrom": [
+        "src/components/blog/Icons.jsx:17",
+        "src/components/shared/DownloadButton.jsx:14"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/blog/Icons.jsx:17",
+          "contains": "<svg {...svgProps}>"
+        },
+        {
+          "cite": "src/components/shared/DownloadButton.jsx:14",
+          "contains": "<FiArrowRight />"
+        }
+      ]
+    },
+    {
+      "id": "art.line-illustration",
+      "generationPolicy": "may-generate-new",
+      "description": "Decorative hand-drawn arrows and the privacy trust-card line art. A generator may draw new decorative line art in the same stroke style but must not trace the originals.",
+      "guidance": "Generic or decorative; a generator may create a new original asset (assetRef generate:<short brief>) or reuse a registered one.",
+      "measuredFrom": [
+        "src/components/Privacy.jsx:44",
+        "src/components/Companion.jsx:14"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/Privacy.jsx:44",
+          "contains": "privacy-animated-layer"
+        },
+        {
+          "cite": "src/components/Companion.jsx:14",
+          "contains": "const ARROW_PATH"
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "asset.ashby-wordmark.svg",
+      "file": "public/assets/ashby-wordmark.svg",
+      "role": "logo.third-party-wordmark"
+    },
+    {
+      "id": "asset.ashby.png",
+      "file": "public/assets/ashby.png",
+      "role": "icon.third-party-app"
+    },
+    {
+      "id": "asset.avocado.webp",
+      "file": "public/assets/avocado.webp",
+      "role": "photo.mock-product"
+    },
+    {
+      "id": "asset.bananas.webp",
+      "file": "public/assets/bananas.webp",
+      "role": "photo.mock-product"
+    },
+    {
+      "id": "asset.calendar.png",
+      "file": "public/assets/calendar.png",
+      "role": "icon.third-party-app"
+    },
+    {
+      "id": "asset.companion.webp",
+      "file": "public/assets/companion.webp",
+      "role": "illustration.felt-scene"
+    },
+    {
+      "id": "asset.doordash.png",
+      "file": "public/assets/doordash.png",
+      "role": "icon.third-party-app"
+    },
+    {
+      "id": "asset.finder.svg",
+      "file": "public/assets/finder.svg",
+      "role": "icon.third-party-app"
+    },
+    {
+      "id": "asset.footer-beach-ascii.svg",
+      "file": "public/assets/footer-beach-ascii.svg",
+      "role": "art.footer-ascii"
+    },
+    {
+      "id": "asset.footer-bird-ascii-fast.svg",
+      "file": "public/assets/footer-bird-ascii-fast.svg",
+      "role": "art.footer-ascii"
+    },
+    {
+      "id": "asset.footer-bird-ascii-slow.svg",
+      "file": "public/assets/footer-bird-ascii-slow.svg",
+      "role": "art.footer-ascii"
+    },
+    {
+      "id": "asset.footer-bird-ascii.svg",
+      "file": "public/assets/footer-bird-ascii.svg",
+      "role": "art.footer-ascii"
+    },
+    {
+      "id": "asset.gmail.png",
+      "file": "public/assets/gmail.png",
+      "role": "icon.third-party-app"
+    },
+    {
+      "id": "asset.google-chrome.svg",
+      "file": "public/assets/google-chrome.svg",
+      "role": "icon.third-party-app"
+    },
+    {
+      "id": "asset.google-meet.png",
+      "file": "public/assets/google-meet.png",
+      "role": "icon.third-party-app"
+    },
+    {
+      "id": "asset.grain-bowls.webp",
+      "file": "public/assets/grain-bowls.webp",
+      "role": "photo.mock-product"
+    },
+    {
+      "id": "asset.granola.png",
+      "file": "public/assets/granola.png",
+      "role": "icon.third-party-app"
+    },
+    {
+      "id": "asset.green-bowl.webp",
+      "file": "public/assets/green-bowl.webp",
+      "role": "photo.mock-product"
+    },
+    {
+      "id": "asset.harvard.svg",
+      "file": "public/assets/harvard.svg",
+      "role": "logo.third-party-wordmark"
+    },
+    {
+      "id": "asset.hero-beach-reading.webp",
+      "file": "public/assets/hero-beach-reading.webp",
+      "role": "illustration.felt-scene"
+    },
+    {
+      "id": "asset.launch-deck-01-introduction.png",
+      "file": "public/assets/launch-deck-01-introduction.png",
+      "role": "screenshot.product-output"
+    },
+    {
+      "id": "asset.launch-deck-02-services.png",
+      "file": "public/assets/launch-deck-02-services.png",
+      "role": "screenshot.product-output"
+    },
+    {
+      "id": "asset.launch-deck-03-work.png",
+      "file": "public/assets/launch-deck-03-work.png",
+      "role": "screenshot.product-output"
+    },
+    {
+      "id": "asset.launch-deck-04-website.png",
+      "file": "public/assets/launch-deck-04-website.png",
+      "role": "screenshot.product-output"
+    },
+    {
+      "id": "asset.launch-deck-05-readiness.png",
+      "file": "public/assets/launch-deck-05-readiness.png",
+      "role": "screenshot.product-output"
+    },
+    {
+      "id": "asset.launch-deck-06-decisions.png",
+      "file": "public/assets/launch-deck-06-decisions.png",
+      "role": "screenshot.product-output"
+    },
+    {
+      "id": "asset.launch-merlin.png",
+      "file": "public/assets/launch-merlin.png",
+      "role": "screenshot.os-install-step"
+    },
+    {
+      "id": "asset.linear.png",
+      "file": "public/assets/linear.png",
+      "role": "icon.third-party-app"
+    },
+    {
+      "id": "asset.mark.webp",
+      "file": "public/assets/mark.webp",
+      "role": "brand.merlin-mascot-art"
+    },
+    {
+      "id": "asset.meeting-scene.webp",
+      "file": "public/assets/meeting-scene.webp",
+      "role": "illustration.felt-scene"
+    },
+    {
+      "id": "asset.meeting.webp",
+      "file": "public/assets/meeting.webp",
+      "role": "illustration.felt-scene"
+    },
+    {
+      "id": "asset.merlin-app-icon.svg",
+      "file": "public/assets/merlin-app-icon.svg",
+      "role": "brand.merlin-app-icon"
+    },
+    {
+      "id": "asset.merlin-dock-32.png",
+      "file": "public/assets/merlin-dock-32.png",
+      "role": "brand.merlin-app-icon"
+    },
+    {
+      "id": "asset.merlin-dock.png",
+      "file": "public/assets/merlin-dock.png",
+      "role": "brand.merlin-app-icon"
+    },
+    {
+      "id": "asset.merlin-introduction.mp3",
+      "file": "public/assets/merlin-introduction.mp3",
+      "role": "media.audio-sample"
+    },
+    {
+      "id": "asset.move-to-applications.png",
+      "file": "public/assets/move-to-applications.png",
+      "role": "screenshot.os-install-step"
+    },
+    {
+      "id": "asset.notion.png",
+      "file": "public/assets/notion.png",
+      "role": "icon.third-party-app"
+    },
+    {
+      "id": "asset.notion.svg",
+      "file": "public/assets/notion.svg",
+      "role": "logo.third-party-wordmark"
+    },
+    {
+      "id": "asset.oat-milk.webp",
+      "file": "public/assets/oat-milk.webp",
+      "role": "photo.mock-product"
+    },
+    {
+      "id": "asset.open-download.png",
+      "file": "public/assets/open-download.png",
+      "role": "screenshot.os-install-step"
+    },
+    {
+      "id": "asset.photoshop.png",
+      "file": "public/assets/photoshop.png",
+      "role": "icon.third-party-app"
+    },
+    {
+      "id": "asset.qatar-logo.webp",
+      "file": "public/assets/qatar-logo.webp",
+      "role": "logo.third-party-wordmark"
+    },
+    {
+      "id": "asset.quiet-lakeside.webp",
+      "file": "public/assets/quiet-lakeside.webp",
+      "role": "illustration.felt-scene"
+    },
+    {
+      "id": "asset.slack.png",
+      "file": "public/assets/slack.png",
+      "role": "icon.third-party-app"
+    },
+    {
+      "id": "asset.studio.webp",
+      "file": "public/assets/studio.webp",
+      "role": "illustration.felt-scene"
+    },
+    {
+      "id": "asset.veggie-bowls.webp",
+      "file": "public/assets/veggie-bowls.webp",
+      "role": "photo.mock-product"
+    },
+    {
+      "id": "asset.zoom-camera.svg",
+      "file": "public/assets/zoom-camera.svg",
+      "role": "icon.third-party-app"
+    },
+    {
+      "id": "asset.blog.ai-note-taking-tools-in-2025-top-picks-trends-and-tips.webp",
+      "file": "public/assets/blog/ai-note-taking-tools-in-2025-top-picks-trends-and-tips.webp",
+      "role": "photo.stock-cover"
+    },
+    {
+      "id": "asset.blog.author-adeola-adeoti.jpg",
+      "file": "public/assets/blog/author-adeola-adeoti.jpg",
+      "role": "photo.person-portrait"
+    },
+    {
+      "id": "asset.blog.best-free-transcription-software-tools-in-2025-top-speech-to-text-picks.webp",
+      "file": "public/assets/blog/best-free-transcription-software-tools-in-2025-top-speech-to-text-picks.webp",
+      "role": "photo.stock-cover"
+    },
+    {
+      "id": "asset.blog.how-to-create-a-professional-email-address-2025-guide.webp",
+      "file": "public/assets/blog/how-to-create-a-professional-email-address-2025-guide.webp",
+      "role": "photo.stock-cover"
+    },
+    {
+      "id": "asset.blog.how-to-email-a-professor-updated-guide-with-templates-and-real-world-tips.webp",
+      "file": "public/assets/blog/how-to-email-a-professor-updated-guide-with-templates-and-real-world-tips.webp",
+      "role": "photo.stock-cover"
+    },
+    {
+      "id": "asset.blog.how-to-end-an-email-ultimate-guide-to-professional-and-friendly-sign-offs-in-2025.webp",
+      "file": "public/assets/blog/how-to-end-an-email-ultimate-guide-to-professional-and-friendly-sign-offs-in-2025.webp",
+      "role": "photo.stock-cover"
+    },
+    {
+      "id": "asset.blog.how-to-schedule-slack-messages-with-ease.webp",
+      "file": "public/assets/blog/how-to-schedule-slack-messages-with-ease.webp",
+      "role": "photo.stock-cover"
+    },
+    {
+      "id": "asset.blog.how-to-set-an-out-of-office-in-microsoft-teams.webp",
+      "file": "public/assets/blog/how-to-set-an-out-of-office-in-microsoft-teams.webp",
+      "role": "photo.stock-cover"
+    },
+    {
+      "id": "asset.blog.how-to-share-a-google-calendar-on-iphone-in-2025.webp",
+      "file": "public/assets/blog/how-to-share-a-google-calendar-on-iphone-in-2025.webp",
+      "role": "photo.stock-cover"
+    },
+    {
+      "id": "asset.blog.how-to-unsend-an-email-updated-2025-guide.webp",
+      "file": "public/assets/blog/how-to-unsend-an-email-updated-2025-guide.webp",
+      "role": "photo.stock-cover"
+    },
+    {
+      "id": "asset.blog.how-to-use-google-calendar-the-complete-2025-guide.webp",
+      "file": "public/assets/blog/how-to-use-google-calendar-the-complete-2025-guide.webp",
+      "role": "photo.stock-cover"
+    },
+    {
+      "id": "asset.blog.how-to-write-a-formal-email.webp",
+      "file": "public/assets/blog/how-to-write-a-formal-email.webp",
+      "role": "photo.stock-cover"
+    },
+    {
+      "id": "asset.blog.how-to-write-a-resignation-email-in-2025-the-ultimate-guide-for-professionals.webp",
+      "file": "public/assets/blog/how-to-write-a-resignation-email-in-2025-the-ultimate-guide-for-professionals.webp",
+      "role": "photo.stock-cover"
+    },
+    {
+      "id": "asset.blog.mastering-gmail-out-of-office-replies-in-2025.webp",
+      "file": "public/assets/blog/mastering-gmail-out-of-office-replies-in-2025.webp",
+      "role": "photo.stock-cover"
+    },
+    {
+      "id": "asset.blog.microsoft-teams-vs-slack-2025-pros-cons-and-what-s-best.webp",
+      "file": "public/assets/blog/microsoft-teams-vs-slack-2025-pros-cons-and-what-s-best.webp",
+      "role": "photo.stock-cover"
+    },
+    {
+      "id": "asset.blog.sam-altman-the-startup-prodigy-steering-openai-s-quest-for-agi-and-ai-leadership.webp",
+      "file": "public/assets/blog/sam-altman-the-startup-prodigy-steering-openai-s-quest-for-agi-and-ai-leadership.webp",
+      "role": "photo.stock-cover"
+    },
+    {
+      "id": "asset.blog.summary-of-best-100-chatgpt-4-prompts.webp",
+      "file": "public/assets/blog/summary-of-best-100-chatgpt-4-prompts.webp",
+      "role": "photo.stock-cover"
+    },
+    {
+      "id": "asset.blog.throwaway-email-addresses-in-2025-the-complete-guide-to-disposable-emails-for-privacy-and-spam-control.webp",
+      "file": "public/assets/blog/throwaway-email-addresses-in-2025-the-complete-guide-to-disposable-emails-for-privacy-and-spam-control.webp",
+      "role": "photo.stock-cover"
+    },
+    {
+      "id": "asset.blog.what-does-cc-and-bcc-mean-in-email.webp",
+      "file": "public/assets/blog/what-does-cc-and-bcc-mean-in-email.webp",
+      "role": "photo.stock-cover"
+    },
+    {
+      "id": "asset.blog.why-is-my-email-queued-and-how-to-fix-it.webp",
+      "file": "public/assets/blog/why-is-my-email-queued-and-how-to-fix-it.webp",
+      "role": "photo.stock-cover"
+    },
+    {
+      "id": "inline.salesforce-logo",
+      "file": null,
+      "role": "logo.third-party-wordmark",
+      "note": "inline SVG in Companies.jsx"
+    },
+    {
+      "id": "inline.hubspot-logo",
+      "file": null,
+      "role": "logo.third-party-wordmark",
+      "note": "inline SVG in Companies.jsx"
+    },
+    {
+      "id": "inline.mckinsey-logo",
+      "file": null,
+      "role": "logo.third-party-wordmark",
+      "note": "inline SVG in Companies.jsx"
+    },
+    {
+      "id": "inline.qatar-airways-logo",
+      "file": null,
+      "role": "logo.third-party-wordmark",
+      "note": "react-icons simple-icons glyph in browser/icons.jsx"
+    },
+    {
+      "id": "inline.instacart-logo",
+      "file": null,
+      "role": "logo.third-party-wordmark",
+      "note": "react-icons simple-icons glyph in browser/icons.jsx"
+    },
+    {
+      "id": "inline.merlin-face-mark",
+      "file": null,
+      "role": "brand.merlin-app-icon",
+      "note": "inline SVG (MerlinMark)"
+    }
+  ]
+}

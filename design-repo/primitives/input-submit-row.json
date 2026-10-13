@@ -1,0 +1,25 @@
+{
+  "id": "input-submit-row",
+  "kind": "primitive",
+  "description": "Underlined input row with a 44px round submit (Feather arrow-right) that becomes a Stop button while loading.",
+  "props": {
+    "placeholder": "string",
+    "maxLength": 500
+  },
+  "variants": [],
+  "domAnchor": "div.merlin-faq-input-row",
+  "measuredFrom": [
+    "src/components/faq/AskMerlinForm.jsx:51",
+    "CLONE_SPEC.md:330"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/faq/AskMerlinForm.jsx:51",
+      "contains": "className=\"merlin-faq-input-row\""
+    },
+    {
+      "cite": "CLONE_SPEC.md:330",
+      "contains": "`form.merlin-faq-form > div.merlin-faq-input-row`"
+    }
+  ]
+}

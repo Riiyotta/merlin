@@ -1,0 +1,806 @@
+{
+  "allowlistVersion": "1.0.0",
+  "_note": "Closed list of what a generator may set. allowlistVersion is MACHINE-CHECKED against registry.manifest.json by verify_all.py. Every id must have a matching contract file and every contract file an entry (parity is checked both ways). settableContentFields are cross-checked against each section's content contract. NOTE: the PageSpec schema has no style/token override field, so there is nothing token-related to allow (MASTER-GUIDE 3.21).",
+  "tokenOverrides": "none - PageSpec carries no style or token field; styling is owned by section contracts",
+  "settableNodeProperties": [
+    "content",
+    "id",
+    "motion",
+    "section",
+    "variant"
+  ],
+  "assetRoles": [
+    "logo.third-party-wordmark",
+    "icon.third-party-app",
+    "brand.merlin-app-icon",
+    "brand.merlin-mascot-art",
+    "illustration.felt-scene",
+    "screenshot.os-install-step",
+    "screenshot.product-output",
+    "photo.stock-cover",
+    "photo.person-portrait",
+    "photo.mock-product",
+    "media.audio-sample",
+    "art.footer-ascii",
+    "icon.generic-ui",
+    "art.line-illustration"
+  ],
+  "primitives": [
+    {
+      "id": "download-button",
+      "file": "primitives/download-button.json",
+      "overridableProps": [
+        "ariaLabel",
+        "className",
+        "variant"
+      ]
+    },
+    {
+      "id": "section-label",
+      "file": "primitives/section-label.json",
+      "overridableProps": [
+        "label",
+        "section"
+      ]
+    },
+    {
+      "id": "handwritten-note",
+      "file": "primitives/handwritten-note.json",
+      "overridableProps": [
+        "arrow",
+        "text"
+      ]
+    },
+    {
+      "id": "inline-identity",
+      "file": "primitives/inline-identity.json",
+      "overridableProps": [
+        "icon",
+        "text"
+      ]
+    },
+    {
+      "id": "avatar-initials",
+      "file": "primitives/avatar-initials.json",
+      "overridableProps": [
+        "initials"
+      ]
+    },
+    {
+      "id": "icon",
+      "file": "primitives/icon.json",
+      "overridableProps": [
+        "name",
+        "size"
+      ]
+    },
+    {
+      "id": "text-highlight",
+      "file": "primitives/text-highlight.json",
+      "overridableProps": [
+        "text",
+        "tone"
+      ]
+    },
+    {
+      "id": "link-arrow",
+      "file": "primitives/link-arrow.json",
+      "overridableProps": [
+        "direction",
+        "href",
+        "label"
+      ]
+    },
+    {
+      "id": "hover-sweep-wordmark",
+      "file": "primitives/hover-sweep-wordmark.json",
+      "overridableProps": [
+        "text"
+      ]
+    },
+    {
+      "id": "hover-text-roll-link",
+      "file": "primitives/hover-text-roll-link.json",
+      "overridableProps": [
+        "href",
+        "text"
+      ]
+    },
+    {
+      "id": "badge",
+      "file": "primitives/badge.json",
+      "overridableProps": [
+        "text"
+      ]
+    },
+    {
+      "id": "tab-pill",
+      "file": "primitives/tab-pill.json",
+      "overridableProps": [
+        "active",
+        "tabs"
+      ]
+    },
+    {
+      "id": "input-submit-row",
+      "file": "primitives/input-submit-row.json",
+      "overridableProps": [
+        "maxLength",
+        "placeholder"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "hero-corner-nav",
+      "file": "components/hero-corner-nav.json",
+      "overridableProps": [
+        "currentPath"
+      ]
+    },
+    {
+      "id": "notification-card",
+      "file": "components/notification-card.json",
+      "overridableProps": [
+        "description",
+        "kind",
+        "title"
+      ]
+    },
+    {
+      "id": "app-tile-row",
+      "file": "components/app-tile-row.json",
+      "overridableProps": [
+        "tiles"
+      ]
+    },
+    {
+      "id": "email-preview-card",
+      "file": "components/email-preview-card.json",
+      "overridableProps": [
+        "body",
+        "sender",
+        "subject"
+      ]
+    },
+    {
+      "id": "routine-timeline",
+      "file": "components/routine-timeline.json",
+      "overridableProps": [
+        "finalCard",
+        "tools"
+      ]
+    },
+    {
+      "id": "browser-card-deck",
+      "file": "components/browser-card-deck.json",
+      "overridableProps": [
+        "cards"
+      ]
+    },
+    {
+      "id": "transcript-window",
+      "file": "components/transcript-window.json",
+      "overridableProps": [
+        "participants",
+        "title"
+      ]
+    },
+    {
+      "id": "project-folder-item",
+      "file": "components/project-folder-item.json",
+      "overridableProps": [
+        "name",
+        "type"
+      ]
+    },
+    {
+      "id": "companion-showcase",
+      "file": "components/companion-showcase.json",
+      "overridableProps": [
+        "tabs"
+      ]
+    },
+    {
+      "id": "trust-card",
+      "file": "components/trust-card.json",
+      "overridableProps": [
+        "art",
+        "body",
+        "title"
+      ]
+    },
+    {
+      "id": "faq-accordion-item",
+      "file": "components/faq-accordion-item.json",
+      "overridableProps": [
+        "answer",
+        "question"
+      ]
+    },
+    {
+      "id": "ask-merlin-form",
+      "file": "components/ask-merlin-form.json",
+      "overridableProps": [
+        "apiMode",
+        "placeholder"
+      ]
+    },
+    {
+      "id": "details-faq-item",
+      "file": "components/details-faq-item.json",
+      "overridableProps": [
+        "answer",
+        "question"
+      ]
+    },
+    {
+      "id": "plan-card",
+      "file": "components/plan-card.json",
+      "overridableProps": [
+        "credits",
+        "ctaVariant",
+        "name",
+        "price",
+        "tone"
+      ]
+    },
+    {
+      "id": "feature-card",
+      "file": "components/feature-card.json",
+      "overridableProps": [
+        "body",
+        "icon",
+        "title"
+      ]
+    },
+    {
+      "id": "closing-bird-sky",
+      "file": "components/closing-bird-sky.json",
+      "overridableProps": []
+    },
+    {
+      "id": "time-of-day-copy",
+      "file": "components/time-of-day-copy.json",
+      "overridableProps": [
+        "part"
+      ]
+    },
+    {
+      "id": "signature-circle",
+      "file": "components/signature-circle.json",
+      "overridableProps": [
+        "circledWord",
+        "mark",
+        "name"
+      ]
+    },
+    {
+      "id": "featured-story",
+      "file": "components/featured-story.json",
+      "overridableProps": [
+        "slug",
+        "title"
+      ]
+    },
+    {
+      "id": "story-row",
+      "file": "components/story-row.json",
+      "overridableProps": [
+        "slug",
+        "title"
+      ]
+    },
+    {
+      "id": "legal-toc",
+      "file": "components/legal-toc.json",
+      "overridableProps": [
+        "sections"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "shell.corner-nav",
+      "file": "sections/shell.corner-nav.json",
+      "settableContentFields": [
+        "activeLink",
+        "brandIcon"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": [
+        "manifesto",
+        "blog",
+        "legal"
+      ]
+    },
+    {
+      "id": "shell.install-header",
+      "file": "sections/shell.install-header.json",
+      "settableContentFields": [
+        "brandIcon",
+        "brandLabel",
+        "homeHref"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "shell.floating-nav",
+      "file": "sections/shell.floating-nav.json",
+      "settableContentFields": [
+        "cta",
+        "links",
+        "logo"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "shell.footer-closing",
+      "file": "sections/shell.footer-closing.json",
+      "settableContentFields": [
+        "beachArt",
+        "body",
+        "brandWordmark",
+        "copyrightHolder",
+        "cta",
+        "headingLine1",
+        "headingLine2Prefix",
+        "links"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "hero.marketing",
+      "file": "sections/hero.marketing.json",
+      "settableContentFields": [
+        "cta",
+        "subtitle",
+        "titleLine1",
+        "titleLine2"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": [
+        "home",
+        "pricing"
+      ]
+    },
+    {
+      "id": "hero.landscape",
+      "file": "sections/hero.landscape.json",
+      "settableContentFields": [
+        "image",
+        "notifications",
+        "sectionLabel"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "proof.company-logos",
+      "file": "sections/proof.company-logos.json",
+      "settableContentFields": [
+        "heading",
+        "logos"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "story.context-routines",
+      "file": "sections/story.context-routines.json",
+      "settableContentFields": [
+        "appTiles",
+        "contextParagraphs",
+        "emailPreview",
+        "headingEmphasis",
+        "headingLead",
+        "routine"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "story.browser-tasks",
+      "file": "sections/story.browser-tasks.json",
+      "settableContentFields": [
+        "cards",
+        "headingEmphasis",
+        "headingLead",
+        "label"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "story.meetings-projects",
+      "file": "sections/story.meetings-projects.json",
+      "settableContentFields": [
+        "headingEmphasis",
+        "headingLead",
+        "headingTail",
+        "introParagraphs",
+        "meetingLogos",
+        "meetingPanel",
+        "projectPanel"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "story.companion",
+      "file": "sections/story.companion.json",
+      "settableContentFields": [
+        "bridgeNote",
+        "figure",
+        "headlines",
+        "introParagraphs",
+        "label",
+        "popover",
+        "tabs"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "scene.privacy-trust",
+      "file": "sections/scene.privacy-trust.json",
+      "settableContentFields": [
+        "cards",
+        "eyebrow",
+        "eyebrowHref",
+        "headingLine1",
+        "headingLine2",
+        "intro"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "faq.accordion",
+      "file": "sections/faq.accordion.json",
+      "settableContentFields": [
+        "askForm",
+        "headingLine1",
+        "headingLine2",
+        "intro",
+        "items"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "pricing.plans",
+      "file": "sections/pricing.plans.json",
+      "settableContentFields": [
+        "ariaLabel",
+        "plans"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "pricing.included",
+      "file": "sections/pricing.included.json",
+      "settableContentFields": [
+        "features",
+        "headingLine1",
+        "headingLine2",
+        "intro"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "pricing.faq",
+      "file": "sections/pricing.faq.json",
+      "settableContentFields": [
+        "askForm",
+        "headingLine1",
+        "headingLine2",
+        "items"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "install.intro",
+      "file": "sections/install.intro.json",
+      "settableContentFields": [
+        "alternativeLabel",
+        "description",
+        "headingLine1",
+        "headingLine2",
+        "installerHref",
+        "installerSource",
+        "retryLabel",
+        "retryPrefix"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "install.steps",
+      "file": "sections/install.steps.json",
+      "settableContentFields": [
+        "ariaLabel",
+        "steps"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "manifesto.opening",
+      "file": "sections/manifesto.opening.json",
+      "settableContentFields": [
+        "handwritingBack",
+        "handwritingTime",
+        "openingParagraph",
+        "secondParagraph",
+        "timeVariants",
+        "titleLine1",
+        "titleLine2"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "manifesto.photo",
+      "file": "sections/manifesto.photo.json",
+      "settableContentFields": [
+        "alt",
+        "image"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": [
+        "after-opening",
+        "after-understanding",
+        "after-action"
+      ]
+    },
+    {
+      "id": "manifesto.understanding",
+      "file": "sections/manifesto.understanding.json",
+      "settableContentFields": [
+        "note",
+        "paragraphs",
+        "titleLine1",
+        "titleLine2"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "manifesto.action",
+      "file": "sections/manifesto.action.json",
+      "settableContentFields": [
+        "note",
+        "paragraphSeven",
+        "paragraphSix",
+        "returnSentence",
+        "titleLine1",
+        "titleLine2"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "manifesto.ending",
+      "file": "sections/manifesto.ending.json",
+      "settableContentFields": [
+        "finish",
+        "paragraphEight",
+        "signature",
+        "titleLine1",
+        "titleLine2"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "blog.intro",
+      "file": "sections/blog.intro.json",
+      "settableContentFields": [
+        "subtitle",
+        "titleLine1",
+        "titleLine2"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "blog.featured",
+      "file": "sections/blog.featured.json",
+      "settableContentFields": [
+        "author",
+        "category",
+        "date",
+        "image",
+        "pillLabel",
+        "readLabel",
+        "slug",
+        "title"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "blog.story-list",
+      "file": "sections/blog.story-list.json",
+      "settableContentFields": [
+        "aside",
+        "heading",
+        "stories"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "blog.manifesto-aside",
+      "file": "sections/blog.manifesto-aside.json",
+      "settableContentFields": [
+        "handwritten",
+        "href",
+        "linkLabel"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "blog.article-header",
+      "file": "sections/blog.article-header.json",
+      "settableContentFields": [
+        "author",
+        "avatar",
+        "backLabel",
+        "category",
+        "cover",
+        "coverAlt",
+        "date",
+        "title"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "blog.prose",
+      "file": "sections/blog.prose.json",
+      "settableContentFields": [
+        "blocks"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "blog.article-end",
+      "file": "sections/blog.article-end.json",
+      "settableContentFields": [
+        "backLabel",
+        "thanks"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "legal.heading",
+      "file": "sections/legal.heading.json",
+      "settableContentFields": [
+        "activeTab",
+        "intro",
+        "lastUpdated",
+        "title"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    },
+    {
+      "id": "legal.body",
+      "file": "sections/legal.body.json",
+      "settableContentFields": [
+        "footer",
+        "sections",
+        "tocLabel"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": []
+    }
+  ]
+}

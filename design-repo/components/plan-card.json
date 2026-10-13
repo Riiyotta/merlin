@@ -1,0 +1,32 @@
+{
+  "id": "plan-card",
+  "kind": "component",
+  "description": "Subgrid plan card: name, description, price row, full-width download CTA, details with check icons and a per-plan accent.",
+  "props": {
+    "name": "string",
+    "tone": "sage|lavender|peach",
+    "price": "string",
+    "credits": "string",
+    "ctaVariant": "primary|secondary"
+  },
+  "variants": [
+    "sage",
+    "lavender",
+    "peach"
+  ],
+  "domAnchor": "article.pricing-plan",
+  "measuredFrom": [
+    "src/components/pricing/PricingPlans.jsx:11",
+    "CLONE_SPEC_PAGES_A.md:142"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/pricing/PricingPlans.jsx:11",
+      "contains": "className={`pricing-plan pricing-plan-${plan.tone}`}"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_A.md:142",
+      "contains": "Plan card: `display:grid; grid-template-rows:subgrid"
+    }
+  ]
+}

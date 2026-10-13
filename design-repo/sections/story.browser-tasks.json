@@ -1,0 +1,181 @@
+{
+  "id": "story.browser-tasks",
+  "category": "story",
+  "description": "'If it happens in a browser, Merlin can help.' - a GSAP ScrollTrigger-pinned 4-card 3D deck (scrub + snap) of interactive mock websites. The mock sites replicate REAL third-party sites (Qatar Airways, DoorDash, Instacart, Ashby); their logos and food photos are must-not-fabricate.",
+  "evidenceLevel": "measured",
+  "domAnchor": "section#browser.browser-showcase",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true,
+    "maxPinnedStagesPerPage": 1
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "label",
+      "headingLead",
+      "headingEmphasis",
+      "cards"
+    ],
+    "properties": {
+      "label": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 2
+      },
+      "headingLead": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 6
+      },
+      "headingEmphasis": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 3
+      },
+      "cards": {
+        "type": "array",
+        "minItems": 4,
+        "maxItems": 4,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "name",
+            "mark",
+            "lead",
+            "detail",
+            "scene"
+          ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 2
+            },
+            "mark": {
+              "$ref": "#/definitions/assetRef",
+              "x-allowedRoles": [
+                "logo.third-party-wordmark",
+                "icon.third-party-app"
+              ]
+            },
+            "lead": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 10
+            },
+            "detail": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 9
+            },
+            "scene": {
+              "type": "string",
+              "enum": [
+                "flight-search",
+                "food-order",
+                "grocery-basket",
+                "job-application"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "scroll-pin-card-deck"
+    ],
+    "reducedMotionFallback": "stacked-static-layout",
+    "timing": {
+      "scrollTrigger": "pin .bs-stage, start 'top top', end +=max(320, 0.325*innerHeight*3), scrub true, snap labelsDirectional",
+      "poses": "yPercent sign*(63+(n-1)*9), rotateX 62, scaleX .94-(n-1)*.06, scaleY .26"
+    },
+    "motionEvidence": {
+      "measuredFrom": [
+        "src/components/Browser.jsx:81",
+        "src/components/Browser.jsx:87",
+        "src/styles/original/0a5b07db1896be06.css:1"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/Browser.jsx:81",
+          "contains": "pin: stageRef.current"
+        },
+        {
+          "cite": "src/components/Browser.jsx:87",
+          "contains": "snap: { snapTo: 'labelsDirectional'"
+        },
+        {
+          "cite": "src/styles/original/0a5b07db1896be06.css:1",
+          "contains": "prefers-reduced-motion:reduce){#top .bs-stage{height:auto"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "999",
+      "change": "card radius 24px (32px above)",
+      "measuredFrom": [
+        "CLONE_SPEC.md:210"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:210",
+          "contains": "radius 32px (24px ≤999px)"
+        }
+      ]
+    },
+    {
+      "query": "max-width",
+      "breakpoint": "699",
+      "change": "stage grid single column, rows auto 1fr, gap 22px, padding 36px 9% 80px; deck 317x317",
+      "measuredFrom": [
+        "CLONE_SPEC.md:214"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:214",
+          "contains": "At 390: stage `min-height:650px"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [
+      "section-label",
+      "inline-identity"
+    ],
+    "components": [
+      "browser-card-deck"
+    ]
+  },
+  "measuredFrom": [
+    "src/components/Browser.jsx:124",
+    "CLONE_SPEC.md:200",
+    "src/components/Browser.jsx:11"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/Browser.jsx:124",
+      "contains": "className=\"browser-showcase\" id=\"browser\""
+    },
+    {
+      "cite": "CLONE_SPEC.md:200",
+      "contains": "## 6. Section: Browser tasks"
+    },
+    {
+      "cite": "src/components/Browser.jsx:11",
+      "contains": "const EXAMPLES = ["
+    }
+  ],
+  "implementedBy": [
+    "src/components/Browser.jsx"
+  ]
+}

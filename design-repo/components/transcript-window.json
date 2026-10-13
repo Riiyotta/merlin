@@ -1,0 +1,35 @@
+{
+  "id": "transcript-window",
+  "kind": "component",
+  "description": "Glass window with a Transcript/Notes segmented switch (spring pill), notes with action-item toggles, and an audio player with a 64-bar waveform.",
+  "props": {
+    "title": "string",
+    "participants": "string"
+  },
+  "variants": [],
+  "domAnchor": "div.transcript-window",
+  "measuredFrom": [
+    "src/components/meetings/MeetingLandscape.jsx:26",
+    "CLONE_SPEC.md:241"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/meetings/MeetingLandscape.jsx:26",
+      "contains": "export function MeetingLandscape"
+    },
+    {
+      "cite": "CLONE_SPEC.md:241",
+      "contains": "`div.transcript-window`"
+    }
+  ],
+  "motion": {
+    "patterns": [
+      "indicator-spring"
+    ],
+    "reducedMotionFallback": "instant-no-spring"
+  },
+  "assetRoles": [
+    "media.audio-sample",
+    "illustration.felt-scene"
+  ]
+}

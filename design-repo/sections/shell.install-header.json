@@ -1,0 +1,100 @@
+{
+  "id": "shell.install-header",
+  "category": "shell",
+  "description": "The /download page's own brand-only header: merlin-dock icon + 'merlin.computer' link home. It deliberately has NO navigation links and NO footer follows the page.",
+  "evidenceLevel": "measured",
+  "domAnchor": "main.install-page > header.install-header",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true,
+    "mustBeFirst": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "brandLabel",
+      "brandIcon",
+      "homeHref"
+    ],
+    "properties": {
+      "brandLabel": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 1
+      },
+      "brandIcon": {
+        "$ref": "#/definitions/assetRef",
+        "x-allowedRoles": [
+          "brand.merlin-app-icon"
+        ]
+      },
+      "homeHref": {
+        "type": "string",
+        "pattern": "^/$",
+        "x-sample": "/"
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {},
+    "motionEvidence": {
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:228"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:228",
+          "contains": "No animations or transitions on this page apart from link underlines"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "620",
+      "change": "header height 80px, 12px type (brand text 11px through :last-child rule)",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:217"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:217",
+          "contains": "Header height 80"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [],
+    "components": []
+  },
+  "measuredFrom": [
+    "src/pages/Download.jsx:48",
+    "CLONE_SPEC_PAGES_A.md:42",
+    "CLONE_SPEC_PAGES_A.md:166"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/pages/Download.jsx:48",
+      "contains": "<header className=\"install-header\">"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_A.md:42",
+      "contains": "Own header (see §3)"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_A.md:166",
+      "contains": "no `#top`, no hero nav, no footer"
+    }
+  ],
+  "implementedBy": [
+    "src/pages/Download.jsx"
+  ]
+}

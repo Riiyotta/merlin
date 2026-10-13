@@ -1,0 +1,178 @@
+{
+  "id": "blog.prose",
+  "category": "blog",
+  "description": "Article body (max-width 680px): direct children are p, h2, h3, h4, ul, ol, blockquote only (no images, tables, code or figures in any of the 20 posts). Spacer paragraphs (0 words) are real. BODY TEXT IS PLACEHOLDER in the clone; budgets come from per-block recorded word counts.",
+  "evidenceLevel": "measured-sample",
+  "domAnchor": "div.blog_prose__r_2py",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "blocks"
+    ],
+    "properties": {
+      "blocks": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 243,
+        "items": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "type",
+                "text"
+              ],
+              "properties": {
+                "type": {
+                  "const": "p"
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 0,
+                  "x-maxWords": 264
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "type",
+                "text"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "h2",
+                    "h3",
+                    "h4"
+                  ]
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 12
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "type",
+                "items"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "ul",
+                    "ol"
+                  ]
+                },
+                "items": {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 27,
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "x-maxWords": 1391
+                  },
+                  "x-maxWordsTotal": 1391
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "type",
+                "text"
+              ],
+              "properties": {
+                "type": {
+                  "const": "blockquote"
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 0,
+                  "x-maxWords": 102
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {},
+    "motionEvidence": {
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:228"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:228",
+          "contains": "- **None at load or on scroll.**"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "760",
+      "change": "prose 16px/28.8",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:190"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:190",
+          "contains": "≤760: 16px / 28.8px"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [],
+    "components": []
+  },
+  "measuredFrom": [
+    "src/components/blog/Prose.jsx:85",
+    "src/data/blog-posts.json:33",
+    "CLONE_SPEC_PAGES_B.md:187"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/blog/Prose.jsx:85",
+      "contains": "<div className=\"blog_prose__r_2py\">"
+    },
+    {
+      "cite": "src/data/blog-posts.json:33",
+      "contains": "\"structure\": ["
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_B.md:187",
+      "contains": "### 2.2 Prose styles"
+    }
+  ],
+  "notes": "Template measured on 2 of 20 posts (how-to-write-a-formal-email, what-does-cc-and-bcc-mean-in-email); the other 18 follow the same template per CLONE_SPEC_PAGES_B.md 2 ('All 20 posts render with this template (checked by posts.js)'). Block maxima are derived from all 20 outlines in src/data/blog-posts.json.",
+  "implementedBy": [
+    "src/components/blog/Prose.jsx"
+  ]
+}

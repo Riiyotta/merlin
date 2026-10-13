@@ -1,0 +1,725 @@
+{
+  "_note": "Type tokens. fontSize/lineHeight/letterSpacing carry histogramCount recomputed by verify_all.py. Sizes below 10px (7-9px) appear in the histogram but only inside scripted scene mock-ups (Photoshop/Slack/mock sites) and are not brand type; they are intentionally not tokenized.",
+  "fontFamily": {
+    "serif": {
+      "$type": "fontFamily",
+      "$value": "Exposure, Georgia, serif",
+      "$description": "Display and heading serif (--serif)",
+      "measuredFrom": [
+        "CLONE_SPEC.md:43"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:43",
+          "contains": "serif = `Exposure, Georgia, serif`"
+        }
+      ]
+    },
+    "sans": {
+      "$type": "fontFamily",
+      "$value": "\"Open Runde\", sans-serif",
+      "$description": "Body/UI sans",
+      "measuredFrom": [
+        "CLONE_SPEC.md:43"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:43",
+          "contains": "sans = `\"Open Runde\", sans-serif`"
+        }
+      ]
+    },
+    "handwriting": {
+      "$type": "fontFamily",
+      "$value": "caveat, \"caveat Fallback\"",
+      "$description": "Handwritten notes (Caveat via next/font instance)",
+      "measuredFrom": [
+        "CLONE_SPEC.md:43"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:43",
+          "contains": "handwriting = `caveat"
+        }
+      ]
+    },
+    "mono-cta": {
+      "$type": "fontFamily",
+      "$value": "ui-monospace, SFMono-Regular, Menlo, monospace",
+      "$description": "Download CTA and privacy eyebrow",
+      "measuredFrom": [
+        "CLONE_SPEC.md:43"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:43",
+          "contains": "mono CTA = `ui-monospace"
+        }
+      ]
+    },
+    "demo-system": {
+      "$type": "fontFamily",
+      "$value": "-apple-system, system-ui, \"Segoe UI\", sans-serif",
+      "$description": "Photoshop/Slack demo chrome (scene-local, not brand)",
+      "measuredFrom": [
+        "CLONE_SPEC.md:43"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:43",
+          "contains": "Photoshop/Slack demo chrome"
+        }
+      ]
+    },
+    "mock-web": {
+      "$type": "fontFamily",
+      "$value": "Arial",
+      "$description": "Mock browser pages (third-party replicas; scene-local)",
+      "measuredFrom": [
+        "CLONE_SPEC.md:43"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:43",
+          "contains": "mock browser pages = Arial"
+        }
+      ]
+    }
+  },
+  "fontSize": {
+    "10": {
+      "$type": "dimension",
+      "$value": "10px",
+      "histogramCount": 176,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    },
+    "11": {
+      "$type": "dimension",
+      "$value": "11px",
+      "histogramCount": 166,
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:110"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:110",
+          "contains": "11px /"
+        }
+      ]
+    },
+    "12": {
+      "$type": "dimension",
+      "$value": "12px",
+      "histogramCount": 145,
+      "measuredFrom": [
+        "CLONE_SPEC.md:205"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:205",
+          "contains": "12px/"
+        }
+      ]
+    },
+    "13": {
+      "$type": "dimension",
+      "$value": "13px",
+      "histogramCount": 116,
+      "measuredFrom": [
+        "CLONE_SPEC.md:130"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:130",
+          "contains": "13px/"
+        }
+      ]
+    },
+    "14": {
+      "$type": "dimension",
+      "$value": "14px",
+      "histogramCount": 88,
+      "measuredFrom": [
+        "CLONE_SPEC.md:108"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:108",
+          "contains": "14px/"
+        }
+      ]
+    },
+    "15": {
+      "$type": "dimension",
+      "$value": "15px",
+      "histogramCount": 35,
+      "measuredFrom": [
+        "CLONE_SPEC.md:49"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:49",
+          "contains": "15px/"
+        }
+      ]
+    },
+    "16": {
+      "$type": "dimension",
+      "$value": "16px",
+      "histogramCount": 43,
+      "measuredFrom": [
+        "CLONE_SPEC.md:147"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:147",
+          "contains": "16px/"
+        }
+      ]
+    },
+    "17": {
+      "$type": "dimension",
+      "$value": "17px",
+      "histogramCount": 33,
+      "measuredFrom": [
+        "CLONE_SPEC.md:109"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:109",
+          "contains": "17px/"
+        }
+      ]
+    },
+    "18": {
+      "$type": "dimension",
+      "$value": "18px",
+      "histogramCount": 12,
+      "measuredFrom": [
+        "CLONE_SPEC.md:248"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:248",
+          "contains": "18px/"
+        }
+      ]
+    },
+    "20": {
+      "$type": "dimension",
+      "$value": "20px",
+      "histogramCount": 15,
+      "measuredFrom": [
+        "CLONE_SPEC.md:116"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:116",
+          "contains": "20px/"
+        }
+      ]
+    },
+    "22": {
+      "$type": "dimension",
+      "$value": "22px",
+      "histogramCount": 8,
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:333"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:333",
+          "contains": "22px/"
+        }
+      ]
+    },
+    "24": {
+      "$type": "dimension",
+      "$value": "24px",
+      "histogramCount": 5,
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:192"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:192",
+          "contains": "24px/"
+        }
+      ]
+    },
+    "28": {
+      "$type": "dimension",
+      "$value": "28px",
+      "histogramCount": 10,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    },
+    "29": {
+      "$type": "dimension",
+      "$value": "29px",
+      "histogramCount": 2,
+      "measuredFrom": [
+        "CLONE_SPEC.md:239"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:239",
+          "contains": "29px/"
+        }
+      ]
+    },
+    "30": {
+      "$type": "dimension",
+      "$value": "30px",
+      "histogramCount": 9,
+      "measuredFrom": [
+        "CLONE_SPEC.md:205"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:205",
+          "contains": "30px/"
+        }
+      ]
+    },
+    "32": {
+      "$type": "dimension",
+      "$value": "32px",
+      "histogramCount": 9,
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:99"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:99",
+          "contains": "32px/"
+        }
+      ]
+    },
+    "36": {
+      "$type": "dimension",
+      "$value": "36px",
+      "histogramCount": 5,
+      "measuredFrom": [
+        "CLONE_SPEC.md:331"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:331",
+          "contains": "36px/"
+        }
+      ]
+    },
+    "40": {
+      "$type": "dimension",
+      "$value": "40px",
+      "histogramCount": 9,
+      "measuredFrom": [
+        "CLONE_SPEC.md:276"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:276",
+          "contains": "40px/"
+        }
+      ]
+    },
+    "42": {
+      "$type": "dimension",
+      "$value": "42px",
+      "histogramCount": 4,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    },
+    "43": {
+      "$type": "dimension",
+      "$value": "43px",
+      "histogramCount": 4,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    },
+    "48": {
+      "$type": "dimension",
+      "$value": "48px",
+      "histogramCount": 5,
+      "measuredFrom": [
+        "CLONE_SPEC.md:302"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:302",
+          "contains": "48px/"
+        }
+      ]
+    },
+    "52": {
+      "$type": "dimension",
+      "$value": "52px",
+      "histogramCount": 3,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    },
+    "60": {
+      "$type": "dimension",
+      "$value": "60px",
+      "histogramCount": 0,
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:211"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:211",
+          "contains": "60px/"
+        }
+      ]
+    },
+    "64": {
+      "$type": "dimension",
+      "$value": "64px",
+      "histogramCount": 4,
+      "measuredFrom": [
+        "CLONE_SPEC.md:112"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:112",
+          "contains": "64px/"
+        }
+      ]
+    },
+    "76": {
+      "$type": "dimension",
+      "$value": "76px",
+      "histogramCount": 0,
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:107"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:107",
+          "contains": "76px /"
+        }
+      ]
+    }
+  },
+  "fontWeight": {
+    "regular": {
+      "$type": "fontWeight",
+      "$value": 400,
+      "$description": "Open Runde 400, Exposure 400",
+      "histogramCount": 42,
+      "measuredFrom": [
+        "CLONE_SPEC.md:44"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:44",
+          "contains": "Open Runde 400/500/600"
+        }
+      ]
+    },
+    "medium": {
+      "$type": "fontWeight",
+      "$value": 500,
+      "$description": "Open Runde 500",
+      "histogramCount": 59,
+      "measuredFrom": [
+        "CLONE_SPEC.md:44"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:44",
+          "contains": "Open Runde 400/500/600"
+        }
+      ]
+    },
+    "semibold": {
+      "$type": "fontWeight",
+      "$value": 600,
+      "$description": "Open Runde 600, handwriting 600",
+      "histogramCount": 48,
+      "measuredFrom": [
+        "CLONE_SPEC.md:44"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:44",
+          "contains": "Open Runde 400/500/600"
+        }
+      ]
+    },
+    "bold": {
+      "$type": "fontWeight",
+      "$value": 700,
+      "$description": "mono CTA only (Open Runde 700 declared but unused)",
+      "histogramCount": 17,
+      "measuredFrom": [
+        "CLONE_SPEC.md:120"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:120",
+          "contains": "font:700 14px/1.2 ui-monospace"
+        }
+      ]
+    }
+  },
+  "lineHeight": {
+    "1": {
+      "$type": "number",
+      "$value": 1.0,
+      "histogramCount": 11,
+      "measuredFrom": [
+        "CLONE_SPEC.md:112"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:112",
+          "contains": "line-height:1"
+        }
+      ]
+    },
+    "1_06": {
+      "$type": "number",
+      "$value": 1.06,
+      "histogramCount": 4,
+      "measuredFrom": [
+        "CLONE_SPEC.md:112"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:112",
+          "contains": "line-height:1.06"
+        }
+      ]
+    },
+    "1_08": {
+      "$type": "number",
+      "$value": 1.08,
+      "histogramCount": 2,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    },
+    "1_1": {
+      "$type": "number",
+      "$value": 1.1,
+      "histogramCount": 15,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    },
+    "1_12": {
+      "$type": "number",
+      "$value": 1.12,
+      "histogramCount": 4,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    },
+    "1_15": {
+      "$type": "number",
+      "$value": 1.15,
+      "histogramCount": 1,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    },
+    "1_2": {
+      "$type": "number",
+      "$value": 1.2,
+      "histogramCount": 13,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    },
+    "1_3": {
+      "$type": "number",
+      "$value": 1.3,
+      "histogramCount": 6,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    },
+    "1_45": {
+      "$type": "number",
+      "$value": 1.45,
+      "histogramCount": 7,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    },
+    "1_5": {
+      "$type": "number",
+      "$value": 1.5,
+      "histogramCount": 26,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    },
+    "1_6": {
+      "$type": "number",
+      "$value": 1.6,
+      "histogramCount": 38,
+      "measuredFrom": [
+        "CLONE_SPEC.md:359"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:359",
+          "contains": "line-height:1.6"
+        }
+      ]
+    },
+    "1_65": {
+      "$type": "number",
+      "$value": 1.65,
+      "histogramCount": 18,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    },
+    "1_7": {
+      "$type": "number",
+      "$value": 1.7,
+      "histogramCount": 33,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    },
+    "1_8": {
+      "$type": "number",
+      "$value": 1.8,
+      "histogramCount": 22,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    }
+  },
+  "letterSpacing": {
+    "n_01em": {
+      "$type": "dimension",
+      "$value": "-.01em",
+      "histogramCount": 13,
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:290"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:290",
+          "contains": "-.01em"
+        }
+      ]
+    },
+    "n_02em": {
+      "$type": "dimension",
+      "$value": "-.02em",
+      "histogramCount": 7,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    },
+    "n_025em": {
+      "$type": "dimension",
+      "$value": "-.025em",
+      "histogramCount": 11,
+      "measuredFrom": [
+        "CLONE_SPEC.md:109"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:109",
+          "contains": "-.025em"
+        }
+      ]
+    },
+    "n_03em": {
+      "$type": "dimension",
+      "$value": "-.03em",
+      "histogramCount": 2,
+      "measuredFrom": [
+        "extraction/derived-histograms.json"
+      ],
+      "measuredQuotes": []
+    },
+    "n_035em": {
+      "$type": "dimension",
+      "$value": "-.035em",
+      "histogramCount": 6,
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:202"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:202",
+          "contains": "-.035em"
+        }
+      ]
+    },
+    "n_04em": {
+      "$type": "dimension",
+      "$value": "-.04em",
+      "histogramCount": 6,
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:128"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:128",
+          "contains": "-.04em"
+        }
+      ]
+    },
+    "n_055em": {
+      "$type": "dimension",
+      "$value": "-.055em",
+      "histogramCount": 8,
+      "measuredFrom": [
+        "CLONE_SPEC.md:302"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:302",
+          "contains": "-.055em"
+        }
+      ]
+    },
+    "_065em": {
+      "$type": "dimension",
+      "$value": ".065em",
+      "histogramCount": 2,
+      "measuredFrom": [
+        "CLONE_SPEC.md:120"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:120",
+          "contains": ".065em"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1549 @@
+{
+  "_note": "Foundation colors. histogramCount is recomputed by verify_all.py from extraction/derived-histograms.json (declaration occurrences in the site CSS); every color also cites the recorded spec value. Mock-site brand colors (DoorDash red, Qatar maroon, Instacart green, Ashby purple) are DELIBERATELY not tokenized: they belong to third-party brands replicated inside scene mock-ups.",
+  "color": {
+    "neutral": {
+      "white": {
+        "$type": "color",
+        "$value": "#ffffff",
+        "$description": "page and card background",
+        "histogramCount": 138,
+        "measuredFrom": [
+          "CLONE_SPEC.md:48"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:48",
+            "contains": "background:#fff"
+          }
+        ]
+      },
+      "black": {
+        "$type": "color",
+        "$value": "#000000",
+        "$description": "download button fill, privacy scene",
+        "histogramCount": 13,
+        "measuredFrom": [
+          "CLONE_SPEC.md:120"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:120",
+            "contains": "border:6px solid #000"
+          }
+        ]
+      }
+    },
+    "ink": {
+      "primary": {
+        "$type": "color",
+        "$value": "#242424",
+        "$description": "primary ink on the home page",
+        "histogramCount": 42,
+        "measuredFrom": [
+          "CLONE_SPEC.md:64"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:64",
+            "contains": "Ink primary"
+          }
+        ]
+      },
+      "story": {
+        "$type": "color",
+        "$value": "#2b3027",
+        "$description": ".merlin-story base ink",
+        "histogramCount": 8,
+        "measuredFrom": [
+          "CLONE_SPEC.md:49"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:49",
+            "contains": "color:#2b3027"
+          }
+        ]
+      },
+      "meetings": {
+        "$type": "color",
+        "$value": "#252922",
+        "$description": "meetings/projects heading ink",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC.md:67"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:67",
+            "contains": "#252922"
+          }
+        ]
+      },
+      "companion": {
+        "$type": "color",
+        "$value": "#172d3b",
+        "$description": "companion heading ink",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC.md:68"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:68",
+            "contains": "#172d3b"
+          }
+        ]
+      },
+      "manifesto": {
+        "$type": "color",
+        "$value": "#171717",
+        "$description": "manifesto page base ink and headings",
+        "histogramCount": 5,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_A.md:240"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_A.md:240",
+            "contains": "#171717"
+          }
+        ]
+      },
+      "install": {
+        "$type": "color",
+        "$value": "#262626",
+        "$description": "install page base ink",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_A.md:200"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_A.md:200",
+            "contains": "#262626"
+          }
+        ]
+      },
+      "blog": {
+        "$type": "color",
+        "$value": "#343630",
+        "$description": "blog page text and h1",
+        "histogramCount": 2,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:107"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:107",
+            "contains": "#343630"
+          }
+        ]
+      },
+      "legal": {
+        "$type": "color",
+        "$value": "#41463c",
+        "$description": "legal page base ink",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:285"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:285",
+            "contains": "#41463c"
+          }
+        ]
+      }
+    },
+    "muted": {
+      "hero": {
+        "$type": "color",
+        "$value": "#858585",
+        "$description": "hero muted title line",
+        "histogramCount": 3,
+        "measuredFrom": [
+          "CLONE_SPEC.md:65"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:65",
+            "contains": "#858585"
+          }
+        ]
+      },
+      "section": {
+        "$type": "color",
+        "$value": "#868682",
+        "$description": "section heading em line",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC.md:65"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:65",
+            "contains": "#868682"
+          }
+        ]
+      },
+      "body": {
+        "$type": "color",
+        "$value": "#737373",
+        "$description": "body muted copy, hero nav links",
+        "histogramCount": 14,
+        "measuredFrom": [
+          "CLONE_SPEC.md:49"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:49",
+            "contains": "#737373"
+          }
+        ]
+      },
+      "body-warm": {
+        "$type": "color",
+        "$value": "#747471",
+        "$description": "section body copy",
+        "histogramCount": 2,
+        "measuredFrom": [
+          "CLONE_SPEC.md:66"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:66",
+            "contains": "#747471"
+          }
+        ]
+      },
+      "body-cool": {
+        "$type": "color",
+        "$value": "#85858b",
+        "$description": "routine intro, faq accent",
+        "histogramCount": 5,
+        "measuredFrom": [
+          "CLONE_SPEC.md:66"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:66",
+            "contains": "#85858b"
+          }
+        ]
+      },
+      "product": {
+        "$type": "color",
+        "$value": "#696969",
+        "$description": "product muted ink",
+        "histogramCount": 36,
+        "measuredFrom": [
+          "CLONE_SPEC.md:49"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:49",
+            "contains": "--product-muted:#696969"
+          }
+        ]
+      }
+    },
+    "accent": {
+      "cyan-hand": {
+        "$type": "color",
+        "$value": "#20b8cf",
+        "$description": "handwriting and note accent",
+        "histogramCount": 8,
+        "measuredFrom": [
+          "CLONE_SPEC.md:69"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:69",
+            "contains": "#20b8cf"
+          }
+        ]
+      },
+      "cyan-fill": {
+        "$type": "color",
+        "$value": "#73e7f5",
+        "$description": "download wipe fill, green highlight",
+        "histogramCount": 8,
+        "measuredFrom": [
+          "CLONE_SPEC.md:70"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:70",
+            "contains": "#73e7f5"
+          }
+        ]
+      },
+      "orange": {
+        "$type": "color",
+        "$value": "#ff9e53",
+        "$description": "projects highlight",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC.md:71"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:71",
+            "contains": "#ff9e53"
+          }
+        ]
+      },
+      "nav-dot": {
+        "$type": "color",
+        "$value": "#00c8e0",
+        "$description": "hero nav dot",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC.md:72"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:72",
+            "contains": "#00c8e0"
+          }
+        ]
+      },
+      "selection-bg": {
+        "$type": "color",
+        "$value": "#c5e8fc",
+        "$description": "companion text selection",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC.md:73"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:73",
+            "contains": "#c5e8fc"
+          }
+        ]
+      },
+      "selection-handle": {
+        "$type": "color",
+        "$value": "#079bea",
+        "$description": "companion selection handles",
+        "histogramCount": 2,
+        "measuredFrom": [
+          "CLONE_SPEC.md:73"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:73",
+            "contains": "#079bea"
+          }
+        ]
+      },
+      "privacy-eyebrow": {
+        "$type": "color",
+        "$value": "#50c7d8",
+        "$description": "privacy scene accent",
+        "histogramCount": 2,
+        "measuredFrom": [
+          "CLONE_SPEC.md:74"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:74",
+            "contains": "#50c7d8"
+          }
+        ]
+      },
+      "link-teal": {
+        "$type": "color",
+        "$value": "#12889a",
+        "$description": "hover accent, prose links, handwriting on manifesto",
+        "histogramCount": 13,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:147"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:147",
+            "contains": "#12889a"
+          }
+        ]
+      },
+      "input-focus": {
+        "$type": "color",
+        "$value": "#2798a8",
+        "$description": "ask-form focus border",
+        "histogramCount": 5,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_A.md:146"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_A.md:146",
+            "contains": "#2798a8"
+          }
+        ]
+      },
+      "focus-ring": {
+        "$type": "color",
+        "$value": "#58959d",
+        "$description": "focus ring on home",
+        "histogramCount": 3,
+        "measuredFrom": [
+          "CLONE_SPEC.md:50"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:50",
+            "contains": "#58959d"
+          }
+        ]
+      },
+      "selection": {
+        "$type": "color",
+        "$value": "#94d8ff",
+        "$description": "::selection background",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC.md:48"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:48",
+            "contains": "#94d8ff"
+          }
+        ]
+      },
+      "badge-red": {
+        "$type": "color",
+        "$value": "#ff3b30",
+        "$description": "notification counter badge",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC.md:78"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:78",
+            "contains": "#ff3b30"
+          }
+        ]
+      },
+      "plan-sage": {
+        "$type": "color",
+        "$value": "#72886c",
+        "$description": "Pro plan accent",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_A.md:101"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_A.md:101",
+            "contains": "#72886c"
+          }
+        ]
+      },
+      "plan-lavender": {
+        "$type": "color",
+        "$value": "#9082b1",
+        "$description": "Ultra plan accent",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_A.md:102"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_A.md:102",
+            "contains": "#9082b1"
+          }
+        ]
+      },
+      "plan-peach": {
+        "$type": "color",
+        "$value": "#c9916c",
+        "$description": "Max plan accent",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_A.md:103"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_A.md:103",
+            "contains": "#c9916c"
+          }
+        ]
+      }
+    },
+    "surface": {
+      "paper": {
+        "$type": "color",
+        "$value": "#fafaf9",
+        "$description": "product paper surface",
+        "histogramCount": 16,
+        "measuredFrom": [
+          "CLONE_SPEC.md:49"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:49",
+            "contains": "--product-paper:#fafaf9"
+          }
+        ]
+      },
+      "product": {
+        "$type": "color",
+        "$value": "#f5f5f5",
+        "$description": "product surface",
+        "histogramCount": 17,
+        "measuredFrom": [
+          "CLONE_SPEC.md:49"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:49",
+            "contains": "--product-surface:#f5f5f5"
+          }
+        ]
+      },
+      "browser-band": {
+        "$type": "color",
+        "$value": "#f6f6f6",
+        "$description": "browser showcase band",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC.md:56"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:56",
+            "contains": "#f6f6f6"
+          }
+        ]
+      },
+      "footer": {
+        "$type": "color",
+        "$value": "#e6e6e6",
+        "$description": "closing footer background",
+        "histogramCount": 35,
+        "measuredFrom": [
+          "CLONE_SPEC.md:56"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:56",
+            "contains": "footer.closing-footer` (bg `#e6e6e6`)"
+          }
+        ]
+      },
+      "landscape": {
+        "$type": "color",
+        "$value": "#ece3c7",
+        "$description": "hero landscape fallback bg",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC.md:126"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:126",
+            "contains": "#ece3c7"
+          }
+        ]
+      },
+      "meeting": {
+        "$type": "color",
+        "$value": "#b5c6d8",
+        "$description": "meeting landscape fallback bg",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC.md:240"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:240",
+            "contains": "#b5c6d8"
+          }
+        ]
+      },
+      "install": {
+        "$type": "color",
+        "$value": "#fafaf7",
+        "$description": "install page background",
+        "histogramCount": 2,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_A.md:170"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_A.md:170",
+            "contains": "#fafaf7"
+          }
+        ]
+      },
+      "blog-image": {
+        "$type": "color",
+        "$value": "#f2f2ef",
+        "$description": "blog image placeholder",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:76"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:76",
+            "contains": "#f2f2ef"
+          }
+        ]
+      },
+      "tab-track": {
+        "$type": "color",
+        "$value": "#f5f6f3",
+        "$description": "legal tab track",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:290"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:290",
+            "contains": "#f5f6f3"
+          }
+        ]
+      },
+      "pill-teal": {
+        "$type": "color",
+        "$value": "#edf8f9",
+        "$description": "Latest story pill",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:110"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:110",
+            "contains": "#edf8f9"
+          }
+        ]
+      },
+      "arrow-hover": {
+        "$type": "color",
+        "$value": "#eef8f8",
+        "$description": "story arrow hover",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:147"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:147",
+            "contains": "#eef8f8"
+          }
+        ]
+      },
+      "companion-showcase": {
+        "$type": "color",
+        "$value": "#f5f5f7",
+        "$description": "companion showcase panel",
+        "histogramCount": 3,
+        "measuredFrom": [
+          "CLONE_SPEC.md:277"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:277",
+            "contains": "background:#f5f5f7"
+          }
+        ]
+      },
+      "install-art": {
+        "$type": "color",
+        "$value": "#f4f4f0",
+        "$description": "install step art box",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_A.md:209"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_A.md:209",
+            "contains": "#f4f4f0"
+          }
+        ]
+      }
+    },
+    "line": {
+      "default": {
+        "$type": "color",
+        "$value": "#ebebeb",
+        "$description": "default line",
+        "histogramCount": 2,
+        "measuredFrom": [
+          "CLONE_SPEC.md:49"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:49",
+            "contains": "--line:#ebebeb"
+          }
+        ]
+      },
+      "product": {
+        "$type": "color",
+        "$value": "#e6e6e6",
+        "$description": "product border",
+        "histogramCount": 35,
+        "measuredFrom": [
+          "CLONE_SPEC.md:49"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:49",
+            "contains": "--product-border:#e6e6e6"
+          }
+        ]
+      },
+      "card": {
+        "$type": "color",
+        "$value": "#e4e4e7",
+        "$description": "card borders",
+        "histogramCount": 8,
+        "measuredFrom": [
+          "CLONE_SPEC.md:79"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:79",
+            "contains": "#e4e4e7"
+          }
+        ]
+      },
+      "card-alt": {
+        "$type": "color",
+        "$value": "#d5d5d5",
+        "$description": "card borders alt",
+        "histogramCount": 2,
+        "measuredFrom": [
+          "CLONE_SPEC.md:79"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:79",
+            "contains": "#d5d5d5"
+          }
+        ]
+      },
+      "card-alt2": {
+        "$type": "color",
+        "$value": "#d6d6d6",
+        "$description": "folder card borders",
+        "histogramCount": 2,
+        "measuredFrom": [
+          "CLONE_SPEC.md:79"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:79",
+            "contains": "#d6d6d6"
+          }
+        ]
+      },
+      "card-alt3": {
+        "$type": "color",
+        "$value": "#e9e9eb",
+        "$description": "routine card border",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC.md:79"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:79",
+            "contains": "#e9e9eb"
+          }
+        ]
+      },
+      "hairline": {
+        "$type": "color",
+        "$value": "#c6c6c3",
+        "$description": "companies hairline",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC.md:147"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:147",
+            "contains": "#c6c6c3"
+          }
+        ]
+      },
+      "blog": {
+        "$type": "color",
+        "$value": "#eaece6",
+        "$description": "blog story dividers",
+        "histogramCount": 2,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:87"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:87",
+            "contains": "#eaece6"
+          }
+        ]
+      },
+      "blog-end": {
+        "$type": "color",
+        "$value": "#e7ebe1",
+        "$description": "blog article end rule",
+        "histogramCount": 2,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:178"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:178",
+            "contains": "#e7ebe1"
+          }
+        ]
+      },
+      "legal": {
+        "$type": "color",
+        "$value": "#eceee8",
+        "$description": "legal borders",
+        "histogramCount": 3,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:290"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:290",
+            "contains": "#eceee8"
+          }
+        ]
+      },
+      "faq": {
+        "$type": "color",
+        "$value": "#e6e6e9",
+        "$description": "faq divider",
+        "histogramCount": 2,
+        "measuredFrom": [
+          "CLONE_SPEC.md:76"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:76",
+            "contains": "#e6e6e9"
+          }
+        ]
+      },
+      "install-step": {
+        "$type": "color",
+        "$value": "#dddfd5",
+        "$description": "install step number ring",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_A.md:206"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_A.md:206",
+            "contains": "#dddfd5"
+          }
+        ]
+      },
+      "plan": {
+        "$type": "color",
+        "$value": "#c8c8c8",
+        "$description": "plan card border",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_A.md:142"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_A.md:142",
+            "contains": "#c8c8c8"
+          }
+        ]
+      },
+      "plan-shadow": {
+        "$type": "color",
+        "$value": "#d9d9d9",
+        "$description": "plan card offset shadow",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_A.md:142"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_A.md:142",
+            "contains": "#d9d9d9"
+          }
+        ]
+      },
+      "privacy-divider": {
+        "$type": "color",
+        "$value": "#ffffff12",
+        "$description": "privacy trust-card dividers",
+        "histogramCount": 9,
+        "measuredFrom": [
+          "CLONE_SPEC.md:303"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:303",
+            "contains": "#ffffff12"
+          }
+        ]
+      }
+    },
+    "text": {
+      "privacy-heading": {
+        "$type": "color",
+        "$value": "#f5f5f7",
+        "$description": "privacy heading on black",
+        "histogramCount": 3,
+        "measuredFrom": [
+          "CLONE_SPEC.md:75"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:75",
+            "contains": "heading `#f5f5f7`"
+          }
+        ]
+      },
+      "privacy-accent": {
+        "$type": "color",
+        "$value": "#a1a1a8",
+        "$description": "privacy accent line",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC.md:75"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:75",
+            "contains": "#a1a1a8"
+          }
+        ]
+      },
+      "privacy-copy": {
+        "$type": "color",
+        "$value": "#aaaab1",
+        "$description": "privacy intro copy",
+        "histogramCount": 2,
+        "measuredFrom": [
+          "CLONE_SPEC.md:75"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:75",
+            "contains": "#aaaab1"
+          }
+        ]
+      },
+      "privacy-card-title": {
+        "$type": "color",
+        "$value": "#d9d9df",
+        "$description": "privacy card h3",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC.md:75"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:75",
+            "contains": "#d9d9df"
+          }
+        ]
+      },
+      "privacy-card-body": {
+        "$type": "color",
+        "$value": "#92929b",
+        "$description": "privacy card p",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC.md:75"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:75",
+            "contains": "#92929b"
+          }
+        ]
+      },
+      "faq-heading": {
+        "$type": "color",
+        "$value": "#29292e",
+        "$description": "faq heading",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC.md:76"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:76",
+            "contains": "#29292e"
+          }
+        ]
+      },
+      "faq-question": {
+        "$type": "color",
+        "$value": "#333338",
+        "$description": "faq question",
+        "histogramCount": 3,
+        "measuredFrom": [
+          "CLONE_SPEC.md:76"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:76",
+            "contains": "#333338"
+          }
+        ]
+      },
+      "faq-answer": {
+        "$type": "color",
+        "$value": "#666670",
+        "$description": "faq answer",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC.md:76"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:76",
+            "contains": "#666670"
+          }
+        ]
+      },
+      "faq-chevron": {
+        "$type": "color",
+        "$value": "#92929a",
+        "$description": "faq chevron",
+        "histogramCount": 2,
+        "measuredFrom": [
+          "CLONE_SPEC.md:76"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:76",
+            "contains": "#92929a"
+          }
+        ]
+      },
+      "footer-ink": {
+        "$type": "color",
+        "$value": "#292d27",
+        "$description": "footer ink",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC.md:77"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:77",
+            "contains": "#292d27"
+          }
+        ]
+      },
+      "footer-copyright": {
+        "$type": "color",
+        "$value": "#74786e",
+        "$description": "footer copyright",
+        "histogramCount": 2,
+        "measuredFrom": [
+          "CLONE_SPEC.md:77"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:77",
+            "contains": "#74786e"
+          }
+        ]
+      },
+      "blog-featured": {
+        "$type": "color",
+        "$value": "#3b3e36",
+        "$description": "blog featured h2",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:111"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:111",
+            "contains": "#3b3e36"
+          }
+        ]
+      },
+      "blog-story": {
+        "$type": "color",
+        "$value": "#45493f",
+        "$description": "blog story h3",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:118"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:118",
+            "contains": "#45493f"
+          }
+        ]
+      },
+      "blog-prose": {
+        "$type": "color",
+        "$value": "#686e60",
+        "$description": "blog prose body",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:190"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:190",
+            "contains": "#686e60"
+          }
+        ]
+      },
+      "blog-prose-strong": {
+        "$type": "color",
+        "$value": "#454d3d",
+        "$description": "blog strong and rendered headings",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:194"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:194",
+            "contains": "#454d3d"
+          }
+        ]
+      },
+      "blog-heading": {
+        "$type": "color",
+        "$value": "#363d2f",
+        "$description": "blog heading base",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:192"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:192",
+            "contains": "#363d2f"
+          }
+        ]
+      },
+      "blog-quote": {
+        "$type": "color",
+        "$value": "#4e5945",
+        "$description": "blockquote text",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:199"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:199",
+            "contains": "#4e5945"
+          }
+        ]
+      },
+      "blog-intro": {
+        "$type": "color",
+        "$value": "#85877f",
+        "$description": "blog intro paragraph",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:108"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:108",
+            "contains": "#85877f"
+          }
+        ]
+      },
+      "blog-eyebrow": {
+        "$type": "color",
+        "$value": "#888b84",
+        "$description": "eyebrow",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:109"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:109",
+            "contains": "#888b84"
+          }
+        ]
+      },
+      "blog-meta-time": {
+        "$type": "color",
+        "$value": "#92948e",
+        "$description": "meta time",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:113"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:113",
+            "contains": "#92948e"
+          }
+        ]
+      },
+      "blog-meta-author": {
+        "$type": "color",
+        "$value": "#696e63",
+        "$description": "meta author",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:112"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:112",
+            "contains": "#696e63"
+          }
+        ]
+      },
+      "blog-category": {
+        "$type": "color",
+        "$value": "#92968a",
+        "$description": "story category",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:117"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:117",
+            "contains": "#92968a"
+          }
+        ]
+      },
+      "blog-arrow": {
+        "$type": "color",
+        "$value": "#8f9487",
+        "$description": "story arrow",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:147"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:147",
+            "contains": "#8f9487"
+          }
+        ]
+      },
+      "blog-section-span": {
+        "$type": "color",
+        "$value": "#9a9c95",
+        "$description": "section span",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:116"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:116",
+            "contains": "#9a9c95"
+          }
+        ]
+      },
+      "blog-manifesto-link": {
+        "$type": "color",
+        "$value": "#74796b",
+        "$description": "manifesto link",
+        "histogramCount": 2,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:120"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:120",
+            "contains": "#74796b"
+          }
+        ]
+      },
+      "blog-back": {
+        "$type": "color",
+        "$value": "#878c80",
+        "$description": "back link",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:209"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:209",
+            "contains": "#878c80"
+          }
+        ]
+      },
+      "blog-author-time": {
+        "$type": "color",
+        "$value": "#92978b",
+        "$description": "author time",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:174"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:174",
+            "contains": "#92978b"
+          }
+        ]
+      },
+      "blog-article-end": {
+        "$type": "color",
+        "$value": "#969c8e",
+        "$description": "article end",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:179"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:179",
+            "contains": "#969c8e"
+          }
+        ]
+      },
+      "pill-teal": {
+        "$type": "color",
+        "$value": "#218c9b",
+        "$description": "Latest story pill text",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:110"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:110",
+            "contains": "#218c9b"
+          }
+        ]
+      },
+      "legal-h1": {
+        "$type": "color",
+        "$value": "#363c30",
+        "$description": "legal h1",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:328"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:328",
+            "contains": "#363c30"
+          }
+        ]
+      },
+      "legal-h2": {
+        "$type": "color",
+        "$value": "#414a36",
+        "$description": "legal section h2",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:333"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:333",
+            "contains": "#414a36"
+          }
+        ]
+      },
+      "legal-h3": {
+        "$type": "color",
+        "$value": "#505a44",
+        "$description": "legal h3",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:334"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:334",
+            "contains": "#505a44"
+          }
+        ]
+      },
+      "legal-body": {
+        "$type": "color",
+        "$value": "#777f6d",
+        "$description": "legal body",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:335"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:335",
+            "contains": "#777f6d"
+          }
+        ]
+      },
+      "legal-intro": {
+        "$type": "color",
+        "$value": "#818879",
+        "$description": "legal intro",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:329"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:329",
+            "contains": "#818879"
+          }
+        ]
+      },
+      "legal-date": {
+        "$type": "color",
+        "$value": "#929889",
+        "$description": "legal date",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:330"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:330",
+            "contains": "#929889"
+          }
+        ]
+      },
+      "legal-toc-label": {
+        "$type": "color",
+        "$value": "#464e3d",
+        "$description": "legal TOC label",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:331"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:331",
+            "contains": "#464e3d"
+          }
+        ]
+      },
+      "legal-toc-link": {
+        "$type": "color",
+        "$value": "#8b9281",
+        "$description": "legal TOC link",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:332"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:332",
+            "contains": "#8b9281"
+          }
+        ]
+      },
+      "legal-tab-active": {
+        "$type": "color",
+        "$value": "#353c2e",
+        "$description": "legal tab active",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:291"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:291",
+            "contains": "#353c2e"
+          }
+        ]
+      },
+      "legal-tab-inactive": {
+        "$type": "color",
+        "$value": "#878e7e",
+        "$description": "legal tab inactive",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:292"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:292",
+            "contains": "#878e7e"
+          }
+        ]
+      },
+      "legal-footer-link": {
+        "$type": "color",
+        "$value": "#78836b",
+        "$description": "legal doc-footer links",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:338"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:338",
+            "contains": "#78836b"
+          }
+        ]
+      },
+      "legal-marker": {
+        "$type": "color",
+        "$value": "#a0aa94",
+        "$description": "legal list markers",
+        "histogramCount": 1,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:336"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:336",
+            "contains": "#a0aa94"
+          }
+        ]
+      },
+      "install-muted": {
+        "$type": "color",
+        "$value": "#75756e",
+        "$description": "install description",
+        "histogramCount": 2,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_A.md:203"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_A.md:203",
+            "contains": "#75756e"
+          }
+        ]
+      },
+      "install-heading-span": {
+        "$type": "color",
+        "$value": "#777b70",
+        "$description": "install h1 span",
+        "histogramCount": 3,
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_A.md:202"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_A.md:202",
+            "contains": "#777b70"
+          }
+        ]
+      }
+    }
+  }
+}

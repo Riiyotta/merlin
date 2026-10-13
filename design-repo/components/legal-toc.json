@@ -1,0 +1,30 @@
+{
+  "id": "legal-toc",
+  "kind": "component",
+  "description": "Sticky (top 32px) 'On this page' list; links jump with native anchors; :target colors the section heading #12889a.",
+  "props": {
+    "sections": "array of {id,title}"
+  },
+  "variants": [],
+  "domAnchor": "aside.legal-sidebar",
+  "measuredFrom": [
+    "src/components/legal/LegalPage.jsx:105",
+    "CLONE_SPEC_PAGES_B.md:347"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/legal/LegalPage.jsx:105",
+      "contains": "className=\"legal-contents\""
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_B.md:347",
+      "contains": "**Sticky TOC:** `aside.legal-sidebar` is `position:sticky; top:32px`"
+    }
+  ],
+  "motion": {
+    "patterns": [
+      "anchor-smooth-scroll"
+    ],
+    "reducedMotionFallback": "no-animation"
+  }
+}

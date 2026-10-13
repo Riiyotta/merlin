@@ -1,0 +1,96 @@
+{
+  "id": "blog.manifesto-aside",
+  "category": "blog",
+  "description": "Centered Caveat handwritten aside (rotate -3deg) and a 'Why we’re building Merlin' arrow link to /manifesto. The handwritten line in the CLONE is an original placeholder of the same word count.",
+  "evidenceLevel": "measured",
+  "domAnchor": "aside.blog_manifesto__VgyoG",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "handwritten",
+      "linkLabel",
+      "href"
+    ],
+    "properties": {
+      "handwritten": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 8
+      },
+      "linkLabel": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 4
+      },
+      "href": {
+        "type": "string",
+        "pattern": "^/manifesto$",
+        "x-sample": "/manifesto"
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-transition"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {},
+    "motionEvidence": {
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:148"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:148",
+          "contains": "Manifesto link hover: svg `translate(2px,-2px)`"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "760",
+      "change": "padding 64px 0; handwritten 28px",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:140"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:140",
+          "contains": "(padding 64px 0)"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [
+      "handwritten-note",
+      "link-arrow"
+    ],
+    "components": []
+  },
+  "measuredFrom": [
+    "src/pages/Blog.jsx:8",
+    "src/pages/Blog.jsx:73"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/pages/Blog.jsx:8",
+      "contains": "const MANIFESTO_NOTE ="
+    },
+    {
+      "cite": "src/pages/Blog.jsx:73",
+      "contains": "<aside className=\"blog_manifesto__VgyoG\">"
+    }
+  ],
+  "implementedBy": [
+    "src/pages/Blog.jsx"
+  ]
+}

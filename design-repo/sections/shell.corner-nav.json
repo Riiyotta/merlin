@@ -1,0 +1,156 @@
+{
+  "id": "shell.corner-nav",
+  "category": "shell",
+  "description": "Stand-alone corner navigation (brand + Pricing + Manifesto + sliding dot) inside a relative header wrapper, used on manifesto, blog and legal. On home and pricing the same nav is embedded in hero.marketing instead. The wrapper class differs per route (manifesto-navigation / blog_navigation__bQ9ND / legal-navigation); class names are load-bearing.",
+  "evidenceLevel": "measured",
+  "domAnchor": "div.site-container > header",
+  "variants": [
+    "manifesto",
+    "blog",
+    "legal"
+  ],
+  "constraints": {
+    "onePerPage": true,
+    "mustBeFirst": true
+  },
+  "variantRules": [
+    {
+      "variant": "manifesto",
+      "pinned": {
+        "activeLink": "manifesto"
+      },
+      "note": "aria-current on Manifesto (CLONE_SPEC_PAGES_A.md section 1)"
+    },
+    {
+      "variant": "blog",
+      "pinned": {
+        "activeLink": "none"
+      },
+      "note": "no link matches /blog; dot not rendered at load"
+    },
+    {
+      "variant": "legal",
+      "pinned": {
+        "activeLink": "none"
+      },
+      "note": "no link matches /privacy or /terms; dot not rendered at load"
+    }
+  ],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "activeLink",
+      "brandIcon"
+    ],
+    "properties": {
+      "activeLink": {
+        "type": "string",
+        "enum": [
+          "manifesto",
+          "none"
+        ]
+      },
+      "brandIcon": {
+        "$ref": "#/definitions/assetRef",
+        "x-allowedRoles": [
+          "brand.merlin-app-icon"
+        ]
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "nav-dot-spring",
+      "brand-hover-sweep",
+      "none"
+    ],
+    "reducedMotionFallback": "instant-no-spring",
+    "timing": {
+      "spring": "tokens spring.nav-dot",
+      "sweepMs": 900
+    },
+    "motionEvidence": {
+      "measuredFrom": [
+        "src/components/hero/HeroNav.jsx:9",
+        "src/components/hero/HeroNav.jsx:112"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/hero/HeroNav.jsx:9",
+          "contains": "const SPRING = { stiffness: 170, damping: 15, mass: 0.8 }"
+        },
+        {
+          "cite": "src/components/hero/HeroNav.jsx:112",
+          "contains": "window.setTimeout(() => setSweeping(false), 900)"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "760",
+      "change": "wrapper header height 160px becomes 144px (blog); legal uses 640",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:40"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:40",
+          "contains": "(`144px` at ≤760/≤640)"
+        }
+      ]
+    },
+    {
+      "query": "max-width",
+      "breakpoint": "767",
+      "change": "hero-nav-dot hidden",
+      "measuredFrom": [
+        "CLONE_SPEC.md:111"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:111",
+          "contains": "Hidden ≤767px"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [
+      "icon",
+      "hover-sweep-wordmark"
+    ],
+    "components": [
+      "hero-corner-nav"
+    ]
+  },
+  "measuredFrom": [
+    "src/pages/Manifesto.jsx:43",
+    "src/components/blog/BlogLayout.jsx:22",
+    "src/components/legal/LegalPage.jsx:84",
+    "CLONE_SPEC_PAGES_B.md:40"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/pages/Manifesto.jsx:43",
+      "contains": "<header className=\"manifesto-navigation\">"
+    },
+    {
+      "cite": "src/components/blog/BlogLayout.jsx:22",
+      "contains": "<header className=\"blog_navigation__bQ9ND\">"
+    },
+    {
+      "cite": "src/components/legal/LegalPage.jsx:84",
+      "contains": "<header className=\"legal-navigation\">"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_B.md:40",
+      "contains": "Same component and CSS (`a5f02e…`), different wrapper."
+    }
+  ],
+  "implementedBy": [
+    "src/components/hero/HeroNav.jsx"
+  ]
+}

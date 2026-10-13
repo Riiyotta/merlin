@@ -1,0 +1,263 @@
+{
+  "id": "manifesto.opening",
+  "category": "manifesto",
+  "description": "Poster opening: two Caveat handwriting overlays behind the title, H1 'Less managing. More living.', a time-of-day opening paragraph and a second paragraph with two inline mentions (meeting, document) plus a time-of-day interruption tail. BODY TEXT IS PLACEHOLDER (the live essay is not reproduced).",
+  "evidenceLevel": "measured",
+  "domAnchor": "section.manifesto-poster-opening",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "handwritingTime",
+      "handwritingBack",
+      "titleLine1",
+      "titleLine2",
+      "openingParagraph",
+      "secondParagraph"
+    ],
+    "properties": {
+      "handwritingTime": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 2
+      },
+      "handwritingBack": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 2
+      },
+      "titleLine1": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 2
+      },
+      "titleLine2": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 2
+      },
+      "openingParagraph": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 28
+      },
+      "secondParagraph": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 35
+      },
+      "timeVariants": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "morning",
+          "afternoon",
+          "evening",
+          "night",
+          "earlyNight"
+        ],
+        "properties": {
+          "morning": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "opening",
+              "interruption"
+            ],
+            "properties": {
+              "opening": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 21
+              },
+              "interruption": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 18
+              }
+            }
+          },
+          "afternoon": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "opening",
+              "interruption"
+            ],
+            "properties": {
+              "opening": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 22
+              },
+              "interruption": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 19
+              }
+            }
+          },
+          "evening": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "opening",
+              "interruption"
+            ],
+            "properties": {
+              "opening": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 22
+              },
+              "interruption": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 19
+              }
+            }
+          },
+          "night": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "opening",
+              "interruption"
+            ],
+            "properties": {
+              "opening": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 24
+              },
+              "interruption": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 18
+              }
+            }
+          },
+          "earlyNight": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "opening",
+              "interruption"
+            ],
+            "properties": {
+              "opening": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 28
+              },
+              "interruption": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 18
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "time-of-day-swap",
+      "none"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {
+      "hourRanges": {
+        "morning": "5-11",
+        "afternoon": "12-16",
+        "evening": "17-21",
+        "night": "22-23 and 0-4",
+        "earlyNight": "before 5"
+      },
+      "refreshMs": 60000
+    },
+    "motionEvidence": {
+      "measuredFrom": [
+        "src/components/manifesto/copy.js:59",
+        "src/components/manifesto/TimeOfDayCopy.jsx:13"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/manifesto/copy.js:59",
+          "contains": "export function copyForHour(h)"
+        },
+        {
+          "cite": "src/components/manifesto/TimeOfDayCopy.jsx:13",
+          "contains": "window.setInterval(update, 60000)"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "1023",
+      "change": "copy column min(82%,660px); side shifts re-centered; opening padding 200/210",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:305"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:305",
+          "contains": "≤1023: copy `width:min(82%,660px)`"
+        }
+      ]
+    },
+    {
+      "query": "max-width",
+      "breakpoint": "600",
+      "change": "handwriting clamp(76px,23vw,138px); h1 36px/41.4; p 23px/34.5; opening padding 120 0 135",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:306"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:306",
+          "contains": "**≤600 (390 measured):**"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [
+      "handwritten-note",
+      "inline-identity"
+    ],
+    "components": [
+      "time-of-day-copy"
+    ]
+  },
+  "measuredFrom": [
+    "src/pages/Manifesto.jsx:48",
+    "CLONE_SPEC_PAGES_A.md:236",
+    "CLONE_SPEC_PAGES_A.md:309"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/pages/Manifesto.jsx:48",
+      "contains": "<section className=\"manifesto-poster-opening\">"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_A.md:236",
+      "contains": "**Copy policy:**"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_A.md:309",
+      "contains": "Time-of-day copy (module `10256`"
+    }
+  ],
+  "implementedBy": [
+    "src/pages/Manifesto.jsx"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "browser-card-deck",
+  "kind": "component",
+  "description": "Four absolutely stacked 3D deck slots, each a brand-colored card holding a scaled (800px -> .51) interactive mock website; pagination dots; pinned by GSAP.",
+  "props": {
+    "cards": "array of {name, mark, scene}"
+  },
+  "variants": [],
+  "domAnchor": "div.bs-deck",
+  "measuredFrom": [
+    "src/components/Browser.jsx:145",
+    "src/components/browser/MockSites.jsx:358"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/Browser.jsx:145",
+      "contains": "className=\"bs-deck\""
+    },
+    {
+      "cite": "src/components/browser/MockSites.jsx:358",
+      "contains": "BrowserPreview"
+    }
+  ],
+  "motion": {
+    "patterns": [
+      "scroll-pin-card-deck"
+    ],
+    "reducedMotionFallback": "stacked-static-layout"
+  },
+  "assetRoles": [
+    "logo.third-party-wordmark",
+    "photo.mock-product"
+  ]
+}

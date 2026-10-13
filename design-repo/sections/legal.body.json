@@ -1,0 +1,253 @@
+{
+  "id": "legal.body",
+  "category": "legal",
+  "description": "Sticky 'On this page' TOC (no scroll-spy; :target colors the heading) beside the prose article: h2 sections with p / h3 / ul / contact-link blocks, then the document footer (contact + back to top). BODY TEXT IS PLACEHOLDER in the clone.",
+  "evidenceLevel": "measured",
+  "domAnchor": "div.legal-columns",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "tocLabel",
+      "sections",
+      "footer"
+    ],
+    "properties": {
+      "tocLabel": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 3
+      },
+      "sections": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 14,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "title",
+            "blocks"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+              "x-sample": "information"
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 6
+            },
+            "blocks": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 8,
+              "items": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "type",
+                      "text"
+                    ],
+                    "properties": {
+                      "type": {
+                        "const": "p"
+                      },
+                      "text": {
+                        "type": "string",
+                        "minLength": 1,
+                        "x-maxWords": 82
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "type",
+                      "text"
+                    ],
+                    "properties": {
+                      "type": {
+                        "const": "h3"
+                      },
+                      "text": {
+                        "type": "string",
+                        "minLength": 1,
+                        "x-maxWords": 3
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "type",
+                      "items"
+                    ],
+                    "properties": {
+                      "type": {
+                        "const": "ul"
+                      },
+                      "items": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 6,
+                        "items": {
+                          "type": "string",
+                          "minLength": 1,
+                          "x-maxWords": 79
+                        },
+                        "x-maxWordsTotal": 79
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "type",
+                      "label",
+                      "email"
+                    ],
+                    "properties": {
+                      "type": {
+                        "const": "contact-link"
+                      },
+                      "label": {
+                        "type": "string",
+                        "minLength": 1,
+                        "x-maxWords": 3
+                      },
+                      "email": {
+                        "type": "string",
+                        "pattern": "^[^@\\s]+@[^@\\s]+$",
+                        "x-sample": "contact@example.com"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "footer": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "contactLabel",
+          "contactEmail",
+          "topLabel"
+        ],
+        "properties": {
+          "contactLabel": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 3
+          },
+          "contactEmail": {
+            "type": "string",
+            "pattern": "^[^@\\s]+@[^@\\s]+$",
+            "x-sample": "contact@example.com"
+          },
+          "topLabel": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 3
+          }
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "anchor-smooth-scroll",
+      "hover-transition"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {
+      "tocHover": "color + translateX(2px) .16s",
+      "scrollSpy": "none"
+    },
+    "motionEvidence": {
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:347"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:347",
+          "contains": "There is **no scroll-spy**"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "640",
+      "change": "columns become block; sidebar static with block borders; TOC becomes a horizontal scroll row",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:342"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:342",
+          "contains": "the sidebar becomes static"
+        }
+      ]
+    },
+    {
+      "query": "max-width",
+      "breakpoint": "900",
+      "change": "columns 170px minmax(0,1fr), gap 32px",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:342"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:342",
+          "contains": "columns `170px minmax(0,1fr)`"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [],
+    "components": [
+      "legal-toc"
+    ]
+  },
+  "measuredFrom": [
+    "src/components/legal/LegalPage.jsx:104",
+    "CLONE_SPEC_PAGES_B.md:346",
+    "src/components/legal/privacyData.js:24"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/legal/LegalPage.jsx:104",
+      "contains": "<aside className=\"legal-sidebar\">"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_B.md:346",
+      "contains": "### 4.5 Motion"
+    },
+    {
+      "cite": "src/components/legal/privacyData.js:24",
+      "contains": "id: 'local-and-cloud'"
+    }
+  ],
+  "implementedBy": [
+    "src/components/legal/LegalPage.jsx"
+  ]
+}

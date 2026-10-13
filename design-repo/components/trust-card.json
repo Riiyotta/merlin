@@ -1,0 +1,35 @@
+{
+  "id": "trust-card",
+  "kind": "component",
+  "description": "Privacy trust card: 336x145 line-art SVG, h3, p; animation plays only on hover.",
+  "props": {
+    "art": "assetRef",
+    "title": "string",
+    "body": "string"
+  },
+  "variants": [],
+  "domAnchor": "article.privacy-trust-card",
+  "measuredFrom": [
+    "src/components/Privacy.jsx:39",
+    "CLONE_SPEC.md:312"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/Privacy.jsx:39",
+      "contains": "className=\"privacy-trust-card\""
+    },
+    {
+      "cite": "CLONE_SPEC.md:312",
+      "contains": "**Card illustrations (hover only):**"
+    }
+  ],
+  "motion": {
+    "patterns": [
+      "card-hover-illustration"
+    ],
+    "reducedMotionFallback": "final-state-static"
+  },
+  "assetRoles": [
+    "art.line-illustration"
+  ]
+}

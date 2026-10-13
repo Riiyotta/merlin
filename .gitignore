@@ -1,0 +1,2 @@
+# Build artifact: regenerate fresh with the CLI zip tool after any design-repo change; never track it.
+design-repo.zip

@@ -1,0 +1,30 @@
+{
+  "id": "hover-sweep-wordmark",
+  "kind": "primitive",
+  "description": "'merlin.computer' wordmark whose text gets the chroma sweep gradient for 900ms on hover/focus (footer clears on animationend).",
+  "props": {
+    "text": "string"
+  },
+  "variants": [],
+  "domAnchor": "a.hero-site-name",
+  "measuredFrom": [
+    "src/components/Footer.jsx:16",
+    "src/components/hero/HeroNav.jsx:161"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/Footer.jsx:16",
+      "contains": "closing-wordmark hero-site-name"
+    },
+    {
+      "cite": "src/components/hero/HeroNav.jsx:161",
+      "contains": "hero-site-sweep"
+    }
+  ],
+  "motion": {
+    "patterns": [
+      "brand-hover-sweep"
+    ],
+    "reducedMotionFallback": "no-animation"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "id": "blog.story-list",
+  "category": "blog",
+  "description": "'More from Merlin' flat list of story rows (category, title, author/date, arrow). No thumbnails, excerpts, filters, tags, search or pagination exist on the real page. Excludes the featured post.",
+  "evidenceLevel": "measured",
+  "domAnchor": "section.blog_stories__Dlir_",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "heading",
+      "aside",
+      "stories"
+    ],
+    "properties": {
+      "heading": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 3
+      },
+      "aside": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 5
+      },
+      "stories": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 19,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "slug",
+            "category",
+            "title",
+            "author",
+            "date"
+          ],
+          "properties": {
+            "slug": {
+              "type": "string",
+              "pattern": "^[a-z0-9-]+$",
+              "x-sample": "how-to-write-a-formal-email"
+            },
+            "category": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 1
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 17
+            },
+            "author": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 2
+            },
+            "date": {
+              "type": "string",
+              "pattern": "^[A-Z][a-z]{2,8} [0-9]{1,2}, [0-9]{4}$",
+              "x-sample": "May 13, 2025"
+            }
+          }
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-transition"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {
+      "rowHover": "title #12889a .16s; arrow bg #eef8f8, translate(2px,-2px) .18s"
+    },
+    "motionEvidence": {
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:147"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:147",
+          "contains": "Story row hover: h3 color"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "760",
+      "change": "row grid 1fr 28px, gap 12px, padding 26px 0; section aside hidden; h3 20px/27",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:126"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:126",
+          "contains": "≤760px (390): `grid-template-columns:1fr 28px"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [
+      "link-arrow"
+    ],
+    "components": [
+      "story-row"
+    ]
+  },
+  "measuredFrom": [
+    "src/pages/Blog.jsx:59",
+    "CLONE_SPEC_PAGES_B.md:99"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/pages/Blog.jsx:59",
+      "contains": "{stories.map((post) => ("
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_B.md:99",
+      "contains": "There are **no thumbnails, excerpts, filters, tags, search or pagination**"
+    }
+  ],
+  "implementedBy": [
+    "src/pages/Blog.jsx"
+  ]
+}

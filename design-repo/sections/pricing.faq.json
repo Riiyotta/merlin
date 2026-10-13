@@ -1,0 +1,176 @@
+{
+  "id": "pricing.faq",
+  "category": "pricing",
+  "description": "Pricing FAQ: native <details> list (several can be open), plus the shared Ask-Merlin form. Answers in the CLONE are original placeholder text; the live site's answers are not reproduced.",
+  "evidenceLevel": "measured",
+  "domAnchor": "section.pricing-faq",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "headingLine1",
+      "headingLine2",
+      "items",
+      "askForm"
+    ],
+    "properties": {
+      "headingLine1": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 3
+      },
+      "headingLine2": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 4
+      },
+      "items": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 8,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "question",
+            "answer"
+          ],
+          "properties": {
+            "question": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 6
+            },
+            "answer": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 45
+            }
+          }
+        }
+      },
+      "askForm": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "placeholder",
+          "inputAriaLabel",
+          "submitAriaLabel",
+          "apiMode"
+        ],
+        "properties": {
+          "placeholder": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 7
+          },
+          "inputAriaLabel": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 4
+          },
+          "submitAriaLabel": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 2
+          },
+          "apiMode": {
+            "type": "string",
+            "enum": [
+              "local-mock"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "accordion-chevron",
+      "shimmer-loading"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {
+      "plusRotate": "45deg, .2s"
+    },
+    "motionEvidence": {
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:158",
+        "src/styles/original/2abce9a6dc03269b.css:1"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:158",
+          "contains": "FAQ details: when open, the plus SVG rotates 45deg"
+        },
+        {
+          "cite": "src/styles/original/2abce9a6dc03269b.css:1",
+          "contains": "prefers-reduced-motion:reduce"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "700",
+      "change": "one column, gap 35px, padding 70px 0; h2 36px/40.32",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:152"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:152",
+          "contains": "`.pricing-faq` is one column, gap 35"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [
+      "input-submit-row",
+      "icon"
+    ],
+    "components": [
+      "details-faq-item",
+      "ask-merlin-form"
+    ]
+  },
+  "measuredFrom": [
+    "src/components/pricing/PricingFaq.jsx:38",
+    "src/components/pricing/pricingData.js:2",
+    "CLONE_SPEC_PAGES_A.md:112",
+    "src/components/faq/AskMerlinForm.jsx:55",
+    "src/components/faq/mockFaqApi.js:1"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/pricing/PricingFaq.jsx:38",
+      "contains": "<details key={q}>"
+    },
+    {
+      "cite": "src/components/pricing/pricingData.js:2",
+      "contains": "FAQ answers are ORIGINAL placeholder text"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_A.md:112",
+      "contains": "FAQ (native `<details>`, all closed initially"
+    },
+    {
+      "cite": "src/components/faq/AskMerlinForm.jsx:55",
+      "contains": "placeholder=\"What else would you like to know?\""
+    },
+    {
+      "cite": "src/components/faq/mockFaqApi.js:1",
+      "contains": "Local stand-in for the live site's POST /api/faq"
+    }
+  ],
+  "implementedBy": [
+    "src/components/pricing/PricingFaq.jsx"
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "id": "faq.accordion",
+  "category": "faq",
+  "description": "Home FAQ: two-column layout, single-open accordion of 5 Q&A (buttons, chevron rotates) plus the Ask-Merlin form. The ask form talks to a LOCAL MOCK (no network); the live site POSTs /api/faq.",
+  "evidenceLevel": "measured",
+  "domAnchor": "section#faq.merlin-faq",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "headingLine1",
+      "headingLine2",
+      "intro",
+      "items",
+      "askForm"
+    ],
+    "properties": {
+      "headingLine1": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 2
+      },
+      "headingLine2": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 2
+      },
+      "intro": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 10
+      },
+      "items": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 8,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "question",
+            "answer"
+          ],
+          "properties": {
+            "question": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 8
+            },
+            "answer": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 39
+            }
+          }
+        }
+      },
+      "askForm": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "placeholder",
+          "inputAriaLabel",
+          "submitAriaLabel",
+          "apiMode"
+        ],
+        "properties": {
+          "placeholder": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 7
+          },
+          "inputAriaLabel": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 4
+          },
+          "submitAriaLabel": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 2
+          },
+          "apiMode": {
+            "type": "string",
+            "enum": [
+              "local-mock"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "accordion-chevron",
+      "shimmer-loading"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {
+      "chevron": ".18s ease",
+      "shimmer": "1.8s linear infinite"
+    },
+    "motionEvidence": {
+      "measuredFrom": [
+        "src/components/Faq.jsx:30",
+        "src/styles/original/f7c0a2656765fcca.css:1"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/Faq.jsx:30",
+          "contains": "onClick={() => setOpen(open === i ? null : i)}"
+        },
+        {
+          "cite": "src/styles/original/f7c0a2656765fcca.css:1",
+          "contains": "prefers-reduced-motion:reduce){#top .merlin-faq-shimmer{animation:none"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "699",
+      "change": "single column; h2 36px/38.88px; questions 15px; padding 112px 24px",
+      "measuredFrom": [
+        "CLONE_SPEC.md:331"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:331",
+          "contains": "At 390: single column, heading 36px/38.88px"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [
+      "input-submit-row",
+      "icon"
+    ],
+    "components": [
+      "faq-accordion-item",
+      "ask-merlin-form"
+    ]
+  },
+  "measuredFrom": [
+    "src/components/Faq.jsx:10",
+    "src/components/faq/AskMerlinForm.jsx:55",
+    "src/components/faq/mockFaqApi.js:1",
+    "CLONE_SPEC.md:320"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/Faq.jsx:10",
+      "contains": "className=\"merlin-faq\" id=\"faq\""
+    },
+    {
+      "cite": "src/components/faq/AskMerlinForm.jsx:55",
+      "contains": "placeholder=\"What else would you like to know?\""
+    },
+    {
+      "cite": "src/components/faq/mockFaqApi.js:1",
+      "contains": "Local stand-in for the live site's POST /api/faq"
+    },
+    {
+      "cite": "CLONE_SPEC.md:320",
+      "contains": "## 10. Section: FAQ"
+    }
+  ],
+  "implementedBy": [
+    "src/components/Faq.jsx"
+  ]
+}

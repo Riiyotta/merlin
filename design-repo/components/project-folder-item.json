@@ -1,0 +1,36 @@
+{
+  "id": "project-folder-item",
+  "kind": "component",
+  "description": "Hard-offset-shadow project file row with a capsule icon, caption and a tilted three-sheet art that fans out on hover.",
+  "props": {
+    "type": "pdf|spreadsheet|website|deck",
+    "name": "string"
+  },
+  "variants": [
+    "pdf",
+    "spreadsheet",
+    "website",
+    "deck"
+  ],
+  "domAnchor": "figure.project-folder-item",
+  "measuredFrom": [
+    "src/components/Meetings.jsx:19",
+    "CLONE_SPEC.md:248"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/Meetings.jsx:19",
+      "contains": "className={`project-folder-item project-folder-${f.accent}`}"
+    },
+    {
+      "cite": "CLONE_SPEC.md:248",
+      "contains": "4 `figure.project-folder-item`"
+    }
+  ],
+  "motion": {
+    "patterns": [
+      "hover-transition"
+    ],
+    "reducedMotionFallback": "no-animation"
+  }
+}

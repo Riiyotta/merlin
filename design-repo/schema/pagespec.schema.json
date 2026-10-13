@@ -1,0 +1,4609 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "pagespec.schema.json",
+  "title": "Merlin design-repo PageSpec",
+  "type": "object",
+  "additionalProperties": false,
+  "description": "Machine contract for a generated page. Draft-07. Closed everywhere (additionalProperties:false). The semantic layer (semantic_validate.py) enforces template/node cross-reference, rhythm rules, maxWords, asset policies. There is deliberately NO per-instance token/style override field: styling is owned by the section contracts (MASTER-GUIDE 3.21).",
+  "required": [
+    "pageSpecVersion",
+    "template",
+    "route",
+    "meta",
+    "nodes"
+  ],
+  "properties": {
+    "pageSpecVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "DOCUMENTATION ONLY marker; nothing machine-checks it."
+    },
+    "template": {
+      "enum": [
+        "home",
+        "pricing",
+        "install",
+        "manifesto",
+        "blog-index",
+        "blog-post",
+        "legal"
+      ]
+    },
+    "route": {
+      "enum": [
+        "/",
+        "/pricing",
+        "/download",
+        "/manifesto",
+        "/blog",
+        "/blog/:slug",
+        "/privacy",
+        "/terms"
+      ]
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "description"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 20
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 25
+        },
+        "skipLink": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "href"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 4
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^#[a-z-]+$"
+            }
+          }
+        }
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 20,
+      "items": {
+        "$ref": "#/definitions/node"
+      }
+    }
+  },
+  "definitions": {
+    "assetRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "assetRole",
+        "assetRef"
+      ],
+      "properties": {
+        "assetRole": {
+          "enum": [
+            "logo.third-party-wordmark",
+            "icon.third-party-app",
+            "brand.merlin-app-icon",
+            "brand.merlin-mascot-art",
+            "illustration.felt-scene",
+            "screenshot.os-install-step",
+            "screenshot.product-output",
+            "photo.stock-cover",
+            "photo.person-portrait",
+            "photo.mock-product",
+            "media.audio-sample",
+            "art.footer-ascii",
+            "icon.generic-ui",
+            "art.line-illustration"
+          ]
+        },
+        "assetRef": {
+          "type": "string",
+          "pattern": "^(reuse:(asset|inline)\\.[A-Za-z0-9._-]+|generate:[^\\s][^\\n]{0,79}|placeholder:neutral)$"
+        },
+        "alt": {
+          "type": "string",
+          "x-maxWords": 20
+        }
+      }
+    },
+    "content_shell_corner-nav": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "activeLink",
+        "brandIcon"
+      ],
+      "properties": {
+        "activeLink": {
+          "type": "string",
+          "enum": [
+            "manifesto",
+            "none"
+          ]
+        },
+        "brandIcon": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/assetRef"
+            },
+            {
+              "properties": {
+                "assetRole": {
+                  "enum": [
+                    "brand.merlin-app-icon"
+                  ]
+                }
+              }
+            }
+          ],
+          "x-allowedRoles": [
+            "brand.merlin-app-icon"
+          ]
+        }
+      }
+    },
+    "motion_shell_corner-nav": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "nav-dot-spring",
+              "brand-hover-sweep",
+              "none"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "instant-no-spring"
+        }
+      }
+    },
+    "content_shell_install-header": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "brandLabel",
+        "brandIcon",
+        "homeHref"
+      ],
+      "properties": {
+        "brandLabel": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 1
+        },
+        "brandIcon": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/assetRef"
+            },
+            {
+              "properties": {
+                "assetRole": {
+                  "enum": [
+                    "brand.merlin-app-icon"
+                  ]
+                }
+              }
+            }
+          ],
+          "x-allowedRoles": [
+            "brand.merlin-app-icon"
+          ]
+        },
+        "homeHref": {
+          "type": "string",
+          "pattern": "^/$",
+          "x-sample": "/"
+        }
+      }
+    },
+    "motion_shell_install-header": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "none"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "content_shell_floating-nav": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "logo",
+        "links",
+        "cta"
+      ],
+      "properties": {
+        "logo": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/assetRef"
+            },
+            {
+              "properties": {
+                "assetRole": {
+                  "enum": [
+                    "brand.merlin-app-icon"
+                  ]
+                }
+              }
+            }
+          ],
+          "x-allowedRoles": [
+            "brand.merlin-app-icon"
+          ]
+        },
+        "links": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "href"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 1
+              },
+              "href": {
+                "type": "string",
+                "pattern": "^(/|#|mailto:)[^\\s]*$",
+                "x-sample": "/pricing"
+              }
+            }
+          }
+        },
+        "cta": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "href"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 1
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^/download\\?start=1$",
+              "x-sample": "/download?start=1"
+            }
+          }
+        }
+      }
+    },
+    "motion_shell_floating-nav": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "floating-nav-presence",
+              "hover-text-roll"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "instant-no-spring"
+        }
+      }
+    },
+    "content_shell_footer-closing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "headingLine1",
+        "headingLine2Prefix",
+        "body",
+        "cta",
+        "beachArt",
+        "brandWordmark",
+        "copyrightHolder",
+        "links"
+      ],
+      "properties": {
+        "headingLine1": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 4
+        },
+        "headingLine2Prefix": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 2
+        },
+        "body": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 14
+        },
+        "cta": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "href"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 4
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^/download\\?start=1$",
+              "x-sample": "/download?start=1"
+            }
+          }
+        },
+        "beachArt": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/assetRef"
+            },
+            {
+              "properties": {
+                "assetRole": {
+                  "enum": [
+                    "art.footer-ascii"
+                  ]
+                }
+              }
+            }
+          ],
+          "x-allowedRoles": [
+            "art.footer-ascii"
+          ]
+        },
+        "brandWordmark": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 1
+        },
+        "copyrightHolder": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 3
+        },
+        "links": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "href"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 1
+              },
+              "href": {
+                "type": "string",
+                "pattern": "^(/|#|mailto:)[^\\s]*$",
+                "x-sample": "/pricing"
+              }
+            }
+          }
+        }
+      }
+    },
+    "motion_shell_footer-closing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "css-bird-loop",
+              "clock-tick",
+              "brand-hover-sweep",
+              "cta-wipe-hover"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "content_hero_marketing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "titleLine1",
+        "titleLine2",
+        "subtitle"
+      ],
+      "properties": {
+        "titleLine1": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 3
+        },
+        "titleLine2": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 5
+        },
+        "subtitle": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 22
+        },
+        "cta": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "href",
+            "variant"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 4
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^/download\\?start=1$",
+              "x-sample": "/download?start=1"
+            },
+            "variant": {
+              "type": "string",
+              "enum": [
+                "primary"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "motion_hero_marketing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "hero-title-chroma-sweep",
+              "nav-dot-spring",
+              "brand-hover-sweep",
+              "cta-wipe-hover",
+              "none"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "content_hero_landscape": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sectionLabel",
+        "image",
+        "notifications"
+      ],
+      "properties": {
+        "sectionLabel": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 4
+        },
+        "image": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/assetRef"
+            },
+            {
+              "properties": {
+                "assetRole": {
+                  "enum": [
+                    "illustration.felt-scene"
+                  ]
+                }
+              }
+            }
+          ],
+          "x-allowedRoles": [
+            "illustration.felt-scene"
+          ]
+        },
+        "notifications": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "title",
+              "description"
+            ],
+            "properties": {
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "meeting-brief",
+                  "launch-deck",
+                  "email-draft"
+                ]
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 7
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 8
+              }
+            }
+          }
+        }
+      }
+    },
+    "motion_hero_landscape": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "scroll-parallax-photo",
+              "notification-stack-flip"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "instant-no-spring"
+        }
+      }
+    },
+    "content_proof_company-logos": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "heading",
+        "logos"
+      ],
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 4
+        },
+        "logos": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "mark"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 3
+              },
+              "mark": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/assetRef"
+                  },
+                  {
+                    "properties": {
+                      "assetRole": {
+                        "enum": [
+                          "logo.third-party-wordmark"
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "x-allowedRoles": [
+                  "logo.third-party-wordmark"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "motion_proof_company-logos": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "none"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "content_story_context-routines": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "headingLead",
+        "headingEmphasis",
+        "appTiles",
+        "contextParagraphs",
+        "emailPreview",
+        "routine"
+      ],
+      "properties": {
+        "headingLead": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 3
+        },
+        "headingEmphasis": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 1
+        },
+        "appTiles": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "icon"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 1
+              },
+              "icon": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/assetRef"
+                  },
+                  {
+                    "properties": {
+                      "assetRole": {
+                        "enum": [
+                          "icon.third-party-app"
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "x-allowedRoles": [
+                  "icon.third-party-app"
+                ]
+              }
+            }
+          }
+        },
+        "contextParagraphs": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 2,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 16
+          }
+        },
+        "emailPreview": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "subject",
+            "senderName",
+            "senderInitials",
+            "time",
+            "body"
+          ],
+          "properties": {
+            "subject": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 5
+            },
+            "senderName": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 2
+            },
+            "senderInitials": {
+              "type": "string",
+              "pattern": "^[A-Z]{2}$",
+              "x-sample": "SH"
+            },
+            "time": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 2
+            },
+            "body": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 5,
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 31
+              }
+            }
+          }
+        },
+        "routine": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "note",
+            "intro",
+            "schedule",
+            "tools",
+            "finalCard",
+            "figure"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 1
+            },
+            "note": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 5
+            },
+            "intro": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 12
+            },
+            "schedule": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 5
+            },
+            "tools": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 5,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "app",
+                  "action",
+                  "result",
+                  "duration"
+                ],
+                "properties": {
+                  "app": {
+                    "type": "string",
+                    "enum": [
+                      "Gmail",
+                      "Notion",
+                      "Calendar"
+                    ]
+                  },
+                  "action": {
+                    "type": "string",
+                    "minLength": 1,
+                    "x-maxWords": 5
+                  },
+                  "result": {
+                    "type": "string",
+                    "minLength": 1,
+                    "x-maxWords": 3
+                  },
+                  "duration": {
+                    "type": "string",
+                    "pattern": "^[0-9.]+s$",
+                    "x-sample": "0.8s"
+                  }
+                }
+              }
+            },
+            "finalCard": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "title",
+                "badge",
+                "summary",
+                "bullets"
+              ],
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 4
+                },
+                "badge": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 3
+                },
+                "summary": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 14
+                },
+                "bullets": {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 3,
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "x-maxWords": 11
+                  }
+                }
+              }
+            },
+            "figure": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "image",
+                "caption"
+              ],
+              "properties": {
+                "image": {
+                  "allOf": [
+                    {
+                      "$ref": "#/definitions/assetRef"
+                    },
+                    {
+                      "properties": {
+                        "assetRole": {
+                          "enum": [
+                            "illustration.felt-scene"
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "x-allowedRoles": [
+                    "illustration.felt-scene"
+                  ]
+                },
+                "caption": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 22
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "motion_story_context-routines": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "routine-walkthrough-steps",
+              "hover-transition"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "final-state-static"
+        }
+      }
+    },
+    "content_story_browser-tasks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "headingLead",
+        "headingEmphasis",
+        "cards"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 2
+        },
+        "headingLead": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 6
+        },
+        "headingEmphasis": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 3
+        },
+        "cards": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "mark",
+              "lead",
+              "detail",
+              "scene"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 2
+              },
+              "mark": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/assetRef"
+                  },
+                  {
+                    "properties": {
+                      "assetRole": {
+                        "enum": [
+                          "logo.third-party-wordmark",
+                          "icon.third-party-app"
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "x-allowedRoles": [
+                  "logo.third-party-wordmark",
+                  "icon.third-party-app"
+                ]
+              },
+              "lead": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 10
+              },
+              "detail": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 9
+              },
+              "scene": {
+                "type": "string",
+                "enum": [
+                  "flight-search",
+                  "food-order",
+                  "grocery-basket",
+                  "job-application"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "motion_story_browser-tasks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "scroll-pin-card-deck"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "stacked-static-layout"
+        }
+      }
+    },
+    "content_story_meetings-projects": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "headingLead",
+        "headingTail",
+        "headingEmphasis",
+        "meetingLogos",
+        "introParagraphs",
+        "meetingPanel",
+        "projectPanel"
+      ],
+      "properties": {
+        "headingLead": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 1
+        },
+        "headingTail": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 1
+        },
+        "headingEmphasis": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 5
+        },
+        "meetingLogos": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 2,
+          "items": {
+            "allOf": [
+              {
+                "$ref": "#/definitions/assetRef"
+              },
+              {
+                "properties": {
+                  "assetRole": {
+                    "enum": [
+                      "icon.third-party-app"
+                    ]
+                  }
+                }
+              }
+            ],
+            "x-allowedRoles": [
+              "icon.third-party-app"
+            ]
+          }
+        },
+        "introParagraphs": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 16
+          }
+        },
+        "meetingPanel": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "title",
+            "highlight",
+            "description",
+            "scene",
+            "recording",
+            "transcriptTitle",
+            "transcriptDate",
+            "participants"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 1
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 5
+            },
+            "highlight": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 4
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 16
+            },
+            "scene": {
+              "allOf": [
+                {
+                  "$ref": "#/definitions/assetRef"
+                },
+                {
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "illustration.felt-scene"
+                      ]
+                    }
+                  }
+                }
+              ],
+              "x-allowedRoles": [
+                "illustration.felt-scene"
+              ]
+            },
+            "recording": {
+              "allOf": [
+                {
+                  "$ref": "#/definitions/assetRef"
+                },
+                {
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "media.audio-sample"
+                      ]
+                    }
+                  }
+                }
+              ],
+              "x-allowedRoles": [
+                "media.audio-sample"
+              ]
+            },
+            "transcriptTitle": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 2
+            },
+            "transcriptDate": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 3
+            },
+            "participants": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 7
+            }
+          }
+        },
+        "projectPanel": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "title",
+            "highlight",
+            "description",
+            "files"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 1
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 4
+            },
+            "highlight": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 5
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 17
+            },
+            "files": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 4,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "type",
+                  "name",
+                  "meta",
+                  "sheetLabel",
+                  "sheetTitle"
+                ],
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "pdf",
+                      "spreadsheet",
+                      "website",
+                      "deck"
+                    ]
+                  },
+                  "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "x-maxWords": 2
+                  },
+                  "meta": {
+                    "type": "string",
+                    "minLength": 1,
+                    "x-maxWords": 7
+                  },
+                  "sheetLabel": {
+                    "type": "string",
+                    "minLength": 1,
+                    "x-maxWords": 3
+                  },
+                  "sheetTitle": {
+                    "type": "string",
+                    "minLength": 1,
+                    "x-maxWords": 3
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "motion_story_meetings-projects": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "indicator-spring",
+              "hover-transition"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "instant-no-spring"
+        }
+      }
+    },
+    "content_story_companion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bridgeNote",
+        "label",
+        "headlines",
+        "popover",
+        "introParagraphs",
+        "figure",
+        "tabs"
+      ],
+      "properties": {
+        "bridgeNote": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 6
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 1
+        },
+        "headlines": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "line1",
+              "line2"
+            ],
+            "properties": {
+              "line1": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 4
+              },
+              "line2": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 4
+              }
+            }
+          }
+        },
+        "popover": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "askLabel",
+            "rephraseLabel"
+          ],
+          "properties": {
+            "askLabel": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 2
+            },
+            "rephraseLabel": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 2
+            }
+          }
+        },
+        "introParagraphs": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 22
+          }
+        },
+        "figure": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "image",
+            "caption"
+          ],
+          "properties": {
+            "image": {
+              "allOf": [
+                {
+                  "$ref": "#/definitions/assetRef"
+                },
+                {
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "illustration.felt-scene"
+                      ]
+                    }
+                  }
+                }
+              ],
+              "x-allowedRoles": [
+                "illustration.felt-scene"
+              ]
+            },
+            "caption": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 10
+            }
+          }
+        },
+        "tabs": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "app",
+              "icon",
+              "caption"
+            ],
+            "properties": {
+              "app": {
+                "type": "string",
+                "enum": [
+                  "Photoshop",
+                  "Slack",
+                  "Chrome"
+                ]
+              },
+              "icon": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/assetRef"
+                  },
+                  {
+                    "properties": {
+                      "assetRole": {
+                        "enum": [
+                          "icon.third-party-app"
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "x-allowedRoles": [
+                  "icon.third-party-app"
+                ]
+              },
+              "caption": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 7
+              }
+            }
+          }
+        }
+      }
+    },
+    "motion_story_companion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "demo-autoplay-timeline",
+              "indicator-spring",
+              "typed-headline-swap",
+              "word-stagger-title",
+              "entrance-reveal"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "still-frame"
+        }
+      }
+    },
+    "content_scene_privacy-trust": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "eyebrow",
+        "eyebrowHref",
+        "headingLine1",
+        "headingLine2",
+        "intro",
+        "cards"
+      ],
+      "properties": {
+        "eyebrow": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 3
+        },
+        "eyebrowHref": {
+          "type": "string",
+          "pattern": "^/privacy$",
+          "x-sample": "/privacy"
+        },
+        "headingLine1": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 2
+        },
+        "headingLine2": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 3
+        },
+        "intro": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 22
+        },
+        "cards": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "art",
+              "title",
+              "body"
+            ],
+            "properties": {
+              "art": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/assetRef"
+                  },
+                  {
+                    "properties": {
+                      "assetRole": {
+                        "enum": [
+                          "art.line-illustration"
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "x-allowedRoles": [
+                  "art.line-illustration"
+                ]
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 5
+              },
+              "body": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 13
+              }
+            }
+          }
+        }
+      }
+    },
+    "motion_scene_privacy-trust": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "decode-headline",
+              "entrance-reveal",
+              "card-hover-illustration"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "final-state-static"
+        }
+      }
+    },
+    "content_faq_accordion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "headingLine1",
+        "headingLine2",
+        "intro",
+        "items",
+        "askForm"
+      ],
+      "properties": {
+        "headingLine1": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 2
+        },
+        "headingLine2": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 2
+        },
+        "intro": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 10
+        },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "question",
+              "answer"
+            ],
+            "properties": {
+              "question": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 8
+              },
+              "answer": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 39
+              }
+            }
+          }
+        },
+        "askForm": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "placeholder",
+            "inputAriaLabel",
+            "submitAriaLabel",
+            "apiMode"
+          ],
+          "properties": {
+            "placeholder": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 7
+            },
+            "inputAriaLabel": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 4
+            },
+            "submitAriaLabel": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 2
+            },
+            "apiMode": {
+              "type": "string",
+              "enum": [
+                "local-mock"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "motion_faq_accordion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "accordion-chevron",
+              "shimmer-loading"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "content_pricing_plans": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ariaLabel",
+        "plans"
+      ],
+      "properties": {
+        "ariaLabel": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 2
+        },
+        "plans": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "tone",
+              "description",
+              "price",
+              "ctaVariant",
+              "credits"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 1
+              },
+              "tone": {
+                "type": "string",
+                "enum": [
+                  "sage",
+                  "lavender",
+                  "peach"
+                ]
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 12
+              },
+              "price": {
+                "type": "string",
+                "pattern": "^[0-9]+$",
+                "x-sample": "99"
+              },
+              "ctaVariant": {
+                "type": "string",
+                "enum": [
+                  "primary",
+                  "secondary"
+                ]
+              },
+              "credits": {
+                "type": "string",
+                "pattern": "^[0-9,]+$",
+                "x-sample": "85,000"
+              }
+            }
+          }
+        }
+      }
+    },
+    "motion_pricing_plans": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "cta-wipe-hover"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "content_pricing_included": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "headingLine1",
+        "headingLine2",
+        "intro",
+        "features"
+      ],
+      "properties": {
+        "headingLine1": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 3
+        },
+        "headingLine2": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 4
+        },
+        "intro": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 15
+        },
+        "features": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "icon",
+              "title",
+              "body"
+            ],
+            "properties": {
+              "icon": {
+                "type": "string",
+                "enum": [
+                  "context",
+                  "browser",
+                  "companion",
+                  "meeting",
+                  "project",
+                  "routine"
+                ]
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 6
+              },
+              "body": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 17
+              }
+            }
+          }
+        }
+      }
+    },
+    "motion_pricing_included": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "none"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "content_pricing_faq": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "headingLine1",
+        "headingLine2",
+        "items",
+        "askForm"
+      ],
+      "properties": {
+        "headingLine1": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 3
+        },
+        "headingLine2": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 4
+        },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "question",
+              "answer"
+            ],
+            "properties": {
+              "question": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 6
+              },
+              "answer": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 45
+              }
+            }
+          }
+        },
+        "askForm": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "placeholder",
+            "inputAriaLabel",
+            "submitAriaLabel",
+            "apiMode"
+          ],
+          "properties": {
+            "placeholder": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 7
+            },
+            "inputAriaLabel": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 4
+            },
+            "submitAriaLabel": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 2
+            },
+            "apiMode": {
+              "type": "string",
+              "enum": [
+                "local-mock"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "motion_pricing_faq": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "accordion-chevron",
+              "shimmer-loading"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "content_install_intro": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "headingLine1",
+        "headingLine2",
+        "description",
+        "retryPrefix",
+        "retryLabel",
+        "alternativeLabel",
+        "installerSource",
+        "installerHref"
+      ],
+      "properties": {
+        "headingLine1": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 4
+        },
+        "headingLine2": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 5
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 14
+        },
+        "retryPrefix": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 3
+        },
+        "retryLabel": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 3
+        },
+        "alternativeLabel": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 4
+        },
+        "installerSource": {
+          "type": "string",
+          "enum": [
+            "local-stub"
+          ]
+        },
+        "installerHref": {
+          "type": "string",
+          "pattern": "^/download-stub\\.txt(\\?arch=(arm64|x64))?$",
+          "x-sample": "/download-stub.txt?arch=arm64"
+        }
+      }
+    },
+    "motion_install_intro": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "none"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "content_install_steps": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ariaLabel",
+        "steps"
+      ],
+      "properties": {
+        "ariaLabel": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 5
+        },
+        "steps": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "number",
+              "title",
+              "body",
+              "image"
+            ],
+            "properties": {
+              "number": {
+                "type": "string",
+                "pattern": "^0[1-9]$",
+                "x-sample": "01"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 3
+              },
+              "body": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 12
+              },
+              "image": {
+                "allOf": [
+                  {
+                    "$ref": "#/definitions/assetRef"
+                  },
+                  {
+                    "properties": {
+                      "assetRole": {
+                        "enum": [
+                          "screenshot.os-install-step"
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "x-allowedRoles": [
+                  "screenshot.os-install-step"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "motion_install_steps": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "none"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "content_manifesto_opening": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "handwritingTime",
+        "handwritingBack",
+        "titleLine1",
+        "titleLine2",
+        "openingParagraph",
+        "secondParagraph"
+      ],
+      "properties": {
+        "handwritingTime": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 2
+        },
+        "handwritingBack": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 2
+        },
+        "titleLine1": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 2
+        },
+        "titleLine2": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 2
+        },
+        "openingParagraph": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 28
+        },
+        "secondParagraph": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 35
+        },
+        "timeVariants": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "morning",
+            "afternoon",
+            "evening",
+            "night",
+            "earlyNight"
+          ],
+          "properties": {
+            "morning": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "opening",
+                "interruption"
+              ],
+              "properties": {
+                "opening": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 21
+                },
+                "interruption": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 18
+                }
+              }
+            },
+            "afternoon": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "opening",
+                "interruption"
+              ],
+              "properties": {
+                "opening": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 22
+                },
+                "interruption": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 19
+                }
+              }
+            },
+            "evening": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "opening",
+                "interruption"
+              ],
+              "properties": {
+                "opening": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 22
+                },
+                "interruption": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 19
+                }
+              }
+            },
+            "night": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "opening",
+                "interruption"
+              ],
+              "properties": {
+                "opening": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 24
+                },
+                "interruption": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 18
+                }
+              }
+            },
+            "earlyNight": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "opening",
+                "interruption"
+              ],
+              "properties": {
+                "opening": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 28
+                },
+                "interruption": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 18
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "motion_manifesto_opening": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "time-of-day-swap",
+              "none"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "content_manifesto_photo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "image",
+        "alt"
+      ],
+      "properties": {
+        "image": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/assetRef"
+            },
+            {
+              "properties": {
+                "assetRole": {
+                  "enum": [
+                    "illustration.felt-scene"
+                  ]
+                }
+              }
+            }
+          ],
+          "x-allowedRoles": [
+            "illustration.felt-scene"
+          ]
+        },
+        "alt": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 15
+        }
+      }
+    },
+    "motion_manifesto_photo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "none"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "content_manifesto_understanding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "titleLine1",
+        "titleLine2",
+        "paragraphs",
+        "note"
+      ],
+      "properties": {
+        "titleLine1": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 4
+        },
+        "titleLine2": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 4
+        },
+        "paragraphs": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 36
+          }
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 4
+        }
+      }
+    },
+    "motion_manifesto_understanding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "none"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "content_manifesto_action": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "titleLine1",
+        "titleLine2",
+        "paragraphSix",
+        "returnSentence",
+        "paragraphSeven",
+        "note"
+      ],
+      "properties": {
+        "titleLine1": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 4
+        },
+        "titleLine2": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 3
+        },
+        "paragraphSix": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 34
+        },
+        "returnSentence": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 6
+        },
+        "paragraphSeven": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 31
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 4
+        }
+      }
+    },
+    "motion_manifesto_action": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "time-of-day-swap",
+              "none"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "content_manifesto_ending": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "paragraphEight",
+        "finish",
+        "titleLine1",
+        "titleLine2",
+        "signature"
+      ],
+      "properties": {
+        "paragraphEight": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 34
+        },
+        "finish": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 36
+        },
+        "titleLine1": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 2
+        },
+        "titleLine2": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 3
+        },
+        "signature": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "circledWord",
+            "name",
+            "mark"
+          ],
+          "properties": {
+            "circledWord": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 1
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 1
+            },
+            "mark": {
+              "allOf": [
+                {
+                  "$ref": "#/definitions/assetRef"
+                },
+                {
+                  "properties": {
+                    "assetRole": {
+                      "enum": [
+                        "brand.merlin-mascot-art"
+                      ]
+                    }
+                  }
+                }
+              ],
+              "x-allowedRoles": [
+                "brand.merlin-mascot-art"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "motion_manifesto_ending": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "time-of-day-swap",
+              "signature-circle-draw",
+              "none"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "final-state-static"
+        }
+      }
+    },
+    "content_blog_intro": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "titleLine1",
+        "titleLine2",
+        "subtitle"
+      ],
+      "properties": {
+        "titleLine1": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 3
+        },
+        "titleLine2": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 3
+        },
+        "subtitle": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 11
+        }
+      }
+    },
+    "motion_blog_intro": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "none"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "content_blog_featured": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "slug",
+        "category",
+        "pillLabel",
+        "title",
+        "author",
+        "date",
+        "readLabel",
+        "image"
+      ],
+      "properties": {
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "x-sample": "how-to-write-a-formal-email"
+        },
+        "category": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 1
+        },
+        "pillLabel": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 2
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 17
+        },
+        "author": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 2
+        },
+        "date": {
+          "type": "string",
+          "pattern": "^[A-Z][a-z]{2,8} [0-9]{1,2}, [0-9]{4}$",
+          "x-sample": "May 13, 2025"
+        },
+        "readLabel": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 3
+        },
+        "image": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/assetRef"
+            },
+            {
+              "properties": {
+                "assetRole": {
+                  "enum": [
+                    "illustration.felt-scene"
+                  ]
+                }
+              }
+            }
+          ],
+          "x-allowedRoles": [
+            "illustration.felt-scene"
+          ]
+        }
+      }
+    },
+    "motion_blog_featured": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "hover-transition"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "content_blog_story-list": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "heading",
+        "aside",
+        "stories"
+      ],
+      "properties": {
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 3
+        },
+        "aside": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 5
+        },
+        "stories": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 19,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "slug",
+              "category",
+              "title",
+              "author",
+              "date"
+            ],
+            "properties": {
+              "slug": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$",
+                "x-sample": "how-to-write-a-formal-email"
+              },
+              "category": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 1
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 17
+              },
+              "author": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 2
+              },
+              "date": {
+                "type": "string",
+                "pattern": "^[A-Z][a-z]{2,8} [0-9]{1,2}, [0-9]{4}$",
+                "x-sample": "May 13, 2025"
+              }
+            }
+          }
+        }
+      }
+    },
+    "motion_blog_story-list": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "hover-transition"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "content_blog_manifesto-aside": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "handwritten",
+        "linkLabel",
+        "href"
+      ],
+      "properties": {
+        "handwritten": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 8
+        },
+        "linkLabel": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 4
+        },
+        "href": {
+          "type": "string",
+          "pattern": "^/manifesto$",
+          "x-sample": "/manifesto"
+        }
+      }
+    },
+    "motion_blog_manifesto-aside": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "hover-transition"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "content_blog_article-header": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "backLabel",
+        "category",
+        "title",
+        "author",
+        "date",
+        "avatar"
+      ],
+      "properties": {
+        "backLabel": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 2
+        },
+        "category": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 17
+        },
+        "author": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 2
+        },
+        "date": {
+          "type": "string",
+          "pattern": "^[A-Z][a-z]{2,8} [0-9]{1,2}, [0-9]{4}$",
+          "x-sample": "May 13, 2025"
+        },
+        "avatar": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/assetRef"
+            },
+            {
+              "properties": {
+                "assetRole": {
+                  "enum": [
+                    "photo.person-portrait"
+                  ]
+                }
+              }
+            }
+          ],
+          "x-allowedRoles": [
+            "photo.person-portrait"
+          ]
+        },
+        "cover": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/assetRef"
+            },
+            {
+              "properties": {
+                "assetRole": {
+                  "enum": [
+                    "photo.stock-cover"
+                  ]
+                }
+              }
+            }
+          ],
+          "x-allowedRoles": [
+            "photo.stock-cover"
+          ]
+        },
+        "coverAlt": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 17
+        }
+      }
+    },
+    "motion_blog_article-header": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "hover-transition"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "content_blog_prose": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "blocks"
+      ],
+      "properties": {
+        "blocks": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 243,
+          "items": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "type",
+                  "text"
+                ],
+                "properties": {
+                  "type": {
+                    "const": "p"
+                  },
+                  "text": {
+                    "type": "string",
+                    "minLength": 0,
+                    "x-maxWords": 264
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "type",
+                  "text"
+                ],
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "h2",
+                      "h3",
+                      "h4"
+                    ]
+                  },
+                  "text": {
+                    "type": "string",
+                    "minLength": 1,
+                    "x-maxWords": 12
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "type",
+                  "items"
+                ],
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "enum": [
+                      "ul",
+                      "ol"
+                    ]
+                  },
+                  "items": {
+                    "type": "array",
+                    "minItems": 1,
+                    "maxItems": 27,
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "x-maxWords": 1391
+                    },
+                    "x-maxWordsTotal": 1391
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "type",
+                  "text"
+                ],
+                "properties": {
+                  "type": {
+                    "const": "blockquote"
+                  },
+                  "text": {
+                    "type": "string",
+                    "minLength": 0,
+                    "x-maxWords": 102
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "motion_blog_prose": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "none"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "content_blog_article-end": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "thanks",
+        "backLabel"
+      ],
+      "properties": {
+        "thanks": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 8
+        },
+        "backLabel": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 4
+        }
+      }
+    },
+    "motion_blog_article-end": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "hover-transition"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "content_legal_heading": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "activeTab",
+        "title",
+        "lastUpdated"
+      ],
+      "properties": {
+        "activeTab": {
+          "type": "string",
+          "enum": [
+            "privacy",
+            "terms"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 3
+        },
+        "intro": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 19
+        },
+        "lastUpdated": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 3
+        }
+      }
+    },
+    "motion_legal_heading": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "hover-transition"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "content_legal_body": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tocLabel",
+        "sections",
+        "footer"
+      ],
+      "properties": {
+        "tocLabel": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 3
+        },
+        "sections": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 14,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "title",
+              "blocks"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+                "x-sample": "information"
+              },
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "x-maxWords": 6
+              },
+              "blocks": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 8,
+                "items": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "type",
+                        "text"
+                      ],
+                      "properties": {
+                        "type": {
+                          "const": "p"
+                        },
+                        "text": {
+                          "type": "string",
+                          "minLength": 1,
+                          "x-maxWords": 82
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "type",
+                        "text"
+                      ],
+                      "properties": {
+                        "type": {
+                          "const": "h3"
+                        },
+                        "text": {
+                          "type": "string",
+                          "minLength": 1,
+                          "x-maxWords": 3
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "type",
+                        "items"
+                      ],
+                      "properties": {
+                        "type": {
+                          "const": "ul"
+                        },
+                        "items": {
+                          "type": "array",
+                          "minItems": 1,
+                          "maxItems": 6,
+                          "items": {
+                            "type": "string",
+                            "minLength": 1,
+                            "x-maxWords": 79
+                          },
+                          "x-maxWordsTotal": 79
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "type",
+                        "label",
+                        "email"
+                      ],
+                      "properties": {
+                        "type": {
+                          "const": "contact-link"
+                        },
+                        "label": {
+                          "type": "string",
+                          "minLength": 1,
+                          "x-maxWords": 3
+                        },
+                        "email": {
+                          "type": "string",
+                          "pattern": "^[^@\\s]+@[^@\\s]+$",
+                          "x-sample": "contact@example.com"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "footer": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "contactLabel",
+            "contactEmail",
+            "topLabel"
+          ],
+          "properties": {
+            "contactLabel": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 3
+            },
+            "contactEmail": {
+              "type": "string",
+              "pattern": "^[^@\\s]+@[^@\\s]+$",
+              "x-sample": "contact@example.com"
+            },
+            "topLabel": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 3
+            }
+          }
+        }
+      }
+    },
+    "motion_legal_body": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "anchor-smooth-scroll",
+              "hover-transition"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "section",
+        "content",
+        "motion"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]{1,40}$"
+        },
+        "section": {
+          "enum": [
+            "shell.corner-nav",
+            "shell.install-header",
+            "shell.floating-nav",
+            "shell.footer-closing",
+            "hero.marketing",
+            "hero.landscape",
+            "proof.company-logos",
+            "story.context-routines",
+            "story.browser-tasks",
+            "story.meetings-projects",
+            "story.companion",
+            "scene.privacy-trust",
+            "faq.accordion",
+            "pricing.plans",
+            "pricing.included",
+            "pricing.faq",
+            "install.intro",
+            "install.steps",
+            "manifesto.opening",
+            "manifesto.photo",
+            "manifesto.understanding",
+            "manifesto.action",
+            "manifesto.ending",
+            "blog.intro",
+            "blog.featured",
+            "blog.story-list",
+            "blog.manifesto-aside",
+            "blog.article-header",
+            "blog.prose",
+            "blog.article-end",
+            "legal.heading",
+            "legal.body"
+          ]
+        },
+        "variant": {
+          "enum": [
+            "after-action",
+            "after-opening",
+            "after-understanding",
+            "blog",
+            "home",
+            "legal",
+            "manifesto",
+            "pricing"
+          ]
+        },
+        "content": {
+          "type": "object"
+        },
+        "motion": {
+          "type": "object"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "shell.corner-nav"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_shell_corner-nav"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_shell_corner-nav"
+              },
+              "variant": {
+                "enum": [
+                  "manifesto",
+                  "blog",
+                  "legal"
+                ]
+              }
+            },
+            "required": [
+              "variant"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "shell.corner-nav"
+              },
+              "variant": {
+                "const": "manifesto"
+              }
+            },
+            "required": [
+              "section",
+              "variant"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "properties": {
+                  "activeLink": {
+                    "const": "manifesto"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "shell.corner-nav"
+              },
+              "variant": {
+                "const": "blog"
+              }
+            },
+            "required": [
+              "section",
+              "variant"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "properties": {
+                  "activeLink": {
+                    "const": "none"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "shell.corner-nav"
+              },
+              "variant": {
+                "const": "legal"
+              }
+            },
+            "required": [
+              "section",
+              "variant"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "properties": {
+                  "activeLink": {
+                    "const": "none"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "shell.install-header"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_shell_install-header"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_shell_install-header"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "shell.floating-nav"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_shell_floating-nav"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_shell_floating-nav"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "shell.footer-closing"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_shell_footer-closing"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_shell_footer-closing"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "hero.marketing"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_hero_marketing"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_hero_marketing"
+              },
+              "variant": {
+                "enum": [
+                  "home",
+                  "pricing"
+                ]
+              }
+            },
+            "required": [
+              "variant"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "hero.marketing"
+              },
+              "variant": {
+                "const": "home"
+              }
+            },
+            "required": [
+              "section",
+              "variant"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "required": [
+                  "cta"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "hero.marketing"
+              },
+              "variant": {
+                "const": "pricing"
+              }
+            },
+            "required": [
+              "section",
+              "variant"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "not": {
+                  "anyOf": [
+                    {
+                      "required": [
+                        "cta"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "motion": {
+                "properties": {
+                  "patterns": {
+                    "items": {
+                      "not": {
+                        "enum": [
+                          "hero-title-chroma-sweep"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "hero.landscape"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_hero_landscape"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_hero_landscape"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "proof.company-logos"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_proof_company-logos"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_proof_company-logos"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "story.context-routines"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_story_context-routines"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_story_context-routines"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "story.browser-tasks"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_story_browser-tasks"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_story_browser-tasks"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "story.meetings-projects"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_story_meetings-projects"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_story_meetings-projects"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "story.companion"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_story_companion"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_story_companion"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "scene.privacy-trust"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_scene_privacy-trust"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_scene_privacy-trust"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "faq.accordion"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_faq_accordion"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_faq_accordion"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "pricing.plans"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_pricing_plans"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_pricing_plans"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "pricing.included"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_pricing_included"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_pricing_included"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "pricing.faq"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_pricing_faq"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_pricing_faq"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "install.intro"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_install_intro"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_install_intro"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "install.steps"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_install_steps"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_install_steps"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "manifesto.opening"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_manifesto_opening"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_manifesto_opening"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "manifesto.photo"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_manifesto_photo"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_manifesto_photo"
+              },
+              "variant": {
+                "enum": [
+                  "after-opening",
+                  "after-understanding",
+                  "after-action"
+                ]
+              }
+            },
+            "required": [
+              "variant"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "manifesto.understanding"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_manifesto_understanding"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_manifesto_understanding"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "manifesto.action"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_manifesto_action"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_manifesto_action"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "manifesto.ending"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_manifesto_ending"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_manifesto_ending"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "blog.intro"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_blog_intro"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_blog_intro"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "blog.featured"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_blog_featured"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_blog_featured"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "blog.story-list"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_blog_story-list"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_blog_story-list"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "blog.manifesto-aside"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_blog_manifesto-aside"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_blog_manifesto-aside"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "blog.article-header"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_blog_article-header"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_blog_article-header"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "blog.prose"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_blog_prose"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_blog_prose"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "blog.article-end"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_blog_article-end"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_blog_article-end"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "legal.heading"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_legal_heading"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_legal_heading"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "legal.body"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_legal_body"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_legal_body"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

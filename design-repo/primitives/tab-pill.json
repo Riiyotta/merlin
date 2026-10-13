@@ -1,0 +1,25 @@
+{
+  "id": "tab-pill",
+  "kind": "primitive",
+  "description": "Legal Privacy/Terms tab track with a white active pill (aria-current).",
+  "props": {
+    "tabs": "array",
+    "active": "string"
+  },
+  "variants": [],
+  "domAnchor": "nav.legal-tabs",
+  "measuredFrom": [
+    "src/components/legal/LegalPage.jsx:90",
+    "CLONE_SPEC_PAGES_B.md:290"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/legal/LegalPage.jsx:90",
+      "contains": "<nav className=\"legal-tabs\""
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_B.md:290",
+      "contains": "nav.legal-tabs"
+    }
+  ]
+}

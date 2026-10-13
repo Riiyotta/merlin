@@ -1,0 +1,24 @@
+{
+  "id": "badge",
+  "kind": "primitive",
+  "description": "Small pill: 'Latest story' (#218c9b on #edf8f9), 'Inbox' chip, 'Prepared for you'.",
+  "props": {
+    "text": "string"
+  },
+  "variants": [],
+  "domAnchor": "span.blog_latest__S4ifZ",
+  "measuredFrom": [
+    "src/pages/Blog.jsx:44",
+    "CLONE_SPEC_PAGES_B.md:110"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/pages/Blog.jsx:44",
+      "contains": "blog_latest__S4ifZ"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_B.md:110",
+      "contains": "\"Latest story\" pill"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "blog.intro",
+  "category": "blog",
+  "description": "Blog index intro: centered 2-line serif H1 and a 2-line subtitle.",
+  "evidenceLevel": "measured",
+  "domAnchor": "header.blog_intro__ggRFG",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "titleLine1",
+      "titleLine2",
+      "subtitle"
+    ],
+    "properties": {
+      "titleLine1": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 3
+      },
+      "titleLine2": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 3
+      },
+      "subtitle": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 11
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {},
+    "motionEvidence": {
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:145"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:145",
+          "contains": "- No load or scroll entrance animations."
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "760",
+      "change": "padding 36px 0 56px; h1 48px/50.4; subtitle 16px/24.8",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:134"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:134",
+          "contains": "(padding 36px 0 56px)"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [],
+    "components": []
+  },
+  "measuredFrom": [
+    "src/pages/Blog.jsx:26",
+    "CLONE_SPEC_PAGES_B.md:72"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/pages/Blog.jsx:26",
+      "contains": "<header className=\"blog_intro__ggRFG\">"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_B.md:72",
+      "contains": "header.blog_intro__ggRFG"
+    }
+  ],
+  "implementedBy": [
+    "src/pages/Blog.jsx"
+  ]
+}

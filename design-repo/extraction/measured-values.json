@@ -1,0 +1,779 @@
+{
+  "_note": "Citation trail for the design-repo. Source-dependent citations degrade to WARNINGS (never failures) when no sibling source tree is present. `measuredQuotes` pin each citation's content so an in-range-but-wrong line is caught when the source IS present.",
+  "sourceProject": {
+    "name": "merlin-clone",
+    "liveUrl": "https://www.merlin.computer (a real company's marketing site; this repo is a snapshot of a LOCAL CLONE of it)",
+    "stack": "React 18 + Vite 5 + react-router-dom 6 (lazy per-route code splitting), framer-motion 14, GSAP 3 (ScrollTrigger). Tailwind v3 is installed but DISABLED: tailwind.config.js sets corePlugins.preflight=false and src/index.css has no @tailwind directives, so design tokens come from the original compiled CSS custom properties and computed values, not from a Tailwind config.",
+    "dependencies": {
+      "framer-motion": "^14.0.0",
+      "gsap": "^3.15.0",
+      "react": "^18.3.1",
+      "react-dom": "^18.3.1",
+      "react-router-dom": "^6.30.6",
+      "@vitejs/plugin-react": "^4.3.4",
+      "autoprefixer": "^10.4.20",
+      "postcss": "^8.4.49",
+      "tailwindcss": "^3.4.17",
+      "vite": "^5.4.11"
+    },
+    "measuredFrom": [
+      "package.json:12",
+      "package.json:13",
+      "package.json:14",
+      "package.json:15",
+      "package.json:16",
+      "package.json:19",
+      "package.json:20",
+      "package.json:21",
+      "package.json:22",
+      "package.json:23",
+      "tailwind.config.js:4",
+      "src/index.css:6"
+    ],
+    "measuredQuotes": [
+      {
+        "cite": "package.json:12",
+        "contains": "\"framer-motion\": \"^14.0.0\""
+      },
+      {
+        "cite": "package.json:13",
+        "contains": "\"gsap\": \"^3.15.0\""
+      },
+      {
+        "cite": "package.json:14",
+        "contains": "\"react\": \"^18.3.1\""
+      },
+      {
+        "cite": "package.json:15",
+        "contains": "\"react-dom\": \"^18.3.1\""
+      },
+      {
+        "cite": "package.json:16",
+        "contains": "\"react-router-dom\": \"^6.30.6\""
+      },
+      {
+        "cite": "package.json:19",
+        "contains": "\"@vitejs/plugin-react\": \"^4.3.4\""
+      },
+      {
+        "cite": "package.json:20",
+        "contains": "\"autoprefixer\": \"^10.4.20\""
+      },
+      {
+        "cite": "package.json:21",
+        "contains": "\"postcss\": \"^8.4.49\""
+      },
+      {
+        "cite": "package.json:22",
+        "contains": "\"tailwindcss\": \"^3.4.17\""
+      },
+      {
+        "cite": "package.json:23",
+        "contains": "\"vite\": \"^5.4.11\""
+      },
+      {
+        "cite": "tailwind.config.js:4",
+        "contains": "corePlugins: { preflight: false }"
+      },
+      {
+        "cite": "src/index.css:6",
+        "contains": "Tailwind directives intentionally omitted"
+      }
+    ]
+  },
+  "liveSource": {
+    "summary": "REAL, LIVE COMPANY SOURCE. Copy, logos, felt-character art, photographs, product screenshots and brand marks belong to Merlin or third parties. This design-repo is NOT for public redistribution; the asset-role contract (tokens/llm/asset-roles.json) bans reproducing real third-party logos, the Merlin marks, real people's photos, real product screenshots and recordings.",
+    "measuredFrom": [
+      "CLONE_SPEC.md:3",
+      "src/components/Companies.jsx:8"
+    ],
+    "measuredQuotes": [
+      {
+        "cite": "CLONE_SPEC.md:3",
+        "contains": "Merlin homepage clone spec"
+      },
+      {
+        "cite": "src/components/Companies.jsx:8",
+        "contains": "aria-label=\"Salesforce\""
+      }
+    ]
+  },
+  "placeholderCopy": {
+    "summary": "The clone's long-form text is deliberately ORIGINAL placeholder sized to live word counts: manifesto essay + handwriting overlays, /privacy + /terms bodies, blog post bodies, pricing FAQ answers, the blog-index handwritten aside. The design-repo carries structure and maxWords budgets only; the bundled example uses short structural UI copy plus neutral placeholder prose of its own. NOT placeholder (live copy present in the clone): the 5 home FAQ answers, the Gmail preview email body, routine/notification/transcript demo text - the design-repo records only their word budgets.",
+    "evidence": {
+      "measuredFrom": [
+        "src/components/manifesto/copy.js:1",
+        "src/components/legal/placeholder.js:1",
+        "src/lib/blog-placeholder.js:1",
+        "src/components/pricing/pricingData.js:2",
+        "src/components/faq/faqData.js:1"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/manifesto/copy.js:1",
+          "contains": "PLACEHOLDER COPY. The original manifesto essay is Merlin's copyrighted writing"
+        },
+        {
+          "cite": "src/components/legal/placeholder.js:1",
+          "contains": "Original neutral filler used in place of Merlin's legal text"
+        },
+        {
+          "cite": "src/lib/blog-placeholder.js:1",
+          "contains": "PLACEHOLDER COPY. Merlin's article bodies are copyrighted"
+        },
+        {
+          "cite": "src/components/pricing/pricingData.js:2",
+          "contains": "FAQ answers are ORIGINAL placeholder text"
+        },
+        {
+          "cite": "src/components/faq/faqData.js:1",
+          "contains": "export const FAQ_ITEMS = ["
+        }
+      ]
+    }
+  },
+  "localStandIns": {
+    "summary": "FAQ ask form -> client-side mock (no /api/faq); /download installer links and iframe -> /download-stub.txt (the real installer host is never contacted); no analytics; no outbound requests.",
+    "evidence": {
+      "measuredFrom": [
+        "src/components/faq/mockFaqApi.js:1",
+        "src/components/download/InstallIntro.jsx:4",
+        "public/download-stub.txt:1"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/faq/mockFaqApi.js:1",
+          "contains": "Local stand-in for the live site's POST /api/faq"
+        },
+        {
+          "cite": "src/components/download/InstallIntro.jsx:4",
+          "contains": "Analytics (website_download_requested) is not ported."
+        },
+        {
+          "cite": "public/download-stub.txt:1",
+          "contains": "no real binary is fetched"
+        }
+      ]
+    }
+  },
+  "perRouteCssIsolation": {
+    "summary": "ORIGINAL compiled CSS is used verbatim; each route lazy-imports its own ordered stylesheet list (see templates/routes.json routeStylesheets). Specificity ties are decided by order. Class names - including CSS-module hashes such as blog_page__bLGfe - are LOAD-BEARING: the CSS selects them literally (#top.blog_page__bLGfe .blog_...), so they must be reproduced exactly.",
+    "evidence": {
+      "measuredFrom": [
+        "src/App.jsx:4",
+        "src/styles/home.css:1",
+        "CLONE_SPEC_PAGES_A.md:27"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/App.jsx:4",
+          "contains": "Each route is lazy so its original-site CSS only loads on that page"
+        },
+        {
+          "cite": "src/styles/home.css:1",
+          "contains": "@import './original/e2e0ba86a6b0d559.css';"
+        },
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:27",
+          "contains": "Keep each route's order"
+        }
+      ]
+    }
+  },
+  "loadBearingClassNames": [
+    {
+      "name": "main#top.merlin-story.site-layout",
+      "why": "most original selectors are #top .x or #top.merlin-story .x",
+      "measuredFrom": [
+        "CLONE_SPEC.md:24"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:24",
+          "contains": "Root: `<main class=\"merlin-story site-layout\" id=\"top\">`"
+        }
+      ]
+    },
+    {
+      "name": "blog_page__bLGfe",
+      "why": "CSS module root class: every blog rule is #top.blog_page__bLGfe .blog_*__hash",
+      "measuredFrom": [
+        "src/components/blog/BlogLayout.jsx:17",
+        "CLONE_SPEC_PAGES_B.md:26"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/blog/BlogLayout.jsx:17",
+          "contains": "blog_page__bLGfe"
+        },
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:26",
+          "contains": "**The blog styles are a CSS module inside `ea3e27f6a69b5df4.css`**"
+        }
+      ]
+    },
+    {
+      "name": "blog_index__3_0oG, blog_intro__ggRFG, blog_featured__dQvxo, blog_stories__Dlir_, blog_story__uUvdL, blog_manifesto__VgyoG, blog_article__Uk9MF, blog_articleHeader__3w7of, blog_prose__r_2py, blog_articleEnd__zI6hK",
+      "why": "hashed CSS-module classes used literally by the page JSX",
+      "measuredFrom": [
+        "src/pages/Blog.jsx:25",
+        "src/pages/BlogPost.jsx:18",
+        "src/components/blog/Prose.jsx:85"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/pages/Blog.jsx:25",
+          "contains": "blog_index__3_0oG"
+        },
+        {
+          "cite": "src/pages/BlogPost.jsx:18",
+          "contains": "blog_articleHeader__3w7of"
+        },
+        {
+          "cite": "src/components/blog/Prose.jsx:85",
+          "contains": "blog_prose__r_2py"
+        }
+      ]
+    },
+    {
+      "name": "floating-navigation_nav__y4vuM, hover-text_hoverText__JouUr",
+      "why": "CSS-module hashes of the floating nav",
+      "measuredFrom": [
+        "src/components/FloatingNav.jsx:8",
+        "src/components/FloatingNav.jsx:17"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/FloatingNav.jsx:8",
+          "contains": "floating-navigation_nav__y4vuM"
+        },
+        {
+          "cite": "src/components/FloatingNav.jsx:17",
+          "contains": "hover-text_hoverText__JouUr"
+        }
+      ]
+    },
+    {
+      "name": "main.install-page",
+      "why": "the install route has NO #top and its own stylesheet",
+      "measuredFrom": [
+        "src/pages/Download.jsx:47"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/pages/Download.jsx:47",
+          "contains": "<main className=\"install-page\">"
+        }
+      ]
+    }
+  ],
+  "timeOfDayCopy": {
+    "summary": "/manifesto swaps three copy parts by new Date().getHours(): morning 5-11, afternoon 12-16, evening 17-21, night otherwise (separate opening for hours before 5). Motion is IntersectionObserver- and spring-driven with a reduced-motion branch on every animated section.",
+    "measuredFrom": [
+      "src/components/manifesto/copy.js:60",
+      "CLONE_SPEC_PAGES_A.md:310"
+    ],
+    "measuredQuotes": [
+      {
+        "cite": "src/components/manifesto/copy.js:60",
+        "contains": "if (h >= 5 && h < 12) return VARIANTS.morning"
+      },
+      {
+        "cite": "CLONE_SPEC_PAGES_A.md:310",
+        "contains": "`5 ≤ h < 12` morning"
+      }
+    ]
+  },
+  "deliberateAbsences": [
+    {
+      "what": "no floating nav on /pricing, /manifesto, /blog*, /privacy, /terms, /download",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:46",
+        "CLONE_SPEC_PAGES_B.md:43"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:46",
+          "contains": "| Floating nav `floating-navigation_nav__y4vuM` | **Absent**"
+        },
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:43",
+          "contains": "| Floating nav `nav.floating-navigation_nav__y4vuM` | **No.**"
+        }
+      ]
+    },
+    {
+      "what": "/download has no nav and no footer (brand-only header)",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:166"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:166",
+          "contains": "The route uses **no** homepage chrome"
+        }
+      ]
+    },
+    {
+      "what": "blog and legal pages have no entrance animation",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:228",
+        "CLONE_SPEC_PAGES_B.md:351"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:228",
+          "contains": "- **None at load or on scroll.**"
+        },
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:351",
+          "contains": "- No entrance animations; only the footer birds run."
+        }
+      ]
+    },
+    {
+      "what": "no monthly/annual pricing toggle",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:58"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:58",
+          "contains": "**No monthly/annual toggle exists.**"
+        }
+      ]
+    },
+    {
+      "what": "no blog filters, tags, search, pagination, TOC, reading progress, read time or excerpts",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:390"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:390",
+          "contains": "- No blog filters, categories UI, pagination, search, TOC or reading-progress bar exist on the live site"
+        }
+      ]
+    },
+    {
+      "what": "no scroll-spy on the legal TOC",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:347"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:347",
+          "contains": "There is **no scroll-spy**"
+        }
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "id": "no-external-requests",
+      "text": "The clone makes no outbound requests and runs no analytics: ask form is a local mock, installer links go to /download-stub.txt. A PageSpec may not contain http(s) URLs (rule NO_EXTERNAL_REQUESTS; schema pins installerSource to local-stub and apiMode to local-mock).",
+      "measuredFrom": [
+        "src/components/faq/mockFaqApi.js:1",
+        "src/components/download/InstallIntro.jsx:36"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/faq/mockFaqApi.js:1",
+          "contains": "Local stand-in"
+        },
+        {
+          "cite": "src/components/download/InstallIntro.jsx:36",
+          "contains": "const installerUrl = (arch) => `/download-stub.txt?arch=${arch}`"
+        }
+      ]
+    },
+    {
+      "id": "not-for-public-redistribution",
+      "text": "Real company's content and brand assets; do not publish this repository or its zip.",
+      "measuredFrom": [
+        "CLONE_SPEC.md:3"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:3",
+          "contains": "Merlin homepage clone spec"
+        }
+      ]
+    },
+    {
+      "id": "routing-behaviors-not-pages",
+      "text": "`*` falls back to Home and an unknown /blog/<slug> Navigates (replace) to /blog; both are routing behaviors recorded in templates/routes.json `behaviors`, not templates.",
+      "measuredFrom": [
+        "src/App.jsx:28",
+        "src/pages/BlogPost.jsx:45"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/App.jsx:28",
+          "contains": "<Route path=\"*\" element={<Home />} />"
+        },
+        {
+          "cite": "src/pages/BlogPost.jsx:45",
+          "contains": "<Navigate to=\"/blog\" replace />"
+        }
+      ]
+    },
+    {
+      "id": "no-per-instance-style-override",
+      "text": "PageSpec has no token/style override field (MASTER-GUIDE 3.21): styling is owned by section contracts.",
+      "measuredFrom": [],
+      "measuredQuotes": []
+    }
+  ],
+  "evidenceLevels": {
+    "measured": "Playwright-measured in the CLONE_SPEC files AND cross-read against the real source.",
+    "measured-sample": "Measured on a sample; the remainder follows the same template by the spec's own check (blog posts: 2 of 20 measured).",
+    "derived-from-source": "Read from src/ only (routing fallbacks), never measured on the live site.",
+    "derived-histogram": "Counted by extraction/derive_histograms.py from the compiled CSS."
+  },
+  "inferredVsMeasured": {
+    "inferred": [
+      "histogram-only tokens (sizes 10/11px, etc.) corroborate by CSS count, not by a spec line",
+      "scene internals (mock sites, Photoshop/Slack/Chrome demos, notification detail panels) are documented only at contract level (editable text slots + fixed scene ids)",
+      "motion `timing` blocks restate spec values; the 5 spring tokens are read from code",
+      "section variant lists for manifesto.photo are positional labels invented for this repo (the page has three photos in fixed positions)"
+    ],
+    "notGroundable": [
+      "the live site's dark-mode behavior (none observed)",
+      "FLIP notification frame output (spec section 13)",
+      "live /api/faq responses",
+      "the live 404 page (catch-all is clone behavior)"
+    ]
+  },
+  "wordCounts": {
+    "summary": "maxWords = the MAXIMUM observed count (no headroom) from recorded live counts and the clone's own data; re-derived independently by the build (node import of the data modules, python over blog-posts.json). verify_all.py recomputes the blog maxima when the source is present.",
+    "legal": {
+      "privacyParagraphs": 17,
+      "privacyWords": 649,
+      "termsParagraphs": 30,
+      "termsH3": 19,
+      "termsLists": 2,
+      "maxParagraph": 82,
+      "maxListTotal": 79
+    },
+    "homeFaq": {
+      "maxQuestion": 8,
+      "maxAnswer": 39,
+      "items": 5
+    },
+    "pricingFaq": {
+      "maxQuestion": 6,
+      "maxAnswerLive": 45,
+      "maxAnswerClone": 43,
+      "items": 6
+    },
+    "manifesto": {
+      "openingMax": 28,
+      "interruptionMax": 19,
+      "finishMax": 36,
+      "P3": 30,
+      "P4": 30,
+      "P6": 34,
+      "P8": 34
+    },
+    "blog": {
+      "titleMax": 17,
+      "pMax": 264,
+      "blockquoteMax": 102,
+      "listTotalMax": 1391,
+      "headingTextMax": 12,
+      "maxBlocksPerPost": 243
+    },
+    "measuredFrom": [
+      "src/components/legal/privacyData.js:30",
+      "src/data/blog-posts.json:23"
+    ],
+    "measuredQuotes": [
+      {
+        "cite": "src/components/legal/privacyData.js:30",
+        "contains": "id: 'website'"
+      },
+      {
+        "cite": "src/data/blog-posts.json:23",
+        "contains": "\"bodyStats\": {"
+      }
+    ]
+  },
+  "specDiscrepancies": [
+    {
+      "id": "D1",
+      "where": "CLONE_SPEC_PAGES_A.md section 2.2",
+      "claim": "pricing FAQ answers given '(verbatim)'",
+      "reality": "src/components/pricing/pricingData.js uses ORIGINAL placeholder answers (up to 43 words vs the live 45); only the questions are verbatim",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:112",
+        "src/components/pricing/pricingData.js:2"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:112",
+          "contains": "- FAQ (native `<details>`, all closed initially"
+        },
+        {
+          "cite": "src/components/pricing/pricingData.js:2",
+          "contains": "FAQ answers are ORIGINAL placeholder text"
+        }
+      ]
+    },
+    {
+      "id": "D2",
+      "where": "CLONE_SPEC_PAGES_A.md section 4.4",
+      "claim": "placeholder word counts per variant: morning finish 32, fallback finish 34",
+      "reality": "the clone's placeholders have morning finish 33 and fallback finish 33 (all other counts match: 21/18, 22/19, 22/19/33, 28|24/18/35, 19/18)",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:315",
+        "src/components/manifesto/copy.js:16"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:315",
+          "contains": "Placeholder word counts per variant"
+        },
+        {
+          "cite": "src/components/manifesto/copy.js:16",
+          "contains": "export const FALLBACK = {"
+        }
+      ]
+    },
+    {
+      "id": "D3",
+      "where": "CLONE_SPEC_PAGES_B.md section 5",
+      "claim": "/terms has '40 p'",
+      "reality": "the spec's own outline table, the clone data and the live DOM capture all give 30 paragraphs (19 h3, 2 ul); the '40' is wrong",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:378",
+        "src/components/legal/termsData.js:22"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:378",
+          "contains": "40 p, 19 h3 (rendered"
+        },
+        {
+          "cite": "src/components/legal/termsData.js:22",
+          "contains": "export const termsPage = {"
+        }
+      ]
+    },
+    {
+      "id": "D4",
+      "where": "CLONE_SPEC_PAGES_B.md section 0.1",
+      "claim": "'The clone can therefore import all original CSS once, globally'",
+      "reality": "the real clone does the opposite on purpose: per-route lazy CSS lists (src/styles/<route>.css), matching Next.js per-route chunks; only 357da7... and 437c25... are global (src/index.css)",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:27",
+        "src/index.css:3"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:27",
+          "contains": "The clone can therefore import all original CSS once, globally"
+        },
+        {
+          "cite": "src/index.css:3",
+          "contains": "@import './styles/original/437c25afc566ca52.css';"
+        }
+      ]
+    },
+    {
+      "id": "D5",
+      "where": "CLONE_SPEC.md section 0 (step 1)",
+      "claim": "copy only the first ~6 rules of the Mantine bundle 437c25afc566ca52.css",
+      "reality": "the clone imports the whole 179 KB Mantine bundle globally in src/index.css (harmless; the histogram script tallies it separately as vendor so it cannot skew tokens)",
+      "measuredFrom": [
+        "CLONE_SPEC.md:20",
+        "src/index.css:3"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:20",
+          "contains": "only its first ~6 base rules matter"
+        },
+        {
+          "cite": "src/index.css:3",
+          "contains": "@import './styles/original/437c25afc566ca52.css';"
+        }
+      ]
+    },
+    {
+      "id": "D6",
+      "where": "task brief / CLONE_SPEC.md sections 5c, 10",
+      "claim": "long-form text in the clone is placeholder",
+      "reality": "the 5 home FAQ answers, the Gmail email body and the demo/notification text are LIVE copy transcribed in the clone and spec; only manifesto, legal, blog bodies, pricing FAQ answers and the blog aside are placeholders",
+      "measuredFrom": [
+        "src/components/faq/faqData.js:1",
+        "src/components/Routines.jsx:164"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/faq/faqData.js:1",
+          "contains": "export const FAQ_ITEMS = ["
+        },
+        {
+          "cite": "src/components/Routines.jsx:164",
+          "contains": "<p>Hi Amira,</p>"
+        }
+      ]
+    },
+    {
+      "id": "D7",
+      "where": "CLONE_SPEC_PAGES_B.md section 1.1",
+      "claim": "blog aside handwriting is a specific live phrase",
+      "reality": "the clone replaces it with an original placeholder of the same word count (the spec reproduces the live phrase, so this design-repo does not copy it)",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:95",
+        "src/pages/Blog.jsx:7"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:95",
+          "contains": "span.blog_handwritten__cIXLa"
+        },
+        {
+          "cite": "src/pages/Blog.jsx:7",
+          "contains": "Original phrase with the same word count (8)"
+        }
+      ]
+    }
+  ],
+  "routeStylesheets": {
+    "summary": "Per-route stylesheet lists (live <link> order; specificity ties are decided by order). Must equal templates/routes.json routeStylesheets (checked by verify_all.py) and, when the source is present, the real src/styles/<route>.css import lists.",
+    "lists": {
+      "home": {
+        "order": [
+          "357da7cf10d68108.css",
+          "437c25afc566ca52.css",
+          "e2e0ba86a6b0d559.css",
+          "4a4d88752d2165c6.css",
+          "6385c293c5638848.css",
+          "f46c55d95248097e.css",
+          "a5f02e9d0c6db7af.css",
+          "401561448b81938e.css",
+          "922109019b2259fa.css",
+          "0a5b07db1896be06.css",
+          "fc1769f629488e8f.css",
+          "f7c0a2656765fcca.css",
+          "ea3e27f6a69b5df4.css"
+        ],
+        "importList": "src/styles/home.css",
+        "measuredFrom": [
+          "CLONE_SPEC.md:20"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC.md:20",
+            "contains": "`357da7cf10d68108.css` (root font-size"
+          }
+        ]
+      },
+      "pricing": {
+        "order": [
+          "357da7cf10d68108.css",
+          "437c25afc566ca52.css",
+          "a5f02e9d0c6db7af.css",
+          "f7c0a2656765fcca.css",
+          "f46c55d95248097e.css",
+          "922109019b2259fa.css",
+          "e2e0ba86a6b0d559.css",
+          "2abce9a6dc03269b.css",
+          "ea3e27f6a69b5df4.css"
+        ],
+        "importList": "src/styles/pricing.css",
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_A.md:20"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_A.md:20",
+            "contains": "| /pricing | `357da7cf10d68108`"
+          }
+        ]
+      },
+      "download": {
+        "order": [
+          "357da7cf10d68108.css",
+          "437c25afc566ca52.css",
+          "9168513aa22c6d8a.css"
+        ],
+        "importList": "src/styles/download.css",
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_A.md:21"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_A.md:21",
+            "contains": "| /download | `357da7cf10d68108`"
+          }
+        ]
+      },
+      "manifesto": {
+        "order": [
+          "357da7cf10d68108.css",
+          "437c25afc566ca52.css",
+          "a5f02e9d0c6db7af.css",
+          "922109019b2259fa.css",
+          "f46c55d95248097e.css",
+          "e2e0ba86a6b0d559.css",
+          "ae725ea36c48b431.css",
+          "ea3e27f6a69b5df4.css"
+        ],
+        "importList": "src/styles/manifesto.css",
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_A.md:22"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_A.md:22",
+            "contains": "| /manifesto | `357da7cf10d68108`"
+          }
+        ]
+      },
+      "blog": {
+        "order": [
+          "357da7cf10d68108.css",
+          "437c25afc566ca52.css",
+          "a5f02e9d0c6db7af.css",
+          "f46c55d95248097e.css",
+          "e2e0ba86a6b0d559.css",
+          "ea3e27f6a69b5df4.css"
+        ],
+        "importList": "src/styles/blog.css",
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:22"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:22",
+            "contains": "| `/blog`, `/blog/:slug` | `357da7cf10d68108`"
+          }
+        ]
+      },
+      "legal": {
+        "order": [
+          "357da7cf10d68108.css",
+          "437c25afc566ca52.css",
+          "a5f02e9d0c6db7af.css",
+          "f46c55d95248097e.css",
+          "e2e0ba86a6b0d559.css",
+          "e261c04d0a2d5dfe.css",
+          "ea3e27f6a69b5df4.css"
+        ],
+        "importList": "src/styles/legal.css",
+        "measuredFrom": [
+          "CLONE_SPEC_PAGES_B.md:23"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "CLONE_SPEC_PAGES_B.md:23",
+            "contains": "| `/privacy`, `/terms` | same as above"
+          }
+        ]
+      }
+    }
+  }
+}

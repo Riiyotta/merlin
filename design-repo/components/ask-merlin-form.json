@@ -1,0 +1,31 @@
+{
+  "id": "ask-merlin-form",
+  "kind": "component",
+  "description": "FAQ ask form: idle -> loading ('Reading the docs…' shimmer, Stop button) -> answer or error. Backed by a LOCAL MOCK (1.4s timeout, keyword overlap) - no network.",
+  "props": {
+    "placeholder": "string",
+    "apiMode": "local-mock"
+  },
+  "variants": [],
+  "domAnchor": "form.merlin-faq-form",
+  "measuredFrom": [
+    "src/components/faq/AskMerlinForm.jsx:6",
+    "src/components/faq/mockFaqApi.js:10"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/faq/AskMerlinForm.jsx:6",
+      "contains": "export default function AskMerlinForm()"
+    },
+    {
+      "cite": "src/components/faq/mockFaqApi.js:10",
+      "contains": "export function askFaq(question, signal)"
+    }
+  ],
+  "motion": {
+    "patterns": [
+      "shimmer-loading"
+    ],
+    "reducedMotionFallback": "no-animation"
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "id": "shell.footer-closing",
+  "category": "shell",
+  "description": "Closing footer: 3 ASCII-bird tracks, a live clock invitation ('starts at HH:MM' = now + 3 minutes), download CTA, ASCII beach, brand wordmark + copyright, 6 footer links. Present on every route except /download.",
+  "evidenceLevel": "measured",
+  "domAnchor": "footer.closing-footer",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true,
+    "mustBeLast": true,
+    "absentOnTemplates": [
+      "install"
+    ]
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "headingLine1",
+      "headingLine2Prefix",
+      "body",
+      "cta",
+      "beachArt",
+      "brandWordmark",
+      "copyrightHolder",
+      "links"
+    ],
+    "properties": {
+      "headingLine1": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 4
+      },
+      "headingLine2Prefix": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 2
+      },
+      "body": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 14
+      },
+      "cta": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "href"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 4
+          },
+          "href": {
+            "type": "string",
+            "pattern": "^/download\\?start=1$",
+            "x-sample": "/download?start=1"
+          }
+        }
+      },
+      "beachArt": {
+        "$ref": "#/definitions/assetRef",
+        "x-allowedRoles": [
+          "art.footer-ascii"
+        ]
+      },
+      "brandWordmark": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 1
+      },
+      "copyrightHolder": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 3
+      },
+      "links": {
+        "type": "array",
+        "minItems": 5,
+        "maxItems": 6,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "href"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 1
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/|#|mailto:)[^\\s]*$",
+              "x-sample": "/pricing"
+            }
+          }
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "css-bird-loop",
+      "clock-tick",
+      "brand-hover-sweep",
+      "cta-wipe-hover"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {
+      "clockRefreshMs": 1000,
+      "birdTracks": 3
+    },
+    "motionEvidence": {
+      "measuredFrom": [
+        "src/components/footer/FooterClock.jsx:17",
+        "src/styles/original/ea3e27f6a69b5df4.css:1"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/footer/FooterClock.jsx:17",
+          "contains": "window.setInterval(update, 1000)"
+        },
+        {
+          "cite": "src/styles/original/ea3e27f6a69b5df4.css:1",
+          "contains": "prefers-reduced-motion:reduce){.merlin-story .closing-bird,.merlin-story .closing-bird-drift{animation:none}"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "699",
+      "change": "main grid becomes single column; beach art moves below CTA; links wrap",
+      "measuredFrom": [
+        "CLONE_SPEC.md:342"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:342",
+          "contains": "At 390: main single column"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [
+      "download-button",
+      "icon",
+      "hover-sweep-wordmark"
+    ],
+    "components": [
+      "closing-bird-sky"
+    ]
+  },
+  "measuredFrom": [
+    "src/components/Footer.jsx:29",
+    "src/components/footer/FooterClock.jsx:7",
+    "CLONE_SPEC.md:335",
+    "src/components/Footer.jsx:48"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/Footer.jsx:29",
+      "contains": "<footer className=\"closing-footer\">"
+    },
+    {
+      "cite": "src/components/footer/FooterClock.jsx:7",
+      "contains": "Date.now() + 180000"
+    },
+    {
+      "cite": "CLONE_SPEC.md:335",
+      "contains": "## 11. Footer"
+    },
+    {
+      "cite": "src/components/Footer.jsx:48",
+      "contains": "© {new Date().getFullYear()} merlin computing inc"
+    }
+  ],
+  "implementedBy": [
+    "src/components/Footer.jsx"
+  ]
+}

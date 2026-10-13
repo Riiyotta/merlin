@@ -1,0 +1,132 @@
+{
+  "id": "blog.article-header",
+  "category": "blog",
+  "description": "Article header: back link, eyebrow, serif H1, author row (36px avatar), and an optional 3:2 cover (max-height 600px). The featured post has no cover and the img is omitted.",
+  "evidenceLevel": "measured",
+  "domAnchor": "header.blog_articleHeader__3w7of",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "backLabel",
+      "category",
+      "title",
+      "author",
+      "date",
+      "avatar"
+    ],
+    "properties": {
+      "backLabel": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 2
+      },
+      "category": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 1
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 17
+      },
+      "author": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 2
+      },
+      "date": {
+        "type": "string",
+        "pattern": "^[A-Z][a-z]{2,8} [0-9]{1,2}, [0-9]{4}$",
+        "x-sample": "May 13, 2025"
+      },
+      "avatar": {
+        "$ref": "#/definitions/assetRef",
+        "x-allowedRoles": [
+          "photo.person-portrait"
+        ]
+      },
+      "cover": {
+        "$ref": "#/definitions/assetRef",
+        "x-allowedRoles": [
+          "photo.stock-cover"
+        ]
+      },
+      "coverAlt": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 17
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hover-transition"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {
+      "backLink": "color .16s ease -> #12889a"
+    },
+    "motionEvidence": {
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:229"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:229",
+          "contains": "Hover: back links → #12889a"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "760",
+      "change": "article width calc(100% - 40px); header padding-top 36px; cover margin-bottom 32px; h1 36px/40.32",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:225"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:225",
+          "contains": "Breakpoint: `max-width:760px` (nav 144px tall"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [
+      "link-arrow"
+    ],
+    "components": []
+  },
+  "measuredFrom": [
+    "src/pages/BlogPost.jsx:18",
+    "src/pages/BlogPost.jsx:29",
+    "CLONE_SPEC_PAGES_B.md:184"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/pages/BlogPost.jsx:18",
+      "contains": "<header className=\"blog_articleHeader__3w7of\">"
+    },
+    {
+      "cite": "src/pages/BlogPost.jsx:29",
+      "contains": "{post.cover && <img className=\"blog_articleImage__wj3kN\""
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_B.md:184",
+      "contains": "The featured post (`the-future-of-work-is-autonomous-…`) has **no cover**"
+    }
+  ],
+  "implementedBy": [
+    "src/pages/BlogPost.jsx"
+  ]
+}

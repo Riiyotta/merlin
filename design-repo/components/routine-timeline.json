@@ -1,0 +1,31 @@
+{
+  "id": "routine-timeline",
+  "kind": "component",
+  "description": "'Weekly studio update' routine walkthrough: eyebrow with pause/replay, tool steps with spinner -> check, final update card.",
+  "props": {
+    "tools": "array",
+    "finalCard": "object"
+  },
+  "variants": [],
+  "domAnchor": "div.routine-timeline",
+  "measuredFrom": [
+    "src/components/routines/RoutineTimeline.jsx:97",
+    "CLONE_SPEC.md:193"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/routines/RoutineTimeline.jsx:97",
+      "contains": "export default function RoutineTimeline()"
+    },
+    {
+      "cite": "CLONE_SPEC.md:193",
+      "contains": "### Motion (routine walkthrough"
+    }
+  ],
+  "motion": {
+    "patterns": [
+      "routine-walkthrough-steps"
+    ],
+    "reducedMotionFallback": "final-state-static"
+  }
+}

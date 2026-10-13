@@ -1,0 +1,284 @@
+{
+  "id": "story.meetings-projects",
+  "category": "story",
+  "description": "Two-panel handoff: Meetings (felt-scene landscape with a transcript/notes window and an audio player of a real recording) and Projects (4 file 'folders' with tilted sheets). Heading carries Google Meet/Zoom logos and artifact icons.",
+  "evidenceLevel": "measured",
+  "domAnchor": "section#meetings",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "headingLead",
+      "headingTail",
+      "headingEmphasis",
+      "meetingLogos",
+      "introParagraphs",
+      "meetingPanel",
+      "projectPanel"
+    ],
+    "properties": {
+      "headingLead": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 1
+      },
+      "headingTail": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 1
+      },
+      "headingEmphasis": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 5
+      },
+      "meetingLogos": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 2,
+        "items": {
+          "$ref": "#/definitions/assetRef",
+          "x-allowedRoles": [
+            "icon.third-party-app"
+          ]
+        }
+      },
+      "introParagraphs": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 2,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 16
+        }
+      },
+      "meetingPanel": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "title",
+          "highlight",
+          "description",
+          "scene",
+          "recording",
+          "transcriptTitle",
+          "transcriptDate",
+          "participants"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 5
+          },
+          "highlight": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 4
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 16
+          },
+          "scene": {
+            "$ref": "#/definitions/assetRef",
+            "x-allowedRoles": [
+              "illustration.felt-scene"
+            ]
+          },
+          "recording": {
+            "$ref": "#/definitions/assetRef",
+            "x-allowedRoles": [
+              "media.audio-sample"
+            ]
+          },
+          "transcriptTitle": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 2
+          },
+          "transcriptDate": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 3
+          },
+          "participants": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 7
+          }
+        }
+      },
+      "projectPanel": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "title",
+          "highlight",
+          "description",
+          "files"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 4
+          },
+          "highlight": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 5
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 17
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 4,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "type",
+                "name",
+                "meta",
+                "sheetLabel",
+                "sheetTitle"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "pdf",
+                    "spreadsheet",
+                    "website",
+                    "deck"
+                  ]
+                },
+                "name": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 2
+                },
+                "meta": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 7
+                },
+                "sheetLabel": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 3
+                },
+                "sheetTitle": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 3
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "indicator-spring",
+      "hover-transition"
+    ],
+    "reducedMotionFallback": "instant-no-spring",
+    "timing": {
+      "transcriptPill": "spring stiffness 550 damping 38 mass .7",
+      "panelEnter": ".16s [.23,1,.32,1]"
+    },
+    "motionEvidence": {
+      "measuredFrom": [
+        "src/components/meetings/MeetingLandscape.jsx:111",
+        "CLONE_SPEC.md:258"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/meetings/MeetingLandscape.jsx:111",
+          "contains": "stiffness: 550, damping: 38, mass: 0.7"
+        },
+        {
+          "cite": "CLONE_SPEC.md:258",
+          "contains": "Project items hover (only `(hover:hover)"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "699",
+      "change": "panels stack; meeting landscape padding 40px 13px 28px radius 18px; project panel padding 26px 18px",
+      "measuredFrom": [
+        "CLONE_SPEC.md:253"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:253",
+          "contains": "At 390 the two panels stack"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [
+      "section-label",
+      "text-highlight",
+      "inline-identity",
+      "avatar-initials"
+    ],
+    "components": [
+      "transcript-window",
+      "project-folder-item"
+    ]
+  },
+  "measuredFrom": [
+    "src/components/Meetings.jsx:75",
+    "CLONE_SPEC.md:229",
+    "src/components/Meetings.jsx:7"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/Meetings.jsx:75",
+      "contains": "id=\"meetings\""
+    },
+    {
+      "cite": "CLONE_SPEC.md:229",
+      "contains": "## 7. Section: Meetings + Projects"
+    },
+    {
+      "cite": "src/components/Meetings.jsx:7",
+      "contains": "const PROJECT_FILES = ["
+    }
+  ],
+  "implementedBy": [
+    "src/components/Meetings.jsx"
+  ]
+}

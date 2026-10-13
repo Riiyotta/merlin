@@ -1,0 +1,31 @@
+{
+  "id": "details-faq-item",
+  "kind": "component",
+  "description": "Native <details>/<summary> FAQ item with a plus icon that rotates 45deg when open (several may be open).",
+  "props": {
+    "question": "string",
+    "answer": "string"
+  },
+  "variants": [],
+  "domAnchor": "details",
+  "measuredFrom": [
+    "src/components/pricing/PricingFaq.jsx:38",
+    "CLONE_SPEC_PAGES_A.md:112"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/pricing/PricingFaq.jsx:38",
+      "contains": "<details key={q}>"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_A.md:112",
+      "contains": "FAQ (native `<details>`"
+    }
+  ],
+  "motion": {
+    "patterns": [
+      "accordion-chevron"
+    ],
+    "reducedMotionFallback": "no-animation"
+  }
+}

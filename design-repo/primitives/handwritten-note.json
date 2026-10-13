@@ -1,0 +1,28 @@
+{
+  "id": "handwritten-note",
+  "kind": "primitive",
+  "description": "Caveat handwriting text in the accent color, optionally with a hand-drawn arrow SVG.",
+  "props": {
+    "text": "string",
+    "arrow": "boolean"
+  },
+  "variants": [],
+  "domAnchor": "div.context-routine-note",
+  "measuredFrom": [
+    "src/components/Routines.jsx:187",
+    "CLONE_SPEC.md:176"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/Routines.jsx:187",
+      "contains": "<span style={{ fontFamily: CAVEAT }}>Then, make it a routine.</span>"
+    },
+    {
+      "cite": "CLONE_SPEC.md:176",
+      "contains": "caveat 44px/50.6px 600"
+    }
+  ],
+  "assetRoles": [
+    "art.line-illustration"
+  ]
+}

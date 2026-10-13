@@ -1,0 +1,34 @@
+{
+  "id": "time-of-day-copy",
+  "kind": "component",
+  "description": "Manifesto copy selector by hour (5-11 morning, 12-16 afternoon, 17-21 evening, else night; <5 early-night opening), refreshed every 60s and on visibilitychange; renders fallback copy before mount.",
+  "props": {
+    "part": "opening|return|finish"
+  },
+  "variants": [
+    "opening",
+    "return",
+    "finish"
+  ],
+  "domAnchor": "p",
+  "measuredFrom": [
+    "src/components/manifesto/TimeOfDayCopy.jsx:23",
+    "CLONE_SPEC_PAGES_A.md:309"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/manifesto/TimeOfDayCopy.jsx:23",
+      "contains": "export default function TimeOfDayCopy({ part })"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_A.md:309",
+      "contains": "It picks a variant set from `new Date().getHours()`"
+    }
+  ],
+  "motion": {
+    "patterns": [
+      "time-of-day-swap"
+    ],
+    "reducedMotionFallback": "no-animation"
+  }
+}

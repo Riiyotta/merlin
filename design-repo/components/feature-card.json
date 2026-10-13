@@ -1,0 +1,26 @@
+{
+  "id": "feature-card",
+  "kind": "component",
+  "description": "Pricing feature article: 40px section-label icon, h3, p.",
+  "props": {
+    "icon": "string",
+    "title": "string",
+    "body": "string"
+  },
+  "variants": [],
+  "domAnchor": "div.pricing-feature-grid > article",
+  "measuredFrom": [
+    "src/components/pricing/PricingIncluded.jsx:19",
+    "CLONE_SPEC_PAGES_A.md:87"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/pricing/PricingIncluded.jsx:19",
+      "contains": "<SectionIcon section={f.icon} />"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_A.md:87",
+      "contains": "article x6 > svg(40x40"
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "template": "pricing",
+  "route": "/pricing",
+  "meta": {
+    "title": "Plans | Merlin",
+    "description": "Placeholder description for the plans page of a sample site.",
+    "skipLink": {
+      "label": "Skip to plans",
+      "href": "#plans"
+    }
+  },
+  "nodes": [
+    {
+      "id": "hero",
+      "section": "hero.marketing",
+      "variant": "pricing",
+      "content": {
+        "titleLine1": "Make room for",
+        "titleLine2": "the rest of your day.",
+        "subtitle": "Placeholder subtitle for a sample plans page. Replace with approved wording."
+      },
+      "motion": {
+        "patterns": [
+          "nav-dot-spring",
+          "brand-hover-sweep"
+        ],
+        "reducedMotionFallback": "no-animation"
+      }
+    },
+    {
+      "id": "plans",
+      "section": "pricing.plans",
+      "content": {
+        "ariaLabel": "Monthly plans",
+        "plans": [
+          {
+            "name": "Pro",
+            "tone": "sage",
+            "description": "Placeholder plan summary for a lighter, everyday tier.",
+            "price": "29",
+            "ctaVariant": "secondary",
+            "credits": "25,000"
+          },
+          {
+            "name": "Ultra",
+            "tone": "lavender",
+            "description": "Placeholder plan summary for a fuller, middle tier.",
+            "price": "99",
+            "ctaVariant": "primary",
+            "credits": "85,000"
+          },
+          {
+            "name": "Max",
+            "tone": "peach",
+            "description": "Placeholder plan summary for the largest tier.",
+            "price": "299",
+            "ctaVariant": "secondary",
+            "credits": "250,000"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "cta-wipe-hover"
+        ],
+        "reducedMotionFallback": "no-animation"
+      }
+    },
+    {
+      "id": "included",
+      "section": "pricing.included",
+      "content": {
+        "headingLine1": "All the places",
+        "headingLine2": "your day takes you.",
+        "intro": "Placeholder introduction to the shared feature list.",
+        "features": [
+          {
+            "icon": "context",
+            "title": "A little more context.",
+            "body": "Placeholder feature description kept neutral and short."
+          },
+          {
+            "icon": "browser",
+            "title": "A hand in your browser.",
+            "body": "Placeholder feature description kept neutral and short."
+          },
+          {
+            "icon": "companion",
+            "title": "Right where you are.",
+            "body": "Placeholder feature description kept neutral and short."
+          },
+          {
+            "icon": "meeting",
+            "title": "Be there for the meeting.",
+            "body": "Placeholder feature description kept neutral and short."
+          },
+          {
+            "icon": "project",
+            "title": "From thought to a real thing.",
+            "body": "Placeholder feature description kept neutral and short."
+          },
+          {
+            "icon": "routine",
+            "title": "One less thing to repeat.",
+            "body": "Placeholder feature description kept neutral and short."
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "none"
+        ],
+        "reducedMotionFallback": "no-animation"
+      }
+    },
+    {
+      "id": "faq",
+      "section": "pricing.faq",
+      "content": {
+        "headingLine1": "A few things",
+        "headingLine2": "you might be wondering.",
+        "items": [
+          {
+            "question": "Which plan should I choose?",
+            "answer": "Placeholder answer written for this sample. Replace it with approved wording before use."
+          },
+          {
+            "question": "What are credits?",
+            "answer": "Placeholder answer written for this sample. Replace it with approved wording before use."
+          },
+          {
+            "question": "Do unused credits roll over?",
+            "answer": "Placeholder answer written for this sample. Replace it with approved wording before use."
+          },
+          {
+            "question": "What happens if I run out?",
+            "answer": "Placeholder answer written for this sample. Replace it with approved wording before use."
+          },
+          {
+            "question": "Is there an annual option?",
+            "answer": "Placeholder answer written for this sample. Replace it with approved wording before use."
+          },
+          {
+            "question": "How do I get started?",
+            "answer": "Placeholder answer written for this sample. Replace it with approved wording before use."
+          }
+        ],
+        "askForm": {
+          "placeholder": "What else would you like to know?",
+          "inputAriaLabel": "Your question about Merlin",
+          "submitAriaLabel": "Ask Merlin",
+          "apiMode": "local-mock"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "accordion-chevron",
+          "shimmer-loading"
+        ],
+        "reducedMotionFallback": "no-animation"
+      }
+    },
+    {
+      "id": "footer",
+      "section": "shell.footer-closing",
+      "content": {
+        "headingLine1": "Your next free moment",
+        "headingLine2Prefix": "starts at",
+        "body": "Placeholder closing invitation for a sample page.",
+        "cta": {
+          "label": "Get Merlin for Mac",
+          "href": "/download?start=1"
+        },
+        "beachArt": {
+          "assetRole": "art.footer-ascii",
+          "assetRef": "reuse:asset.footer-beach-ascii.svg"
+        },
+        "brandWordmark": "merlin.computer",
+        "copyrightHolder": "merlin computing inc",
+        "links": [
+          {
+            "label": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "label": "Manifesto",
+            "href": "/manifesto"
+          },
+          {
+            "label": "Blog",
+            "href": "/blog"
+          },
+          {
+            "label": "Privacy",
+            "href": "/privacy"
+          },
+          {
+            "label": "Terms",
+            "href": "/terms"
+          },
+          {
+            "label": "Contact",
+            "href": "mailto:contact@example.com"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "css-bird-loop",
+          "clock-tick",
+          "cta-wipe-hover"
+        ],
+        "reducedMotionFallback": "no-animation"
+      }
+    }
+  ]
+}

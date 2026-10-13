@@ -1,0 +1,343 @@
+{
+  "_note": "Layout/container/grid tokens measured from computed CSS.",
+  "layout": {
+    "container.content-width": {
+      "$value": "83.333333%",
+      "$description": "home/pricing/blog/legal content width",
+      "measuredFrom": [
+        "CLONE_SPEC.md:53"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:53",
+          "contains": "--site-content-width:83.333333%"
+        }
+      ]
+    },
+    "container.content-width-tablet": {
+      "$value": "91.666667%",
+      "$description": "below 1024px",
+      "measuredFrom": [
+        "CLONE_SPEC.md:53"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:53",
+          "contains": "width becomes 91.666667%"
+        }
+      ]
+    },
+    "container.content-max": {
+      "$value": "1440px",
+      "$description": "max content",
+      "measuredFrom": [
+        "CLONE_SPEC.md:53"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:53",
+          "contains": "--site-content-max:1440px"
+        }
+      ]
+    },
+    "container.story-max": {
+      "$value": "1600px",
+      "$description": "story sections",
+      "measuredFrom": [
+        "CLONE_SPEC.md:55"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:55",
+          "contains": "max-width:1600px"
+        }
+      ]
+    },
+    "container.story-margin": {
+      "$value": "4%",
+      "$description": "story section side margin",
+      "measuredFrom": [
+        "CLONE_SPEC.md:55"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:55",
+          "contains": "side margin 4%"
+        }
+      ]
+    },
+    "grid.columns": {
+      "$value": "12",
+      "$description": "routines/companion grid",
+      "measuredFrom": [
+        "CLONE_SPEC.md:55"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:55",
+          "contains": "12-column grids"
+        }
+      ]
+    },
+    "grid.gap": {
+      "$value": "24px",
+      "$description": "12-col gap",
+      "measuredFrom": [
+        "CLONE_SPEC.md:55"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:55",
+          "contains": "column-gap 24px"
+        }
+      ]
+    },
+    "header.nav-height": {
+      "$value": "160px",
+      "$description": "blog/legal navigation header (144px at <=760/<=640)",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:40"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:40",
+          "contains": "height:160px"
+        }
+      ]
+    },
+    "blog.index-width": {
+      "$value": "min(1120px, 83.333333%)",
+      "$description": "blog index column",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:102"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:102",
+          "contains": "width:min(1120px, 83.333333%)"
+        }
+      ]
+    },
+    "blog.article-width": {
+      "$value": "min(800px,83.333333%)",
+      "$description": "blog article",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:164"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:164",
+          "contains": "width min(800px,83.333333%)"
+        }
+      ]
+    },
+    "blog.prose-width": {
+      "$value": "680px",
+      "$description": "blog prose max-width",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:183"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:183",
+          "contains": "prose and article-end max-width 680px"
+        }
+      ]
+    },
+    "legal.document-width": {
+      "$value": "min(1080px,83.333333%)",
+      "$description": "legal document",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:288"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:288",
+          "contains": "width min(1080px,83.333333%)"
+        }
+      ]
+    },
+    "legal.columns": {
+      "$value": "220px minmax(0,1fr)",
+      "$description": "legal TOC + prose",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:296"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:296",
+          "contains": "grid 220px minmax(0,1fr)"
+        }
+      ]
+    },
+    "legal.prose-max": {
+      "$value": "720px",
+      "$description": "legal prose",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:289"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:289",
+          "contains": "max-width 720"
+        }
+      ]
+    },
+    "privacy.layout": {
+      "$value": "404px 834px",
+      "$description": "privacy scene grid",
+      "measuredFrom": [
+        "CLONE_SPEC.md:301"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:301",
+          "contains": "grid `404px 834px`"
+        }
+      ]
+    },
+    "faq.layout": {
+      "$value": "minmax(0,.8fr) minmax(0,1.65fr)",
+      "$description": "home faq grid",
+      "measuredFrom": [
+        "CLONE_SPEC.md:322"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:322",
+          "contains": "minmax(0,.8fr) minmax(0,1.65fr)"
+        }
+      ]
+    },
+    "pricing.plan-grid": {
+      "$value": "3 columns, gap 16px",
+      "$description": "plan cards",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:73"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:73",
+          "contains": "div.pricing-plan-grid"
+        }
+      ]
+    },
+    "pricing.included": {
+      "$value": "grid .9fr 1.4fr, gap 9%",
+      "$description": "included section",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:145"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:145",
+          "contains": "grid `.9fr 1.4fr`"
+        }
+      ]
+    },
+    "pricing.faq": {
+      "$value": "grid 1fr 1.2fr, gap 10%",
+      "$description": "pricing faq",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:146"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:146",
+          "contains": "grid `1fr 1.2fr`"
+        }
+      ]
+    },
+    "install.steps": {
+      "$value": "3 columns, gap 30px, max-width 1200px",
+      "$description": "install steps",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:180"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:180",
+          "contains": "grid 3 x 380, gap 30"
+        }
+      ]
+    },
+    "manifesto.copy-column": {
+      "$value": "min(90%,720px)",
+      "$description": "manifesto copy column",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:298"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:298",
+          "contains": "width:min(90%,720px)"
+        }
+      ]
+    },
+    "manifesto.photo": {
+      "$value": "min(82%,880px)",
+      "$description": "manifesto photo",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:299"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:299",
+          "contains": "width:min(82%,880px)"
+        }
+      ]
+    },
+    "section.hero-padding": {
+      "$value": "160px 0 96px",
+      "$description": "story hero",
+      "measuredFrom": [
+        "CLONE_SPEC.md:107"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:107",
+          "contains": "padding `160px 0 96px`"
+        }
+      ]
+    },
+    "section.faq-padding": {
+      "$value": "180px clamp(24px,5vw,80px)",
+      "$description": "home faq",
+      "measuredFrom": [
+        "CLONE_SPEC.md:321"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:321",
+          "contains": "padding:180px clamp(24px,5vw,80px)"
+        }
+      ]
+    },
+    "section.privacy-padding": {
+      "$value": "160px 72px",
+      "$description": "privacy scene",
+      "measuredFrom": [
+        "CLONE_SPEC.md:299"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:299",
+          "contains": "padding:160px 72px"
+        }
+      ]
+    },
+    "section.root-font-size": {
+      "$value": "62.5%",
+      "$description": "html font-size; 56.25% <=62.5em, 54% <=56.25em, 51% <=37.5em, 75% >=112.5em",
+      "measuredFrom": [
+        "CLONE_SPEC.md:47"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:47",
+          "contains": ":root{font-size:62.5%}"
+        }
+      ]
+    }
+  }
+}

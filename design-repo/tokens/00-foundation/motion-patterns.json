@@ -1,0 +1,350 @@
+{
+  "_note": "Closed catalog of motion patterns observed on the real site. Section contracts list which patterns each section may use and lock one reducedMotionFallback per section. The PageSpec node.motion object is closed to {patterns, reducedMotionFallback}.",
+  "patterns": {
+    "none": {
+      "trigger": "none",
+      "description": "No motion on this section (static)",
+      "measuredFrom": [
+        "CLONE_SPEC.md:149"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:149",
+          "contains": "- Motion: none."
+        }
+      ]
+    },
+    "entrance-reveal": {
+      "trigger": "in-view",
+      "description": "Reveal wrapper: translateY 20 -> 0, 0.75s ease [.22,1,.36,1], once, amount .15 (framer whileInView)",
+      "measuredFrom": [
+        "src/lib/companion-motion.jsx:29"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/lib/companion-motion.jsx:29",
+          "contains": "whileInView={{ y: 0 }}"
+        }
+      ]
+    },
+    "hero-title-chroma-sweep": {
+      "trigger": "load",
+      "description": "Headline gradient sweep 1.5s on mount, class removed at 1500ms; home only",
+      "measuredFrom": [
+        "src/components/Hero.jsx:13"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/Hero.jsx:13",
+          "contains": "window.setTimeout(() => setChroma(false), 1500)"
+        }
+      ]
+    },
+    "brand-hover-sweep": {
+      "trigger": "hover|focus",
+      "description": "'merlin.computer' text gradient sweep 900ms (hero nav brand, footer wordmark)",
+      "measuredFrom": [
+        "src/components/hero/HeroNav.jsx:112"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/hero/HeroNav.jsx:112",
+          "contains": "window.setTimeout(() => setSweeping(false), 900)"
+        }
+      ]
+    },
+    "nav-dot-spring": {
+      "trigger": "hover|focus",
+      "description": "6px dot follows hovered link: spring {170,15,.8}, bend -8, lead 10",
+      "measuredFrom": [
+        "src/components/hero/HeroNav.jsx:9"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/hero/HeroNav.jsx:9",
+          "contains": "const SPRING = { stiffness: 170, damping: 15, mass: 0.8 }"
+        }
+      ]
+    },
+    "scroll-parallax-photo": {
+      "trigger": "scroll",
+      "description": "Hero photo y -3% -> 3% with scale 1.07 (useScroll/useTransform)",
+      "measuredFrom": [
+        "src/components/Hero.jsx:17"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/Hero.jsx:17",
+          "contains": "useScroll({ target: landscapeRef"
+        }
+      ]
+    },
+    "notification-stack-flip": {
+      "trigger": "in-view",
+      "description": "3 notification cards arrive 180ms then every 430ms via a WAAPI FLIP spring; replay; optional sine ping",
+      "measuredFrom": [
+        "src/components/hero/HeroNotifications.jsx:25"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/hero/HeroNotifications.jsx:25",
+          "contains": "useInView(sceneRef, { amount: 0.6 })"
+        }
+      ]
+    },
+    "routine-walkthrough-steps": {
+      "trigger": "in-view",
+      "description": "Stepper 0..12 advancing by recorded per-tool durations while >=10% in view",
+      "measuredFrom": [
+        "src/components/routines/RoutineTimeline.jsx:99"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/routines/RoutineTimeline.jsx:99",
+          "contains": "const inView = useInView(ref, { amount: 0.1 })"
+        }
+      ]
+    },
+    "scroll-pin-card-deck": {
+      "trigger": "scroll",
+      "description": "GSAP ScrollTrigger pin + scrub + labelsDirectional snap over a 4-card 3D deck",
+      "measuredFrom": [
+        "src/components/Browser.jsx:81"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/Browser.jsx:81",
+          "contains": "pin: stageRef.current"
+        }
+      ]
+    },
+    "indicator-spring": {
+      "trigger": "click",
+      "description": "Sliding tab pill/indicator driven by a framer spring (transcript 550/38/.7, companion 380/32)",
+      "measuredFrom": [
+        "src/components/companion/CompanionShowcase.jsx:153"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/companion/CompanionShowcase.jsx:153",
+          "contains": "stiffness: 380, damping: 32"
+        }
+      ]
+    },
+    "demo-autoplay-timeline": {
+      "trigger": "in-view",
+      "description": "40ms clock that advances scripted demos while >=15% in view; auto-advances tabs",
+      "measuredFrom": [
+        "src/components/companion/playback.jsx:35"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/companion/playback.jsx:35",
+          "contains": "window.setInterval(() => {"
+        }
+      ]
+    },
+    "typed-headline-swap": {
+      "trigger": "click",
+      "description": "'Rephrase word' cycles headline pairs; characters type in at 28ms each",
+      "measuredFrom": [
+        "src/components/Companion.jsx:27"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/Companion.jsx:27",
+          "contains": "animationDelay: `${(offset + i) * 28}ms`"
+        }
+      ]
+    },
+    "word-stagger-title": {
+      "trigger": "tab-change",
+      "description": "Context title words fade/rise with 0.055s stagger, arrow path draws .65s",
+      "measuredFrom": [
+        "src/components/companion/CompanionShowcase.jsx:70"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/companion/CompanionShowcase.jsx:70",
+          "contains": "delay: reduced ? 0 : 0.055 * i"
+        }
+      ]
+    },
+    "decode-headline": {
+      "trigger": "in-view",
+      "description": "Characters resolve from random glyphs on a 55ms interval; once, >=18% in view",
+      "measuredFrom": [
+        "src/components/privacy/DecodingHeadline.jsx:13"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/privacy/DecodingHeadline.jsx:13",
+          "contains": "const shown = frame >= 10 + index"
+        }
+      ]
+    },
+    "card-hover-illustration": {
+      "trigger": "hover",
+      "description": "Trust-card SVG animations paused until card hover (CSS animation-play-state)",
+      "measuredFrom": [
+        "CLONE_SPEC.md:312"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:312",
+          "contains": "**Card illustrations (hover only):**"
+        }
+      ]
+    },
+    "accordion-chevron": {
+      "trigger": "click",
+      "description": "Chevron rotates 180deg (.18s) / plus rotates 45deg (.2s) when open",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:158"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:158",
+          "contains": "FAQ details: when open, the plus SVG rotates 45deg"
+        }
+      ]
+    },
+    "shimmer-loading": {
+      "trigger": "submit",
+      "description": "'Reading the docs…' shimmer 1.8s linear infinite while the mock API resolves",
+      "measuredFrom": [
+        "CLONE_SPEC.md:330"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:330",
+          "contains": "`merlin-faq-shimmer 1.8s linear infinite`"
+        }
+      ]
+    },
+    "cta-wipe-hover": {
+      "trigger": "hover|focus",
+      "description": "Download button ::before slides translateX(calc(100% - 56px)) -> 0 over .55s [.22,1,.36,1]; text color .36s",
+      "measuredFrom": [
+        "CLONE_SPEC.md:122"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:122",
+          "contains": "`::before`: `content:\"\"; position:absolute; inset:0"
+        }
+      ]
+    },
+    "css-bird-loop": {
+      "trigger": "load",
+      "description": "Three CSS keyframe bird tracks (23s/37s/13s) with drift loops",
+      "measuredFrom": [
+        "CLONE_SPEC.md:347"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:347",
+          "contains": "track 1: `.closing-bird{animation:closing-bird-cross 23s linear infinite"
+        }
+      ]
+    },
+    "clock-tick": {
+      "trigger": "interval",
+      "description": "Footer clock text = now + 3 minutes, recomputed every 1000ms and on visibilitychange",
+      "measuredFrom": [
+        "src/components/footer/FooterClock.jsx:7"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/footer/FooterClock.jsx:7",
+          "contains": "Date.now() + 180000"
+        }
+      ]
+    },
+    "floating-nav-presence": {
+      "trigger": "scroll",
+      "description": "AnimatePresence enter/exit y 100 -> 0, 0.25s; gated by scrollY, page end and #privacy intersection",
+      "measuredFrom": [
+        "src/components/FloatingNav.jsx:56"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/FloatingNav.jsx:56",
+          "contains": "scrolledIn && !privacyVisible"
+        }
+      ]
+    },
+    "hover-text-roll": {
+      "trigger": "hover",
+      "description": "Floating-nav link text rolls up (-100%) revealing data-hover text, .3s",
+      "measuredFrom": [
+        "CLONE_SPEC.md:358"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:358",
+          "contains": "on hover the span translates -100% (text rolls up)"
+        }
+      ]
+    },
+    "hover-transition": {
+      "trigger": "hover|focus",
+      "description": "Generic CSS hover/focus transitions (.12-.45s) on cards, rows, arrows, links",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:147"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:147",
+          "contains": "Story row hover: h3 color"
+        }
+      ]
+    },
+    "time-of-day-swap": {
+      "trigger": "interval",
+      "description": "Copy variant set chosen by getHours(); recomputed every 60s and on visibilitychange",
+      "measuredFrom": [
+        "src/components/manifesto/TimeOfDayCopy.jsx:13"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/manifesto/TimeOfDayCopy.jsx:13",
+          "contains": "window.setInterval(update, 60000)"
+        }
+      ]
+    },
+    "signature-circle-draw": {
+      "trigger": "in-view",
+      "description": "SVG path stroke-dashoffset 1 -> 0 over 1.6s ease-in-out when 50% in view, once",
+      "measuredFrom": [
+        "src/components/manifesto/Signature.jsx:19"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/manifesto/Signature.jsx:19",
+          "contains": "{ threshold: 0.5 }"
+        }
+      ]
+    },
+    "anchor-smooth-scroll": {
+      "trigger": "click",
+      "description": "Native anchor jumps with html{scroll-behavior:smooth}; no scroll-spy; :target highlights heading",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:347"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:347",
+          "contains": "Clicking a TOC link smooth-scrolls"
+        }
+      ]
+    }
+  },
+  "reducedMotionFallbacks": {
+    "no-animation": "CSS transitions/animations set to none (or the pattern has no JS branch); content shown in its resting state.",
+    "final-state-static": "Show the end state immediately (e.g. full decoded headline, last routine step, drawn signature circle).",
+    "instant-no-spring": "Springs/durations replaced with jumps or duration 0; parallax and FLIP skipped.",
+    "stacked-static-layout": "Pinned stage released: cards stacked statically in a single column, pagination hidden.",
+    "still-frame": "Scripted demo frozen at a recorded still-frame time instead of playing."
+  }
+}

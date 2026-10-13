@@ -1,0 +1,161 @@
+{
+  "id": "shell.floating-nav",
+  "category": "shell",
+  "description": "Fixed bottom pill navigation (logo tile, Pricing, Manifesto, Download). HOME ONLY: pricing, manifesto, blog, legal and download all omit it. Visible only when scrollY > 100, not within 100px of the page end, and #privacy is not intersecting.",
+  "evidenceLevel": "measured",
+  "domAnchor": "nav.floating-navigation_nav__y4vuM",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true,
+    "homeRouteOnly": true,
+    "mustBeLast": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "logo",
+      "links",
+      "cta"
+    ],
+    "properties": {
+      "logo": {
+        "$ref": "#/definitions/assetRef",
+        "x-allowedRoles": [
+          "brand.merlin-app-icon"
+        ]
+      },
+      "links": {
+        "type": "array",
+        "minItems": 2,
+        "maxItems": 2,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "href"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "x-maxWords": 1
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(/|#|mailto:)[^\\s]*$",
+              "x-sample": "/pricing"
+            }
+          }
+        }
+      },
+      "cta": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "href"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "x-maxWords": 1
+          },
+          "href": {
+            "type": "string",
+            "pattern": "^/download\\?start=1$",
+            "x-sample": "/download?start=1"
+          }
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "floating-nav-presence",
+      "hover-text-roll"
+    ],
+    "reducedMotionFallback": "instant-no-spring",
+    "timing": {
+      "enterExit": "y 100 -> 0, opacity, 0.25s",
+      "reducedDurationS": 0
+    },
+    "motionEvidence": {
+      "measuredFrom": [
+        "src/components/FloatingNav.jsx:63",
+        "src/components/FloatingNav.jsx:53"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/FloatingNav.jsx:63",
+          "contains": "transition={{ duration: reduced ? 0 : 0.25 }}"
+        },
+        {
+          "cite": "src/components/FloatingNav.jsx:53",
+          "contains": "const offset = reduced ? 0 : 100"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "640",
+      "change": "bottom becomes max(16px, safe-area-inset-bottom); radius 20px; logo 42x42; links 14px",
+      "measuredFrom": [
+        "CLONE_SPEC.md:360"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:360",
+          "contains": "≤640px: `bottom:max(16px"
+        }
+      ]
+    },
+    {
+      "query": "max-width",
+      "breakpoint": "380",
+      "change": "gap 9px, logo 36px, text 12px",
+      "measuredFrom": [
+        "CLONE_SPEC.md:360"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:360",
+          "contains": "≤380px: gap 9px"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [
+      "hover-text-roll-link"
+    ],
+    "components": []
+  },
+  "measuredFrom": [
+    "src/pages/Home.jsx:26",
+    "src/components/FloatingNav.jsx:56",
+    "CLONE_SPEC_PAGES_A.md:46"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/pages/Home.jsx:26",
+      "contains": "<FloatingNav />"
+    },
+    {
+      "cite": "src/components/FloatingNav.jsx:56",
+      "contains": "scrolledIn && !privacyVisible"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_A.md:46",
+      "contains": "| Floating nav `floating-navigation_nav__y4vuM` | **Absent**"
+    }
+  ],
+  "implementedBy": [
+    "src/components/FloatingNav.jsx"
+  ]
+}

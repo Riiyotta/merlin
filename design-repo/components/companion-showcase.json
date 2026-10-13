@@ -1,0 +1,39 @@
+{
+  "id": "companion-showcase",
+  "kind": "component",
+  "description": "Rounded showcase panel with a 3-tab app switcher (sliding indicator), play/pause/replay control and one scripted demo viewport (Photoshop 22s, Slack 17s, Chrome 18.5s) that auto-advances.",
+  "props": {
+    "tabs": "array of {app, icon, caption}"
+  },
+  "variants": [
+    "Photoshop",
+    "Slack",
+    "Chrome"
+  ],
+  "domAnchor": "div.companion-showcase",
+  "measuredFrom": [
+    "src/components/companion/CompanionShowcase.jsx:20",
+    "CLONE_SPEC.md:288"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/companion/CompanionShowcase.jsx:20",
+      "contains": "export default function CompanionShowcase"
+    },
+    {
+      "cite": "CLONE_SPEC.md:288",
+      "contains": "**Demo engine `eR(duration)`:**"
+    }
+  ],
+  "motion": {
+    "patterns": [
+      "demo-autoplay-timeline",
+      "indicator-spring"
+    ],
+    "reducedMotionFallback": "still-frame"
+  },
+  "assetRoles": [
+    "icon.third-party-app",
+    "brand.merlin-mascot-art"
+  ]
+}

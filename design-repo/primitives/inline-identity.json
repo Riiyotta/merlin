@@ -1,0 +1,29 @@
+{
+  "id": "inline-identity",
+  "kind": "primitive",
+  "description": "Inline icon/avatar + word inside running copy (context-inline-identity, bs-inline-brand, companion-inline-identity, manifesto-mention).",
+  "props": {
+    "icon": "assetRef",
+    "text": "string"
+  },
+  "variants": [],
+  "domAnchor": "span.context-inline-identity",
+  "measuredFrom": [
+    "src/components/Routines.jsx:87",
+    "src/components/manifesto/Mention.jsx:8"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/Routines.jsx:87",
+      "contains": "className=\"context-inline-identity\""
+    },
+    {
+      "cite": "src/components/manifesto/Mention.jsx:8",
+      "contains": "className=\"manifesto-mention\""
+    }
+  ],
+  "assetRoles": [
+    "icon.third-party-app",
+    "icon.generic-ui"
+  ]
+}

@@ -1,0 +1,357 @@
+{
+  "_note": "Rhythm/position rules JSON Schema cannot express. Each rule has severity error|warn and (where relevant) named exceptions. semantic_validate.py reads exceptions from THIS file (no second copy) and exports IMPLEMENTED_RULES; verify_all.py fails if a semantic rule here is not implemented or an implemented rule is missing here.",
+  "rules": [
+    {
+      "id": "ONE_HERO_MARKETING",
+      "severity": "error",
+      "description": "At most one hero.marketing node per page. Templates that have no hero.marketing (install, manifesto, blog-index, blog-post, legal) are named exceptions to any 'hero required' reading: their H1 lives in install.intro / manifesto.opening / blog.intro / blog.article-header / legal.heading.",
+      "enforcedBy": "semantic_validate.py",
+      "params": {
+        "section": "hero.marketing",
+        "max": 1
+      },
+      "exceptions": {
+        "heroLessTemplates": [
+          "install",
+          "manifesto",
+          "blog-index",
+          "blog-post",
+          "legal"
+        ],
+        "note": "verify_all.py checks this list equals the set of templates whose node list lacks hero.marketing"
+      },
+      "measuredFrom": [
+        "src/pages/Pricing.jsx:22",
+        "src/pages/Manifesto.jsx:53"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/pages/Pricing.jsx:22",
+          "contains": "<section className=\"story-hero\""
+        },
+        {
+          "cite": "src/pages/Manifesto.jsx:53",
+          "contains": "<h1 id=\"manifesto-title\">"
+        }
+      ]
+    },
+    {
+      "id": "TEMPLATE_ORDER",
+      "severity": "error",
+      "description": "A PageSpec's nodes must equal its declared template's node list: every required section present, in the template's order, with the template's fixed variant where one is set; extra or unknown sections are rejected.",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "src/pages/Home.jsx:17-26"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/pages/Home.jsx:17-26",
+          "contains": "<Hero />"
+        }
+      ]
+    },
+    {
+      "id": "FOOTER_PRESENT_AND_LAST",
+      "severity": "error",
+      "description": "shell.footer-closing is the last node on every template that has one, except that shell.floating-nav may follow it on home (Home.jsx renders <FloatingNav /> after <Footer />). The install template has no footer at all (named exception).",
+      "enforcedBy": "semantic_validate.py",
+      "params": {
+        "section": "shell.footer-closing",
+        "mayBeFollowedBy": [
+          "shell.floating-nav"
+        ]
+      },
+      "exceptions": {
+        "templatesWithoutFooter": [
+          "install"
+        ]
+      },
+      "measuredFrom": [
+        "src/pages/Home.jsx:25-26",
+        "src/pages/Download.jsx:47"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/pages/Home.jsx:25-26",
+          "contains": "<Footer />"
+        },
+        {
+          "cite": "src/pages/Download.jsx:47",
+          "contains": "<main className=\"install-page\">"
+        }
+      ]
+    },
+    {
+      "id": "FLOATING_NAV_HOME_ONLY",
+      "severity": "error",
+      "description": "shell.floating-nav appears only on the home template (route /). Pricing, manifesto, blog, legal and install explicitly lack it.",
+      "enforcedBy": "semantic_validate.py",
+      "params": {
+        "section": "shell.floating-nav",
+        "onlyTemplates": [
+          "home"
+        ]
+      },
+      "exceptions": [],
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:46"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:46",
+          "contains": "| Floating nav `floating-navigation_nav__y4vuM` | **Absent**"
+        }
+      ]
+    },
+    {
+      "id": "CORNER_NAV_FIRST",
+      "severity": "error",
+      "description": "Where a template uses the stand-alone shell.corner-nav it is the first node. Home and pricing embed the nav inside hero.marketing instead, and install has its own brand-only header (named exceptions).",
+      "enforcedBy": "semantic_validate.py",
+      "params": {
+        "section": "shell.corner-nav",
+        "position": "first"
+      },
+      "exceptions": {
+        "embeddedInHero": [
+          "home",
+          "pricing"
+        ],
+        "ownHeader": [
+          "install"
+        ]
+      },
+      "measuredFrom": [
+        "src/pages/Manifesto.jsx:43"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/pages/Manifesto.jsx:43",
+          "contains": "<header className=\"manifesto-navigation\">"
+        }
+      ]
+    },
+    {
+      "id": "NO_ADJACENT_SAME_SECTION_VARIANT",
+      "severity": "error",
+      "description": "The same (section, variant) pair must not appear in two adjacent nodes. A category-level adjacency rule is deliberately NOT used: the real pages legitimately run same-category sections back to back (four story.* sections on home, three pricing.* sections, five manifesto.* sections).",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "src/pages/Home.jsx:19-22"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/pages/Home.jsx:19-22",
+          "contains": "<Routines />"
+        }
+      ]
+    },
+    {
+      "id": "ONE_PER_PAGE",
+      "severity": "error",
+      "description": "Sections with constraints.onePerPage appear once per page; sections with onePerPagePerVariant (manifesto.photo) appear once per (section, variant).",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [],
+      "measuredQuotes": []
+    },
+    {
+      "id": "MAX_ONE_PINNED_STAGE",
+      "severity": "error",
+      "description": "At most one node may use the scroll-pin-card-deck motion pattern per page (a single GSAP ScrollTrigger pin).",
+      "enforcedBy": "semantic_validate.py",
+      "params": {
+        "pattern": "scroll-pin-card-deck",
+        "max": 1
+      },
+      "exceptions": [],
+      "measuredFrom": [
+        "src/components/Browser.jsx:81"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/Browser.jsx:81",
+          "contains": "pin: stageRef.current"
+        }
+      ]
+    },
+    {
+      "id": "MOTION_FALLBACK_REQUIRED",
+      "severity": "error",
+      "description": "Every node carries motion.reducedMotionFallback equal to its section's locked fallback, and motion.patterns is a subset of the section's allowedPatterns.",
+      "enforcedBy": "schema+semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "CLONE_SPEC.md:26"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:26",
+          "contains": "`prefers-reduced-motion: reduce`: every animation has a reduced-motion branch"
+        }
+      ]
+    },
+    {
+      "id": "VARIANT_FIELD_RULES",
+      "severity": "error",
+      "description": "Per (section, variant) required/forbidden content fields, forbidden motion patterns and pinned values from each section contract's variantRules (e.g. hero.marketing/home requires cta; hero.marketing/pricing forbids cta and the chroma sweep; shell.corner-nav/manifesto pins activeLink).",
+      "enforcedBy": "schema+semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:43"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:43",
+          "contains": "**no load chroma sweep**"
+        }
+      ]
+    },
+    {
+      "id": "ASSET_REF_POLICY",
+      "severity": "error",
+      "description": "Every assetRef is reuse:<id> (id registered with the same role), generate:<brief> (only may-generate-new roles) or placeholder:neutral; the assetRole must be allowed for that field and pinned to its registry policy.",
+      "enforcedBy": "schema+semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "src/components/Companies.jsx:8"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/Companies.jsx:8",
+          "contains": "aria-label=\"Salesforce\""
+        }
+      ]
+    },
+    {
+      "id": "NO_EXTERNAL_REQUESTS",
+      "severity": "error",
+      "description": "No string in a PageSpec may contain http:// or https:// (the clone makes no outbound requests); hrefs must be internal paths, anchors or mailto. The installer source is pinned to the local stub.",
+      "enforcedBy": "schema+semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "src/components/download/InstallIntro.jsx:36"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/download/InstallIntro.jsx:36",
+          "contains": "const installerUrl = (arch) => `/download-stub.txt?arch=${arch}`"
+        }
+      ]
+    },
+    {
+      "id": "MAX_WORDS",
+      "severity": "error",
+      "description": "Every text field obeys its contract x-maxWords (and x-maxWordsTotal for lists), counted whitespace-separated, derived from recorded live word counts.",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:322"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:322",
+          "contains": "17 paragraphs, about 650 words."
+        }
+      ]
+    },
+    {
+      "id": "LEGAL_ACTIVE_TAB_MATCHES_ROUTE",
+      "severity": "error",
+      "description": "On the legal template legal.heading.activeTab must be 'privacy' for /privacy and 'terms' for /terms.",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "src/pages/Terms.jsx:9"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/pages/Terms.jsx:9",
+          "contains": "current=\"/terms\""
+        }
+      ]
+    },
+    {
+      "id": "LEGAL_INTRO_ONLY_ON_PRIVACY",
+      "severity": "warn",
+      "description": "legal.heading.intro is present on /privacy and absent on /terms in the real pages; a /terms spec carrying an intro is warned about (not an error: a future legal page could add one).",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:358"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:358",
+          "contains": "**No `p.legal-intro`**"
+        }
+      ]
+    },
+    {
+      "id": "BLOG_FEATURED_NOT_IN_STORY_LIST",
+      "severity": "error",
+      "description": "The featured post's slug must not also appear in blog.story-list.stories (Blog.jsx destructures [featured, ...stories]); a spec that lists it twice reproduces the bug.",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "src/pages/Blog.jsx:21"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/pages/Blog.jsx:21",
+          "contains": "const [featured, ...stories] = data.posts"
+        }
+      ]
+    },
+    {
+      "id": "PLAN_ONE_PRIMARY_CTA",
+      "severity": "warn",
+      "description": "Exactly one plan card uses the primary (black) CTA variant (Ultra on the real page).",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:102"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:102",
+          "contains": "| `pricing-plan-lavender`"
+        }
+      ]
+    },
+    {
+      "id": "ROUTE_TEMPLATE_BINDING",
+      "severity": "error",
+      "description": "PageSpec.route must be a real route and be bound to PageSpec.template in templates/routes.json.",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "src/App.jsx:25"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/App.jsx:25",
+          "contains": "<Route path=\"/blog/:slug\" element={<BlogPost />} />"
+        }
+      ]
+    },
+    {
+      "id": "NO_BILLING_TOGGLE",
+      "severity": "error",
+      "description": "There is no monthly/annual billing toggle: pricing.plans content is closed, so any billing-toggle field is rejected by the schema.",
+      "enforcedBy": "schema",
+      "exceptions": [],
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:58"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:58",
+          "contains": "**No monthly/annual toggle exists.**"
+        }
+      ]
+    }
+  ]
+}

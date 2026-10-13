@@ -1,0 +1,399 @@
+{
+  "_note": "Routes are the real path patterns of src/App.jsx. Routing BEHAVIORS (catch-all, unknown slug redirect) are not pages and map to no template.",
+  "routes": [
+    {
+      "path": "/",
+      "template": "home",
+      "component": "src/App.jsx",
+      "evidenceLevel": "measured",
+      "stylesheetKey": "home",
+      "metaTitle": "Merlin — Your AI assistant for Mac",
+      "measuredFrom": [
+        "src/App.jsx:20",
+        "CLONE_SPEC.md:368"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/App.jsx:20",
+          "contains": "<Route path=\"/\" element={<Home />} />"
+        },
+        {
+          "cite": "CLONE_SPEC.md:368",
+          "contains": "title \"Merlin — Your AI assistant for Mac\""
+        }
+      ]
+    },
+    {
+      "path": "/pricing",
+      "template": "pricing",
+      "component": "src/pages/Pricing.jsx",
+      "evidenceLevel": "measured",
+      "stylesheetKey": "pricing",
+      "metaTitle": "Plans | Merlin",
+      "measuredFrom": [
+        "src/App.jsx:21",
+        "src/pages/Pricing.jsx:12"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/App.jsx:21",
+          "contains": "<Route path=\"/pricing\" element={<Pricing />} />"
+        },
+        {
+          "cite": "src/pages/Pricing.jsx:12",
+          "contains": "'Plans | Merlin'"
+        }
+      ]
+    },
+    {
+      "path": "/download",
+      "template": "install",
+      "component": "src/pages/Download.jsx",
+      "evidenceLevel": "measured",
+      "stylesheetKey": "download",
+      "metaTitle": "Download Merlin for Mac",
+      "measuredFrom": [
+        "src/App.jsx:22",
+        "src/pages/Download.jsx:41"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/App.jsx:22",
+          "contains": "<Route path=\"/download\" element={<Download />} />"
+        },
+        {
+          "cite": "src/pages/Download.jsx:41",
+          "contains": "'Download Merlin for Mac'"
+        }
+      ],
+      "queryAliases": [
+        {
+          "query": "?start=1",
+          "sameTemplate": true,
+          "note": "Hero/footer/floating CTAs link here; the page starts the (stubbed) download and strips `start` from the URL",
+          "measuredFrom": [
+            "src/components/shared/DownloadButton.jsx:9"
+          ],
+          "measuredQuotes": [
+            {
+              "cite": "src/components/shared/DownloadButton.jsx:9",
+              "contains": "href=\"/download?start=1\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/manifesto",
+      "template": "manifesto",
+      "component": "src/pages/Manifesto.jsx",
+      "evidenceLevel": "measured",
+      "stylesheetKey": "manifesto",
+      "metaTitle": "The Merlin manifesto",
+      "measuredFrom": [
+        "src/App.jsx:23",
+        "src/pages/Manifesto.jsx:32"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/App.jsx:23",
+          "contains": "<Route path=\"/manifesto\" element={<Manifesto />} />"
+        },
+        {
+          "cite": "src/pages/Manifesto.jsx:32",
+          "contains": "'The Merlin manifesto'"
+        }
+      ]
+    },
+    {
+      "path": "/blog",
+      "template": "blog-index",
+      "component": "src/pages/Blog.jsx",
+      "evidenceLevel": "measured",
+      "stylesheetKey": "blog",
+      "metaTitle": "Blog — Merlin",
+      "measuredFrom": [
+        "src/App.jsx:24",
+        "src/pages/Blog.jsx:20"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/App.jsx:24",
+          "contains": "<Route path=\"/blog\" element={<Blog />} />"
+        },
+        {
+          "cite": "src/pages/Blog.jsx:20",
+          "contains": "'Blog — Merlin'"
+        }
+      ]
+    },
+    {
+      "path": "/blog/:slug",
+      "template": "blog-post",
+      "component": "src/pages/BlogPost.jsx",
+      "evidenceLevel": "measured-sample",
+      "stylesheetKey": "blog",
+      "metaTitle": "<post title> — Merlin",
+      "measuredFrom": [
+        "src/App.jsx:25",
+        "CLONE_SPEC_PAGES_B.md:55"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/App.jsx:25",
+          "contains": "<Route path=\"/blog/:slug\" element={<BlogPost />} />"
+        },
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:55",
+          "contains": "| /blog/:slug | `<post title> — Merlin`"
+        }
+      ],
+      "instances": {
+        "count": 20,
+        "inSitemap": 19,
+        "featuredNotInSitemapSlugPrefix": "the-future-of-work-is-autonomous-",
+        "measuredFrom": [
+          "src/data/blog-posts.json:20"
+        ],
+        "measuredQuotes": [
+          {
+            "cite": "src/data/blog-posts.json:20",
+            "contains": "\"inSitemap\": false"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/privacy",
+      "template": "legal",
+      "component": "src/pages/Privacy.jsx",
+      "evidenceLevel": "measured",
+      "stylesheetKey": "legal",
+      "metaTitle": "Privacy and control — Merlin",
+      "measuredFrom": [
+        "src/App.jsx:26",
+        "src/pages/Privacy.jsx:10"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/App.jsx:26",
+          "contains": "<Route path=\"/privacy\" element={<Privacy />} />"
+        },
+        {
+          "cite": "src/pages/Privacy.jsx:10",
+          "contains": "metaTitle=\"Privacy and control — Merlin\""
+        }
+      ]
+    },
+    {
+      "path": "/terms",
+      "template": "legal",
+      "component": "src/pages/Terms.jsx",
+      "evidenceLevel": "measured",
+      "stylesheetKey": "legal",
+      "metaTitle": "Terms of Service — Merlin",
+      "measuredFrom": [
+        "src/App.jsx:27",
+        "src/pages/Terms.jsx:10"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/App.jsx:27",
+          "contains": "<Route path=\"/terms\" element={<Terms />} />"
+        },
+        {
+          "cite": "src/pages/Terms.jsx:10",
+          "contains": "metaTitle=\"Terms of Service — Merlin\""
+        }
+      ]
+    }
+  ],
+  "behaviors": [
+    {
+      "id": "catch-all",
+      "path": "*",
+      "behavior": "Any unmatched path renders the Home page (no 404 page).",
+      "evidenceLevel": "derived-from-source",
+      "measuredFrom": [
+        "src/App.jsx:28"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/App.jsx:28",
+          "contains": "<Route path=\"*\" element={<Home />} />"
+        }
+      ]
+    },
+    {
+      "id": "unknown-blog-slug",
+      "path": "/blog/<unknown slug>",
+      "behavior": "Navigate replace to /blog (client-side redirect, history entry replaced).",
+      "evidenceLevel": "derived-from-source",
+      "measuredFrom": [
+        "src/pages/BlogPost.jsx:45"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/pages/BlogPost.jsx:45",
+          "contains": "if (!post) return <Navigate to=\"/blog\" replace />"
+        }
+      ]
+    }
+  ],
+  "routeStylesheets": {
+    "home": {
+      "order": [
+        "357da7cf10d68108.css",
+        "437c25afc566ca52.css",
+        "e2e0ba86a6b0d559.css",
+        "4a4d88752d2165c6.css",
+        "6385c293c5638848.css",
+        "f46c55d95248097e.css",
+        "a5f02e9d0c6db7af.css",
+        "401561448b81938e.css",
+        "922109019b2259fa.css",
+        "0a5b07db1896be06.css",
+        "fc1769f629488e8f.css",
+        "f7c0a2656765fcca.css",
+        "ea3e27f6a69b5df4.css"
+      ],
+      "globalFirst": [
+        "357da7cf10d68108.css",
+        "437c25afc566ca52.css"
+      ],
+      "importList": "src/styles/home.css",
+      "measuredFrom": [
+        "CLONE_SPEC.md:20"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC.md:20",
+          "contains": "`357da7cf10d68108.css` (root font-size"
+        }
+      ]
+    },
+    "pricing": {
+      "order": [
+        "357da7cf10d68108.css",
+        "437c25afc566ca52.css",
+        "a5f02e9d0c6db7af.css",
+        "f7c0a2656765fcca.css",
+        "f46c55d95248097e.css",
+        "922109019b2259fa.css",
+        "e2e0ba86a6b0d559.css",
+        "2abce9a6dc03269b.css",
+        "ea3e27f6a69b5df4.css"
+      ],
+      "globalFirst": [
+        "357da7cf10d68108.css",
+        "437c25afc566ca52.css"
+      ],
+      "importList": "src/styles/pricing.css",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:20"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:20",
+          "contains": "| /pricing | `357da7cf10d68108`"
+        }
+      ]
+    },
+    "download": {
+      "order": [
+        "357da7cf10d68108.css",
+        "437c25afc566ca52.css",
+        "9168513aa22c6d8a.css"
+      ],
+      "globalFirst": [
+        "357da7cf10d68108.css",
+        "437c25afc566ca52.css"
+      ],
+      "importList": "src/styles/download.css",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:21"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:21",
+          "contains": "| /download | `357da7cf10d68108`"
+        }
+      ]
+    },
+    "manifesto": {
+      "order": [
+        "357da7cf10d68108.css",
+        "437c25afc566ca52.css",
+        "a5f02e9d0c6db7af.css",
+        "922109019b2259fa.css",
+        "f46c55d95248097e.css",
+        "e2e0ba86a6b0d559.css",
+        "ae725ea36c48b431.css",
+        "ea3e27f6a69b5df4.css"
+      ],
+      "globalFirst": [
+        "357da7cf10d68108.css",
+        "437c25afc566ca52.css"
+      ],
+      "importList": "src/styles/manifesto.css",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_A.md:22"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_A.md:22",
+          "contains": "| /manifesto | `357da7cf10d68108`"
+        }
+      ]
+    },
+    "blog": {
+      "order": [
+        "357da7cf10d68108.css",
+        "437c25afc566ca52.css",
+        "a5f02e9d0c6db7af.css",
+        "f46c55d95248097e.css",
+        "e2e0ba86a6b0d559.css",
+        "ea3e27f6a69b5df4.css"
+      ],
+      "globalFirst": [
+        "357da7cf10d68108.css",
+        "437c25afc566ca52.css"
+      ],
+      "importList": "src/styles/blog.css",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:22"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:22",
+          "contains": "| `/blog`, `/blog/:slug` | `357da7cf10d68108`"
+        }
+      ]
+    },
+    "legal": {
+      "order": [
+        "357da7cf10d68108.css",
+        "437c25afc566ca52.css",
+        "a5f02e9d0c6db7af.css",
+        "f46c55d95248097e.css",
+        "e2e0ba86a6b0d559.css",
+        "e261c04d0a2d5dfe.css",
+        "ea3e27f6a69b5df4.css"
+      ],
+      "globalFirst": [
+        "357da7cf10d68108.css",
+        "437c25afc566ca52.css"
+      ],
+      "importList": "src/styles/legal.css",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:23"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:23",
+          "contains": "| `/privacy`, `/terms` | same as above"
+        }
+      ]
+    }
+  }
+}
