@@ -1,0 +1,979 @@
+{
+ "main#top": {
+  "box": [
+   0,
+   0,
+   1440,
+   7912.6
+  ],
+  "font": "400 15px/24px \"Open Runde\", sans-serif",
+  "ls": "normal",
+  "color": "rgb(23, 23, 23)",
+  "margin": "0px",
+  "padding": "0px",
+  "transform": "none",
+  "width": "1440px",
+  "textAlign": "start",
+  "textWrap": "wrap",
+  "whiteSpace": "normal",
+  "top": "0px",
+  "bottom": "0px",
+  "left": "0px",
+  "position": "relative",
+  "zIndex": "auto",
+  "overflow": "clip",
+  "br": "0px",
+  "bg": "rgb(255, 255, 255)"
+ },
+ ".manifesto-navigation": {
+  "box": [
+   120,
+   0,
+   1200,
+   152
+  ],
+  "font": "400 15px/24px \"Open Runde\", sans-serif",
+  "ls": "normal",
+  "color": "rgb(23, 23, 23)",
+  "margin": "0px",
+  "padding": "0px",
+  "transform": "none",
+  "width": "1200px",
+  "textAlign": "start",
+  "textWrap": "wrap",
+  "whiteSpace": "normal",
+  "top": "0px",
+  "bottom": "0px",
+  "left": "0px",
+  "position": "relative",
+  "zIndex": "auto",
+  "overflow": "visible",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ ".hero-nav-dot": {
+  "box": [
+   104,
+   106,
+   6,
+   6
+  ],
+  "font": "400 14px/21px \"Open Runde\", sans-serif",
+  "ls": "normal",
+  "color": "rgb(23, 23, 23)",
+  "margin": "0px",
+  "padding": "0px",
+  "transform": "matrix(1, 0, 0, 1, -16, 70)",
+  "width": "6px",
+  "textAlign": "left",
+  "textWrap": "wrap",
+  "whiteSpace": "normal",
+  "top": "0px",
+  "bottom": "77.5px",
+  "left": "0px",
+  "position": "absolute",
+  "zIndex": "auto",
+  "overflow": "visible",
+  "br": "50%",
+  "bg": "rgb(0, 200, 224)"
+ },
+ ".manifesto-poster": {
+  "box": [
+   0,
+   152,
+   1440,
+   6855.3
+  ],
+  "font": "400 15px/24px \"Open Runde\", sans-serif",
+  "ls": "normal",
+  "color": "rgb(23, 23, 23)",
+  "margin": "0px",
+  "padding": "0px 0px 110px",
+  "transform": "none",
+  "width": "1440px",
+  "textAlign": "start",
+  "textWrap": "wrap",
+  "whiteSpace": "normal",
+  "top": "auto",
+  "bottom": "auto",
+  "left": "auto",
+  "position": "static",
+  "zIndex": "auto",
+  "overflow": "hidden",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ ".manifesto-poster-opening": {
+  "box": [
+   0,
+   152,
+   1440,
+   1091.3
+  ],
+  "font": "400 15px/24px \"Open Runde\", sans-serif",
+  "ls": "normal",
+  "color": "rgb(23, 23, 23)",
+  "margin": "0px",
+  "padding": "220px 0px 230px",
+  "transform": "none",
+  "width": "1440px",
+  "textAlign": "start",
+  "textWrap": "wrap",
+  "whiteSpace": "normal",
+  "top": "0px",
+  "bottom": "0px",
+  "left": "0px",
+  "position": "relative",
+  "zIndex": "auto",
+  "overflow": "visible",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ ".manifesto-handwriting-time": {
+  "box": [
+   166.9,
+   65.5,
+   899.6,
+   449.4
+  ],
+  "font": "500 345.6px/276.48px Caveat, cursive",
+  "ls": "-22.464px",
+  "color": "rgb(18, 136, 154)",
+  "margin": "0px",
+  "padding": "0px",
+  "transform": "matrix(0.978148, -0.207912, 0.207912, 0.978148, -533.752, 0)",
+  "width": "860.891px",
+  "textAlign": "start",
+  "textWrap": "nowrap",
+  "whiteSpace": "nowrap",
+  "top": "0px",
+  "bottom": "814.805px",
+  "left": "720px",
+  "position": "absolute",
+  "zIndex": "auto",
+  "overflow": "visible",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ ".manifesto-handwriting-back": {
+  "box": [
+   248.2,
+   867.8,
+   1171.8,
+   470.4
+  ],
+  "font": "500 345.6px/276.48px Caveat, cursive",
+  "ls": "-22.464px",
+  "color": "rgb(18, 136, 154)",
+  "margin": "0px",
+  "padding": "0px",
+  "transform": "matrix(0.984808, -0.173648, 0.173648, 0.984808, -456.469, 0)",
+  "width": "1141.17px",
+  "textAlign": "start",
+  "textWrap": "nowrap",
+  "whiteSpace": "nowrap",
+  "top": "812.805px",
+  "bottom": "2px",
+  "left": "720px",
+  "position": "absolute",
+  "zIndex": "auto",
+  "overflow": "visible",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ ".manifesto-poster-opening .manifesto-poster-copy": {
+  "box": [
+   360,
+   372,
+   720,
+   641.3
+  ],
+  "font": "400 15px/24px \"Open Runde\", sans-serif",
+  "ls": "normal",
+  "color": "rgb(23, 23, 23)",
+  "margin": "0px 360px",
+  "padding": "0px",
+  "transform": "none",
+  "width": "720px",
+  "textAlign": "center",
+  "textWrap": "wrap",
+  "whiteSpace": "normal",
+  "top": "0px",
+  "bottom": "0px",
+  "left": "0px",
+  "position": "relative",
+  "zIndex": "1",
+  "overflow": "visible",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ "#manifesto-title": {
+  "box": [
+   360,
+   372,
+   720,
+   145.7
+  ],
+  "font": "600 63.36px/72.864px \"Open Runde\", sans-serif",
+  "ls": "-1.584px",
+  "color": "rgb(23, 23, 23)",
+  "margin": "0px 0px 48px",
+  "padding": "0px",
+  "transform": "none",
+  "width": "720px",
+  "textAlign": "center",
+  "textWrap": "balance",
+  "whiteSpace": "normal",
+  "top": "auto",
+  "bottom": "auto",
+  "left": "auto",
+  "position": "static",
+  "zIndex": "auto",
+  "overflow": "visible",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ ".manifesto-poster p": {
+  "box": [
+   360,
+   565.7,
+   720,
+   156.6
+  ],
+  "font": "500 36px/52.2px \"Open Runde\", sans-serif",
+  "ls": "-0.36px",
+  "color": "rgb(36, 36, 36)",
+  "margin": "0px",
+  "padding": "0px",
+  "transform": "none",
+  "width": "720px",
+  "textAlign": "center",
+  "textWrap": "pretty",
+  "whiteSpace": "normal",
+  "top": "auto",
+  "bottom": "auto",
+  "left": "auto",
+  "position": "static",
+  "zIndex": "auto",
+  "overflow": "visible",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ ".manifesto-mention": {
+  "box": [
+   891.2,
+   756.3,
+   178,
+   43.5
+  ],
+  "font": "500 36px/52.2px \"Open Runde\", sans-serif",
+  "ls": "-0.36px",
+  "color": "rgb(36, 36, 36)",
+  "margin": "0px",
+  "padding": "0px",
+  "transform": "none",
+  "width": "auto",
+  "textAlign": "center",
+  "textWrap": "nowrap pretty",
+  "whiteSpace": "nowrap",
+  "top": "auto",
+  "bottom": "auto",
+  "left": "auto",
+  "position": "static",
+  "zIndex": "auto",
+  "overflow": "visible",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ ".manifesto-mention > svg": {
+  "box": [
+   891.2,
+   760.3,
+   36,
+   36
+  ],
+  "font": "500 36px/52.2px \"Open Runde\", sans-serif",
+  "ls": "-0.36px",
+  "color": "rgb(36, 36, 36)",
+  "margin": "0px 4.32px 0px 0px",
+  "padding": "0px",
+  "transform": "none",
+  "width": "36px",
+  "textAlign": "center",
+  "textWrap": "nowrap pretty",
+  "whiteSpace": "nowrap",
+  "top": "auto",
+  "bottom": "auto",
+  "left": "auto",
+  "position": "static",
+  "zIndex": "auto",
+  "overflow": "hidden",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ ".manifesto-mention .story-artifact-icons": {
+  "box": [
+   621.7,
+   812.5,
+   36,
+   36
+  ],
+  "font": "500 36px/52.2px \"Open Runde\", sans-serif",
+  "ls": "-0.36px",
+  "color": "rgb(36, 36, 36)",
+  "margin": "0px 4.32px 0px 0px",
+  "padding": "0px",
+  "transform": "none",
+  "width": "36px",
+  "textAlign": "center",
+  "textWrap": "nowrap pretty",
+  "whiteSpace": "nowrap",
+  "top": "auto",
+  "bottom": "auto",
+  "left": "auto",
+  "position": "static",
+  "zIndex": "auto",
+  "overflow": "visible",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ ".manifesto-photo": {
+  "box": [
+   280,
+   1291.3,
+   880,
+   586.7
+  ],
+  "font": "400 15px/24px \"Open Runde\", sans-serif",
+  "ls": "normal",
+  "color": "rgb(23, 23, 23)",
+  "margin": "48px 280px 0px",
+  "padding": "0px",
+  "transform": "none",
+  "width": "880px",
+  "textAlign": "start",
+  "textWrap": "wrap",
+  "whiteSpace": "normal",
+  "top": "auto",
+  "bottom": "auto",
+  "left": "auto",
+  "position": "static",
+  "zIndex": "auto",
+  "overflow": "visible",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ ".manifesto-photo img": {
+  "box": [
+   280,
+   1291.3,
+   880,
+   586.7
+  ],
+  "font": "400 15px/24px \"Open Runde\", sans-serif",
+  "ls": "normal",
+  "color": "rgba(0, 0, 0, 0)",
+  "margin": "0px",
+  "padding": "0px",
+  "transform": "none",
+  "width": "880px",
+  "textAlign": "start",
+  "textWrap": "wrap",
+  "whiteSpace": "normal",
+  "top": "auto",
+  "bottom": "auto",
+  "left": "auto",
+  "position": "static",
+  "zIndex": "auto",
+  "overflow": "clip",
+  "br": "24px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ ".manifesto-poster-understanding": {
+  "box": [
+   0,
+   1877.9,
+   1440,
+   1413.6
+  ],
+  "font": "400 15px/24px \"Open Runde\", sans-serif",
+  "ls": "normal",
+  "color": "rgb(23, 23, 23)",
+  "margin": "0px",
+  "padding": "120px 0px 100px",
+  "transform": "none",
+  "width": "1440px",
+  "textAlign": "start",
+  "textWrap": "wrap",
+  "whiteSpace": "normal",
+  "top": "0px",
+  "bottom": "0px",
+  "left": "0px",
+  "position": "relative",
+  "zIndex": "auto",
+  "overflow": "visible",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ ".manifesto-poster-understanding .manifesto-poster-copy": {
+  "box": [
+   280,
+   1997.9,
+   720,
+   1036.6
+  ],
+  "font": "400 15px/24px \"Open Runde\", sans-serif",
+  "ls": "normal",
+  "color": "rgb(23, 23, 23)",
+  "margin": "0px 440px 0px 280px",
+  "padding": "0px",
+  "transform": "none",
+  "width": "720px",
+  "textAlign": "center",
+  "textWrap": "wrap",
+  "whiteSpace": "normal",
+  "top": "0px",
+  "bottom": "0px",
+  "left": "0px",
+  "position": "relative",
+  "zIndex": "1",
+  "overflow": "visible",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ "#manifesto-understanding-title": {
+  "box": [
+   280,
+   1997.9,
+   720,
+   145.7
+  ],
+  "font": "600 63.36px/72.864px \"Open Runde\", sans-serif",
+  "ls": "-1.584px",
+  "color": "rgb(23, 23, 23)",
+  "margin": "0px 0px 48px",
+  "padding": "0px",
+  "transform": "none",
+  "width": "720px",
+  "textAlign": "center",
+  "textWrap": "balance",
+  "whiteSpace": "normal",
+  "top": "auto",
+  "bottom": "auto",
+  "left": "auto",
+  "position": "static",
+  "zIndex": "auto",
+  "overflow": "visible",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ ".manifesto-handwritten-note": {
+  "box": [
+   431.8,
+   3045.5,
+   576.4,
+   180.3
+  ],
+  "font": "500 112px/112px Caveat, cursive",
+  "ls": "-4.48px",
+  "color": "rgb(18, 136, 154)",
+  "margin": "45px 436.531px 0px 436.523px",
+  "padding": "0px",
+  "transform": "matrix(0.992546, -0.121869, 0.121869, 0.992546, 0, 0)",
+  "width": "566.945px",
+  "textAlign": "center",
+  "textWrap": "wrap",
+  "whiteSpace": "normal",
+  "top": "auto",
+  "bottom": "auto",
+  "left": "auto",
+  "position": "static",
+  "zIndex": "auto",
+  "overflow": "visible",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ ".manifesto-poster-action": {
+  "box": [
+   0,
+   3926.3,
+   1440,
+   1174.9
+  ],
+  "font": "400 15px/24px \"Open Runde\", sans-serif",
+  "ls": "normal",
+  "color": "rgb(23, 23, 23)",
+  "margin": "0px",
+  "padding": "120px 0px 100px",
+  "transform": "none",
+  "width": "1440px",
+  "textAlign": "start",
+  "textWrap": "wrap",
+  "whiteSpace": "normal",
+  "top": "0px",
+  "bottom": "0px",
+  "left": "0px",
+  "position": "relative",
+  "zIndex": "auto",
+  "overflow": "visible",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ ".manifesto-poster-action .manifesto-poster-copy": {
+  "box": [
+   440,
+   4046.3,
+   720,
+   797.9
+  ],
+  "font": "400 15px/24px \"Open Runde\", sans-serif",
+  "ls": "normal",
+  "color": "rgb(23, 23, 23)",
+  "margin": "0px 280px 0px 440px",
+  "padding": "0px",
+  "transform": "none",
+  "width": "720px",
+  "textAlign": "center",
+  "textWrap": "wrap",
+  "whiteSpace": "normal",
+  "top": "0px",
+  "bottom": "0px",
+  "left": "0px",
+  "position": "relative",
+  "zIndex": "1",
+  "overflow": "visible",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ ".manifesto-poster-action .manifesto-handwritten-note": {
+  "box": [
+   420.1,
+   4853.6,
+   599.7,
+   183.1
+  ],
+  "font": "500 112px/112px Caveat, cursive",
+  "ls": "-4.48px",
+  "color": "rgb(18, 136, 154)",
+  "margin": "45px 424.766px 0px",
+  "padding": "0px",
+  "transform": "matrix(0.992546, -0.121869, 0.121869, 0.992546, 0, 0)",
+  "width": "590.469px",
+  "textAlign": "center",
+  "textWrap": "wrap",
+  "whiteSpace": "normal",
+  "top": "auto",
+  "bottom": "auto",
+  "left": "auto",
+  "position": "static",
+  "zIndex": "auto",
+  "overflow": "visible",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ ".manifesto-poster-ending": {
+  "box": [
+   0,
+   5735.8,
+   1440,
+   1161.5
+  ],
+  "font": "400 15px/24px \"Open Runde\", sans-serif",
+  "ls": "normal",
+  "color": "rgb(23, 23, 23)",
+  "margin": "0px",
+  "padding": "130px 0px 30px",
+  "transform": "none",
+  "width": "1440px",
+  "textAlign": "start",
+  "textWrap": "wrap",
+  "whiteSpace": "normal",
+  "top": "auto",
+  "bottom": "auto",
+  "left": "auto",
+  "position": "static",
+  "zIndex": "auto",
+  "overflow": "visible",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ "#manifesto-ending-title": {
+  "box": [
+   360,
+   6415.5,
+   720,
+   145.7
+  ],
+  "font": "600 63.36px/72.864px \"Open Runde\", sans-serif",
+  "ls": "-1.584px",
+  "color": "rgb(23, 23, 23)",
+  "margin": "50px 0px 0px",
+  "padding": "0px",
+  "transform": "none",
+  "width": "720px",
+  "textAlign": "center",
+  "textWrap": "balance",
+  "whiteSpace": "normal",
+  "top": "auto",
+  "bottom": "auto",
+  "left": "auto",
+  "position": "static",
+  "zIndex": "auto",
+  "overflow": "visible",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ ".manifesto-signature": {
+  "box": [
+   562.8,
+   6608.7,
+   314.5,
+   273
+  ],
+  "font": "500 64px/64px Caveat, cursive",
+  "ls": "normal",
+  "color": "rgb(18, 136, 154)",
+  "margin": "62px 574.719px 0px",
+  "padding": "0px",
+  "transform": "matrix(0.994522, -0.104528, 0.104528, 0.994522, 0, 0)",
+  "width": "290.562px",
+  "textAlign": "center",
+  "textWrap": "wrap",
+  "whiteSpace": "normal",
+  "top": "auto",
+  "bottom": "auto",
+  "left": "auto",
+  "position": "static",
+  "zIndex": "auto",
+  "overflow": "visible",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ ".manifesto-circled-yours": {
+  "box": [
+   562.8,
+   6626.6,
+   126,
+   76.2
+  ],
+  "font": "500 64px/64px Caveat, cursive",
+  "ls": "normal",
+  "color": "rgb(18, 136, 154)",
+  "margin": "0px",
+  "padding": "0px",
+  "transform": "none",
+  "width": "119.938px",
+  "textAlign": "center",
+  "textWrap": "wrap",
+  "whiteSpace": "normal",
+  "top": "0px",
+  "bottom": "0px",
+  "left": "0px",
+  "position": "relative",
+  "zIndex": "auto",
+  "overflow": "visible",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ ".manifesto-circled-yours svg": {
+  "box": [
+   532,
+   6602.6,
+   188.4,
+   133.1
+  ],
+  "font": "500 64px/64px Caveat, cursive",
+  "ls": "normal",
+  "color": "rgb(18, 136, 154)",
+  "margin": "0px",
+  "padding": "0px",
+  "transform": "matrix(0.984808, -0.173648, 0.173648, 0.984808, 0, 0)",
+  "width": "170.305px",
+  "textAlign": "center",
+  "textWrap": "wrap",
+  "whiteSpace": "normal",
+  "top": "-8.3125px",
+  "bottom": "-17.2812px",
+  "left": "-25.1797px",
+  "position": "absolute",
+  "zIndex": "auto",
+  "overflow": "visible",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ ".manifesto-signature-mark": {
+  "box": [
+   643.7,
+   6711.7,
+   162.7,
+   162.7
+  ],
+  "font": "500 64px/64px Caveat, cursive",
+  "ls": "normal",
+  "color": "rgba(0, 0, 0, 0)",
+  "margin": "32px 71.2812px 0px",
+  "padding": "0px",
+  "transform": "matrix(0.978148, 0.207912, -0.207912, 0.978148, 0, 0)",
+  "width": "148px",
+  "textAlign": "center",
+  "textWrap": "wrap",
+  "whiteSpace": "normal",
+  "top": "auto",
+  "bottom": "auto",
+  "left": "auto",
+  "position": "static",
+  "zIndex": "auto",
+  "overflow": "clip",
+  "br": "0px",
+  "bg": "rgba(0, 0, 0, 0)"
+ },
+ "paragraphs": [
+  {
+   "section": "manifesto-poster-opening",
+   "words": 22,
+   "chars": 118,
+   "lines": 3,
+   "box": [
+    360,
+    566,
+    720,
+    157
+   ],
+   "mentions": [],
+   "strong": 0
+  },
+  {
+   "section": "manifesto-poster-opening",
+   "words": 35,
+   "chars": 194,
+   "lines": 5,
+   "box": [
+    360,
+    752,
+    720,
+    261
+   ],
+   "mentions": [
+    {
+     "hasArtifact": false,
+     "svgClass": null,
+     "w": 178
+    },
+    {
+     "hasArtifact": true,
+     "svgClass": null,
+     "w": 211
+    }
+   ],
+   "strong": 0
+  },
+  {
+   "section": "manifesto-poster-understanding",
+   "words": 30,
+   "chars": 148,
+   "lines": 4,
+   "box": [
+    280,
+    2192,
+    720,
+    209
+   ],
+   "mentions": [],
+   "strong": 0
+  },
+  {
+   "section": "manifesto-poster-understanding",
+   "words": 30,
+   "chars": 164,
+   "lines": 5,
+   "box": [
+    280,
+    2430,
+    720,
+    261
+   ],
+   "mentions": [],
+   "strong": 0
+  },
+  {
+   "section": "manifesto-poster-understanding",
+   "words": 36,
+   "chars": 199,
+   "lines": 6,
+   "box": [
+    280,
+    2721,
+    720,
+    313
+   ],
+   "mentions": [
+    {
+     "hasArtifact": false,
+     "svgClass": null,
+     "w": 178
+    }
+   ],
+   "strong": 0
+  },
+  {
+   "section": "manifesto-poster-action",
+   "words": 34,
+   "chars": 192,
+   "lines": 5,
+   "box": [
+    440,
+    4240,
+    720,
+    261
+   ],
+   "mentions": [
+    {
+     "hasArtifact": false,
+     "svgClass": null,
+     "w": 178
+    }
+   ],
+   "strong": 0
+  },
+  {
+   "section": "manifesto-poster-action",
+   "words": 37,
+   "chars": 214,
+   "lines": 6,
+   "box": [
+    440,
+    4531,
+    720,
+    313
+   ],
+   "mentions": [
+    {
+     "hasArtifact": true,
+     "svgClass": null,
+     "w": 123
+    },
+    {
+     "hasArtifact": true,
+     "svgClass": null,
+     "w": 252
+    },
+    {
+     "hasArtifact": true,
+     "svgClass": null,
+     "w": 173
+    }
+   ],
+   "strong": 0
+  },
+  {
+   "section": "manifesto-poster-ending",
+   "words": 34,
+   "chars": 169,
+   "lines": 4,
+   "box": [
+    360,
+    5866,
+    720,
+    209
+   ],
+   "mentions": [],
+   "strong": 0
+  },
+  {
+   "section": "manifesto-poster-ending",
+   "words": 36,
+   "chars": 192,
+   "lines": 5,
+   "box": [
+    360,
+    6105,
+    720,
+    261
+   ],
+   "mentions": [],
+   "strong": 0
+  }
+ ],
+ "imgs": [
+  {
+   "src": "/_next/image?url=%2Fmerlin-dock.png&w=3840&q=75",
+   "alt": "",
+   "nw": 20,
+   "nh": 20,
+   "sizes": "20px",
+   "loading": "lazy"
+  },
+  {
+   "src": "/_next/image?url=%2Fstory%2Fhandmade%2Fcompanion.webp&w=3840&q=75",
+   "alt": "Merlin sitting comfortably in an armchair with a laptop in a sunlit room.",
+   "nw": 880,
+   "nh": 586,
+   "sizes": "(max-width: 600px) calc(100vw - 48px), (max-width: 1023px) 82vw, 880px",
+   "loading": "lazy"
+  },
+  {
+   "src": "/_next/image?url=%2Fstory%2Fhandmade%2Fmeeting-scene.webp&w=3840&q=75",
+   "alt": "Merlin sharing tea and a conversation with a friend at a sunny garden studio table.",
+   "nw": 0,
+   "nh": 0,
+   "sizes": "(max-width: 600px) calc(100vw - 48px), (max-width: 1023px) 82vw, 880px",
+   "loading": "lazy"
+  },
+  {
+   "src": "/_next/image?url=%2Fstory%2Fhandmade%2Fhero-beach-reading.webp&w=3840&q=75",
+   "alt": "Merlin enjoying a book under a beach umbrella beside the sea at sunset.",
+   "nw": 0,
+   "nh": 0,
+   "sizes": "(max-width: 600px) calc(100vw - 48px), (max-width: 1023px) 82vw, 880px",
+   "loading": "lazy"
+  },
+  {
+   "src": "/_next/image?url=%2Fstory%2Fhandmade%2Fmark.webp&w=3840&q=75",
+   "alt": "",
+   "nw": 0,
+   "nh": 0,
+   "sizes": "(max-width: 600px) 112px, 148px",
+   "loading": "lazy"
+  }
+ ],
+ "anims": [
+  {
+   "name": "closing-bird-cross",
+   "t": "closing-bird"
+  },
+  {
+   "name": "closing-bird-drift",
+   "t": "closing-bird-drift"
+  },
+  {
+   "name": "closing-bird-glide",
+   "t": "closing-bird"
+  },
+  {
+   "name": "closing-bird-drift",
+   "t": "closing-bird-drift"
+  },
+  {
+   "name": "closing-bird-dart",
+   "t": "closing-bird"
+  },
+  {
+   "name": "closing-bird-drift",
+   "t": "closing-bird-drift"
+  }
+ ],
+ "sigClass": "manifesto-signature",
+ "fonts": [
+  "Exposure 100 900",
+  "Open Runde 400",
+  "Open Runde 500",
+  "Open Runde 600",
+  "Caveat 400 700"
+ ],
+ "pathStyle": {
+  "dash": "1px",
+  "off": "1px",
+  "anim": "none",
+  "stroke": "rgb(18, 136, 154)"
+ }
+}

@@ -1,0 +1,61 @@
+FONTS only orig: []
+FONTS only clone: ['caveat Fallback normal normal']
+
+===== section.story-hero 18 18
+  [4] img.hero-site-icon '': src:/_next/image?url=%2Fmerlin-dock.png&w=3840&q=75->/assets/merlin-dock.png | cur:image?url=%2Fmerlin-dock.png&w=32&q=75->merlin-dock.png | nw:20->1024
+
+===== section.hero-life 13 13
+  [1] img.hero-photo '': src:/story/quiet-lakeside.webp->/assets/quiet-lakeside.webp
+
+===== section.companies 8 8
+  [3] img. '': src:/notion.svg->/assets/notion.svg
+  [5] img. '': src:/harvard.svg->/assets/harvard.svg
+
+===== #routines 204 204
+  [7] img. '': src:/brand-logos/gmail.png->/assets/gmail.png
+  [10] img. '': src:/brand-logos/calendar.png->/assets/calendar.png
+  [13] img. '': src:/brand-logos/slack.png->/assets/slack.png
+  [16] img. '': src:/brand-logos/notion.png->/assets/notion.png
+  [19] img. '': src:/brand-logos/granola.png->/assets/granola.png
+  [22] img. '': src:/brand-logos/linear.png->/assets/linear.png
+  [25] p. 'The conversation is in . ': txt:The conversation is in . The plan is in . email is in your .->The conversation is in  . The plan is in  .   email is in yo
+  [27] img.context-inline-slack '': src:/brand-logos/slack.png->/assets/slack.png
+  [29] img.context-inline-notion '': src:/brand-logos/notion.png->/assets/notion.png
+  [33] img.context-inline-gmail '': src:/brand-logos/gmail.png->/assets/gmail.png
+  [40] img. '': src:/brand-logos/gmail.png->/assets/gmail.png
+  [99] img. '': src:/brand-logos/gmail.png->/assets/gmail.png
+  [118] img. '': src:/brand-logos/gmail.png->/assets/gmail.png
+  [132] img. '': src:/brand-logos/notion.png->/assets/notion.png
+  [146] img. '': src:/brand-logos/notion.png->/assets/notion.png
+  [160] img. '': src:/brand-logos/calendar.png->/assets/calendar.png
+  [193] img. '': src:/brand-logos/gmail.png->/assets/gmail.png
+  [194] img. '': src:/brand-logos/notion.png->/assets/notion.png
+  [195] img. '': src:/brand-logos/calendar.png->/assets/calendar.png
+  [199] img. '': src:/story/handmade/studio.webp->/assets/studio.webp
+  [203] svg. '': inner:784->798
+
+===== #browser 426 426
+  [33] img. '': src:/browser/qatar-logo.webp->/assets/qatar-logo.webp
+  [166] img. '': src:/brand-logos/doordash.png->/assets/doordash.png
+  [210] img. '': src:/browser/grain-bowls.webp->/assets/grain-bowls.webp
+  [227] img. '': src:/browser/grain-bowls.webp->/assets/grain-bowls.webp
+  [237] img. '': src:/browser/green-bowl.webp->/assets/green-bowl.webp
+  [247] img. '': src:/browser/veggie-bowls.webp->/assets/veggie-bowls.webp
+  [315] img. '': src:/browser/avocado.webp->/assets/avocado.webp
+  [316] img. '': src:/browser/bananas.webp->/assets/bananas.webp
+  [323] img. '': src:/browser/avocado.webp->/assets/avocado.webp
+  [333] img. '': src:/browser/bananas.webp->/assets/bananas.webp
+  [343] img. '': src:/browser/oat-milk.webp->/assets/oat-milk.webp
+  [359] img. '': src:/brand-logos/ashby.png->/assets/ashby.png
+  [376] img. '': src:/brand-logos/ashby-wordmark.svg->/assets/ashby-wordmark.svg
+
+===== #meetings 297 297
+  [2] h2. 'One conversation.': txt:One conversation.->One   conversation.
+  [4] img. '': src:/brand-logos/google-meet.png->/assets/google-meet.png
+  [5] img. '': src:/brand-logos/zoom-camera.svg->/assets/zoom-camera.svg
+  [13] p. 'Focus on your call with .': txt:Focus on your call with . Merlin takes care of the notes and->Focus on your call with  . Merlin takes care of the notes an
+  [16] p. 'Then turn your ideas into': txt:Then turn your ideas into , , , and . All from the same conv->Then turn your ideas into  ,  ,  , and  . All from the same 
+  [40] img.meeting-landscape-art '': src:/story/handmade/meeting-scene.webp->/assets/meeting-scene.webp
+  [51] img. '': src:/brand-logos/google-meet.png->/assets/google-meet.png
+  [53] img. '': src:/story/handmade/meeting.webp->/assets/meeting.webp
+  [54] img. '': src:/story/handmade/companion.webp->/assets/companion.webp

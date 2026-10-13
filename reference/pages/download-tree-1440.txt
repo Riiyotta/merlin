@@ -1,0 +1,47 @@
+body [0,0,1440,1000]
+  div [0,0,0,0]
+  style [0,0,0,0] ":root{--mantine-font-family: var(--font-open-runde), sans-serif;--mant"
+  style [0,0,0,0] "@media (max-width: 35.99375em) {.mantine-visible-from-xs {display: non"
+  main.install-page [0,0,1440,1000]
+    header.install-header [86,0,1267,100]
+      a.install-brand [86,35,152,30] "merlin.computer" href=/
+        img [86,35,30,30] src=/_next/image?url=%2Fmerlin-dock.png&w=256&q=75
+    section.install-intro [295,164,850,292]
+      h1#install-title [295,164,850,140] "Thanks for choosing Merlin."
+        br [1121,160,0,78]
+        span [362,230,715,78] "Here’s how to get started."
+      p.install-description [435,326,570,54] "Your download will start automatically. Follow these steps to finish i"
+      p.install-retry [295,402,850,22] "Download not starting?"
+        a [723,405,152,17] "Download Merlin again" href=https://download.merlin.computer/mac/latest?arch=arm64
+      p.install-alternative [295,435,850,21]
+        a [646,437,149,16] "Download for Intel Macs" href=https://download.merlin.computer/mac/latest?arch=x64
+      iframe.install-download-frame [0,0,0,0]
+      noscript [0,0,0,0] "<p>Choose <a href="https://download.merlin.computer/mac/latest?arch=ar"
+    ol.install-steps [120,528,1200,400]
+      li [120,528,380,400]
+        div.install-step-heading [120,528,380,32]
+          span [120,528,32,32] "01"
+          h2 [164,532,159,22] "Open your download"
+        div.install-art [120,577,380,285]
+          img [121,578,378,283] src=/_next/image?url=%2Fdownload%2Fopen-download.png&w=3840&q=90
+        p [150,882,320,46] "Find the Merlin file in your folder and double-click it."
+          strong [269,885,34,17] ".dmg"
+          strong [379,885,74,17] "Downloads"
+      li [530,528,380,400]
+        div.install-step-heading [530,528,380,32]
+          span [530,528,32,32] "02"
+          h2 [574,532,161,22] "Move to Applications"
+        div.install-art [530,577,380,285]
+          img [531,578,378,283] src=/_next/image?url=%2Fdownload%2Fmove-to-applications.png&w=3840&q=90
+        p [560,882,320,46] "Drag the into the folder beside it."
+          strong [622,885,73,17] "Merlin icon"
+          strong [754,885,83,17] "Applications"
+      li [940,528,380,400]
+        div.install-step-heading [940,528,380,32]
+          span [940,528,32,32] "03"
+          h2 [984,532,93,22] "Open Merlin"
+        div.install-art [940,577,380,285]
+          img [941,578,378,283] src=/_next/image?url=%2Fdownload%2Flaunch-merlin.png&w=3840&q=90
+        p [970,882,320,46] "Open from Applications, and sign in to get started."
+          strong [1021,885,42,17] "Merlin"
+  next-route-announcer [0,1000,0,0]

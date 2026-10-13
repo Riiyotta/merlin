@@ -1,0 +1,45 @@
+- generic [active] [ref=f51e1]:
+  - main [ref=f51e2]:
+    - link "Merlin home" [ref=f51e4] [cursor=pointer]:
+      - /url: /
+      - text: merlin.computer
+    - region [ref=f51e5]:
+      - heading "Thanks for choosing Merlin. Here’s how to get started." [level=1] [ref=f51e6]: Thanks for choosing Merlin.Here’s how to get started.
+      - paragraph [ref=f51e7]: Your download will start automatically. Follow these steps to finish installing Merlin.
+      - paragraph [ref=f51e8]:
+        - text: Download not starting?
+        - link "Download Merlin again" [ref=f51e9] [cursor=pointer]:
+          - /url: https://download.merlin.computer/mac/latest?arch=arm64
+      - paragraph [ref=f51e10]:
+        - link "Download for Intel Macs" [ref=f51e11] [cursor=pointer]:
+          - /url: https://download.merlin.computer/mac/latest?arch=x64
+    - list "Install Merlin in three steps" [ref=f51e12]:
+      - listitem [ref=f51e13]:
+        - generic [ref=f51e14]:
+          - generic [ref=f51e15]: "01"
+          - heading "Open your download" [level=2] [ref=f51e16]
+        - paragraph [ref=f51e18]:
+          - text: Find the Merlin
+          - strong [ref=f51e19]: .dmg
+          - text: file in your
+          - strong [ref=f51e20]: Downloads
+          - text: folder and double-click it.
+      - listitem [ref=f51e21]:
+        - generic [ref=f51e22]:
+          - generic [ref=f51e23]: "02"
+          - heading "Move to Applications" [level=2] [ref=f51e24]
+        - paragraph [ref=f51e26]:
+          - text: Drag the
+          - strong [ref=f51e27]: Merlin icon
+          - text: into the
+          - strong [ref=f51e28]: Applications
+          - text: folder beside it.
+      - listitem [ref=f51e29]:
+        - generic [ref=f51e30]:
+          - generic [ref=f51e31]: "03"
+          - heading "Open Merlin" [level=2] [ref=f51e32]
+        - paragraph [ref=f51e34]:
+          - text: Open
+          - strong [ref=f51e35]: Merlin
+          - text: from Applications, and sign in to get started.
+  - alert [ref=f51e36]

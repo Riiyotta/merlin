@@ -1,0 +1,846 @@
+- generic [active] [ref=f22e1]:
+  - main [ref=f22e2]:
+    - link "Skip to product examples" [ref=f22e3] [cursor=pointer]:
+      - /url: "#routines"
+    - generic [ref=f22e4]:
+      - navigation "Main navigation" [ref=f22e5]:
+        - link "merlin.computer" [ref=f22e6] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f22e8]:
+          - link "Pricing" [ref=f22e9] [cursor=pointer]:
+            - /url: /pricing
+          - link "Manifesto" [ref=f22e10] [cursor=pointer]:
+            - /url: /manifesto
+      - heading "Your time. Yours again." [level=1] [ref=f22e11]:
+        - generic [ref=f22e12]: Your time.
+        - generic [ref=f22e13]: Yours again.
+      - generic [ref=f22e14]:
+        - paragraph [ref=f22e15]: Meet Merlin. Your AI assistant for the things you need to do, giving you time back for the things you’d love to.
+        - link "Get Merlin for Mac" [ref=f22e16] [cursor=pointer]:
+          - /url: /download?start=1
+    - region "Merlin, in your everyday" [ref=f22e21]:
+      - img "A woven pastel lakeside landscape with a small sailboat, willow trees, and lavender hills at sunset" [ref=f22e22]
+      - region "Merlin notification preview" [ref=f22e23]:
+        - status [ref=f22e24]:
+          - generic [aria-hidden] [ref=f22e25]: "0"
+          - generic [ref=f22e26]: 0 unread notifications
+        - generic [ref=f22e27]:
+          - button "Notification sound" [ref=f22e28] [cursor=pointer]: Sound off
+          - button "Replay notification animation" [ref=f22e33] [cursor=pointer]: Replay
+    - region "Used by professionals at" [ref=f22e37]:
+      - paragraph [ref=f22e38]: Used by professionals at
+      - generic [ref=f22e39]:
+        - img "Notion" [ref=f22e40]
+        - img "Salesforce" [ref=f22e41]
+        - img "Harvard University" [ref=f22e44]
+        - img "HubSpot" [ref=f22e45]
+        - img "McKinsey & Company" [ref=f22e48]
+    - region [ref=f22e50]:
+      - generic [ref=f22e51]:
+        - heading "First, a little context." [level=2] [ref=f22e52]:
+          - text: First, a little
+          - generic [ref=f22e53]:
+            - group "Connected apps" [ref=f22e54]:
+              - generic "Gmail" [ref=f22e55]:
+                - img "Gmail" [ref=f22e57]
+              - generic "Calendar" [ref=f22e58]:
+                - img "Calendar" [ref=f22e60]
+              - generic "Slack" [ref=f22e61]:
+                - img "Slack" [ref=f22e63]
+              - generic "Notion" [ref=f22e64]:
+                - img "Notion" [ref=f22e66]
+              - generic "Granola" [ref=f22e67]:
+                - img "Granola" [ref=f22e69]
+              - generic "Linear" [ref=f22e70]:
+                - img "Linear" [ref=f22e72]
+            - emphasis [ref=f22e73]: context.
+        - generic [ref=f22e74]:
+          - paragraph [ref=f22e75]:
+            - text: The conversation is in
+            - generic [ref=f22e76]: Slack
+            - text: . The plan is in
+            - generic [ref=f22e77]: Notion
+            - text: .
+            - generic [ref=f22e78]:
+              - generic [aria-hidden] [ref=f22e79]: SH
+              - text: Sophie’s
+            - text: email is in your
+            - generic [ref=f22e80]: inbox
+            - text: .
+          - paragraph [ref=f22e81]: Connect the tools you use, and Merlin can help you bring it all together.
+      - generic [ref=f22e84]:
+        - generic [ref=f22e85]: Gmail
+        - generic [aria-hidden] [ref=f22e88]:
+          - generic [ref=f22e89]: Inbox
+          - generic [ref=f22e107]: Reply
+        - article "Received email from Sophie about the launch review" [ref=f22e112]:
+          - generic [ref=f22e113]:
+            - generic [ref=f22e114]:
+              - heading "A quick catch-up before launch" [level=3] [ref=f22e115]
+              - generic [ref=f22e116]: Inbox
+            - generic [ref=f22e117]:
+              - generic [aria-hidden] [ref=f22e118]: SH
+              - generic [ref=f22e120]:
+                - generic [ref=f22e121]: Sophie Hayes
+                - generic [ref=f22e122]: <sophie@commonground.example>
+              - generic [ref=f22e123]: 9:41 AM
+          - generic [ref=f22e124]:
+            - paragraph [ref=f22e125]: Hi Amira,
+            - paragraph [ref=f22e126]: The launch is looking good. Can we talk through the deck before next Friday?
+            - paragraph [ref=f22e127]: I’ve added my notes to the project page. It would be great to see the latest website direction alongside the slides, so we can make sure everything tells the same story.
+            - paragraph [ref=f22e128]: Does Monday at 10 work for you and Leo? We can use the time to agree on the last few details before October 9.
+            - paragraph [ref=f22e129]: Thanks!Sophie
+      - generic [ref=f22e130]:
+        - generic [ref=f22e131]: Routines
+        - generic [ref=f22e139]: Then, make it a routine.
+        - paragraph [ref=f22e143]: Tell Merlin what needs doing, and when. It’ll take it from there.
+        - generic "Weekly studio update routine walkthrough" [ref=f22e145]:
+          - generic [ref=f22e146]:
+            - text: Every Friday · 4:00 pm
+            - button "Pause routine" [ref=f22e150] [cursor=pointer]: Pause
+          - list [ref=f22e154]:
+            - listitem [ref=f22e155]:
+              - generic [ref=f22e159]:
+                - strong [ref=f22e160]: Weekly studio update started
+                - generic [ref=f22e161]: 4:00 pm
+          - status [ref=f22e162]
+        - figure [ref=f22e163]:
+          - generic [ref=f22e164]:
+            - text: From morning briefings to Friday updates, set a routine once.
+            - generic [ref=f22e165]: Merlin
+            - text: keeps it moving, so you have one less thing to remember.
+    - region [ref=f22e176]:
+      - generic [ref=f22e179]:
+        - generic [ref=f22e180]:
+          - generic [ref=f22e181]: Browser tasks
+          - heading "If it happens in a browser, Merlin can help." [level=2] [ref=f22e190]
+          - paragraph [ref=f22e191]:
+            - text: I can help you compare flights on
+            - generic [ref=f22e192]: Qatar Airways
+            - text: and find the right one for your trip.
+        - generic [ref=f22e195]:
+          - article "Qatar Airways" [ref=f22e197]:
+            - generic [ref=f22e204]:
+              - generic [ref=f22e205]: qatarairways.com
+              - generic [ref=f22e219]:
+                - generic [ref=f22e220]:
+                  - img "Qatar Airways" [ref=f22e221]
+                  - generic [ref=f22e222]:
+                    - generic [ref=f22e223]: Explore
+                    - generic [ref=f22e224]: Book
+                    - generic [ref=f22e225]: Experience
+                    - generic [ref=f22e226]: Privilege Club
+                  - generic [ref=f22e227]: Log in
+                - generic [ref=f22e231]:
+                  - generic [ref=f22e232]: 1 Flights
+                  - generic [ref=f22e234]: 2 Passenger details
+                  - generic [ref=f22e236]: 3 Add-ons
+                  - generic [ref=f22e238]: 4 Payment
+                - generic [ref=f22e239]:
+                  - generic [ref=f22e240]:
+                    - generic [ref=f22e241]: Return trip
+                    - strong [ref=f22e242]: London Doha
+                  - generic [ref=f22e245]:
+                    - generic [ref=f22e246]: Departure / Return
+                    - strong [ref=f22e247]: 9 Oct – 12 Oct 2026
+                  - generic [ref=f22e248]:
+                    - generic [ref=f22e249]: Passengers / Class
+                    - strong [ref=f22e250]: 1 Adult · Economy
+                - main [ref=f22e254]:
+                  - heading "Select your outbound flight" [level=3] [ref=f22e255]
+                  - paragraph [ref=f22e256]:
+                    - text: London Heathrow (LHR) to Doha (DOH)
+                    - generic [ref=f22e257]: Friday, 9 October 2026
+                  - generic [ref=f22e258]:
+                    - generic [ref=f22e259]:
+                      - generic [ref=f22e260]: Wed, 7 Oct
+                      - generic [ref=f22e261]: GBP 562
+                    - generic [ref=f22e262]:
+                      - generic [ref=f22e263]: Thu, 8 Oct
+                      - generic [ref=f22e264]: GBP 551
+                    - generic [ref=f22e265]:
+                      - generic [ref=f22e266]: Fri, 9 Oct
+                      - generic [ref=f22e267]: GBP 529
+                    - generic [ref=f22e268]:
+                      - generic [ref=f22e269]: Sat, 10 Oct
+                      - generic [ref=f22e270]: GBP 548
+                    - generic [ref=f22e271]:
+                      - generic [ref=f22e272]: Sun, 11 Oct
+                      - generic [ref=f22e273]: GBP 567
+                  - generic [ref=f22e274]:
+                    - generic [ref=f22e275]: 3 flights available · All times are local
+                    - generic [ref=f22e276]: Direct flights · Sort by departure
+                  - generic [ref=f22e286]:
+                    - button "Qatar Airways QR 10 · Boeing 777 08:05 LHR 6h 45m › Non-stop 16:50 DOH Flight details Cabin baggage included Economy from GBP 548 Selected" [pressed] [ref=f22e287] [cursor=pointer]:
+                      - generic [ref=f22e288]:
+                        - generic [ref=f22e289]:
+                          - text: Qatar Airways
+                          - generic [ref=f22e292]: QR 10 · Boeing 777
+                        - generic [ref=f22e293]:
+                          - generic [ref=f22e294]:
+                            - generic [ref=f22e295]: 08:05
+                            - generic [ref=f22e296]: LHR
+                          - generic [ref=f22e297]:
+                            - generic [ref=f22e298]: 6h 45m
+                            - generic [ref=f22e299]: ›
+                            - generic [ref=f22e300]: Non-stop
+                          - generic [ref=f22e301]:
+                            - generic [ref=f22e302]: 16:50
+                            - generic [ref=f22e303]: DOH
+                        - generic [ref=f22e304]:
+                          - text: Flight details
+                          - generic [ref=f22e307]: Cabin baggage included
+                      - generic [ref=f22e308]:
+                        - generic [ref=f22e309]: Economy
+                        - generic [ref=f22e310]:
+                          - text: from
+                          - generic [ref=f22e311]: GBP 548
+                        - generic [ref=f22e312]: Selected
+                    - button "Qatar Airways QR 4 · Boeing 777 14:15 LHR 6h 45m › Non-stop 23:00 DOH Flight details Cabin baggage included Economy from GBP 576 Select" [ref=f22e315] [cursor=pointer]:
+                      - generic [ref=f22e316]:
+                        - generic [ref=f22e317]:
+                          - text: Qatar Airways
+                          - generic [ref=f22e320]: QR 4 · Boeing 777
+                        - generic [ref=f22e321]:
+                          - generic [ref=f22e322]:
+                            - generic [ref=f22e323]: 14:15
+                            - generic [ref=f22e324]: LHR
+                          - generic [ref=f22e325]:
+                            - generic [ref=f22e326]: 6h 45m
+                            - generic [ref=f22e327]: ›
+                            - generic [ref=f22e328]: Non-stop
+                          - generic [ref=f22e329]:
+                            - generic [ref=f22e330]: 23:00
+                            - generic [ref=f22e331]: DOH
+                        - generic [ref=f22e332]:
+                          - text: Flight details
+                          - generic [ref=f22e335]: Cabin baggage included
+                      - generic [ref=f22e336]:
+                        - generic [ref=f22e337]: Economy
+                        - generic [ref=f22e338]:
+                          - text: from
+                          - generic [ref=f22e339]: GBP 576
+                        - generic [ref=f22e340]: Select
+                    - button "Qatar Airways QR 16 · Boeing 777 21:55 LHR 6h 45m › Non-stop 06:40 +1 DOH Flight details Cabin baggage included Economy from GBP 529 Select" [ref=f22e343] [cursor=pointer]:
+                      - generic [ref=f22e344]:
+                        - generic [ref=f22e345]:
+                          - text: Qatar Airways
+                          - generic [ref=f22e348]: QR 16 · Boeing 777
+                        - generic [ref=f22e349]:
+                          - generic [ref=f22e350]:
+                            - generic [ref=f22e351]: 21:55
+                            - generic [ref=f22e352]: LHR
+                          - generic [ref=f22e353]:
+                            - generic [ref=f22e354]: 6h 45m
+                            - generic [ref=f22e355]: ›
+                            - generic [ref=f22e356]: Non-stop
+                          - generic [ref=f22e357]:
+                            - generic [ref=f22e358]: 06:40 +1
+                            - generic [ref=f22e359]: DOH
+                        - generic [ref=f22e360]:
+                          - text: Flight details
+                          - generic [ref=f22e363]: Cabin baggage included
+                      - generic [ref=f22e364]:
+                        - generic [ref=f22e365]: Economy
+                        - generic [ref=f22e366]:
+                          - text: from
+                          - generic [ref=f22e367]: GBP 529
+                        - generic [ref=f22e368]: Select
+          - article [aria-hidden] [ref=f22e372]:
+            - generic [ref=f22e373]: DoorDash
+            - generic [ref=f22e377]:
+              - generic [ref=f22e378]: doordash.com
+              - generic [ref=f22e392]:
+                - generic [ref=f22e393]:
+                  - generic [ref=f22e395]: DOORDASH
+                  - generic [ref=f22e398]:
+                    - text: Delivery
+                    - generic [ref=f22e399]: Pickup
+                  - generic [ref=f22e400]: Studio
+                  - textbox [ref=f22e410]:
+                    - /placeholder: Search DoorDash
+                  - generic [ref=f22e411]: "0"
+                - generic [ref=f22e416]:
+                  - generic [ref=f22e417]: Restaurants
+                  - generic [ref=f22e418]: Grocery
+                  - generic [ref=f22e419]: Convenience
+                  - generic [ref=f22e420]: Alcohol
+                  - generic [ref=f22e421]: Flowers
+                  - generic [ref=f22e422]: Pet supplies
+                  - generic [ref=f22e423]: Retail
+                - main [ref=f22e424]:
+                  - generic [ref=f22e426]:
+                    - text: LUNCH, SORTED.
+                    - heading [level=3] [ref=f22e427]: A little somethingfor everyone.
+                    - paragraph [ref=f22e429]: Fresh bowls. Local favorites. Delivered.
+                  - generic [ref=f22e431]:
+                    - generic [ref=f22e432]: Filters
+                    - generic [ref=f22e440]: DashPass
+                    - generic [ref=f22e441]: Pickup
+                    - generic [ref=f22e442]: Under 30 min
+                    - generic [ref=f22e443]: Vegetarian
+                    - generic [ref=f22e446]: Rating 4.5+
+                  - generic [ref=f22e447]:
+                    - heading [level=3] [ref=f22e448]: Lunch near you
+                    - generic [ref=f22e449]: See all
+                  - generic [ref=f22e452]:
+                    - article [ref=f22e453]:
+                      - button [pressed] [ref=f22e454] [cursor=pointer]:
+                        - strong [ref=f22e456]: Market Kitchen
+                        - generic [ref=f22e457]:
+                          - text: 4.8 ★
+                          - generic [ref=f22e458]: (200+) · 25–35 min
+                        - generic [ref=f22e459]: Healthy · Bowls · Salads
+                        - generic [ref=f22e460]: $0 delivery fee
+                      - button [ref=f22e461] [cursor=pointer]
+                    - article [ref=f22e464]:
+                      - button [ref=f22e465] [cursor=pointer]:
+                        - strong [ref=f22e467]: Little Garden
+                        - generic [ref=f22e468]:
+                          - text: 4.7 ★
+                          - generic [ref=f22e469]: (200+) · 30–40 min
+                        - generic [ref=f22e470]: Vegetarian · Mediterranean
+                        - generic [ref=f22e471]: $0 delivery fee
+                      - button [ref=f22e472] [cursor=pointer]
+                    - article [ref=f22e475]:
+                      - button [ref=f22e476] [cursor=pointer]:
+                        - strong [ref=f22e478]: Rice & Co.
+                        - generic [ref=f22e479]:
+                          - text: 4.9 ★
+                          - generic [ref=f22e480]: (200+) · 20–30 min
+                        - generic [ref=f22e481]: Asian · Rice bowls · Healthy
+                        - generic [ref=f22e482]: $1.49 delivery fee
+                      - button [ref=f22e483] [cursor=pointer]
+                  - generic [ref=f22e486]:
+                    - text: Market Kitchen selected
+                    - generic [ref=f22e489]: Review your lunch options before ordering
+          - article [aria-hidden] [ref=f22e491]:
+            - generic [ref=f22e492]: Instacart
+            - generic [ref=f22e498]:
+              - generic [ref=f22e499]: instacart.com
+              - generic [ref=f22e513]:
+                - generic [ref=f22e514]:
+                  - generic [ref=f22e516]: instacart
+                  - textbox [ref=f22e523]:
+                    - /placeholder: Search products and stores
+                  - generic [ref=f22e524]: Home
+                  - generic [ref=f22e528]: "4"
+                - generic [ref=f22e533]:
+                  - complementary [ref=f22e534]:
+                    - generic [ref=f22e535]: freshmarket
+                    - heading [level=4] [ref=f22e537]: Fresh Market
+                    - generic [ref=f22e538]: Everyday store prices
+                    - generic [ref=f22e539]: Shop
+                    - generic [ref=f22e540]: Buy it again
+                    - generic [ref=f22e541]: Deals
+                    - separator [ref=f22e542]
+                    - generic [ref=f22e543]: Departments
+                    - generic [ref=f22e544]: Produce
+                    - generic [ref=f22e545]: Dairy & Eggs
+                    - generic [ref=f22e546]: Meat & Seafood
+                    - generic [ref=f22e547]: Beverages
+                    - generic [ref=f22e548]: Snacks
+                    - generic [ref=f22e549]: Frozen
+                    - generic [ref=f22e550]: Bakery
+                  - main [ref=f22e551]:
+                    - generic [ref=f22e552]:
+                      - generic [ref=f22e553]: Delivery in as fast as 1 hour
+                      - generic [ref=f22e557]: 100% satisfaction guarantee
+                    - generic [ref=f22e558]:
+                      - text: FRESH PICKS FOR YOUR WEEK
+                      - heading [level=3] [ref=f22e559]: Good thingsstart here.
+                      - text: Everyday essentials, delivered.
+                    - generic [ref=f22e561]:
+                      - heading [level=3] [ref=f22e562]: Your weekly essentials
+                      - generic [ref=f22e563]: View all
+                    - generic [ref=f22e566]:
+                      - article [ref=f22e567]:
+                        - generic [ref=f22e569]:
+                          - button [ref=f22e570] [cursor=pointer]: −
+                          - generic [ref=f22e571]: "2"
+                          - button [ref=f22e572] [cursor=pointer]: +
+                        - strong [ref=f22e573]: $1.50
+                        - generic [ref=f22e574]: Hass Avocado
+                        - generic [ref=f22e575]: 1 each
+                        - generic [ref=f22e576]: Many in stock
+                      - article [ref=f22e577]:
+                        - generic [ref=f22e579]:
+                          - button [ref=f22e580] [cursor=pointer]: −
+                          - generic [ref=f22e581]: "1"
+                          - button [ref=f22e582] [cursor=pointer]: +
+                        - strong [ref=f22e583]: $2.50
+                        - generic [ref=f22e584]: Organic Bananas
+                        - generic [ref=f22e585]: Sold individually · 1 bunch
+                        - generic [ref=f22e586]: Many in stock
+                      - article [ref=f22e587]:
+                        - generic [ref=f22e589]:
+                          - button [ref=f22e590] [cursor=pointer]: −
+                          - generic [ref=f22e591]: "1"
+                          - button [ref=f22e592] [cursor=pointer]: +
+                        - strong [ref=f22e593]: $3.25
+                        - generic [ref=f22e594]: Oatly Original Oatmilk
+                        - generic [ref=f22e595]: 32 fl oz
+                        - generic [ref=f22e596]: Many in stock
+                    - generic [ref=f22e597]:
+                      - generic [ref=f22e598]: 4 items in your cart
+                      - strong [ref=f22e603]: Subtotal $8.75
+          - article [aria-hidden] [ref=f22e605]:
+            - generic [ref=f22e606]: Ashby
+            - generic [ref=f22e610]:
+              - generic [ref=f22e611]: jobs.ashbyhq.com
+              - generic [ref=f22e625]:
+                - heading [level=3] [ref=f22e630]: Product Designer
+                - generic [ref=f22e631]:
+                  - complementary [ref=f22e632]:
+                    - generic [ref=f22e633]:
+                      - generic [ref=f22e634]: Location
+                      - generic [ref=f22e635]: London, United Kingdom
+                    - generic [ref=f22e636]:
+                      - generic [ref=f22e637]: Employment Type
+                      - generic [ref=f22e638]: Full time
+                    - generic [ref=f22e639]:
+                      - generic [ref=f22e640]: Location Type
+                      - generic [ref=f22e641]: Hybrid
+                    - generic [ref=f22e642]:
+                      - generic [ref=f22e643]: Department
+                      - generic [ref=f22e644]: Design
+                  - main [ref=f22e645]:
+                    - tablist [ref=f22e646]:
+                      - tab [ref=f22e647] [cursor=pointer]: Overview
+                      - tab [selected] [ref=f22e648] [cursor=pointer]: Application
+                    - generic [ref=f22e649]:
+                      - generic [ref=f22e650]:
+                        - generic [ref=f22e651]:
+                          - strong [ref=f22e652]: Autofill from profile
+                          - generic [ref=f22e656]: Use your saved details to complete your application.
+                        - button [ref=f22e657] [cursor=pointer]: Fill from profile
+                      - generic [ref=f22e658]:
+                        - text: Name*
+                        - textbox [ref=f22e659]: Sophie Hayes
+                      - generic [ref=f22e660]:
+                        - text: Email*
+                        - textbox [ref=f22e661]: sophie@example.com
+                      - generic [ref=f22e662]:
+                        - text: Portfolio*
+                        - textbox [ref=f22e663]: https://example.com/sophie
+                      - generic [ref=f22e664]:
+                        - text: Location*
+                        - textbox [ref=f22e665]: London, United Kingdom
+                      - generic [ref=f22e666]: Filled with Merlin · Ready for your review
+        - generic "Browser examples" [ref=f22e669]:
+          - button "Show Qatar Airways" [ref=f22e670] [cursor=pointer]
+          - button "Show DoorDash" [ref=f22e672] [cursor=pointer]
+          - button "Show Instacart" [ref=f22e674] [cursor=pointer]
+          - button "Show Ashby" [ref=f22e676] [cursor=pointer]
+    - region [ref=f22e678]:
+      - generic [ref=f22e679]:
+        - heading [level=2] [ref=f22e680]:
+          - text: One conversation.
+          - emphasis [ref=f22e682]:
+            - text: Something to
+            - img [ref=f22e684]:
+              - generic [ref=f22e689]: PDF
+            - text: show for it.
+        - generic [ref=f22e703]:
+          - paragraph [ref=f22e704]:
+            - text: Focus on your call with
+            - generic [ref=f22e705]:
+              - generic [aria-hidden] [ref=f22e706]: SH
+              - text: Sophie
+            - text: . Merlin takes care of the notes and next steps.
+          - paragraph [ref=f22e707]:
+            - text: Then turn your ideas into
+            - generic [ref=f22e708]:
+              - img [ref=f22e710]:
+                - generic [ref=f22e715]: PDF
+              - text: PDFs
+            - text: ","
+            - generic [ref=f22e716]: decks
+            - text: ","
+            - generic [ref=f22e724]: spreadsheets
+            - text: ", and"
+            - generic [ref=f22e733]: websites
+            - text: . All from the same conversation.
+      - generic [ref=f22e742]:
+        - article [ref=f22e743]:
+          - generic [ref=f22e744]:
+            - generic [ref=f22e745]: Meetings
+            - heading "Be there for the call. Merlin handles the notes." [level=3] [ref=f22e753]
+            - paragraph [ref=f22e754]: Record with Merlin. After the call, come back to what you decided and what happens next.
+          - generic [ref=f22e755]:
+            - img "Two handmade felt characters talking over tea in a sunlit garden studio" [ref=f22e756]
+            - generic [ref=f22e763]:
+              - generic [ref=f22e764]:
+                - generic [ref=f22e765]:
+                  - img "Google Meet" [ref=f22e767]
+                  - generic [ref=f22e768]:
+                    - img "Sophie" [ref=f22e769]
+                    - img "Leo" [ref=f22e770]
+                - tablist "Meeting content" [ref=f22e771]:
+                  - tab "Transcript" [ref=f22e772] [cursor=pointer]
+                  - tab "Notes" [selected] [ref=f22e777] [cursor=pointer]
+              - heading "Launch catch-up Monday, October 5" [level=3] [ref=f22e783]:
+                - text: Launch catch-up
+                - generic [ref=f22e784]: Monday, October 5
+              - generic [ref=f22e785]:
+                - strong [ref=f22e787]: Amira, Sophie & Leo
+                - generic [ref=f22e788]: ·
+                - text: Google Meet
+              - tabpanel "Notes" [ref=f22e789]:
+                - generic [ref=f22e791]:
+                  - heading "Meeting summary" [level=4] [ref=f22e792]
+                  - paragraph [ref=f22e793]: The team aligned on a focused October 9 launch for Common Ground. The first release will introduce the studio’s three core services, with a clear story across the website and launch deck.
+                  - paragraph [ref=f22e794]: Leo will share the revised designs on Wednesday. Amira will build the deck around the approved direction, leaving Thursday for Sophie’s feedback and final copy changes.
+                  - heading "Key decisions" [level=4] [ref=f22e795]
+                  - list [ref=f22e796]:
+                    - listitem [ref=f22e797]:
+                      - strong [ref=f22e798]: Keep the scope small.
+                      - text: Give each service room to breathe; save additional offerings for a later release.
+                    - listitem [ref=f22e799]:
+                      - strong [ref=f22e800]: Tell one story.
+                      - text: Use the same positioning and visual direction in the deck and on the website.
+                    - listitem [ref=f22e801]:
+                      - strong [ref=f22e802]: Review before Friday.
+                      - text: Resolve design and copy feedback before the October 9 launch.
+                  - generic [ref=f22e803]:
+                    - heading "Action items" [level=4] [ref=f22e804]
+                    - generic [ref=f22e805]: 0 of 3 done
+                  - button "Prepare the launch deck Introduce the three services, the studio story, and the approved website direction. AmiraThu, Oct 8" [ref=f22e806] [cursor=pointer]:
+                    - generic [ref=f22e808]:
+                      - strong [ref=f22e809]: Prepare the launch deck
+                      - generic [ref=f22e810]: Introduce the three services, the studio story, and the approved website direction.
+                      - generic [ref=f22e811]:
+                        - text: Amira ·
+                        - time [ref=f22e812]: Thu, Oct 8
+                  - button "Share the revised website designs Bring the homepage and service pages together for the team’s review. LeoWed, Oct 7" [ref=f22e813] [cursor=pointer]:
+                    - generic [ref=f22e815]:
+                      - strong [ref=f22e816]: Share the revised website designs
+                      - generic [ref=f22e817]: Bring the homepage and service pages together for the team’s review.
+                      - generic [ref=f22e818]:
+                        - text: Leo ·
+                        - time [ref=f22e819]: Wed, Oct 7
+                  - button "Review the deck and final copy Collect feedback in one place and confirm the last changes before launch. SophieThu, Oct 8" [ref=f22e820] [cursor=pointer]:
+                    - generic [ref=f22e822]:
+                      - strong [ref=f22e823]: Review the deck and final copy
+                      - generic [ref=f22e824]: Collect feedback in one place and confirm the last changes before launch.
+                      - generic [ref=f22e825]:
+                        - text: Sophie ·
+                        - time [ref=f22e826]: Thu, Oct 8
+              - generic [ref=f22e827]:
+                - button "Play Merlin audio" [ref=f22e828] [cursor=pointer]
+                - generic [ref=f22e837]:
+                  - slider "Merlin audio position" [ref=f22e904] [cursor=pointer]: "0"
+                  - generic [ref=f22e905]:
+                    - time [ref=f22e906]: 0:00
+                    - generic [ref=f22e907]: 2:05
+        - article [ref=f22e908]:
+          - generic [ref=f22e909]:
+            - generic [ref=f22e910]: Projects
+            - heading "You bring the ideas. Merlin brings them to life." [level=3] [ref=f22e916]
+            - paragraph [ref=f22e917]: Reports, spreadsheets, decks, and websites. Everything you need to move the project forward, together in one place.
+          - generic [ref=f22e919]:
+            - figure "Launch report.pdf 6 pages · Edited 2 hours ago" [ref=f22e920]:
+              - img [ref=f22e923]:
+                - generic [ref=f22e928]: PDF
+              - generic [ref=f22e929]:
+                - strong [ref=f22e930]: Launch report.pdf
+                - generic [ref=f22e931]: 6 pages · Edited 2 hours ago
+              - generic [aria-hidden] [ref=f22e932]:
+                - generic [ref=f22e933]: ✓
+                - img [ref=f22e937]:
+                  - generic [ref=f22e942]: PDF
+                - generic [ref=f22e943]:
+                  - generic [ref=f22e944]: COMMON GROUND
+                  - strong [ref=f22e945]: Launch report
+            - figure "Launch budget.xlsx 3 sheets · Edited 2 hours ago" [ref=f22e950]:
+              - generic [ref=f22e960]:
+                - strong [ref=f22e961]: Launch budget.xlsx
+                - generic [ref=f22e962]: 3 sheets · Edited 2 hours ago
+              - generic [aria-hidden] [ref=f22e963]:
+                - generic [ref=f22e964]: ✓
+                - generic [ref=f22e975]:
+                  - generic [ref=f22e976]: BUDGET / OCTOBER
+                  - strong [ref=f22e977]: Launch budget
+            - figure "Studio website.html Website · Edited yesterday" [ref=f22e991]:
+              - generic [ref=f22e1001]:
+                - strong [ref=f22e1002]: Studio website.html
+                - generic [ref=f22e1003]: Website · Edited yesterday
+              - generic [aria-hidden] [ref=f22e1004]:
+                - generic [ref=f22e1005]: ✓
+                - generic [ref=f22e1017]:
+                  - generic [ref=f22e1018]: COMMON GROUND STUDIO
+                  - strong [ref=f22e1019]: A fresh start.
+            - figure "Launch deck.pptx 12 slides · Edited yesterday" [ref=f22e1024]:
+              - generic [ref=f22e1033]:
+                - strong [ref=f22e1034]: Launch deck.pptx
+                - generic [ref=f22e1035]: 12 slides · Edited yesterday
+              - generic [aria-hidden] [ref=f22e1036]:
+                - generic [ref=f22e1037]: ✓
+                - generic [ref=f22e1047]:
+                  - generic [ref=f22e1048]: THE LAUNCH STORY
+                  - strong [ref=f22e1049]: Good things ahead.
+    - region [ref=f22e1054]:
+      - generic [ref=f22e1055]:
+        - generic [ref=f22e1056]:
+          - paragraph [ref=f22e1057]:
+            - generic [ref=f22e1058]: And when you’re working somewhere else…
+          - generic [ref=f22e1061]: Companion
+          - generic [ref=f22e1067]:
+            - heading "No need to leave what you’re doing." [level=2] [ref=f22e1068]:
+              - generic [aria-hidden] [ref=f22e1069]: No need to leave
+              - generic [aria-hidden] [ref=f22e1070]: what you’re doing.
+            - group "Selected text actions" [ref=f22e1071]:
+              - button "Ask Merlin" [ref=f22e1072] [cursor=pointer]
+              - button "Rephrase word" [ref=f22e1085] [cursor=pointer]
+        - generic [ref=f22e1086]:
+          - paragraph [ref=f22e1087]:
+            - text: That sentence doesn’t sound quite like you. Highlight it and ask
+            - generic [ref=f22e1088]: Merlin
+            - text: for another version. Put it back when it feels right.
+          - paragraph [ref=f22e1099]:
+            - text: Or ask about a
+            - generic [ref=f22e1100]: webpage
+            - text: ", a file in"
+            - generic [ref=f22e1102]: Finder
+            - text: ", or what’s on your"
+            - generic [ref=f22e1104]: screen
+            - text: ", with your permission."
+        - figure [ref=f22e1108]:
+          - img "A cyan felt character working from a comfortable armchair" [ref=f22e1109]
+          - generic [ref=f22e1110]: A second pair of eyes.Right when you need one.
+      - generic [ref=f22e1111]:
+        - heading "Removing a background in Photoshop." [level=3] [ref=f22e1113]:
+          - generic [aria-hidden] [ref=f22e1114]:
+            - generic [ref=f22e1115]: Removing
+            - generic [ref=f22e1116]: a
+            - generic [ref=f22e1117]: background
+            - generic [ref=f22e1118]: in
+            - generic [ref=f22e1119]: Photoshop.
+        - generic [ref=f22e1122]:
+          - tabpanel "Photoshop" [ref=f22e1123]:
+            - generic [ref=f22e1126]:
+              - generic "Animated example of Merlin looking at Photoshop with permission" [ref=f22e1127]:
+                - generic [ref=f22e1128]:
+                  - generic [aria-hidden] [ref=f22e1129]:
+                    - strong [ref=f22e1134]: Photoshop
+                    - generic [ref=f22e1135]: File
+                    - generic [ref=f22e1136]: Edit
+                    - generic [ref=f22e1137]: Image
+                    - generic [ref=f22e1138]: Layer
+                    - generic [ref=f22e1139]: Type
+                    - generic [ref=f22e1140]: Select
+                    - generic [ref=f22e1141]: Filter
+                    - generic [ref=f22e1142]: View
+                    - generic [ref=f22e1143]: Window
+                    - generic [ref=f22e1144]: Help
+                  - generic [aria-hidden] [ref=f22e1145]:
+                    - generic [ref=f22e1153]: Auto-Select
+                    - generic [ref=f22e1154]: Layer
+                    - generic [ref=f22e1158]: Show Transform Controls
+                    - generic [ref=f22e1159]: Share
+                  - generic [aria-hidden] [ref=f22e1163]: merlin-studio.psd @ 50% (Artwork, RGB/8)
+                  - generic [aria-hidden] [ref=f22e1214]:
+                    - text: "0"
+                    - generic [ref=f22e1215]: "100"
+                    - generic [ref=f22e1216]: "200"
+                    - generic [ref=f22e1217]: "300"
+                    - generic [ref=f22e1218]: "400"
+                    - generic [ref=f22e1219]: "500"
+                    - generic [ref=f22e1220]: "600"
+                  - img "Hand-stitched cyan felt Merlin artwork on a warm pink background" [ref=f22e1223]
+                  - generic [ref=f22e1224]:
+                    - generic [aria-hidden] [ref=f22e1225]: ⠿
+                    - generic [ref=f22e1226]: Select subject
+                    - button "Remove background in this demo" [disabled] [ref=f22e1227]: Remove background
+                  - complementary [aria-hidden] [ref=f22e1237]:
+                    - generic [ref=f22e1238]: Properties
+                    - generic [ref=f22e1243]:
+                      - paragraph [ref=f22e1244]: Pixel Layer
+                      - strong [ref=f22e1249]: Transform
+                      - generic [ref=f22e1250]:
+                        - generic [ref=f22e1251]: W 1200 px
+                        - generic [ref=f22e1252]: H 1200 px
+                        - generic [ref=f22e1253]: X 0 px
+                        - generic [ref=f22e1254]: Y 0 px
+                      - strong [ref=f22e1255]: Align and Distribute
+                      - generic [ref=f22e1256]: ⊢ ⊥ ⊣ ⊤ ⊞ ⋮
+                    - generic [ref=f22e1257]:
+                      - text: Layers
+                      - generic [ref=f22e1258]: Channels
+                      - generic [ref=f22e1259]: Paths
+                    - generic [ref=f22e1260]:
+                      - generic [ref=f22e1261]: Normal
+                      - text: "Opacity: 100%"
+                    - generic [ref=f22e1264]: Artwork
+                    - generic [ref=f22e1273]: fx
+                  - generic [aria-hidden] [ref=f22e1284]:
+                    - generic [ref=f22e1285]: 50%
+                    - generic [ref=f22e1286]: 1200 px × 1200 px (72 ppi)
+                    - generic [ref=f22e1287]: Adobe Photoshop
+              - paragraph [ref=f22e1288]: "Scripted example: open Merlin in Photoshop and ask how to remove a background. Approve the sample screen request. Merlin sees the screenshot and explains which tool to use. The demo user clicks Remove Background and Photoshop adds a mask. This demo never captures your screen or changes your files."
+          - generic [ref=f22e1289]:
+            - tablist "Companion app examples" [ref=f22e1290]:
+              - tab "Photoshop" [selected] [ref=f22e1291] [cursor=pointer]
+              - tab "Slack" [ref=f22e1294] [cursor=pointer]
+              - tab "Chrome" [ref=f22e1297] [cursor=pointer]
+            - button "Pause demo" [ref=f22e1301] [cursor=pointer]
+    - region [ref=f22e1304]:
+      - generic [ref=f22e1305]:
+        - generic [ref=f22e1306]:
+          - link "Privacy and control" [ref=f22e1307] [cursor=pointer]:
+            - /url: /privacy
+          - heading "Personal work. Private by design." [level=2] [ref=f22e1310]:
+            - generic [aria-hidden] [ref=f22e1311]:
+              - generic [ref=f22e1312]:
+                - text: P
+                - generic [ref=f22e1313]: "0"
+              - generic [ref=f22e1314]:
+                - text: e
+                - generic [ref=f22e1315]: "9"
+              - generic [ref=f22e1316]:
+                - text: r
+                - generic [ref=f22e1317]: C
+              - generic [ref=f22e1318]:
+                - text: s
+                - generic [ref=f22e1319]: "8"
+              - generic [ref=f22e1320]:
+                - text: o
+                - generic [ref=f22e1321]: B
+              - generic [ref=f22e1322]:
+                - text: "n"
+                - generic [ref=f22e1323]: "4"
+              - generic [ref=f22e1324]:
+                - text: a
+                - generic [ref=f22e1325]: A
+              - generic [ref=f22e1326]:
+                - text: l
+                - generic [ref=f22e1327]: "3"
+              - generic [ref=f22e1329]:
+                - text: w
+                - generic [ref=f22e1330]: "2"
+              - generic [ref=f22e1331]:
+                - text: o
+                - generic [ref=f22e1332]: D
+              - generic [ref=f22e1333]:
+                - text: r
+                - generic [ref=f22e1334]: "1"
+              - generic [ref=f22e1335]:
+                - text: k
+                - generic [ref=f22e1336]: F
+              - generic [ref=f22e1337]:
+                - text: .
+                - generic [ref=f22e1338]: "7"
+            - generic [aria-hidden] [ref=f22e1339]:
+              - generic [ref=f22e1340]:
+                - text: P
+                - generic [ref=f22e1341]: E
+              - generic [ref=f22e1342]:
+                - text: r
+                - generic [ref=f22e1343]: "6"
+              - generic [ref=f22e1344]:
+                - text: i
+                - generic [ref=f22e1345]: "0"
+              - generic [ref=f22e1346]:
+                - text: v
+                - generic [ref=f22e1347]: "9"
+              - generic [ref=f22e1348]:
+                - text: a
+                - generic [ref=f22e1349]: C
+              - generic [ref=f22e1350]:
+                - text: t
+                - generic [ref=f22e1351]: "8"
+              - generic [ref=f22e1352]:
+                - text: e
+                - generic [ref=f22e1353]: B
+              - generic [ref=f22e1355]:
+                - text: b
+                - generic [ref=f22e1356]: A
+              - generic [ref=f22e1357]:
+                - text: "y"
+                - generic [ref=f22e1358]: "3"
+              - generic [ref=f22e1360]:
+                - text: d
+                - generic [ref=f22e1361]: "2"
+              - generic [ref=f22e1362]:
+                - text: e
+                - generic [ref=f22e1363]: D
+              - generic [ref=f22e1364]:
+                - text: s
+                - generic [ref=f22e1365]: "1"
+              - generic [ref=f22e1366]:
+                - text: i
+                - generic [ref=f22e1367]: F
+              - generic [ref=f22e1368]:
+                - text: g
+                - generic [ref=f22e1369]: "7"
+              - generic [ref=f22e1370]:
+                - text: "n"
+                - generic [ref=f22e1371]: E
+              - generic [ref=f22e1372]:
+                - text: .
+                - generic [ref=f22e1373]: "6"
+          - paragraph [ref=f22e1374]: Your work is personal. You choose what to share with Merlin and when to step in. We never sell your personal information.
+        - generic [ref=f22e1375]:
+          - article [ref=f22e1376]:
+            - heading "Independently audited security" [level=3] [ref=f22e1383]
+            - paragraph [ref=f22e1384]: Merlin’s security controls undergo independent assessment through a SOC 2 Type II audit.
+          - article [ref=f22e1385]:
+            - heading "Your approval comes first" [level=3] [ref=f22e1390]
+            - paragraph [ref=f22e1391]: Merlin asks before sending emails or invites. You’re in control.
+          - article [ref=f22e1392]:
+            - heading "No model training" [level=3] [ref=f22e1399]
+            - paragraph [ref=f22e1400]: Neither Merlin nor our AI providers use your data to train models.
+          - article [ref=f22e1401]:
+            - heading "Protected in storage and transit" [level=3] [ref=f22e1410]
+            - paragraph [ref=f22e1411]: Your data is encrypted when stored and as it moves between systems.
+    - region [ref=f22e1412]:
+      - generic [ref=f22e1413]:
+        - generic [ref=f22e1414]:
+          - heading "Good questions. Clear answers." [level=2] [ref=f22e1415]: Good questions.Clear answers.
+          - paragraph [ref=f22e1416]: Start with the essentials. For anything else, ask Merlin below.
+        - generic [ref=f22e1417]:
+          - generic [ref=f22e1418]:
+            - heading [level=3] [ref=f22e1420]:
+              - button "What can Merlin help me with?" [ref=f22e1421] [cursor=pointer]
+            - heading [level=3] [ref=f22e1426]:
+              - button "What do I need to get started?" [ref=f22e1427] [cursor=pointer]
+            - heading [level=3] [ref=f22e1432]:
+              - button "Can I use Merlin in my own browser?" [ref=f22e1433] [cursor=pointer]
+            - heading [level=3] [ref=f22e1438]:
+              - button "How does Companion work?" [ref=f22e1439] [cursor=pointer]
+            - heading [level=3] [ref=f22e1444]:
+              - button "Can Merlin help with meeting notes?" [ref=f22e1445] [cursor=pointer]
+          - generic [ref=f22e1450]:
+            - textbox "Your question about Merlin" [ref=f22e1451]:
+              - /placeholder: What else would you like to know?
+            - button "Ask Merlin" [disabled] [ref=f22e1452]
+    - generic [ref=f22e1455]:
+      - generic [ref=f22e1457]:
+        - heading [level=2] [ref=f22e1458]:
+          - text: Your next free moment
+          - generic [ref=f22e1459]:
+            - text: starts at
+            - time [ref=f22e1464]: 15:59
+        - paragraph [ref=f22e1465]: In just three minutes, Merlin starts handling your to-dos. You decide what comes after.
+        - link "Get Merlin for Mac" [ref=f22e1466] [cursor=pointer]:
+          - /url: /download?start=1
+      - generic [ref=f22e1471]:
+        - generic [ref=f22e1472]:
+          - link "merlin.computer — back to top" [ref=f22e1473] [cursor=pointer]:
+            - /url: "#top"
+            - text: merlin.computer
+          - generic [ref=f22e1474]: © 2026 merlin computing inc
+        - navigation "Footer" [ref=f22e1475]:
+          - link "Pricing" [ref=f22e1476] [cursor=pointer]:
+            - /url: /pricing
+          - link "Manifesto" [ref=f22e1477] [cursor=pointer]:
+            - /url: /manifesto
+          - link "Blog" [ref=f22e1478] [cursor=pointer]:
+            - /url: /blog
+          - link "Privacy" [ref=f22e1479] [cursor=pointer]:
+            - /url: /privacy
+          - link "Terms" [ref=f22e1480] [cursor=pointer]:
+            - /url: /terms
+          - link "Contact" [ref=f22e1481] [cursor=pointer]:
+            - /url: mailto:team@merlin.computer
+  - alert [ref=f22e1485]

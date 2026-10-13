@@ -1,0 +1,36 @@
+section,category,templates,routes,Home,Pricing,Install,Manifesto,Blog index,Blog post,Legal document
+shell.skip-link,SHELL,6,26,x,x,,x,x,x,x
+shell.corner-nav,SHELL,6,26,x,x,,x,x,x,x
+shell.closing-footer,SHELL,6,26,x,x,,x,x,x,x
+content.article-header,CONTENT,1,20,,,,,,x,
+content.article-body,CONTENT,1,20,,,,,,x,
+content.article-end,CONTENT,1,20,,,,,,x,
+content.legal-heading,CONTENT,1,2,,,,,,,x
+content.legal-contents,CONTENT,1,2,,,,,,,x
+content.legal-body,CONTENT,1,2,,,,,,,x
+shell.floating-nav,SHELL,1,1,x,,,,,,
+shell.install-header,SHELL,1,1,,,x,,,,
+hero.home-headline,HERO,1,1,x,,,,,,
+hero.landscape-notifications,HERO,1,1,x,,,,,,
+hero.pricing-headline,HERO,1,1,,x,,,,,
+proof.company-logos,PROOF,1,1,x,,,,,,
+product.context-routines,PRODUCT,1,1,x,,,,,,
+product.browser-tasks,PRODUCT,1,1,x,,,,,,
+product.meetings-projects,PRODUCT,1,1,x,,,,,,
+product.companion-demos,PRODUCT,1,1,x,,,,,,
+product.privacy-trust,PRODUCT,1,1,x,,,,,,
+commerce.plan-cards,COMMERCE,1,1,,x,,,,,
+commerce.included-features,COMMERCE,1,1,,x,,,,,
+support.home-faq,SUPPORT,1,1,x,,,,,,
+support.pricing-faq,SUPPORT,1,1,,x,,,,,
+onboarding.install-intro,ONBOARDING,1,1,,,x,,,,
+onboarding.install-steps,ONBOARDING,1,1,,,x,,,,
+content.manifesto-opening,CONTENT,1,1,,,,x,,,
+content.manifesto-understanding,CONTENT,1,1,,,,x,,,
+content.manifesto-action,CONTENT,1,1,,,,x,,,
+content.manifesto-ending,CONTENT,1,1,,,,x,,,
+content.blog-intro,CONTENT,1,1,,,,,x,,
+content.blog-featured-story,CONTENT,1,1,,,,,x,,
+content.blog-story-list,CONTENT,1,1,,,,,x,,
+content.blog-handwritten-aside,CONTENT,1,1,,,,,x,,
+ROUTE COUNT,,,27,1,1,1,1,1,20,2

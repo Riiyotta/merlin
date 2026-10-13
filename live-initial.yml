@@ -1,0 +1,34 @@
+- generic [active] [ref=f22e1]:
+  - main [ref=f22e2]:
+    - link "Skip to product examples" [ref=f22e3] [cursor=pointer]:
+      - /url: "#routines"
+    - generic [ref=f22e4]:
+      - navigation "Main navigation" [ref=f22e5]
+      - heading "Your time. Yours again." [level=1] [ref=f22e11]
+      - generic [ref=f22e14]
+    - region "Merlin, in your everyday" [ref=f22e21]:
+      - img "A woven pastel lakeside landscape with a small sailboat, willow trees, and lavender hills at sunset" [ref=f22e22]
+      - region "Merlin notification preview" [ref=f22e23]
+    - region "Used by professionals at" [ref=f22e37]:
+      - paragraph [ref=f22e38]: Used by professionals at
+      - generic [ref=f22e39]
+    - region "First, a little context." [ref=f22e50]:
+      - generic [ref=f22e51]
+      - generic [ref=f22e84]
+      - generic [ref=f22e130]
+    - region "If it happens in a browser, Merlin can help." [ref=f22e176]:
+      - generic [ref=f22e179]
+    - region "One conversation. Something to show for it." [ref=f22e678]:
+      - generic [ref=f22e679]
+      - generic [ref=f22e742]
+    - region "No need to leave what you’re doing." [ref=f22e1054]:
+      - generic [ref=f22e1055]
+      - generic [ref=f22e1111]
+    - region "Personal work. Private by design." [ref=f22e1304]:
+      - generic [ref=f22e1305]
+    - region "Good questions. Clear answers." [ref=f22e1412]:
+      - generic [ref=f22e1413]
+    - generic [ref=f22e1455]:
+      - generic [ref=f22e1457]
+      - generic [ref=f22e1471]
+  - alert [ref=f22e1485]

@@ -1,0 +1,1719 @@
+{
+ "title": "Privacy and control — Merlin",
+ "url": "https://www.merlin.computer/privacy",
+ "h": 4297,
+ "css": [
+  "357da7cf10d68108.css",
+  "437c25afc566ca52.css",
+  "a5f02e9d0c6db7af.css",
+  "f46c55d95248097e.css",
+  "e2e0ba86a6b0d559.css",
+  "e261c04d0a2d5dfe.css",
+  "ea3e27f6a69b5df4.css"
+ ],
+ "js": [
+  "b468fba8-9284181649d81112.js",
+  "4bd1b696-182b6b13bdad92e3.js",
+  "1255-c5779d570a135656.js",
+  "main-app-5fafbe116c67af45.js",
+  "c16f53c3-a6af64d152aba437.js",
+  "polyfills-42372ed130431b0a.js",
+  "webpack-c3725a4e89504d85.js"
+ ],
+ "meta": [
+  "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+  "<meta name=\"next-size-adjust\" content=\"\">",
+  "<meta name=\"description\" content=\"How Merlin handles your information, what stays on your Mac, and how to manage access and your data.\">",
+  "<meta property=\"og:title\" content=\"Merlin — Your AI assistant for Mac\">",
+  "<meta property=\"og:description\" content=\"Work with Merlin across your apps and browser. Prepare for meetings, create projects, and automate recurring work.\">",
+  "<meta property=\"og:site_name\" content=\"Merlin\">",
+  "<meta property=\"og:image\" content=\"https://www.merlin.computer/story/handmade/hero-beach-reading.webp\">",
+  "<meta property=\"og:image:width\" content=\"1774\">",
+  "<meta property=\"og:image:height\" content=\"887\">",
+  "<meta property=\"og:image:alt\" content=\"A peaceful woven landscape with rolling meadows and lavender mountains\">",
+  "<meta property=\"og:type\" content=\"website\">",
+  "<meta name=\"twitter:card\" content=\"summary_large_image\">",
+  "<meta name=\"twitter:site\" content=\"@merlincomputer\">",
+  "<meta name=\"twitter:title\" content=\"Merlin — Your AI assistant for Mac\">",
+  "<meta name=\"twitter:description\" content=\"Work with Merlin across your apps and browser. Prepare for meetings, create projects, and automate recurring work.\">",
+  "<meta name=\"twitter:image\" content=\"https://www.merlin.computer/story/handmade/hero-beach-reading.webp\">",
+  "<meta name=\"twitter:image:width\" content=\"1774\">",
+  "<meta name=\"twitter:image:height\" content=\"887\">",
+  "<meta name=\"twitter:image:alt\" content=\"A peaceful woven landscape with rolling meadows and lavender mountains\">",
+  "<link rel=\"icon\" href=\"/merlin-app-icon.svg\">"
+ ],
+ "bodyBg": "rgb(255, 255, 255)",
+ "htmlFs": "10px",
+ "tree": "body [0,0,1440,4297]\n  div [0,0,0,0]\n  main#top.merlin-story.site-layout.legal-page [0,0,1440,4297]\n    a.skip-link [12,-82,204,52]\n    div.site-container [120,0,1200,160]\n      header.legal-navigation [120,0,1200,160]\n        nav.hero-corner-nav [120,36,157,84]\n          a.hero-site-name.hero-site-brand [120,36,157,26]\n            img.hero-site-icon [120,39,20,20]\n            span.hero-site-name [148,36,129,26]\n          div.hero-corner-links [120,70,65,50]\n            a [120,70,45,21]\n            a [120,99,65,21]\n    div#legal-content.legal-document [180,204,1080,3075]\n      header.legal-heading [460,204,720,270]\n        nav.legal-tabs [460,204,164,42]\n          a [465,209,78,32]\n          a [549,209,71,32]\n        h1 [460,278,720,69]\n        p.legal-intro [460,371,720,59]\n        p.legal-date [460,455,720,19]\n          span [543,455,3,19]\n      div.legal-columns [180,546,1080,2734]\n        aside.legal-sidebar [180,546,220,312]\n          nav.legal-contents [180,546,220,312]\n            span.legal-contents-label [180,546,73,18]\n            a [180,581,204,46]\n            a [180,632,196,28]\n            ... (9 children total; tags: [[\"span.legal-contents-label\",1],[\"a\",8]])\n        article.legal-prose [460,546,720,2734]\n          section#local-and-cloud.legal-section [460,546,720,302]\n            h2#local-and-cloud-title [460,546,720,30]\n            p [460,594,720,115]\n            p [460,725,720,86]\n          section#information.legal-section [460,884,720,273]\n            h2#information-title [460,884,720,30]\n            p [460,932,720,86]\n            p [460,1034,720,86]\n          section#permissions.legal-section [460,1194,720,405]\n            h2#permissions-title [460,1194,720,30]\n            p [460,1241,720,86]\n            p [460,1344,720,115]\n            p [460,1475,720,86]\n          ... (9 children total; tags: [[\"section#local-and-cloud.legal-section\",1],[\"section#information.legal-section\",1],[\"section#permissions.legal-section\",1],[\"section#providers.legal-section\",1],[\"section#security.legal-section\",1],[\"section#retention.legal-section\",1],[\"section#website.legal-section\",1],[\"section#contact.legal-section\",1],[\"footer.legal-document-footer\",1]])\n    footer.closing-footer [0,3391,1440,905]\n      div.closing-sky [0,3391,1440,905]\n        div.closing-bird-track.closing-bird-track-1 [0,3407,1440,100]\n          div.closing-bird [1201,3407,60,41]\n            div.closing-bird-drift [1201,3407,62,43]\n              div.closing-bird-shape [1201,3407,62,43]\n        div.closing-bird-track.closing-bird-track-2 [0,3421,1440,100]\n          div.closing-bird [267,3421,52,35]\n            div.closing-bird-drift [266,3429,53,37]\n              div.closing-bird-shape [266,3429,53,37]\n        div.closing-bird-track.closing-bird-track-3 [0,3437,1440,100]\n          div.closing-bird [780,3437,48,32]\n            div.closing-bird-drift [779,3446,49,34]\n              div.closing-bird-shape [779,3446,49,34]\n      div.closing-main [94,3391,1253,770]\n        div.closing-invitation [94,3627,538,365]\n          h2 [94,3627,538,186]\n            span.closing-start-time [94,3748,478,65]\n              span.closing-clock-time [347,3748,225,61] (+1 svg)\n                time [405,3748,166,61]\n          p [94,3837,370,54]\n          a.download-button.download-button-primary [94,3923,288,68]\n            span [126,3949,168,17]\n            span.download-arrow [320,3929,56,56] (+1 svg)\n        div.closing-beach [689,3521,744,576]\n      div.closing-footer-links [94,4161,1253,88]\n        div.closing-brand [94,4196,165,53]\n          a.closing-wordmark.hero-site-name [94,4196,129,26]\n          span.closing-copyright [94,4230,165,19]\n        nav [891,4206,456,32]\n          a [891,4206,45,32]\n          a [967,4206,65,32]\n          a [1063,4206,29,32]\n          a [1124,4206,48,32]\n          a [1203,4206,41,32]\n          a [1275,4206,72,32] (+1 svg)\n  next-route-announcer [0,4297,0,0]",
+ "styles": [
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "15px",
+    "lineHeight": "24px",
+    "fontWeight": "400",
+    "letterSpacing": "normal",
+    "color": "rgb(65, 70, 60)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 1,
+   "sel": [
+    "main#top.merlin-story.site-layout.legal-page > a.skip-link"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "17px",
+    "lineHeight": "25.5px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.425px",
+    "color": "rgb(65, 70, 60)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 1,
+   "sel": [
+    "a.hero-site-name.hero-site-brand > span.hero-site-name"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "14px",
+    "lineHeight": "21px",
+    "fontWeight": "400",
+    "letterSpacing": "normal",
+    "color": "rgb(115, 115, 115)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 2,
+   "sel": [
+    "div.hero-corner-links > a"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "13px",
+    "lineHeight": "18.2px",
+    "fontWeight": "500",
+    "letterSpacing": "normal",
+    "color": "rgb(53, 60, 46)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 1,
+   "sel": [
+    "nav.legal-tabs > a"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "13px",
+    "lineHeight": "18.2px",
+    "fontWeight": "500",
+    "letterSpacing": "normal",
+    "color": "rgb(135, 142, 126)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 1,
+   "sel": [
+    "nav.legal-tabs > a"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "Exposure, Georgia, serif",
+    "fontSize": "64px",
+    "lineHeight": "69.12px",
+    "fontWeight": "400",
+    "letterSpacing": "-2.24px",
+    "color": "rgb(54, 60, 48)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 1,
+   "sel": [
+    "header.legal-heading > h1"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "18px",
+    "lineHeight": "29.7px",
+    "fontWeight": "400",
+    "letterSpacing": "normal",
+    "color": "rgb(129, 136, 121)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 1,
+   "sel": [
+    "header.legal-heading > p.legal-intro"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "12px",
+    "lineHeight": "19.2px",
+    "fontWeight": "400",
+    "letterSpacing": "normal",
+    "color": "rgb(146, 152, 137)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 2,
+   "sel": [
+    "header.legal-heading > p.legal-date",
+    "p.legal-date > span"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "12px",
+    "lineHeight": "18px",
+    "fontWeight": "500",
+    "letterSpacing": "normal",
+    "color": "rgb(70, 78, 61)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 1,
+   "sel": [
+    "nav.legal-contents > span.legal-contents-label"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "12px",
+    "lineHeight": "18px",
+    "fontWeight": "400",
+    "letterSpacing": "normal",
+    "color": "rgb(139, 146, 129)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 8,
+   "sel": [
+    "nav.legal-contents > a"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "22px",
+    "lineHeight": "29.7px",
+    "fontWeight": "500",
+    "letterSpacing": "-0.55px",
+    "color": "rgb(65, 74, 54)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 8,
+   "sel": [
+    "section#local-and-cloud.legal-section > h2#local-and-cloud-title",
+    "section#information.legal-section > h2#information-title",
+    "section#permissions.legal-section > h2#permissions-title",
+    "section#providers.legal-section > h2#providers-title"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "16px",
+    "lineHeight": "28.8px",
+    "fontWeight": "400",
+    "letterSpacing": "normal",
+    "color": "rgb(119, 127, 109)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 17,
+   "sel": [
+    "section#local-and-cloud.legal-section > p",
+    "section#information.legal-section > p",
+    "section#permissions.legal-section > p",
+    "section#providers.legal-section > p"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "13px",
+    "lineHeight": "19.5px",
+    "fontWeight": "500",
+    "letterSpacing": "normal",
+    "color": "rgb(120, 131, 107)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 4,
+   "sel": [
+    "footer.legal-document-footer > a",
+    "a > span"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "Exposure, Georgia, serif",
+    "fontSize": "64px",
+    "lineHeight": "60.8px",
+    "fontWeight": "400",
+    "letterSpacing": "-0.64px",
+    "color": "rgb(41, 45, 39)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 3,
+   "sel": [
+    "div.closing-invitation > h2",
+    "h2 > span.closing-start-time",
+    "span.closing-clock-time > time"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "17px",
+    "lineHeight": "27.2px",
+    "fontWeight": "400",
+    "letterSpacing": "normal",
+    "color": "rgb(103, 103, 103)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 1,
+   "sel": [
+    "div.closing-invitation > p"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "ui-monospace, SFMono-Regular, Menlo, monospace",
+    "fontSize": "14px",
+    "lineHeight": "16.8px",
+    "fontWeight": "700",
+    "letterSpacing": "0.91px",
+    "color": "rgb(255, 255, 255)",
+    "textTransform": "uppercase",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 1,
+   "sel": [
+    "a.download-button.download-button-primary > span"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "17px",
+    "lineHeight": "25.5px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.425px",
+    "color": "rgb(41, 45, 39)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 1,
+   "sel": [
+    "div.closing-brand > a.closing-wordmark.hero-site-name"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "12px",
+    "lineHeight": "19.2px",
+    "fontWeight": "400",
+    "letterSpacing": "normal",
+    "color": "rgb(116, 120, 110)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 1,
+   "sel": [
+    "div.closing-brand > span.closing-copyright"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "14px",
+    "lineHeight": "22.4px",
+    "fontWeight": "400",
+    "letterSpacing": "normal",
+    "color": "rgb(41, 45, 39)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 6,
+   "sel": [
+    "nav > a"
+   ]
+  }
+ ],
+ "blocks": {
+  "main#top.merlin-story.site-layout.legal-page": {
+   "box": [
+    0,
+    0,
+    1440,
+    4297
+   ],
+   "position": "relative",
+   "width": "1440px",
+   "flexDirection": "row",
+   "background": "rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+   "backgroundColor": "rgb(255, 255, 255)",
+   "border": "0px none rgb(65, 70, 60)",
+   "borderBottom": "0px none rgb(65, 70, 60)",
+   "borderTop": "0px none rgb(65, 70, 60)",
+   "overflow": "clip"
+  },
+  "a.skip-link": {
+   "box": [
+    12,
+    -82,
+    204,
+    52
+   ],
+   "position": "fixed",
+   "top": "12px",
+   "bottom": "836px",
+   "width": "204.172px",
+   "padding": "14px",
+   "flexDirection": "row",
+   "background": "rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+   "backgroundColor": "rgb(255, 255, 255)",
+   "border": "0px none rgb(65, 70, 60)",
+   "borderBottom": "0px none rgb(65, 70, 60)",
+   "borderTop": "0px none rgb(65, 70, 60)",
+   "transform": "matrix(1, 0, 0, 1, 0, -93.6)",
+   "zIndex": "100"
+  },
+  "div.site-container": {
+   "box": [
+    120,
+    0,
+    1200,
+    160
+   ],
+   "width": "1200px",
+   "maxWidth": "1440px",
+   "margin": "0px 120px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(65, 70, 60)",
+   "borderBottom": "0px none rgb(65, 70, 60)",
+   "borderTop": "0px none rgb(65, 70, 60)"
+  },
+  "header.legal-navigation": {
+   "box": [
+    120,
+    0,
+    1200,
+    160
+   ],
+   "position": "relative",
+   "width": "1200px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(65, 70, 60)",
+   "borderBottom": "0px none rgb(65, 70, 60)",
+   "borderTop": "0px none rgb(65, 70, 60)"
+  },
+  "nav.hero-corner-nav": {
+   "box": [
+    120,
+    36,
+    157,
+    84
+   ],
+   "display": "flex",
+   "position": "absolute",
+   "top": "36px",
+   "bottom": "40.5px",
+   "width": "157.438px",
+   "gap": "8px",
+   "flexDirection": "column",
+   "alignItems": "flex-start",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(65, 70, 60)",
+   "borderBottom": "0px none rgb(65, 70, 60)",
+   "borderTop": "0px none rgb(65, 70, 60)"
+  },
+  "a.hero-site-name.hero-site-brand": {
+   "box": [
+    120,
+    36,
+    157,
+    26
+   ],
+   "display": "flex",
+   "width": "157.438px",
+   "gap": "8px",
+   "flexDirection": "row",
+   "alignItems": "center",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(65, 70, 60)",
+   "borderBottom": "0px none rgb(65, 70, 60)",
+   "borderTop": "0px none rgb(65, 70, 60)"
+  },
+  "img.hero-site-icon": {
+   "box": [
+    120,
+    39,
+    20,
+    20
+   ],
+   "width": "20px",
+   "maxWidth": "100%",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgba(0, 0, 0, 0)",
+   "borderBottom": "0px none rgba(0, 0, 0, 0)",
+   "borderTop": "0px none rgba(0, 0, 0, 0)",
+   "overflow": "clip"
+  },
+  "div.hero-corner-links": {
+   "box": [
+    120,
+    70,
+    65,
+    50
+   ],
+   "display": "flex",
+   "width": "65.4375px",
+   "gap": "8px",
+   "flexDirection": "column",
+   "alignItems": "flex-start",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(115, 115, 115)",
+   "borderBottom": "0px none rgb(115, 115, 115)",
+   "borderTop": "0px none rgb(115, 115, 115)"
+  },
+  "a": {
+   "box": [
+    120,
+    70,
+    45,
+    21
+   ],
+   "width": "45.2812px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(115, 115, 115)",
+   "borderBottom": "0px none rgb(115, 115, 115)",
+   "borderTop": "0px none rgb(115, 115, 115)"
+  },
+  "div#legal-content.legal-document": {
+   "box": [
+    180,
+    204,
+    1080,
+    3075
+   ],
+   "width": "1080px",
+   "margin": "44px 180px 112px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(65, 70, 60)",
+   "borderBottom": "0px none rgb(65, 70, 60)",
+   "borderTop": "0px none rgb(65, 70, 60)"
+  },
+  "header.legal-heading": {
+   "box": [
+    460,
+    204,
+    720,
+    270
+   ],
+   "width": "720px",
+   "maxWidth": "720px",
+   "margin": "0px 0px 72px 280px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(65, 70, 60)",
+   "borderBottom": "0px none rgb(65, 70, 60)",
+   "borderTop": "0px none rgb(65, 70, 60)"
+  },
+  "nav.legal-tabs": {
+   "box": [
+    460,
+    204,
+    164,
+    42
+   ],
+   "display": "flex",
+   "width": "164.359px",
+   "padding": "4px",
+   "gap": "6px",
+   "flexDirection": "row",
+   "alignItems": "center",
+   "background": "rgb(245, 246, 243) none repeat scroll 0% 0% / auto padding-box border-box",
+   "backgroundColor": "rgb(245, 246, 243)",
+   "border": "1px solid rgb(236, 238, 232)",
+   "borderBottom": "1px solid rgb(236, 238, 232)",
+   "borderTop": "1px solid rgb(236, 238, 232)",
+   "borderRadius": "24px"
+  },
+  "h1": {
+   "box": [
+    460,
+    278,
+    720,
+    69
+   ],
+   "width": "720px",
+   "margin": "32px 0px 24px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(54, 60, 48)",
+   "borderBottom": "0px none rgb(54, 60, 48)",
+   "borderTop": "0px none rgb(54, 60, 48)"
+  },
+  "p.legal-intro": {
+   "box": [
+    460,
+    371,
+    720,
+    59
+   ],
+   "width": "720px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(129, 136, 121)",
+   "borderBottom": "0px none rgb(129, 136, 121)",
+   "borderTop": "0px none rgb(129, 136, 121)"
+  },
+  "p.legal-date": {
+   "box": [
+    460,
+    455,
+    720,
+    19
+   ],
+   "display": "flex",
+   "width": "720px",
+   "margin": "24px 0px 0px",
+   "gap": "8px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(146, 152, 137)",
+   "borderBottom": "0px none rgb(146, 152, 137)",
+   "borderTop": "0px none rgb(146, 152, 137)"
+  },
+  "div.legal-columns": {
+   "box": [
+    180,
+    546,
+    1080,
+    2734
+   ],
+   "display": "grid",
+   "width": "1080px",
+   "gap": "60px",
+   "gridTemplateColumns": "220px 800px",
+   "flexDirection": "row",
+   "alignItems": "start",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(65, 70, 60)",
+   "borderBottom": "0px none rgb(65, 70, 60)",
+   "borderTop": "0px none rgb(65, 70, 60)"
+  },
+  "aside.legal-sidebar": {
+   "box": [
+    180,
+    546,
+    220,
+    312
+   ],
+   "position": "sticky",
+   "top": "32px",
+   "width": "220px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(65, 70, 60)",
+   "borderBottom": "0px none rgb(65, 70, 60)",
+   "borderTop": "0px none rgb(65, 70, 60)"
+  },
+  "nav.legal-contents": {
+   "box": [
+    180,
+    546,
+    220,
+    312
+   ],
+   "display": "flex",
+   "width": "220px",
+   "padding": "0px 16px 0px 0px",
+   "gap": "5px",
+   "flexDirection": "column",
+   "alignItems": "flex-start",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(65, 70, 60)",
+   "borderBottom": "0px none rgb(65, 70, 60)",
+   "borderTop": "0px none rgb(65, 70, 60)"
+  },
+  "article.legal-prose": {
+   "box": [
+    460,
+    546,
+    720,
+    2734
+   ],
+   "width": "720px",
+   "maxWidth": "720px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(65, 70, 60)",
+   "borderBottom": "0px none rgb(65, 70, 60)",
+   "borderTop": "0px none rgb(65, 70, 60)"
+  },
+  "section#local-and-cloud.legal-section": {
+   "box": [
+    460,
+    546,
+    720,
+    302
+   ],
+   "width": "720px",
+   "margin": "0px 0px 36px",
+   "padding": "0px 0px 36px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "borderBottom": "1px solid rgb(236, 238, 232)",
+   "borderTop": "0px none rgb(65, 70, 60)"
+  },
+  "h2#local-and-cloud-title": {
+   "box": [
+    460,
+    546,
+    720,
+    30
+   ],
+   "width": "720px",
+   "margin": "0px 0px 18px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(65, 74, 54)",
+   "borderBottom": "0px none rgb(65, 74, 54)",
+   "borderTop": "0px none rgb(65, 74, 54)"
+  },
+  "p": {
+   "box": [
+    460,
+    594,
+    720,
+    115
+   ],
+   "width": "720px",
+   "margin": "0px 0px 16px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(119, 127, 109)",
+   "borderBottom": "0px none rgb(119, 127, 109)",
+   "borderTop": "0px none rgb(119, 127, 109)"
+  },
+  "section#information.legal-section": {
+   "box": [
+    460,
+    884,
+    720,
+    273
+   ],
+   "width": "720px",
+   "margin": "0px 0px 36px",
+   "padding": "0px 0px 36px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "borderBottom": "1px solid rgb(236, 238, 232)",
+   "borderTop": "0px none rgb(65, 70, 60)"
+  },
+  "h2#information-title": {
+   "box": [
+    460,
+    884,
+    720,
+    30
+   ],
+   "width": "720px",
+   "margin": "0px 0px 18px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(65, 74, 54)",
+   "borderBottom": "0px none rgb(65, 74, 54)",
+   "borderTop": "0px none rgb(65, 74, 54)"
+  },
+  "section#permissions.legal-section": {
+   "box": [
+    460,
+    1194,
+    720,
+    405
+   ],
+   "width": "720px",
+   "margin": "0px 0px 36px",
+   "padding": "0px 0px 36px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "borderBottom": "1px solid rgb(236, 238, 232)",
+   "borderTop": "0px none rgb(65, 70, 60)"
+  },
+  "h2#permissions-title": {
+   "box": [
+    460,
+    1194,
+    720,
+    30
+   ],
+   "width": "720px",
+   "margin": "0px 0px 18px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(65, 74, 54)",
+   "borderBottom": "0px none rgb(65, 74, 54)",
+   "borderTop": "0px none rgb(65, 74, 54)"
+  },
+  "section#providers.legal-section": {
+   "box": [
+    460,
+    1634,
+    720,
+    302
+   ],
+   "width": "720px",
+   "margin": "0px 0px 36px",
+   "padding": "0px 0px 36px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "borderBottom": "1px solid rgb(236, 238, 232)",
+   "borderTop": "0px none rgb(65, 70, 60)"
+  },
+  "h2#providers-title": {
+   "box": [
+    460,
+    1634,
+    720,
+    30
+   ],
+   "width": "720px",
+   "margin": "0px 0px 18px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(65, 74, 54)",
+   "borderBottom": "0px none rgb(65, 74, 54)",
+   "borderTop": "0px none rgb(65, 74, 54)"
+  },
+  "section#security.legal-section": {
+   "box": [
+    460,
+    1973,
+    720,
+    245
+   ],
+   "width": "720px",
+   "margin": "0px 0px 36px",
+   "padding": "0px 0px 36px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "borderBottom": "1px solid rgb(236, 238, 232)",
+   "borderTop": "0px none rgb(65, 70, 60)"
+  },
+  "h2#security-title": {
+   "box": [
+    460,
+    1973,
+    720,
+    30
+   ],
+   "width": "720px",
+   "margin": "0px 0px 18px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(65, 74, 54)",
+   "borderBottom": "0px none rgb(65, 74, 54)",
+   "borderTop": "0px none rgb(65, 74, 54)"
+  },
+  "section#retention.legal-section": {
+   "box": [
+    460,
+    2253,
+    720,
+    273
+   ],
+   "width": "720px",
+   "margin": "0px 0px 36px",
+   "padding": "0px 0px 36px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "borderBottom": "1px solid rgb(236, 238, 232)",
+   "borderTop": "0px none rgb(65, 70, 60)"
+  },
+  "h2#retention-title": {
+   "box": [
+    460,
+    2253,
+    720,
+    30
+   ],
+   "width": "720px",
+   "margin": "0px 0px 18px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(65, 74, 54)",
+   "borderBottom": "0px none rgb(65, 74, 54)",
+   "borderTop": "0px none rgb(65, 74, 54)"
+  },
+  "section#website.legal-section": {
+   "box": [
+    460,
+    2563,
+    720,
+    417
+   ],
+   "width": "720px",
+   "margin": "0px 0px 36px",
+   "padding": "0px 0px 36px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "borderBottom": "1px solid rgb(236, 238, 232)",
+   "borderTop": "0px none rgb(65, 70, 60)"
+  },
+  "h2#website-title": {
+   "box": [
+    460,
+    2563,
+    720,
+    30
+   ],
+   "width": "720px",
+   "margin": "0px 0px 18px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(65, 74, 54)",
+   "borderBottom": "0px none rgb(65, 74, 54)",
+   "borderTop": "0px none rgb(65, 74, 54)"
+  },
+  "section#contact.legal-section": {
+   "box": [
+    460,
+    3016,
+    720,
+    216
+   ],
+   "width": "720px",
+   "padding": "0px 0px 36px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "borderBottom": "1px solid rgb(236, 238, 232)",
+   "borderTop": "0px none rgb(65, 70, 60)"
+  },
+  "h2#contact-title": {
+   "box": [
+    460,
+    3016,
+    720,
+    30
+   ],
+   "width": "720px",
+   "margin": "0px 0px 18px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(65, 74, 54)",
+   "borderBottom": "0px none rgb(65, 74, 54)",
+   "borderTop": "0px none rgb(65, 74, 54)"
+  },
+  "footer.legal-document-footer": {
+   "box": [
+    460,
+    3232,
+    720,
+    48
+   ],
+   "display": "flex",
+   "width": "720px",
+   "padding": "28px 0px 0px",
+   "gap": "20px",
+   "flexDirection": "row",
+   "justifyContent": "space-between",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(65, 70, 60)",
+   "borderBottom": "0px none rgb(65, 70, 60)",
+   "borderTop": "0px none rgb(65, 70, 60)"
+  },
+  "footer.closing-footer": {
+   "box": [
+    0,
+    3391,
+    1440,
+    905
+   ],
+   "position": "relative",
+   "width": "1440px",
+   "padding": "0px 93.5938px 48px",
+   "flexDirection": "row",
+   "background": "rgb(230, 230, 230) none repeat scroll 0% 0% / auto padding-box border-box",
+   "backgroundColor": "rgb(230, 230, 230)",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)",
+   "overflow": "hidden"
+  },
+  "div.closing-sky": {
+   "box": [
+    0,
+    3391,
+    1440,
+    905
+   ],
+   "position": "absolute",
+   "width": "1440px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)",
+   "overflow": "hidden"
+  },
+  "div.closing-bird-track.closing-bird-track-1": {
+   "box": [
+    0,
+    3407,
+    1440,
+    100
+   ],
+   "position": "absolute",
+   "top": "16px",
+   "bottom": "789.281px",
+   "width": "1440px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)"
+  },
+  "div.closing-bird": {
+   "box": [
+    1201,
+    3407,
+    60,
+    41
+   ],
+   "position": "absolute",
+   "bottom": "59.1875px",
+   "width": "60.4688px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)",
+   "animation": "23s linear -4s infinite closing-bird-cross"
+  },
+  "div.closing-bird-drift": {
+   "box": [
+    1201,
+    3407,
+    62,
+    43
+   ],
+   "width": "60.4688px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)",
+   "transform": "matrix(0.999008, -0.0445398, 0.0445398, 0.999008, 0, 0.745354)",
+   "animation": "4.7s ease-in-out infinite closing-bird-drift"
+  },
+  "div.closing-bird-shape": {
+   "box": [
+    1201,
+    3407,
+    62,
+    43
+   ],
+   "width": "60.4688px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) url(\"https://www.merlin.computer/footer-bird-ascii.svg\") no-repeat scroll 50% 50% / contain padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)"
+  },
+  "div.closing-bird-track.closing-bird-track-2": {
+   "box": [
+    0,
+    3421,
+    1440,
+    100
+   ],
+   "position": "absolute",
+   "top": "30px",
+   "bottom": "775.281px",
+   "width": "1440px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)"
+  },
+  "div.closing-bird-track.closing-bird-track-3": {
+   "box": [
+    0,
+    3437,
+    1440,
+    100
+   ],
+   "position": "absolute",
+   "top": "46px",
+   "bottom": "759.281px",
+   "width": "1440px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)"
+  },
+  "div.closing-main": {
+   "box": [
+    94,
+    3391,
+    1253,
+    770
+   ],
+   "display": "grid",
+   "position": "relative",
+   "width": "1252.81px",
+   "padding": "129.6px 0px 64px",
+   "gap": "57.6px",
+   "gridTemplateColumns": "537.844px 657.375px",
+   "flexDirection": "row",
+   "alignItems": "center",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)"
+  },
+  "div.closing-invitation": {
+   "box": [
+    94,
+    3627,
+    538,
+    365
+   ],
+   "display": "flex",
+   "position": "relative",
+   "width": "537.844px",
+   "flexDirection": "column",
+   "alignItems": "flex-start",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)"
+  },
+  "h2": {
+   "box": [
+    94,
+    3627,
+    538,
+    186
+   ],
+   "width": "537.844px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)"
+  },
+  "time": {
+   "box": [
+    405,
+    3748,
+    166,
+    61
+   ],
+   "width": "166.188px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)"
+  },
+  "a.download-button.download-button-primary": {
+   "box": [
+    94,
+    3923,
+    288,
+    68
+   ],
+   "display": "flex",
+   "position": "relative",
+   "width": "288.109px",
+   "margin": "32px 0px 0px",
+   "padding": "0px 0px 0px 26px",
+   "gap": "26px",
+   "flexDirection": "row",
+   "justifyContent": "space-between",
+   "alignItems": "center",
+   "background": "rgb(0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "backgroundColor": "rgb(0, 0, 0)",
+   "border": "6px solid rgb(0, 0, 0)",
+   "borderBottom": "6px solid rgb(0, 0, 0)",
+   "borderTop": "6px solid rgb(0, 0, 0)",
+   "borderRadius": "22px",
+   "transition": "color 0.36s",
+   "overflow": "hidden"
+  },
+  "div.closing-beach": {
+   "box": [
+    689,
+    3521,
+    744,
+    576
+   ],
+   "width": "743.766px",
+   "margin": "0px -86.4px 0px 0px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) url(\"https://www.merlin.computer/footer-beach-ascii.svg\") no-repeat scroll 100% 50% / contain padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)",
+   "transform": "matrix(-1, 0, 0, 1, 0, 0)"
+  },
+  "div.closing-footer-links": {
+   "box": [
+    94,
+    4161,
+    1253,
+    88
+   ],
+   "display": "flex",
+   "position": "relative",
+   "width": "1252.81px",
+   "padding": "34px 0px 0px",
+   "gap": "44px",
+   "flexDirection": "row",
+   "alignItems": "center",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "1px solid rgb(206, 206, 206)"
+  },
+  "div.closing-brand": {
+   "box": [
+    94,
+    4196,
+    165,
+    53
+   ],
+   "display": "flex",
+   "width": "165.297px",
+   "gap": "8px",
+   "flexDirection": "column",
+   "alignItems": "flex-start",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)"
+  },
+  "a.closing-wordmark.hero-site-name": {
+   "box": [
+    94,
+    4196,
+    129,
+    26
+   ],
+   "width": "129.438px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)"
+  },
+  "nav": {
+   "box": [
+    891,
+    4206,
+    456,
+    32
+   ],
+   "display": "flex",
+   "width": "455.875px",
+   "margin": "0px 0px 0px 587.641px",
+   "gap": "31px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)"
+  }
+ },
+ "reqs": [
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/357da7cf10d68108.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "782"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/e261c04d0a2d5dfe.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "1468"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/f46c55d95248097e.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "291"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/ea3e27f6a69b5df4.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "4410"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/a5f02e9d0c6db7af.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "1167"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/437c25afc566ca52.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "29685"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/e2e0ba86a6b0d559.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "12805"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/webpack-c3725a4e89504d85.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "2561"
+  },
+  {
+   "t": "font",
+   "url": "https://www.merlin.computer/fonts/open-runde-400.woff2",
+   "status": 200,
+   "type": "font/woff2",
+   "len": "154604"
+  },
+  {
+   "t": "font",
+   "url": "https://www.merlin.computer/fonts/Exposure.woff2",
+   "status": 200,
+   "type": "font/woff2",
+   "len": "68544"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/b468fba8-9284181649d81112.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "99079"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/main-app-5fafbe116c67af45.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "1428"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/1255-c5779d570a135656.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "46095"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/c16f53c3-a6af64d152aba437.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "5879"
+  },
+  {
+   "t": "font",
+   "url": "https://www.merlin.computer/fonts/open-runde-500.woff2",
+   "status": 200,
+   "type": "font/woff2",
+   "len": "165396"
+  },
+  {
+   "t": "font",
+   "url": "https://www.merlin.computer/fonts/open-runde-600.woff2",
+   "status": 200,
+   "type": "font/woff2",
+   "len": "162732"
+  },
+  {
+   "t": "image",
+   "url": "https://www.merlin.computer/_next/image?url=%2Fmerlin-dock.png&w=32&q=75",
+   "status": 200,
+   "type": "image/webp",
+   "len": "528"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/4bd1b696-182b6b13bdad92e3.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "55638"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/8334-ab528d8c68fc3699.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "9855"
+  },
+  {
+   "t": "script",
+   "url": "https://www.googletagmanager.com/gtag/js?id=AW-16734359888",
+   "status": 200,
+   "type": "application/javascript; charset=UTF-8",
+   "len": "163530"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/2619-04bc32f026a0d946.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "3542"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/ee560e2c-a77d8334145d6c63.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "3106"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/1356-b1f982685cfcaf9f.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "5519"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/app/layout-30d9aed10a424b68.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "3027"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/6407-3385f66c9f91b609.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "45051"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/7811-5a4570d8c66cf448.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "126417"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/8012-08fd5b4b46f5cf15.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "2783"
+  },
+  {
+   "t": "image",
+   "url": "https://www.merlin.computer/footer-bird-ascii.svg",
+   "status": 200,
+   "type": "image/svg+xml",
+   "len": "2162"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/app/privacy/page-7b1943cd942f78a9.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "2836"
+  },
+  {
+   "t": "image",
+   "url": "https://www.merlin.computer/footer-bird-ascii-fast.svg",
+   "status": 200,
+   "type": "image/svg+xml",
+   "len": "2167"
+  },
+  {
+   "t": "image",
+   "url": "https://www.merlin.computer/footer-beach-ascii.svg",
+   "status": 200,
+   "type": "image/svg+xml",
+   "len": "16011"
+  },
+  {
+   "t": "script",
+   "url": "https://us-assets.i.posthog.com/static/1.434.17/dead-clicks-autocapture.js",
+   "status": 200,
+   "type": "application/javascript",
+   "len": "8962"
+  },
+  {
+   "t": "script",
+   "url": "https://us-assets.i.posthog.com/array/phc_pDvGT6uiKcgEbuBNQamHEp9Y3XBcRnYatdNgV3xxG9Dr/config.js",
+   "status": 200,
+   "type": "application/javascript",
+   "len": "732"
+  },
+  {
+   "t": "script",
+   "url": "https://us-assets.i.posthog.com/static/1.434.17/web-vitals-with-attribution.js",
+   "status": 200,
+   "type": "application/javascript",
+   "len": "7236"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_vercel/insights/script.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "2084"
+  },
+  {
+   "t": "image",
+   "url": "https://www.merlin.computer/footer-bird-ascii-slow.svg",
+   "status": 200,
+   "type": "image/svg+xml",
+   "len": "2167"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/9c4e2130-97935094d747a3b7.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "977"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/2abce9a6dc03269b.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "1456"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/4a4d88752d2165c6.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "7024"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/922109019b2259fa.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "447"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/f7c0a2656765fcca.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "1392"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/6385c293c5638848.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "12965"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/401561448b81938e.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "5890"
+  },
+  {
+   "t": "script",
+   "url": "https://www.googletagmanager.com/gtag/js?id=AW-17100099039&cx=c&gtm=4e6a51",
+   "status": 200,
+   "type": "application/javascript; charset=UTF-8",
+   "len": "154009"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/0a5b07db1896be06.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "17389"
+  },
+  {
+   "t": "script",
+   "url": "https://us-assets.i.posthog.com/static/1.434.17/surveys.js",
+   "status": 200,
+   "type": "application/javascript",
+   "len": "35490"
+  },
+  {
+   "t": "script",
+   "url": "https://us-assets.i.posthog.com/static/1.434.17/posthog-recorder.js",
+   "status": 200,
+   "type": "application/javascript",
+   "len": "69351"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/ae725ea36c48b431.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "1402"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/30a37ab2-505db82616f971e7.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "2265"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/app/pricing/page-8299730973590a41.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "3813"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/fc1769f629488e8f.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "12803"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/6950-9e48fb1cb1316049.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "4116"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/c15bf2b0-bfa95b308e62c6cc.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "20986"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/6974-1b58e22f3222f533.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "31206"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/app/page-b2432c613c7c7eec.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "45986"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/app/manifesto/page-3b4268b2ba0b8b84.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "2086"
+  },
+  {
+   "t": "font",
+   "url": "https://www.merlin.computer/_next/static/media/3c6a8fcb177aeedf-s.p.ttf",
+   "status": 200,
+   "type": "font/ttf",
+   "len": "215407"
+  },
+  {
+   "t": "script",
+   "url": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/17100099039/?random=1791371621899&cv=11&fst=1791371621899&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6a51v9220548547za200zb9210403190zd9210403190xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938468~117776795~118897920~118897930~120213116~120385422~120469145~120469153~121046263~121046271&u_w=1440&u_h=900&url=https%3A%2F%2Fwww.merlin.computer%2Fprivacy&rcb=15&frm=0&tiba=Privacy%20and%20control%20%E2%80%94%20Merlin&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1028725758.1791371622&uaa=arm&uab=64&uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12&uamb=0&uam=&uap=macOS&uapv=27.0.1&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=4",
+   "status": 200,
+   "type": "text/javascript; charset=UTF-8"
+  },
+  {
+   "t": "image",
+   "url": "https://www.google.com/pagead/1p-user-list/17100099039/?random=1791371621899&cv=11&fst=1791370800000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6a51v9220548547za200zb9210403190zd9210403190xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938468~117776795~118897920~118897930~120213116~120385422~120469145~120469153~121046263~121046271&u_w=1440&u_h=900&url=https%3A%2F%2Fwww.merlin.computer%2Fprivacy&rcb=15&frm=0&tiba=Privacy%20and%20control%20%E2%80%94%20Merlin&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1028725758.1791371622&uaa=arm&uab=64&uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12&uamb=0&uam=&uap=macOS&uapv=27.0.1&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQS1AEAQM4h3L8oJ0GOI9h5PxSNSYLYlHCoop-INIkjxjGnH0ICISmw_GKTQWXapE36q7EpUSF9_1dawDbnGCNfkfPzivVhoaLwORyOsQtg8DOzh_t3jWM2vhODXlD3dUxpnvhAk9a8tr1vmgPO6mg0ZO9GtdMlrF9eoX7e49q6P4urD4_54WhejtLM8Iwy7GPzxygcUBE5BAnW9xFCw3q60xc34vwTWA_4vwsq5mHmLlYwwKo9CPbl3-wZpfY2M9c8VhWxk7xbNSAfJQn7KwvqBSvB7dqnZA&random=3685779039&rmt_tld=0&ipr=y",
+   "status": 200,
+   "type": "image/gif",
+   "len": "42"
+  },
+  {
+   "t": "image",
+   "url": "https://www.google.co.in/pagead/1p-user-list/17100099039/?random=1791371621899&cv=11&fst=1791370800000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6a51v9220548547za200zb9210403190zd9210403190xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938466~115938468~117776795~118897920~118897930~120213116~120385422~120469145~120469153~121046263~121046271&u_w=1440&u_h=900&url=https%3A%2F%2Fwww.merlin.computer%2Fprivacy&rcb=15&frm=0&tiba=Privacy%20and%20control%20%E2%80%94%20Merlin&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=1028725758.1791371622&uaa=arm&uab=64&uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12&uamb=0&uam=&uap=macOS&uapv=27.0.1&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQS1AEAQM4h3L8oJ0GOI9h5PxSNSYLYlHCoop-INIkjxjGnH0ICISmw_GKTQWXapE36q7EpUSF9_1dawDbnGCNfkfPzivVhoaLwORyOsQtg8DOzh_t3jWM2vhODXlD3dUxpnvhAk9a8tr1vmgPO6mg0ZO9GtdMlrF9eoX7e49q6P4urD4_54WhejtLM8Iwy7GPzxygcUBE5BAnW9xFCw3q60xc34vwTWA_4vwsq5mHmLlYwwKo9CPbl3-wZpfY2M9c8VhWxk7xbNSAfJQn7KwvqBSvB7dqnZA&random=3685779039&rmt_tld=1&ipr=y",
+   "status": 200,
+   "type": "image/gif",
+   "len": "42"
+  }
+ ],
+ "imgs": [
+  {
+   "src": "https://www.merlin.computer/_next/image?url=%2Fmerlin-dock.png&w=32&q=75",
+   "alt": "",
+   "nat": [
+    20,
+    20
+   ],
+   "box": [
+    120,
+    39,
+    20,
+    20
+   ],
+   "cls": "hero-site-icon",
+   "loading": "lazy",
+   "objectFit": "contain",
+   "radius": "0px"
+  }
+ ]
+}

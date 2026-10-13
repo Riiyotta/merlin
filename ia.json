@@ -1,0 +1,381 @@
+{
+  "$comment": "Derived from the clone's source (src/App.jsx route table, src/pages/*, src/components/*) and CLONE_SPEC*.md. Routing behaviours that are not routes: \"/download?start=1\" is the same page as \"/download\" (it starts the download, then strips the query); an unknown top-level path falls back to the home page; an unknown \"/blog/<slug>\" redirects to \"/blog\". The 20 blog posts are 19 sitemap posts plus one featured post that is not in the live sitemap and has no cover image. Long-form text in manifesto, legal, blog bodies and pricing FAQ answers is placeholder in the clone.",
+  "meta": {
+    "source": "Local clone of https://www.merlin.computer (src/ in this project)",
+    "status": "measured-from-clone-source",
+    "productionApproved": false,
+    "totalRoutes": 27,
+    "totalTemplates": 7
+  },
+  "categories": {
+    "SHELL": "Page chrome shared across routes: skip link, navigation, footer, floating nav, install header.",
+    "HERO": "Page-opening header block.",
+    "PROOF": "Social proof: customer or employer logos.",
+    "PRODUCT": "Product explanation and capability modules on the home page.",
+    "COMMERCE": "Pricing plans and what they include.",
+    "SUPPORT": "Questions and answers.",
+    "ONBOARDING": "Getting the app installed.",
+    "CONTENT": "Editorial, article and legal body content."
+  },
+  "sections": {
+    "shell.skip-link": {
+      "category": "SHELL",
+      "description": "Visually hidden link that becomes visible on keyboard focus and jumps past the navigation to the page's main content; its label and target are page-specific.",
+      "scope": "Every route except the install page.",
+      "implementedBy": "Inline a.skip-link in each page file (Home.jsx, Pricing.jsx, Manifesto.jsx, blog/BlogLayout.jsx, legal/LegalPage.jsx)"
+    },
+    "shell.corner-nav": {
+      "category": "SHELL",
+      "description": "Top-left navigation with the brand link and page links and a spring-animated indicator dot that follows hover and focus and rests on the current page. Pages where no link matches show no dot until the first hover. On the home page it sits inside the hero section.",
+      "scope": "Every route except the install page.",
+      "implementedBy": "src/components/hero/HeroNav.jsx"
+    },
+    "shell.closing-footer": {
+      "category": "SHELL",
+      "description": "Closing footer: live clock showing the current time plus three minutes, the Download button, drifting ASCII birds over an ASCII beach, and a single row of brand, copyright and page links (Pricing, Manifesto, Blog, Privacy, Terms, Contact).",
+      "scope": "Every route except the install page.",
+      "implementedBy": "src/components/Footer.jsx (clock in src/components/footer/FooterClock.jsx)"
+    },
+    "shell.floating-nav": {
+      "category": "SHELL",
+      "description": "Fixed pill navigation that slides up after 100px of scroll and hides near the page bottom and while the dark privacy section is on screen.",
+      "scope": "Home page only.",
+      "implementedBy": "src/components/FloatingNav.jsx"
+    },
+    "shell.install-header": {
+      "category": "SHELL",
+      "description": "Brand-only header of the install page: app icon and name linking home, with no navigation links.",
+      "scope": "Install page only.",
+      "implementedBy": "src/pages/Download.jsx"
+    },
+    "hero.home-headline": {
+      "category": "HERO",
+      "description": "Two-line headline with a one-time colour sweep on load, a one-paragraph description and the primary Download button.",
+      "scope": "Home page only.",
+      "implementedBy": "src/components/Hero.jsx (section.story-hero)"
+    },
+    "hero.landscape-notifications": {
+      "category": "HERO",
+      "description": "Full-width landscape photo with a stack of animated notification cards that open into detail panels (meeting brief, launch deck, email draft), with a scroll parallax on the photo.",
+      "scope": "Home page only.",
+      "implementedBy": "src/components/Hero.jsx (section.hero-landscape) with hero/HeroNotifications.jsx and hero/NotificationDetail.jsx"
+    },
+    "hero.pricing-headline": {
+      "category": "HERO",
+      "description": "Two-line pricing headline and subtitle in the same hero shell as the home page, with no download button and no load animation.",
+      "scope": "Pricing page only.",
+      "implementedBy": "src/pages/Pricing.jsx"
+    },
+    "proof.company-logos": {
+      "category": "PROOF",
+      "description": "Single row of employer logos under a \"Used by professionals at\" label.",
+      "scope": "Home page only.",
+      "implementedBy": "src/components/Companies.jsx"
+    },
+    "product.context-routines": {
+      "category": "PRODUCT",
+      "description": "Heading with inline app tiles, a copy column, a Gmail preview card and a three-column routine walkthrough whose timeline plays step by step while in view.",
+      "scope": "Home page only.",
+      "implementedBy": "src/components/Routines.jsx (routines/RoutineTimeline.jsx)"
+    },
+    "product.browser-tasks": {
+      "category": "PRODUCT",
+      "description": "Pinned scroll stage where four mock-site cards (flight booking, food delivery, grocery shopping, recruiting) flip in 3D with snapping and an elastic landing; each card is an interactive mock site.",
+      "scope": "Home page only.",
+      "implementedBy": "src/components/Browser.jsx (browser/MockSites.jsx)"
+    },
+    "product.meetings-projects": {
+      "category": "PRODUCT",
+      "description": "Two panels under one heading: a meetings panel with a transcript/notes switch, action-item toggles and an audio player, and a projects panel of four file cards.",
+      "scope": "Home page only.",
+      "implementedBy": "src/components/Meetings.jsx (meetings/MeetingLandscape.jsx)"
+    },
+    "product.companion-demos": {
+      "category": "PRODUCT",
+      "description": "Headline that retypes on \"Rephrase word\" followed by auto-advancing Photoshop, Slack and Chrome demos with a spring tab indicator.",
+      "scope": "Home page only.",
+      "implementedBy": "src/components/Companion.jsx (companion/*)"
+    },
+    "product.privacy-trust": {
+      "category": "PRODUCT",
+      "description": "Black full-bleed section with a headline that decodes from code characters and four trust cards whose illustrations animate on hover.",
+      "scope": "Home page only.",
+      "implementedBy": "src/components/Privacy.jsx (privacy/DecodingHeadline.jsx)"
+    },
+    "commerce.plan-cards": {
+      "category": "COMMERCE",
+      "description": "Three monthly plan cards (name, price, credit allowance, feature list), each with its own download button.",
+      "scope": "Pricing page only.",
+      "implementedBy": "src/components/pricing/PricingPlans.jsx"
+    },
+    "commerce.included-features": {
+      "category": "COMMERCE",
+      "description": "Six-item grid of the places Merlin works, each with a section icon, title and short description.",
+      "scope": "Pricing page only.",
+      "implementedBy": "src/components/pricing/PricingIncluded.jsx"
+    },
+    "support.home-faq": {
+      "category": "SUPPORT",
+      "description": "Five-item accordion on a white band plus an ask-Merlin input that shows a loading state, then a reply (a local mock in the clone).",
+      "scope": "Home page only.",
+      "implementedBy": "src/components/Faq.jsx (faq/AskMerlinForm.jsx)"
+    },
+    "support.pricing-faq": {
+      "category": "SUPPORT",
+      "description": "Six-item accordion built from native details elements with a rotating plus icon, followed by the shared ask-Merlin input.",
+      "scope": "Pricing page only.",
+      "implementedBy": "src/components/pricing/PricingFaq.jsx (faq/AskMerlinForm.jsx)"
+    },
+    "onboarding.install-intro": {
+      "category": "ONBOARDING",
+      "description": "Install page introduction: heading, description, the \"download again\" action and an alternate-chip link, driven by Mac and chip detection that starts the download from a hidden frame.",
+      "scope": "Install page only.",
+      "implementedBy": "src/components/download/InstallIntro.jsx"
+    },
+    "onboarding.install-steps": {
+      "category": "ONBOARDING",
+      "description": "Numbered list of three install steps, each with a screenshot.",
+      "scope": "Install page only.",
+      "implementedBy": "src/pages/Download.jsx"
+    },
+    "content.manifesto-opening": {
+      "category": "CONTENT",
+      "description": "Poster opening: time-of-day title copy with two large handwriting overlays behind it.",
+      "scope": "Manifesto page only.",
+      "implementedBy": "src/pages/Manifesto.jsx (manifesto/TimeOfDayCopy.jsx)"
+    },
+    "content.manifesto-understanding": {
+      "category": "CONTENT",
+      "description": "Full-width photo followed by the understanding passage with inline app mentions and a handwritten note.",
+      "scope": "Manifesto page only.",
+      "implementedBy": "src/pages/Manifesto.jsx (manifesto/Mention.jsx)"
+    },
+    "content.manifesto-action": {
+      "category": "CONTENT",
+      "description": "Full-width photo followed by the action passage with a time-of-day paragraph and a handwritten note.",
+      "scope": "Manifesto page only.",
+      "implementedBy": "src/pages/Manifesto.jsx"
+    },
+    "content.manifesto-ending": {
+      "category": "CONTENT",
+      "description": "Full-width photo followed by the closing heading, a time-of-day finish paragraph and the signature whose circle draws itself once at 50% in view.",
+      "scope": "Manifesto page only.",
+      "implementedBy": "src/pages/Manifesto.jsx (manifesto/Signature.jsx)"
+    },
+    "content.blog-intro": {
+      "category": "CONTENT",
+      "description": "Centred serif intro heading and a two-line standfirst of the blog index.",
+      "scope": "Blog index only.",
+      "implementedBy": "src/pages/Blog.jsx"
+    },
+    "content.blog-featured-story": {
+      "category": "CONTENT",
+      "description": "Two-column featured card with a 4:3 image, a \"Latest story\" pill, title and read link; the image zooms slightly on hover.",
+      "scope": "Blog index only.",
+      "implementedBy": "src/pages/Blog.jsx"
+    },
+    "content.blog-story-list": {
+      "category": "CONTENT",
+      "description": "\"More from Merlin\" list of 19 rows (category, title, arrow) separated by hairlines.",
+      "scope": "Blog index only.",
+      "implementedBy": "src/pages/Blog.jsx"
+    },
+    "content.blog-handwritten-aside": {
+      "category": "CONTENT",
+      "description": "Short rotated handwriting line that links to the manifesto.",
+      "scope": "Blog index only.",
+      "implementedBy": "src/pages/Blog.jsx"
+    },
+    "content.article-header": {
+      "category": "CONTENT",
+      "description": "Back link to all stories plus the header block: eyebrow, serif title, author row with date, and an optional cover image (absent on the featured post).",
+      "scope": "Every blog post.",
+      "implementedBy": "src/pages/BlogPost.jsx"
+    },
+    "content.article-body": {
+      "category": "CONTENT",
+      "description": "Reading column of paragraphs, headings, lists and blockquotes rendered from a structure outline (placeholder text in the clone).",
+      "scope": "Every blog post.",
+      "implementedBy": "src/components/blog/Prose.jsx"
+    },
+    "content.article-end": {
+      "category": "CONTENT",
+      "description": "Article footer with a thank-you line and a \"Back to all stories\" link.",
+      "scope": "Every blog post.",
+      "implementedBy": "src/pages/BlogPost.jsx"
+    },
+    "content.legal-heading": {
+      "category": "CONTENT",
+      "description": "Tab pill switching between Privacy and Terms, large serif title, optional intro paragraph and a last-updated line.",
+      "scope": "Privacy and terms pages.",
+      "implementedBy": "src/components/legal/LegalPage.jsx"
+    },
+    "content.legal-contents": {
+      "category": "CONTENT",
+      "description": "Sticky \"On this page\" table of contents with smooth-scroll links; becomes a horizontal scroll row below 640px.",
+      "scope": "Privacy and terms pages.",
+      "implementedBy": "src/components/legal/LegalPage.jsx"
+    },
+    "content.legal-body": {
+      "category": "CONTENT",
+      "description": "Numbered document sections with hairline rules and a document footer (contact link, back to top); the targeted section heading turns teal.",
+      "scope": "Privacy and terms pages.",
+      "implementedBy": "src/components/legal/LegalPage.jsx"
+    }
+  },
+  "templates": [
+    {
+      "id": "template.home",
+      "name": "Home",
+      "routeCount": 1,
+      "routes": [
+        "/"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.corner-nav",
+        "hero.home-headline",
+        "hero.landscape-notifications",
+        "proof.company-logos",
+        "product.context-routines",
+        "product.browser-tasks",
+        "product.meetings-projects",
+        "product.companion-demos",
+        "product.privacy-trust",
+        "support.home-faq",
+        "shell.closing-footer",
+        "shell.floating-nav"
+      ]
+    },
+    {
+      "id": "template.pricing",
+      "name": "Pricing",
+      "routeCount": 1,
+      "routes": [
+        "/pricing"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.corner-nav",
+        "hero.pricing-headline",
+        "commerce.plan-cards",
+        "commerce.included-features",
+        "support.pricing-faq",
+        "shell.closing-footer"
+      ]
+    },
+    {
+      "id": "template.install",
+      "name": "Install",
+      "routeCount": 1,
+      "routes": [
+        "/download"
+      ],
+      "routePattern": null,
+      "chrome": "minimal",
+      "sections": [
+        "shell.install-header",
+        "onboarding.install-intro",
+        "onboarding.install-steps"
+      ]
+    },
+    {
+      "id": "template.manifesto",
+      "name": "Manifesto",
+      "routeCount": 1,
+      "routes": [
+        "/manifesto"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.corner-nav",
+        "content.manifesto-opening",
+        "content.manifesto-understanding",
+        "content.manifesto-action",
+        "content.manifesto-ending",
+        "shell.closing-footer"
+      ]
+    },
+    {
+      "id": "template.blog-index",
+      "name": "Blog index",
+      "routeCount": 1,
+      "routes": [
+        "/blog"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.corner-nav",
+        "content.blog-intro",
+        "content.blog-featured-story",
+        "content.blog-story-list",
+        "content.blog-handwritten-aside",
+        "shell.closing-footer"
+      ]
+    },
+    {
+      "id": "template.blog-post",
+      "name": "Blog post",
+      "routeCount": 20,
+      "routes": [
+        "/blog/the-future-of-work-is-autonomous-why-your-next-hire-might-be-an-ai-chief-of-staff",
+        "/blog/how-to-share-a-google-calendar-on-iphone-in-2025",
+        "/blog/how-to-use-google-calendar-the-complete-2025-guide",
+        "/blog/how-to-schedule-slack-messages-with-ease",
+        "/blog/microsoft-teams-vs-slack-2025-pros-cons-and-what-s-best",
+        "/blog/how-to-email-a-professor-updated-guide-with-templates-and-real-world-tips",
+        "/blog/how-to-set-an-out-of-office-in-microsoft-teams",
+        "/blog/how-to-write-a-formal-email",
+        "/blog/how-to-create-a-professional-email-address-2025-guide",
+        "/blog/how-to-end-an-email-ultimate-guide-to-professional-and-friendly-sign-offs-in-2025",
+        "/blog/what-does-cc-and-bcc-mean-in-email",
+        "/blog/best-free-transcription-software-tools-in-2025-top-speech-to-text-picks",
+        "/blog/summary-of-best-100-chatgpt-4-prompts",
+        "/blog/ai-note-taking-tools-in-2025-top-picks-trends-and-tips",
+        "/blog/sam-altman-the-startup-prodigy-steering-openai-s-quest-for-agi-and-ai-leadership",
+        "/blog/mastering-gmail-out-of-office-replies-in-2025",
+        "/blog/throwaway-email-addresses-in-2025-the-complete-guide-to-disposable-emails-for-privacy-and-spam-control",
+        "/blog/why-is-my-email-queued-and-how-to-fix-it",
+        "/blog/how-to-write-a-resignation-email-in-2025-the-ultimate-guide-for-professionals",
+        "/blog/how-to-unsend-an-email-updated-2025-guide"
+      ],
+      "routePattern": "/blog/{slug}",
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.corner-nav",
+        "content.article-header",
+        "content.article-body",
+        "content.article-end",
+        "shell.closing-footer"
+      ]
+    },
+    {
+      "id": "template.legal",
+      "name": "Legal document",
+      "routeCount": 2,
+      "routes": [
+        "/privacy",
+        "/terms"
+      ],
+      "routePattern": null,
+      "chrome": "full",
+      "sections": [
+        "shell.skip-link",
+        "shell.corner-nav",
+        "content.legal-heading",
+        "content.legal-contents",
+        "content.legal-body",
+        "shell.closing-footer"
+      ]
+    }
+  ]
+}

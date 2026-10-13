@@ -1,0 +1,1624 @@
+{
+ "title": "How to Write a Formal Email — Merlin",
+ "url": "https://www.merlin.computer/blog/how-to-write-a-formal-email",
+ "h": 29760,
+ "css": [
+  "357da7cf10d68108.css",
+  "437c25afc566ca52.css",
+  "a5f02e9d0c6db7af.css",
+  "f46c55d95248097e.css",
+  "e2e0ba86a6b0d559.css",
+  "ea3e27f6a69b5df4.css"
+ ],
+ "js": [
+  "b468fba8-9284181649d81112.js",
+  "4bd1b696-182b6b13bdad92e3.js",
+  "1255-c5779d570a135656.js",
+  "main-app-5fafbe116c67af45.js",
+  "c16f53c3-a6af64d152aba437.js",
+  "polyfills-42372ed130431b0a.js",
+  "webpack-c3725a4e89504d85.js"
+ ],
+ "meta": [
+  "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+  "<meta name=\"next-size-adjust\" content=\"\">",
+  "<meta name=\"description\" content=\"How to Write a Formal Email\">",
+  "<meta property=\"og:title\" content=\"How to Write a Formal Email\">",
+  "<meta property=\"og:description\" content=\"How to Write a Formal Email\">",
+  "<meta property=\"og:type\" content=\"article\">",
+  "<meta property=\"article:published_time\" content=\"2025-05-13T23:08:22.394Z\">",
+  "<meta property=\"article:author\" content=\"Adeola Adeoti\">",
+  "<meta name=\"twitter:card\" content=\"summary_large_image\">",
+  "<meta name=\"twitter:site\" content=\"@merlincomputer\">",
+  "<meta name=\"twitter:title\" content=\"How to Write a Formal Email\">",
+  "<meta name=\"twitter:description\" content=\"How to Write a Formal Email\">",
+  "<link rel=\"icon\" href=\"/merlin-app-icon.svg\">"
+ ],
+ "bodyBg": "rgb(255, 255, 255)",
+ "htmlFs": "8.16px",
+ "tree": "body [0,0,390,29760]\n  div [0,0,0,0]\n  main#top.merlin-story.site-layout.blog_page__bLGfe [0,0,390,29760]\n    a.skip-link [12,-82,127,52]\n    div.site-container [16,0,358,144]\n      header.blog_navigation__bQ9ND [16,0,358,144]\n        nav.hero-corner-nav [16,24,150,79]\n          a.hero-site-name.hero-site-brand [16,24,150,24]\n            img.hero-site-icon [16,26,20,20]\n            span.hero-site-name [44,24,122,24]\n          div.hero-corner-links [16,56,61,47]\n            a [16,56,42,20]\n            a [16,84,61,20]\n    article#blog-content.blog_article__Uk9MF [20,168,350,28535]\n      a.blog_back__4b1m9 [20,168,81,21] (+1 svg)\n      header.blog_articleHeader__3w7of [20,192,350,265]\n        span.blog_eyebrow__0KDg5 [20,228,350,18]\n        h1 [20,266,350,81]\n        div.blog_author__UxA6e [20,377,350,40]\n          img [20,379,36,36]\n          div [68,377,86,40]\n            span [68,377,86,21]\n            time [68,397,86,19]\n      img.blog_articleImage__wj3kN [20,457,350,234]\n      div.blog_prose__r_2py [20,722,350,27843]\n        p [20,722,350,662]\n          strong [20,870,316,49]\n          strong [20,928,332,49]\n          strong [20,1129,306,49]\n        p [20,1409,350,29]\n        p [20,1461,350,0]\n        ... (243 children total; tags: [[\"p\",124],[\"h2\",4],[\"h3\",7],[\"ul\",7],[\"h4\",7],[\"blockquote\",94]])\n      footer.blog_articleEnd__zI6hK [20,28613,350,91]\n        span [20,28642,249,21]\n        a.blog_back__4b1m9 [20,28683,130,21] (+1 svg)\n    footer.closing-footer [0,28803,390,956]\n      div.closing-sky [0,28803,390,956]\n        div.closing-bird-track.closing-bird-track-1 [0,28819,390,100]\n          div.closing-bird [410,28819,50,34]\n            div.closing-bird-drift [409,28828,52,36]\n              div.closing-bird-shape [409,28828,52,36]\n        div.closing-bird-track.closing-bird-track-2 [0,28833,390,100]\n          div.closing-bird [123,28833,44,30]\n            div.closing-bird-drift [123,28833,45,32]\n              div.closing-bird-shape [123,28833,45,32]\n        div.closing-bird-track.closing-bird-track-3 [0,28849,390,100]\n          div.closing-bird [410,28849,40,27]\n            div.closing-bird-drift [410,28852,41,28]\n              div.closing-bird-shape [410,28852,41,28]\n      div.closing-main [28,28803,334,716]\n        div.closing-invitation [28,28893,334,328]\n          h2 [28,28893,334,116]\n            span.closing-start-time [28,28969,299,40]\n              span.closing-clock-time [186,28969,141,38] (+1 svg)\n                time [223,28969,104,38]\n          p [28,29033,334,82]\n          a.download-button.download-button-primary [28,29153,288,68]\n            span [60,29179,168,17]\n            span.download-arrow [254,29159,56,56] (+1 svg)\n        div.closing-beach [8,29257,374,234]\n      div.closing-footer-links [28,29519,334,201]\n        div.closing-brand [28,29550,165,53]\n          a.closing-wordmark.hero-site-name [28,29550,129,26]\n          span.closing-copyright [28,29583,165,19]\n        nav [28,29633,334,87]\n          a [28,29633,42,32]\n          a [93,29633,61,32]\n          a [177,29633,27,32]\n          a [227,29633,45,32]\n          a [295,29633,38,32]\n          a [28,29688,67,32] (+1 svg)\n  next-route-announcer [0,29760,0,0]",
+ "styles": [
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "15px",
+    "lineHeight": "24px",
+    "fontWeight": "400",
+    "letterSpacing": "normal",
+    "color": "rgb(52, 54, 48)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 1,
+   "sel": [
+    "main#top.merlin-story.site-layout.blog_page__bLGfe > a.skip-link"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "16px",
+    "lineHeight": "24px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.4px",
+    "color": "rgb(52, 54, 48)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 1,
+   "sel": [
+    "a.hero-site-name.hero-site-brand > span.hero-site-name"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "13px",
+    "lineHeight": "19.5px",
+    "fontWeight": "400",
+    "letterSpacing": "normal",
+    "color": "rgb(115, 115, 115)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 2,
+   "sel": [
+    "div.hero-corner-links > a"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "13px",
+    "lineHeight": "20.8px",
+    "fontWeight": "400",
+    "letterSpacing": "normal",
+    "color": "rgb(135, 140, 128)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 2,
+   "sel": [
+    "article#blog-content.blog_article__Uk9MF > a.blog_back__4b1m9",
+    "footer.blog_articleEnd__zI6hK > a.blog_back__4b1m9"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "12px",
+    "lineHeight": "18px",
+    "fontWeight": "500",
+    "letterSpacing": "normal",
+    "color": "rgb(136, 139, 132)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 1,
+   "sel": [
+    "header.blog_articleHeader__3w7of > span.blog_eyebrow__0KDg5"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "Exposure, Georgia, serif",
+    "fontSize": "36px",
+    "lineHeight": "40.32px",
+    "fontWeight": "400",
+    "letterSpacing": "-1.08px",
+    "color": "rgb(52, 57, 48)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 1,
+   "sel": [
+    "header.blog_articleHeader__3w7of > h1"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "13px",
+    "lineHeight": "20.8px",
+    "fontWeight": "400",
+    "letterSpacing": "normal",
+    "color": "rgb(52, 54, 48)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 1,
+   "sel": [
+    "div > span"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "12px",
+    "lineHeight": "19.2px",
+    "fontWeight": "400",
+    "letterSpacing": "normal",
+    "color": "rgb(146, 151, 139)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 1,
+   "sel": [
+    "div > time"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "16px",
+    "lineHeight": "28.8px",
+    "fontWeight": "400",
+    "letterSpacing": "normal",
+    "color": "rgb(104, 110, 96)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 50,
+   "sel": [
+    "div.blog_prose__r_2py > p",
+    "p > em",
+    "ul > li",
+    "li > em"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "16px",
+    "lineHeight": "28.8px",
+    "fontWeight": "600",
+    "letterSpacing": "normal",
+    "color": "rgb(69, 77, 61)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 35,
+   "sel": [
+    "p > strong",
+    "li > strong"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "24px",
+    "lineHeight": "31.2px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.6px",
+    "color": "rgb(69, 77, 61)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 4,
+   "sel": [
+    "h2 > strong"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "20px",
+    "lineHeight": "26px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.5px",
+    "color": "rgb(69, 77, 61)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 14,
+   "sel": [
+    "h3 > strong",
+    "h4 > strong"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "Exposure, Georgia, serif",
+    "fontSize": "24px",
+    "lineHeight": "36px",
+    "fontWeight": "400",
+    "letterSpacing": "normal",
+    "color": "rgb(78, 89, 69)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 48,
+   "sel": [
+    "div.blog_prose__r_2py > blockquote"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "Exposure, Georgia, serif",
+    "fontSize": "24px",
+    "lineHeight": "36px",
+    "fontWeight": "600",
+    "letterSpacing": "normal",
+    "color": "rgb(69, 77, 61)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 67,
+   "sel": [
+    "blockquote > strong"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "13px",
+    "lineHeight": "20.8px",
+    "fontWeight": "400",
+    "letterSpacing": "normal",
+    "color": "rgb(150, 156, 142)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 1,
+   "sel": [
+    "footer.blog_articleEnd__zI6hK > span"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "Exposure, Georgia, serif",
+    "fontSize": "40px",
+    "lineHeight": "38px",
+    "fontWeight": "400",
+    "letterSpacing": "-0.4px",
+    "color": "rgb(41, 45, 39)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 3,
+   "sel": [
+    "div.closing-invitation > h2",
+    "h2 > span.closing-start-time",
+    "span.closing-clock-time > time"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "17px",
+    "lineHeight": "27.2px",
+    "fontWeight": "400",
+    "letterSpacing": "normal",
+    "color": "rgb(103, 103, 103)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 1,
+   "sel": [
+    "div.closing-invitation > p"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "ui-monospace, SFMono-Regular, Menlo, monospace",
+    "fontSize": "14px",
+    "lineHeight": "16.8px",
+    "fontWeight": "700",
+    "letterSpacing": "0.91px",
+    "color": "rgb(255, 255, 255)",
+    "textTransform": "uppercase",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 1,
+   "sel": [
+    "a.download-button.download-button-primary > span"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "17px",
+    "lineHeight": "25.5px",
+    "fontWeight": "600",
+    "letterSpacing": "-0.425px",
+    "color": "rgb(41, 45, 39)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 1,
+   "sel": [
+    "div.closing-brand > a.closing-wordmark.hero-site-name"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "12px",
+    "lineHeight": "19.2px",
+    "fontWeight": "400",
+    "letterSpacing": "normal",
+    "color": "rgb(116, 120, 110)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 1,
+   "sel": [
+    "div.closing-brand > span.closing-copyright"
+   ]
+  },
+  {
+   "style": {
+    "fontFamily": "\"Open Runde\", sans-serif",
+    "fontSize": "13px",
+    "lineHeight": "20.8px",
+    "fontWeight": "400",
+    "letterSpacing": "normal",
+    "color": "rgb(41, 45, 39)",
+    "textTransform": "none",
+    "fontStyle": "normal",
+    "textDecorationLine": "none"
+   },
+   "n": 6,
+   "sel": [
+    "nav > a"
+   ]
+  }
+ ],
+ "blocks": {
+  "main#top.merlin-story.site-layout.blog_page__bLGfe": {
+   "box": [
+    0,
+    0,
+    390,
+    29760
+   ],
+   "position": "relative",
+   "width": "390px",
+   "flexDirection": "row",
+   "background": "rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+   "backgroundColor": "rgb(255, 255, 255)",
+   "border": "0px none rgb(52, 54, 48)",
+   "borderBottom": "0px none rgb(52, 54, 48)",
+   "borderTop": "0px none rgb(52, 54, 48)",
+   "overflow": "clip"
+  },
+  "a.skip-link": {
+   "box": [
+    12,
+    -82,
+    127,
+    52
+   ],
+   "position": "fixed",
+   "top": "12px",
+   "bottom": "780px",
+   "width": "126.641px",
+   "padding": "14px",
+   "flexDirection": "row",
+   "background": "rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+   "backgroundColor": "rgb(255, 255, 255)",
+   "border": "0px none rgb(52, 54, 48)",
+   "borderBottom": "0px none rgb(52, 54, 48)",
+   "borderTop": "0px none rgb(52, 54, 48)",
+   "transform": "matrix(1, 0, 0, 1, 0, -93.6)",
+   "zIndex": "100"
+  },
+  "div.site-container": {
+   "box": [
+    16,
+    0,
+    358,
+    144
+   ],
+   "width": "357.5px",
+   "maxWidth": "1440px",
+   "margin": "0px 16.25px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(52, 54, 48)",
+   "borderBottom": "0px none rgb(52, 54, 48)",
+   "borderTop": "0px none rgb(52, 54, 48)"
+  },
+  "header.blog_navigation__bQ9ND": {
+   "box": [
+    16,
+    0,
+    358,
+    144
+   ],
+   "position": "relative",
+   "width": "357.5px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(52, 54, 48)",
+   "borderBottom": "0px none rgb(52, 54, 48)",
+   "borderTop": "0px none rgb(52, 54, 48)"
+  },
+  "nav.hero-corner-nav": {
+   "box": [
+    16,
+    24,
+    150,
+    79
+   ],
+   "display": "flex",
+   "position": "absolute",
+   "top": "24px",
+   "bottom": "41px",
+   "width": "149.812px",
+   "gap": "8px",
+   "flexDirection": "column",
+   "alignItems": "flex-start",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(52, 54, 48)",
+   "borderBottom": "0px none rgb(52, 54, 48)",
+   "borderTop": "0px none rgb(52, 54, 48)"
+  },
+  "a.hero-site-name.hero-site-brand": {
+   "box": [
+    16,
+    24,
+    150,
+    24
+   ],
+   "display": "flex",
+   "position": "relative",
+   "width": "149.812px",
+   "gap": "8px",
+   "flexDirection": "row",
+   "alignItems": "center",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(52, 54, 48)",
+   "borderBottom": "0px none rgb(52, 54, 48)",
+   "borderTop": "0px none rgb(52, 54, 48)"
+  },
+  "img.hero-site-icon": {
+   "box": [
+    16,
+    26,
+    20,
+    20
+   ],
+   "width": "20px",
+   "maxWidth": "100%",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgba(0, 0, 0, 0)",
+   "borderBottom": "0px none rgba(0, 0, 0, 0)",
+   "borderTop": "0px none rgba(0, 0, 0, 0)",
+   "overflow": "clip"
+  },
+  "div.hero-corner-links": {
+   "box": [
+    16,
+    56,
+    61,
+    47
+   ],
+   "display": "flex",
+   "width": "60.7656px",
+   "gap": "8px",
+   "flexDirection": "column",
+   "alignItems": "flex-start",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(115, 115, 115)",
+   "borderBottom": "0px none rgb(115, 115, 115)",
+   "borderTop": "0px none rgb(115, 115, 115)"
+  },
+  "a": {
+   "box": [
+    16,
+    56,
+    42,
+    20
+   ],
+   "position": "relative",
+   "width": "42.0469px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(115, 115, 115)",
+   "borderBottom": "0px none rgb(115, 115, 115)",
+   "borderTop": "0px none rgb(115, 115, 115)"
+  },
+  "article#blog-content.blog_article__Uk9MF": {
+   "box": [
+    20,
+    168,
+    350,
+    28535
+   ],
+   "width": "350px",
+   "margin": "24px 20px 100px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(52, 54, 48)",
+   "borderBottom": "0px none rgb(52, 54, 48)",
+   "borderTop": "0px none rgb(52, 54, 48)"
+  },
+  "a.blog_back__4b1m9": {
+   "box": [
+    20,
+    168,
+    81,
+    21
+   ],
+   "display": "inline-flex",
+   "width": "81.1094px",
+   "gap": "8px",
+   "flexDirection": "row",
+   "alignItems": "center",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(135, 140, 128)",
+   "borderBottom": "0px none rgb(135, 140, 128)",
+   "borderTop": "0px none rgb(135, 140, 128)",
+   "transition": "color 0.16s"
+  },
+  "header.blog_articleHeader__3w7of": {
+   "box": [
+    20,
+    192,
+    350,
+    265
+   ],
+   "width": "350px",
+   "padding": "36px 0px 40px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(52, 54, 48)",
+   "borderBottom": "0px none rgb(52, 54, 48)",
+   "borderTop": "0px none rgb(52, 54, 48)"
+  },
+  "h1": {
+   "box": [
+    20,
+    266,
+    350,
+    81
+   ],
+   "width": "350px",
+   "margin": "20px 0px 24px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(52, 57, 48)",
+   "borderBottom": "0px none rgb(52, 57, 48)",
+   "borderTop": "0px none rgb(52, 57, 48)"
+  },
+  "div.blog_author__UxA6e": {
+   "box": [
+    20,
+    377,
+    350,
+    40
+   ],
+   "display": "flex",
+   "width": "350px",
+   "margin": "30px 0px 0px",
+   "gap": "12px",
+   "flexDirection": "row",
+   "alignItems": "center",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(52, 54, 48)",
+   "borderBottom": "0px none rgb(52, 54, 48)",
+   "borderTop": "0px none rgb(52, 54, 48)"
+  },
+  "img": {
+   "box": [
+    20,
+    379,
+    36,
+    36
+   ],
+   "width": "36px",
+   "maxWidth": "100%",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(52, 54, 48)",
+   "borderBottom": "0px none rgb(52, 54, 48)",
+   "borderTop": "0px none rgb(52, 54, 48)",
+   "borderRadius": "50%",
+   "overflow": "clip"
+  },
+  "div": {
+   "box": [
+    68,
+    377,
+    86,
+    40
+   ],
+   "display": "flex",
+   "width": "86.2656px",
+   "flexDirection": "column",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(52, 54, 48)",
+   "borderBottom": "0px none rgb(52, 54, 48)",
+   "borderTop": "0px none rgb(52, 54, 48)"
+  },
+  "time": {
+   "box": [
+    68,
+    397,
+    86,
+    19
+   ],
+   "width": "86.2656px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(146, 151, 139)",
+   "borderBottom": "0px none rgb(146, 151, 139)",
+   "borderTop": "0px none rgb(146, 151, 139)"
+  },
+  "img.blog_articleImage__wj3kN": {
+   "box": [
+    20,
+    457,
+    350,
+    234
+   ],
+   "width": "350px",
+   "maxWidth": "100%",
+   "margin": "0px 0px 32px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(52, 54, 48)",
+   "borderBottom": "0px none rgb(52, 54, 48)",
+   "borderTop": "0px none rgb(52, 54, 48)",
+   "borderRadius": "18px",
+   "overflow": "clip"
+  },
+  "div.blog_prose__r_2py": {
+   "box": [
+    20,
+    722,
+    350,
+    27843
+   ],
+   "width": "350px",
+   "maxWidth": "680px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(104, 110, 96)",
+   "borderBottom": "0px none rgb(104, 110, 96)",
+   "borderTop": "0px none rgb(104, 110, 96)"
+  },
+  "p": {
+   "box": [
+    20,
+    722,
+    350,
+    662
+   ],
+   "width": "350px",
+   "margin": "0px 0px 24px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(104, 110, 96)",
+   "borderBottom": "0px none rgb(104, 110, 96)",
+   "borderTop": "0px none rgb(104, 110, 96)"
+  },
+  "h2": {
+   "box": [
+    20,
+    1477,
+    350,
+    62
+   ],
+   "width": "350px",
+   "margin": "40px 0px 16px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(54, 61, 47)",
+   "borderBottom": "0px none rgb(54, 61, 47)",
+   "borderTop": "0px none rgb(54, 61, 47)"
+  },
+  "h3": {
+   "box": [
+    20,
+    3244,
+    350,
+    26
+   ],
+   "width": "350px",
+   "margin": "40px 0px 16px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(54, 61, 47)",
+   "borderBottom": "0px none rgb(54, 61, 47)",
+   "borderTop": "0px none rgb(54, 61, 47)"
+  },
+  "ul": {
+   "box": [
+    20,
+    6022,
+    350,
+    131
+   ],
+   "width": "350px",
+   "margin": "0px 0px 24px",
+   "padding": "0px 0px 0px 24px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(104, 110, 96)",
+   "borderBottom": "0px none rgb(104, 110, 96)",
+   "borderTop": "0px none rgb(104, 110, 96)"
+  },
+  "li": {
+   "box": [
+    44,
+    6022,
+    326,
+    29
+   ],
+   "display": "list-item",
+   "width": "326px",
+   "margin": "8px 0px",
+   "padding": "0px 0px 0px 4px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(104, 110, 96)",
+   "borderBottom": "0px none rgb(104, 110, 96)",
+   "borderTop": "0px none rgb(104, 110, 96)"
+  },
+  "h4": {
+   "box": [
+    20,
+    9655,
+    350,
+    26
+   ],
+   "width": "350px",
+   "margin": "40px 0px 16px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(54, 61, 47)",
+   "borderBottom": "0px none rgb(54, 61, 47)",
+   "borderTop": "0px none rgb(54, 61, 47)"
+  },
+  "blockquote": {
+   "box": [
+    20,
+    9900,
+    350,
+    88
+   ],
+   "width": "350px",
+   "margin": "32px 0px",
+   "padding": "8px 0px 8px 24px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "borderBottom": "0px none rgb(78, 89, 69)",
+   "borderTop": "0px none rgb(78, 89, 69)"
+  },
+  "footer.blog_articleEnd__zI6hK": {
+   "box": [
+    20,
+    28613,
+    350,
+    91
+   ],
+   "display": "flex",
+   "width": "350px",
+   "maxWidth": "680px",
+   "margin": "48px 0px 0px",
+   "padding": "28px 0px 0px",
+   "gap": "20px",
+   "flexDirection": "row",
+   "justifyContent": "space-between",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "borderBottom": "0px none rgb(150, 156, 142)",
+   "borderTop": "1px solid rgb(231, 235, 225)"
+  },
+  "footer.closing-footer": {
+   "box": [
+    0,
+    28803,
+    390,
+    956
+   ],
+   "position": "relative",
+   "width": "390px",
+   "padding": "0px 28px 40px",
+   "flexDirection": "row",
+   "background": "rgb(230, 230, 230) none repeat scroll 0% 0% / auto padding-box border-box",
+   "backgroundColor": "rgb(230, 230, 230)",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)",
+   "overflow": "hidden"
+  },
+  "div.closing-sky": {
+   "box": [
+    0,
+    28803,
+    390,
+    956
+   ],
+   "position": "absolute",
+   "width": "390px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)",
+   "overflow": "hidden"
+  },
+  "div.closing-bird-track.closing-bird-track-1": {
+   "box": [
+    0,
+    28819,
+    390,
+    100
+   ],
+   "position": "absolute",
+   "top": "16px",
+   "bottom": "840.25px",
+   "width": "390px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)"
+  },
+  "div.closing-bird": {
+   "box": [
+    410,
+    28819,
+    50,
+    34
+   ],
+   "position": "absolute",
+   "bottom": "66.25px",
+   "width": "50px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)",
+   "animation": "23s linear -4s infinite closing-bird-cross"
+  },
+  "div.closing-bird-drift": {
+   "box": [
+    409,
+    28828,
+    52,
+    36
+   ],
+   "width": "50px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)",
+   "transform": "matrix(0.998735, 0.0502751, -0.0502751, 0.998735, 0, 9.80295)",
+   "animation": "4.7s ease-in-out infinite closing-bird-drift"
+  },
+  "div.closing-bird-shape": {
+   "box": [
+    409,
+    28828,
+    52,
+    36
+   ],
+   "width": "50px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) url(\"https://www.merlin.computer/footer-bird-ascii.svg\") no-repeat scroll 50% 50% / contain padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)"
+  },
+  "div.closing-bird-track.closing-bird-track-2": {
+   "box": [
+    0,
+    28833,
+    390,
+    100
+   ],
+   "position": "absolute",
+   "top": "30px",
+   "bottom": "826.25px",
+   "width": "390px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)"
+  },
+  "div.closing-bird-track.closing-bird-track-3": {
+   "box": [
+    0,
+    28849,
+    390,
+    100
+   ],
+   "position": "absolute",
+   "top": "46px",
+   "bottom": "810.25px",
+   "width": "390px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)"
+  },
+  "div.closing-main": {
+   "box": [
+    28,
+    28803,
+    334,
+    716
+   ],
+   "display": "grid",
+   "position": "relative",
+   "width": "334px",
+   "padding": "90px 0px 28px",
+   "gap": "36px",
+   "gridTemplateColumns": "334px",
+   "flexDirection": "row",
+   "alignItems": "center",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)"
+  },
+  "div.closing-invitation": {
+   "box": [
+    28,
+    28893,
+    334,
+    328
+   ],
+   "display": "flex",
+   "position": "relative",
+   "width": "334px",
+   "flexDirection": "column",
+   "alignItems": "flex-start",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)"
+  },
+  "a.download-button.download-button-primary": {
+   "box": [
+    28,
+    29153,
+    288,
+    68
+   ],
+   "display": "flex",
+   "position": "relative",
+   "width": "288.109px",
+   "margin": "38px 0px 0px",
+   "padding": "0px 0px 0px 26px",
+   "gap": "26px",
+   "flexDirection": "row",
+   "justifyContent": "space-between",
+   "alignItems": "center",
+   "background": "rgb(0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "backgroundColor": "rgb(0, 0, 0)",
+   "border": "6px solid rgb(0, 0, 0)",
+   "borderBottom": "6px solid rgb(0, 0, 0)",
+   "borderTop": "6px solid rgb(0, 0, 0)",
+   "borderRadius": "22px",
+   "transition": "color 0.36s",
+   "overflow": "hidden"
+  },
+  "div.closing-beach": {
+   "box": [
+    8,
+    29257,
+    374,
+    234
+   ],
+   "width": "374px",
+   "margin": "0px -20px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) url(\"https://www.merlin.computer/footer-beach-ascii.svg\") no-repeat scroll 100% 50% / contain padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)",
+   "transform": "matrix(-1, 0, 0, 1, 0, 0)"
+  },
+  "div.closing-footer-links": {
+   "box": [
+    28,
+    29519,
+    334,
+    201
+   ],
+   "display": "flex",
+   "position": "relative",
+   "width": "334px",
+   "padding": "30px 0px 0px",
+   "gap": "30px",
+   "flexDirection": "row",
+   "alignItems": "center",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "1px solid rgb(206, 206, 206)"
+  },
+  "div.closing-brand": {
+   "box": [
+    28,
+    29550,
+    165,
+    53
+   ],
+   "display": "flex",
+   "width": "165.297px",
+   "gap": "8px",
+   "flexDirection": "column",
+   "alignItems": "flex-start",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)"
+  },
+  "a.closing-wordmark.hero-site-name": {
+   "box": [
+    28,
+    29550,
+    129,
+    26
+   ],
+   "width": "129.438px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)"
+  },
+  "nav": {
+   "box": [
+    28,
+    29633,
+    334,
+    87
+   ],
+   "display": "flex",
+   "width": "334px",
+   "gap": "23px",
+   "flexDirection": "row",
+   "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+   "border": "0px none rgb(41, 45, 39)",
+   "borderBottom": "0px none rgb(41, 45, 39)",
+   "borderTop": "0px none rgb(41, 45, 39)"
+  }
+ },
+ "reqs": [
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/357da7cf10d68108.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "782"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/ea3e27f6a69b5df4.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "4410"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/437c25afc566ca52.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "29691"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/a5f02e9d0c6db7af.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "1167"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/f46c55d95248097e.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "291"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/e2e0ba86a6b0d559.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "12840"
+  },
+  {
+   "t": "image",
+   "url": "https://cdn.sanity.io/images/5zwi7h8a/production/f4f954e7b9c5cf6622f241e68c8d120265d44d26-6016x4016.png?w=1600&auto=format",
+   "status": 200,
+   "type": "image/avif",
+   "len": "34095"
+  },
+  {
+   "t": "font",
+   "url": "https://www.merlin.computer/fonts/Exposure.woff2",
+   "status": 200,
+   "type": "font/woff2",
+   "len": "68544"
+  },
+  {
+   "t": "font",
+   "url": "https://www.merlin.computer/fonts/open-runde-400.woff2",
+   "status": 200,
+   "type": "font/woff2",
+   "len": "154604"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/webpack-c3725a4e89504d85.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "2561"
+  },
+  {
+   "t": "image",
+   "url": "https://cdn.sanity.io/images/5zwi7h8a/production/379e800695c926d62ea80639359446f6bcc40178-800x800.jpg?w=88&h=88&fit=crop",
+   "status": 200,
+   "type": "image/jpeg",
+   "len": "2950"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/b468fba8-9284181649d81112.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "99078"
+  },
+  {
+   "t": "font",
+   "url": "https://www.merlin.computer/fonts/open-runde-600.woff2",
+   "status": 200,
+   "type": "font/woff2",
+   "len": "162732"
+  },
+  {
+   "t": "font",
+   "url": "https://www.merlin.computer/fonts/open-runde-500.woff2",
+   "status": 200,
+   "type": "font/woff2",
+   "len": "165396"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/main-app-5fafbe116c67af45.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "1428"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/1255-c5779d570a135656.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "46095"
+  },
+  {
+   "t": "image",
+   "url": "https://www.merlin.computer/_next/image?url=%2Fmerlin-dock.png&w=32&q=75",
+   "status": 200,
+   "type": "image/webp",
+   "len": "528"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/c16f53c3-a6af64d152aba437.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "5879"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/4bd1b696-182b6b13bdad92e3.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "55707"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/8334-ab528d8c68fc3699.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "9816"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/app/layout-30d9aed10a424b68.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "3027"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/2619-04bc32f026a0d946.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "3542"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/ee560e2c-a77d8334145d6c63.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "3074"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/7811-5a4570d8c66cf448.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "126392"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/1356-b1f982685cfcaf9f.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "5454"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/app/blog/layout-ab0ddbac4d8ccbc2.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "3262"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/8012-08fd5b4b46f5cf15.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "2783"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/1490-b1a1d4765000dceb.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "61047"
+  },
+  {
+   "t": "image",
+   "url": "https://www.merlin.computer/footer-bird-ascii-slow.svg",
+   "status": 200,
+   "type": "image/svg+xml",
+   "len": "2167"
+  },
+  {
+   "t": "image",
+   "url": "https://www.merlin.computer/footer-bird-ascii-fast.svg",
+   "status": 200,
+   "type": "image/svg+xml",
+   "len": "2167"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/app/blog/%5Bslug%5D/page-ab45e5459b818121.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "527"
+  },
+  {
+   "t": "script",
+   "url": "https://www.googletagmanager.com/gtag/js?id=AW-16734359888",
+   "status": 200,
+   "type": "application/javascript; charset=UTF-8",
+   "len": "163614"
+  },
+  {
+   "t": "image",
+   "url": "https://www.merlin.computer/footer-beach-ascii.svg",
+   "status": 200,
+   "type": "image/svg+xml",
+   "len": "15970"
+  },
+  {
+   "t": "image",
+   "url": "https://www.merlin.computer/footer-bird-ascii.svg",
+   "status": 200,
+   "type": "image/svg+xml",
+   "len": "2162"
+  },
+  {
+   "t": "script",
+   "url": "https://us-assets.i.posthog.com/static/1.434.17/dead-clicks-autocapture.js",
+   "status": 200,
+   "type": "application/javascript",
+   "len": "8908"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/6407-3385f66c9f91b609.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "45051"
+  },
+  {
+   "t": "script",
+   "url": "https://us-assets.i.posthog.com/static/1.434.17/web-vitals-with-attribution.js",
+   "status": 200,
+   "type": "application/javascript",
+   "len": "7310"
+  },
+  {
+   "t": "script",
+   "url": "https://us-assets.i.posthog.com/array/phc_pDvGT6uiKcgEbuBNQamHEp9Y3XBcRnYatdNgV3xxG9Dr/config.js",
+   "status": 200,
+   "type": "application/javascript",
+   "len": "732"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_vercel/insights/script.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "2084"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/6950-9e48fb1cb1316049.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "4116"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/app/manifesto/page-3b4268b2ba0b8b84.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "2096"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/9c4e2130-97935094d747a3b7.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "977"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/ae725ea36c48b431.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "1402"
+  },
+  {
+   "t": "script",
+   "url": "https://us-assets.i.posthog.com/static/1.434.17/surveys.js",
+   "status": 200,
+   "type": "application/javascript",
+   "len": "35512"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/f7c0a2656765fcca.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "1392"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/2abce9a6dc03269b.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "1456"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/922109019b2259fa.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "447"
+  },
+  {
+   "t": "script",
+   "url": "https://us-assets.i.posthog.com/static/1.434.17/posthog-recorder.js",
+   "status": 200,
+   "type": "application/javascript",
+   "len": "69251"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/401561448b81938e.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "5890"
+  },
+  {
+   "t": "script",
+   "url": "https://www.googletagmanager.com/gtag/js?id=AW-17100099039&cx=c&gtm=4e6a51",
+   "status": 200,
+   "type": "application/javascript; charset=UTF-8",
+   "len": "154009"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/6385c293c5638848.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "12940"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/4a4d88752d2165c6.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "7024"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/fc1769f629488e8f.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "12803"
+  },
+  {
+   "t": "stylesheet",
+   "url": "https://www.merlin.computer/_next/static/css/0a5b07db1896be06.css",
+   "status": 200,
+   "type": "text/css; charset=utf-8",
+   "len": "17389"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/app/pricing/page-8299730973590a41.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "3813"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/30a37ab2-505db82616f971e7.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "2265"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/6974-1b58e22f3222f533.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "31155"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/app/page-b2432c613c7c7eec.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "45833"
+  },
+  {
+   "t": "script",
+   "url": "https://www.merlin.computer/_next/static/chunks/c15bf2b0-bfa95b308e62c6cc.js",
+   "status": 200,
+   "type": "application/javascript; charset=utf-8",
+   "len": "20986"
+  },
+  {
+   "t": "font",
+   "url": "https://www.merlin.computer/_next/static/media/3c6a8fcb177aeedf-s.p.ttf",
+   "status": 200,
+   "type": "font/ttf",
+   "len": "215988"
+  },
+  {
+   "t": "script",
+   "url": "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/17100099039/?random=1791371499750&cv=11&fst=1791371499750&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6a51v9220548547za200zb9210403190zd9210403190xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938466~115938468~118897920~118897930~120213116~120385422~120469145~120469153~121046263~121046271~121125487&u_w=390&u_h=844&url=https%3A%2F%2Fwww.merlin.computer%2Fblog%2Fhow-to-write-a-formal-email&rcb=0&frm=0&tiba=How%20to%20Write%20a%20Formal%20Email%20%E2%80%94%20Merlin&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=619018732.1791371500&uaa=arm&uab=64&uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12&uamb=0&uam=&uap=macOS&uapv=27.0.1&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=4",
+   "status": 200,
+   "type": "text/javascript; charset=UTF-8"
+  },
+  {
+   "t": "image",
+   "url": "https://www.google.com/pagead/1p-user-list/17100099039/?random=1791371499750&cv=11&fst=1791370800000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6a51v9220548547za200zb9210403190zd9210403190xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938466~115938468~118897920~118897930~120213116~120385422~120469145~120469153~121046263~121046271~121125487&u_w=390&u_h=844&url=https%3A%2F%2Fwww.merlin.computer%2Fblog%2Fhow-to-write-a-formal-email&rcb=0&frm=0&tiba=How%20to%20Write%20a%20Formal%20Email%20%E2%80%94%20Merlin&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=619018732.1791371500&uaa=arm&uab=64&uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12&uamb=0&uam=&uap=macOS&uapv=27.0.1&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQS1AEAQM4h3MuAuG5bBHfEYNfXYSyii9f6r9usWzv9rRq3yekM6ZAVSG314Iq70WWg05fp6IopLPBSrsZrnjirqGvA5ldRwj1bPhrL-RJtX-ukqLdLaiPca087yk1h16tJVVYoYPHzlA9rdHRZu8SoWCEqyRZBZGuWIz26D5_K3XUGY7PhUKediSSBTeCf9VuwvKq2aBJh7WoXCI-wOyTEngbOrDlxFDT5lJMncUcCoLD18KAyAQQZOpsR1BNbEmhB9iLUXnhricqgrIXJPqIAkP48P7_KNQ&random=1830348416&rmt_tld=0&ipr=y",
+   "status": 200,
+   "type": "image/gif",
+   "len": "42"
+  },
+  {
+   "t": "image",
+   "url": "https://www.google.co.in/pagead/1p-user-list/17100099039/?random=1791371499750&cv=11&fst=1791370800000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6a51v9220548547za200zb9210403190zd9210403190xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938466~115938468~118897920~118897930~120213116~120385422~120469145~120469153~121046263~121046271~121125487&u_w=390&u_h=844&url=https%3A%2F%2Fwww.merlin.computer%2Fblog%2Fhow-to-write-a-formal-email&rcb=0&frm=0&tiba=How%20to%20Write%20a%20Formal%20Email%20%E2%80%94%20Merlin&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=619018732.1791371500&uaa=arm&uab=64&uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12&uamb=0&uam=&uap=macOS&uapv=27.0.1&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=3&is_vtc=1&cid=CAQS1AEAQM4h3MuAuG5bBHfEYNfXYSyii9f6r9usWzv9rRq3yekM6ZAVSG314Iq70WWg05fp6IopLPBSrsZrnjirqGvA5ldRwj1bPhrL-RJtX-ukqLdLaiPca087yk1h16tJVVYoYPHzlA9rdHRZu8SoWCEqyRZBZGuWIz26D5_K3XUGY7PhUKediSSBTeCf9VuwvKq2aBJh7WoXCI-wOyTEngbOrDlxFDT5lJMncUcCoLD18KAyAQQZOpsR1BNbEmhB9iLUXnhricqgrIXJPqIAkP48P7_KNQ&random=1830348416&rmt_tld=1&ipr=y",
+   "status": 200,
+   "type": "image/gif",
+   "len": "42"
+  }
+ ],
+ "imgs": [
+  {
+   "src": "https://www.merlin.computer/_next/image?url=%2Fmerlin-dock.png&w=32&q=75",
+   "alt": "",
+   "nat": [
+    20,
+    20
+   ],
+   "box": [
+    16,
+    26,
+    20,
+    20
+   ],
+   "cls": "hero-site-icon",
+   "loading": "lazy",
+   "objectFit": "contain",
+   "radius": "0px"
+  },
+  {
+   "src": "https://cdn.sanity.io/images/5zwi7h8a/production/379e800695c926d62ea80639359446f6bcc40178-800x800.jpg?w=88&h=88&fit=crop",
+   "alt": "",
+   "nat": [
+    88,
+    88
+   ],
+   "box": [
+    20,
+    379,
+    36,
+    36
+   ],
+   "cls": "",
+   "loading": "auto",
+   "objectFit": "cover",
+   "radius": "50%"
+  },
+  {
+   "src": "https://cdn.sanity.io/images/5zwi7h8a/production/f4f954e7b9c5cf6622f241e68c8d120265d44d26-6016x4016.png?w=1600&auto=format",
+   "alt": "How to Write a Formal Email",
+   "nat": [
+    1600,
+    1068
+   ],
+   "box": [
+    20,
+    457,
+    350,
+    234
+   ],
+   "cls": "blog_articleImage__wj3kN",
+   "loading": "auto",
+   "objectFit": "cover",
+   "radius": "18px"
+  }
+ ]
+}

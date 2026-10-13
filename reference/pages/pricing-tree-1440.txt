@@ -1,0 +1,199 @@
+body [0,0,1440,3550]
+  div [0,0,0,0]
+  style [0,0,0,0] ":root{--mantine-font-family: var(--font-open-runde), sans-se"
+  style [0,0,0,0] "@media (max-width: 35.99375em) {.mantine-visible-from-xs {di"
+  main#top.merlin-story.site-layout.pricing-page [0,0,1440,3550]
+    a.skip-link [12,-82,119,52] "Skip to plans" href=#plans
+    section.story-hero [120,0,1200,466]
+      nav.hero-corner-nav [120,36,157,84]
+        span.hero-nav-dot [104,77,6,6]
+        a.hero-site-name.hero-site-brand [120,36,157,26] href=/
+          img.hero-site-icon [120,39,20,20] src=/_next/image?url=%2Fmerlin-dock.png&w=3840&q=75
+          span.hero-site-name [148,36,129,26] "merlin.computer"
+        div.hero-corner-links [120,70,65,50]
+          a [120,70,45,21] "Pricing" href=/pricing
+          a [120,99,65,21] "Manifesto" href=/manifesto
+      h1#pricing-title [260,160,920,148]
+        span.hero-title-line [260,160,920,81] "Make room for"
+        span.hero-title-line.hero-title-muted [260,228,920,81] "the rest of your day."
+      div.hero-bottom [446,316,549,54]
+        p [487,316,465,54] "Your ideas. Your to-dos. Your time back. Choose how much Mer"
+          br [905,317,0,25]
+    div.site-container [120,466,1200,2179]
+      section#plans.pricing-plans [120,466,1200,501]
+        div.pricing-plan-grid [120,466,1200,501]
+          article.pricing-plan.pricing-plan-sage [120,466,389,501]
+            h2 [151,495,327,47] "Pro"
+            p.pricing-plan-description [151,563,327,84] "For the replies, research, and little projects that fill you"
+            div.pricing-plan-price [151,671,327,48]
+              span [151,671,74,48] "$ 29"
+              span [234,693,58,26] "/ month"
+            a.download-button.download-button-secondary.pricing-plan-cta [151,743,327,68] href=/download?start=1
+              span [175,769,168,17] "Get Merlin for Mac"
+              span.download-arrow [416,749,56,56]
+                svg 24x24
+            div.pricing-plan-details [151,836,327,102]
+              p [151,867,327,26]
+                svg 17x17
+                span [178,867,206,26] "credits each month"
+                  strong [178,870,56,20] "25,000"
+              p [151,903,327,26] "All of Merlin, included"
+                svg 17x17
+          article.pricing-plan.pricing-plan-lavender [525,466,389,501]
+            h2 [556,495,327,47] "Ultra"
+            p.pricing-plan-description [556,563,327,84] "For deeper research, bigger projects, and a fuller working d"
+            div.pricing-plan-price [556,671,327,48]
+              span [556,671,77,48] "$ 99"
+              span [642,693,58,26] "/ month"
+            a.download-button.download-button-primary.pricing-plan-cta [556,743,327,68] href=/download?start=1
+              span [580,769,168,17] "Get Merlin for Mac"
+              span.download-arrow [822,749,56,56]
+                svg 24x24
+            div.pricing-plan-details [556,836,327,102]
+              p [556,867,327,26]
+                svg 17x17
+                span [583,867,207,26] "credits each month"
+                  strong [583,870,56,20] "85,000"
+              p [556,903,327,26] "All of Merlin, included"
+                svg 17x17
+          article.pricing-plan.pricing-plan-peach [931,466,389,501]
+            h2 [962,495,327,47] "Max"
+            p.pricing-plan-description [962,563,327,84] "For ambitious work and an assistant you turn to throughout t"
+            div.pricing-plan-price [962,671,327,48]
+              span [962,671,99,48] "$ 299"
+              span [1070,693,58,26] "/ month"
+            a.download-button.download-button-secondary.pricing-plan-cta [962,743,327,68] href=/download?start=1
+              span [986,769,168,17] "Get Merlin for Mac"
+              span.download-arrow [1227,749,56,56]
+                svg 24x24
+            div.pricing-plan-details [962,836,327,102]
+              p [962,867,327,26]
+                svg 17x17
+                span [989,867,217,26] "credits each month"
+                  strong [989,870,67,20] "250,000"
+              p [962,903,327,26] "All of Merlin, included"
+                svg 17x17
+      section.pricing-included [120,967,1200,887]
+        div.pricing-section-intro [120,1103,427,639]
+          h2#included-title [120,1103,427,108] "All the places"
+            br [407,1101,0,58]
+            span [120,1155,419,58] "your day takes you."
+          p [120,1233,350,82] "The same thoughtful assistant, wherever the work happens. Ev"
+        div.pricing-feature-grid [655,1103,665,639]
+          article [655,1106,314,180]
+            svg 40x40
+            h3 [655,1164,314,28] "A little more context."
+            p [655,1202,314,56] "Find an email, catch up on Slack, and prepare for your next "
+          article [1006,1106,314,180]
+            svg 40x40
+            h3 [1006,1164,314,28] "A hand in your browser."
+            p [1006,1202,314,84] "Book flights, order groceries, and fill out forms in your br"
+          article [655,1334,314,180]
+            svg 40x40
+            h3 [655,1392,314,28] "Right where you are."
+            p [655,1430,314,84] "Rewrite a reply, explain selected text, or ask about what’s "
+          article [1006,1334,314,180]
+            svg 40x40
+            h3 [1006,1392,314,28] "Be there for the meeting."
+            p [1006,1430,314,84] "Record meetings, get speaker-labelled transcripts, and turn "
+          article [655,1562,314,180]
+            svg 40x40
+            h3 [655,1620,314,28] "From thought to a real thing."
+            p [655,1658,314,84] "Create slide decks, spreadsheets, PDFs, and websites you can"
+          article [1006,1562,314,180]
+            svg 40x40
+            h3 [1006,1620,314,28] "One less thing to repeat."
+            p [1006,1658,314,84] "Get a morning briefing, prepare for upcoming meetings, and r"
+      section.pricing-faq [120,1855,1200,791]
+        div [120,1966,491,560]
+          h2#pricing-faq-title [120,1966,491,94] "A few things"
+            br [357,1964,0,51]
+            span [120,2011,475,51] "you might be wondering."
+        div.pricing-questions [731,1966,589,560]
+          details [731,1966,589,81]
+            summary [731,1967,589,79] "Which plan should I choose?"
+              svg 20x20
+            p [731,2046,589,142] "Choose based on how much you expect to use Merlin. Pro gives"
+          details [731,2047,589,80]
+            summary [731,2047,589,79] "What are credits?"
+              svg 20x20
+            p [731,2126,589,142] "Credits cover Merlin’s AI usage, including model calls and p"
+          details [731,2127,589,80]
+            summary [731,2127,589,79] "Do unused credits roll over?"
+              svg 20x20
+            p [731,2206,589,84] "Unused included credits don’t roll over. Your allowance refr"
+          details [731,2207,589,80]
+            summary [731,2207,589,79] "What happens if I run out?"
+              svg 20x20
+            p [731,2286,589,113] "When your balance reaches zero, new paid work won’t start. Y"
+          details [731,2287,589,80]
+            summary [731,2287,589,79] "Is there an annual option?"
+              svg 20x20
+            p [731,2366,589,142] "Yes. Annual subscriptions save 20% on the subscription price"
+          details [731,2367,589,80]
+            summary [731,2367,589,79] "How do I get started?"
+              svg 20x20
+            p [731,2446,589,113] "Download Merlin for Mac and follow the setup in the app. You"
+          form.merlin-faq-form.ph-no-capture [731,2447,589,79]
+            div.merlin-faq-input-row [731,2447,589,79]
+              input#_R_lqav5vdb_ [731,2473,545,26]
+              button [1289,2463,44,44]
+                svg 17x17
+          div.merlin-faq-response.ph-no-capture [731,2525,589,0]
+    footer.closing-footer [0,2645,1440,905]
+      div.closing-sky [0,2645,1440,905]
+        div.closing-bird-track.closing-bird-track-1 [0,2661,1440,100]
+          div.closing-bird [1383,2661,60,41]
+            div.closing-bird-drift [1382,2670,63,44]
+              div.closing-bird-shape [1382,2670,63,44]
+        div.closing-bird-track.closing-bird-track-2 [0,2675,1440,100]
+          div.closing-bird [177,2675,52,35]
+            div.closing-bird-drift [176,2683,53,37]
+              div.closing-bird-shape [176,2683,53,37]
+        div.closing-bird-track.closing-bird-track-3 [0,2691,1440,100]
+          div.closing-bird [1333,2691,48,32]
+            div.closing-bird-drift [1332,2690,49,34]
+              div.closing-bird-shape [1332,2690,49,34]
+      div.closing-main [94,2645,1253,770]
+        div.closing-invitation [94,2881,538,364]
+          h2 [94,2881,538,186] "Your next free moment"
+            br [480,2933,0,77]
+            span.closing-start-time [94,3002,478,64] "starts at"
+              span.closing-clock-time [346,3002,225,61]
+                svg 51x51
+                time [405,3002,166,61] "16:42"
+          p [94,3090,370,54] "In just three minutes, Merlin starts handling your to-dos. Y"
+          a.download-button.download-button-primary [94,3177,288,68] href=/download?start=1
+            span [126,3202,168,17] "Get Merlin for Mac"
+            span.download-arrow [320,3183,56,56]
+              svg 24x24
+        div.closing-beach [689,2775,744,576]
+      div.closing-footer-links [94,3415,1253,88]
+        div.closing-brand [94,3450,165,53]
+          a.closing-wordmark.hero-site-name [94,3450,129,26] "merlin.computer" href=#top
+          span.closing-copyright [94,3483,165,19] "© 2026 merlin computing inc"
+        nav [891,3460,456,32]
+          a [891,3460,45,32] "Pricing" href=/pricing
+          a [967,3460,65,32] "Manifesto" href=/manifesto
+          a [1063,3460,29,32] "Blog" href=/blog
+          a [1124,3460,48,32] "Privacy" href=/privacy
+          a [1203,3460,41,32] "Terms" href=/terms
+          a [1275,3460,72,32] "Contact" href=mailto:team@merlin.computer
+            svg 14x14
+  script#_R_ [0,0,0,0] src=/_next/static/chunks/webpack-c3725a4e89504d85.js
+  script [0,0,0,0] "(self.__next_f=self.__next_f||[]).push([0])"
+  script [0,0,0,0] "self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[30135,[\""
+  script [0,0,0,0] "self.__next_f.push([1,"0:{\"P\":null,\"b\":\"TdX68vC1RvKcQYo"
+  script [0,0,0,0] "self.__next_f.push([1,"22:I[42077,[\"844\",\"static/chunks/e"
+  script [0,0,0,0] "self.__next_f.push([1,"a:[\"$\",\"div\",null,{\"className\":"
+  script [0,0,0,0] "self.__next_f.push([1,"b:[\"$\",\"article\",\"Ultra\",{\"cla"
+  script [0,0,0,0] "self.__next_f.push([1,"c:[\"$\",\"article\",\"Max\",{\"class"
+  script [0,0,0,0] "self.__next_f.push([1,"d:[\"$\",\"section\",null,{\"classNam"
+  script [0,0,0,0] "self.__next_f.push([1,"e:[\"$\",\"section\",null,{\"classNam"
+  script [0,0,0,0] "self.__next_f.push([1,"f:[\"$\",\"$L22\",null,{}]\n10:[\"$\""
+  script [0,0,0,0] "self.__next_f.push([1,"2c:I[2292,[\"844\",\"static/chunks/ee"
+  script [0,0,0,0] "self.__next_f.push([1,"28:[[\"$\",\"meta\",\"0\",{\"charSet\"
+  script [0,0,0,0] "self.__next_f.push([1,"2d:I[80622,[],\"IconMark\"]\n"])"
+  script [0,0,0,0] "self.__next_f.push([1,"26:{\"metadata\":[[\"$\",\"title\",\""
+  script [0,0,0,0] "self.__next_f.push([1,"2b:\"$26:metadata\"\n"])"
+  next-route-announcer [0,3550,0,0]

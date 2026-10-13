@@ -1,0 +1,1 @@
+Local clone placeholder: this file stands in for the Merlin installer download (no real binary is fetched).

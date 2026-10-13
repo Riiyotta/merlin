@@ -1,0 +1,7 @@
+/* Global base shared by every route (fonts + Mantine base). Route-specific original CSS is imported by each page in src/pages/. */
+@import './styles/original/357da7cf10d68108.css';
+@import './styles/original/437c25afc566ca52.css';
+
+
+/* Tailwind directives intentionally omitted: the original compiled CSS is the sole stylesheet; Tailwind utilities collided with original class names (.h-4, .hidden, .blur...). */
+:root{--mantine-font-family:var(--font-open-runde),sans-serif;--mantine-font-family-headings:var(--font-open-runde),sans-serif;--font-open-runde:"Open Runde"}

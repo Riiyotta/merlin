@@ -1,0 +1,218 @@
+- generic [active] [ref=f42e1]:
+  - main [ref=f42e2]:
+    - link "Read the blog" [ref=f42e3] [cursor=pointer]:
+      - /url: "#blog-content"
+    - navigation "Main navigation" [ref=f42e6]:
+      - link "merlin.computer" [ref=f42e7] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f42e9]:
+        - link "Pricing" [ref=f42e10] [cursor=pointer]:
+          - /url: /pricing
+        - link "Manifesto" [ref=f42e11] [cursor=pointer]:
+          - /url: /manifesto
+    - generic [ref=f42e12]:
+      - generic [ref=f42e13]:
+        - heading "A little more to think about." [level=1] [ref=f42e14]: A little moreto think about.
+        - paragraph [ref=f42e15]: Notes on building Merlin, finding focus, and making room for life.
+      - 'link "Others Latest story The Future of Work is Autonomous: Why Your Next ‘Hire’ Might Be an AI Chief of Staff Adeola Adeoti Jul 8, 2025 Read the story" [ref=f42e16] [cursor=pointer]':
+        - /url: /blog/the-future-of-work-is-autonomous-why-your-next-hire-might-be-an-ai-chief-of-staff
+        - generic [ref=f42e18]:
+          - generic [ref=f42e19]:
+            - text: Others
+            - generic [ref=f42e20]: Latest story
+          - 'heading "The Future of Work is Autonomous: Why Your Next ‘Hire’ Might Be an AI Chief of Staff" [level=2] [ref=f42e21]'
+          - generic [ref=f42e22]:
+            - generic [ref=f42e23]: Adeola Adeoti
+            - time [ref=f42e24]: Jul 8, 2025
+          - generic [ref=f42e25]: Read the story
+      - region [ref=f42e29]:
+        - generic [ref=f42e30]:
+          - heading "More from Merlin" [level=2] [ref=f42e31]
+          - generic [ref=f42e32]: A few things worth sharing.
+        - generic [ref=f42e33]:
+          - link "Others How to Share a Google Calendar on iPhone in 2025 Adeola Adeoti May 14, 2025" [ref=f42e34] [cursor=pointer]:
+            - /url: /blog/how-to-share-a-google-calendar-on-iphone-in-2025
+            - generic [ref=f42e35]: Others
+            - generic [ref=f42e36]:
+              - heading "How to Share a Google Calendar on iPhone in 2025" [level=3] [ref=f42e37]
+              - generic [ref=f42e38]:
+                - generic [ref=f42e39]: Adeola Adeoti
+                - time [ref=f42e40]: May 14, 2025
+          - 'link "Others How to Use Google Calendar: The Complete 2025 Guide Adeola Adeoti May 14, 2025" [ref=f42e45] [cursor=pointer]':
+            - /url: /blog/how-to-use-google-calendar-the-complete-2025-guide
+            - generic [ref=f42e46]: Others
+            - generic [ref=f42e47]:
+              - 'heading "How to Use Google Calendar: The Complete 2025 Guide" [level=3] [ref=f42e48]'
+              - generic [ref=f42e49]:
+                - generic [ref=f42e50]: Adeola Adeoti
+                - time [ref=f42e51]: May 14, 2025
+          - link "Others How to schedule Slack messages with ease Adeola Adeoti May 13, 2025" [ref=f42e56] [cursor=pointer]:
+            - /url: /blog/how-to-schedule-slack-messages-with-ease
+            - generic [ref=f42e57]: Others
+            - generic [ref=f42e58]:
+              - heading "How to schedule Slack messages with ease" [level=3] [ref=f42e59]
+              - generic [ref=f42e60]:
+                - generic [ref=f42e61]: Adeola Adeoti
+                - time [ref=f42e62]: May 13, 2025
+          - 'link "Others Microsoft Teams vs Slack (2025): Pros, cons, and what''s best Adeola Adeoti May 13, 2025" [ref=f42e67] [cursor=pointer]':
+            - /url: /blog/microsoft-teams-vs-slack-2025-pros-cons-and-what-s-best
+            - generic [ref=f42e68]: Others
+            - generic [ref=f42e69]:
+              - 'heading "Microsoft Teams vs Slack (2025): Pros, cons, and what''s best" [level=3] [ref=f42e70]'
+              - generic [ref=f42e71]:
+                - generic [ref=f42e72]: Adeola Adeoti
+                - time [ref=f42e73]: May 13, 2025
+          - 'link "Others How to Email a Professor: Updated Guide With Templates and Real-World Tips Adeola Adeoti May 13, 2025" [ref=f42e78] [cursor=pointer]':
+            - /url: /blog/how-to-email-a-professor-updated-guide-with-templates-and-real-world-tips
+            - generic [ref=f42e79]: Others
+            - generic [ref=f42e80]:
+              - 'heading "How to Email a Professor: Updated Guide With Templates and Real-World Tips" [level=3] [ref=f42e81]'
+              - generic [ref=f42e82]:
+                - generic [ref=f42e83]: Adeola Adeoti
+                - time [ref=f42e84]: May 13, 2025
+          - link "Others How to Set an Out of Office in Microsoft Teams Adeola Adeoti May 13, 2025" [ref=f42e89] [cursor=pointer]:
+            - /url: /blog/how-to-set-an-out-of-office-in-microsoft-teams
+            - generic [ref=f42e90]: Others
+            - generic [ref=f42e91]:
+              - heading "How to Set an Out of Office in Microsoft Teams" [level=3] [ref=f42e92]
+              - generic [ref=f42e93]:
+                - generic [ref=f42e94]: Adeola Adeoti
+                - time [ref=f42e95]: May 13, 2025
+          - link "Others How to Write a Formal Email Adeola Adeoti May 13, 2025" [ref=f42e100] [cursor=pointer]:
+            - /url: /blog/how-to-write-a-formal-email
+            - generic [ref=f42e101]: Others
+            - generic [ref=f42e102]:
+              - heading "How to Write a Formal Email" [level=3] [ref=f42e103]
+              - generic [ref=f42e104]:
+                - generic [ref=f42e105]: Adeola Adeoti
+                - time [ref=f42e106]: May 13, 2025
+          - link "Others How to Create a Professional Email Address (2025 Guide) Adeola Adeoti May 13, 2025" [ref=f42e111] [cursor=pointer]:
+            - /url: /blog/how-to-create-a-professional-email-address-2025-guide
+            - generic [ref=f42e112]: Others
+            - generic [ref=f42e113]:
+              - heading "How to Create a Professional Email Address (2025 Guide)" [level=3] [ref=f42e114]
+              - generic [ref=f42e115]:
+                - generic [ref=f42e116]: Adeola Adeoti
+                - time [ref=f42e117]: May 13, 2025
+          - 'link "Others How to End an Email: Ultimate Guide to Professional and Friendly Sign-Offs in 2025 Adeola Adeoti May 13, 2025" [ref=f42e122] [cursor=pointer]':
+            - /url: /blog/how-to-end-an-email-ultimate-guide-to-professional-and-friendly-sign-offs-in-2025
+            - generic [ref=f42e123]: Others
+            - generic [ref=f42e124]:
+              - 'heading "How to End an Email: Ultimate Guide to Professional and Friendly Sign-Offs in 2025" [level=3] [ref=f42e125]'
+              - generic [ref=f42e126]:
+                - generic [ref=f42e127]: Adeola Adeoti
+                - time [ref=f42e128]: May 13, 2025
+          - link "Others What does CC and BCC mean in email? Adeola Adeoti May 13, 2025" [ref=f42e133] [cursor=pointer]:
+            - /url: /blog/what-does-cc-and-bcc-mean-in-email
+            - generic [ref=f42e134]: Others
+            - generic [ref=f42e135]:
+              - heading "What does CC and BCC mean in email?" [level=3] [ref=f42e136]
+              - generic [ref=f42e137]:
+                - generic [ref=f42e138]: Adeola Adeoti
+                - time [ref=f42e139]: May 13, 2025
+          - 'link "Others Best Free Transcription Software Tools in 2025: Top Speech-to-Text Picks Adeola Adeoti May 13, 2025" [ref=f42e144] [cursor=pointer]':
+            - /url: /blog/best-free-transcription-software-tools-in-2025-top-speech-to-text-picks
+            - generic [ref=f42e145]: Others
+            - generic [ref=f42e146]:
+              - 'heading "Best Free Transcription Software Tools in 2025: Top Speech-to-Text Picks" [level=3] [ref=f42e147]'
+              - generic [ref=f42e148]:
+                - generic [ref=f42e149]: Adeola Adeoti
+                - time [ref=f42e150]: May 13, 2025
+          - link "Others Summary of Best 100 ChatGPT-4 Prompts Adeola Adeoti May 13, 2025" [ref=f42e155] [cursor=pointer]:
+            - /url: /blog/summary-of-best-100-chatgpt-4-prompts
+            - generic [ref=f42e156]: Others
+            - generic [ref=f42e157]:
+              - heading "Summary of Best 100 ChatGPT-4 Prompts" [level=3] [ref=f42e158]
+              - generic [ref=f42e159]:
+                - generic [ref=f42e160]: Adeola Adeoti
+                - time [ref=f42e161]: May 13, 2025
+          - 'link "Others AI Note-Taking Tools in 2025: Top Picks, Trends & Tips Adeola Adeoti May 13, 2025" [ref=f42e166] [cursor=pointer]':
+            - /url: /blog/ai-note-taking-tools-in-2025-top-picks-trends-and-tips
+            - generic [ref=f42e167]: Others
+            - generic [ref=f42e168]:
+              - 'heading "AI Note-Taking Tools in 2025: Top Picks, Trends & Tips" [level=3] [ref=f42e169]'
+              - generic [ref=f42e170]:
+                - generic [ref=f42e171]: Adeola Adeoti
+                - time [ref=f42e172]: May 13, 2025
+          - 'link "Others Sam Altman: The Startup Prodigy Steering OpenAI’s Quest for AGI and AI Leadership Adeola Adeoti May 13, 2025" [ref=f42e177] [cursor=pointer]':
+            - /url: /blog/sam-altman-the-startup-prodigy-steering-openai-s-quest-for-agi-and-ai-leadership
+            - generic [ref=f42e178]: Others
+            - generic [ref=f42e179]:
+              - 'heading "Sam Altman: The Startup Prodigy Steering OpenAI’s Quest for AGI and AI Leadership" [level=3] [ref=f42e180]'
+              - generic [ref=f42e181]:
+                - generic [ref=f42e182]: Adeola Adeoti
+                - time [ref=f42e183]: May 13, 2025
+          - link "Others Mastering Gmail Out-of-Office Replies in 2025 Adeola Adeoti May 13, 2025" [ref=f42e188] [cursor=pointer]:
+            - /url: /blog/mastering-gmail-out-of-office-replies-in-2025
+            - generic [ref=f42e189]: Others
+            - generic [ref=f42e190]:
+              - heading "Mastering Gmail Out-of-Office Replies in 2025" [level=3] [ref=f42e191]
+              - generic [ref=f42e192]:
+                - generic [ref=f42e193]: Adeola Adeoti
+                - time [ref=f42e194]: May 13, 2025
+          - 'link "Others Throwaway Email Addresses in 2025: The Complete Guide to Disposable Emails for Privacy and Spam Control Adeola Adeoti May 13, 2025" [ref=f42e199] [cursor=pointer]':
+            - /url: /blog/throwaway-email-addresses-in-2025-the-complete-guide-to-disposable-emails-for-privacy-and-spam-control
+            - generic [ref=f42e200]: Others
+            - generic [ref=f42e201]:
+              - 'heading "Throwaway Email Addresses in 2025: The Complete Guide to Disposable Emails for Privacy and Spam Control" [level=3] [ref=f42e202]'
+              - generic [ref=f42e203]:
+                - generic [ref=f42e204]: Adeola Adeoti
+                - time [ref=f42e205]: May 13, 2025
+          - link "Others Why Is My Email Queued and How to Fix It Adeola Adeoti May 13, 2025" [ref=f42e210] [cursor=pointer]:
+            - /url: /blog/why-is-my-email-queued-and-how-to-fix-it
+            - generic [ref=f42e211]: Others
+            - generic [ref=f42e212]:
+              - heading "Why Is My Email Queued and How to Fix It" [level=3] [ref=f42e213]
+              - generic [ref=f42e214]:
+                - generic [ref=f42e215]: Adeola Adeoti
+                - time [ref=f42e216]: May 13, 2025
+          - 'link "Others How to Write a Resignation Email in 2025: The Ultimate Guide for Professionals Adeola Adeoti May 13, 2025" [ref=f42e221] [cursor=pointer]':
+            - /url: /blog/how-to-write-a-resignation-email-in-2025-the-ultimate-guide-for-professionals
+            - generic [ref=f42e222]: Others
+            - generic [ref=f42e223]:
+              - 'heading "How to Write a Resignation Email in 2025: The Ultimate Guide for Professionals" [level=3] [ref=f42e224]'
+              - generic [ref=f42e225]:
+                - generic [ref=f42e226]: Adeola Adeoti
+                - time [ref=f42e227]: May 13, 2025
+          - link "Others How to Unsend an Email (Updated 2025 Guide) Adeola Adeoti May 5, 2025" [ref=f42e232] [cursor=pointer]:
+            - /url: /blog/how-to-unsend-an-email-updated-2025-guide
+            - generic [ref=f42e233]: Others
+            - generic [ref=f42e234]:
+              - heading "How to Unsend an Email (Updated 2025 Guide)" [level=3] [ref=f42e235]
+              - generic [ref=f42e236]:
+                - generic [ref=f42e237]: Adeola Adeoti
+                - time [ref=f42e238]: May 5, 2025
+      - complementary [ref=f42e243]:
+        - generic [ref=f42e244]: a little less busy. a little more life.
+        - link "Why we’re building Merlin" [ref=f42e245] [cursor=pointer]:
+          - /url: /manifesto
+    - generic [ref=f42e249]:
+      - generic [ref=f42e251]:
+        - heading [level=2] [ref=f42e252]:
+          - text: Your next free moment
+          - generic [ref=f42e253]:
+            - text: starts at
+            - time [ref=f42e258]: 16:41
+        - paragraph [ref=f42e259]: In just three minutes, Merlin starts handling your to-dos. You decide what comes after.
+        - link "Get Merlin for Mac" [ref=f42e260] [cursor=pointer]:
+          - /url: /download?start=1
+      - generic [ref=f42e265]:
+        - generic [ref=f42e266]:
+          - link "merlin.computer — back to top" [ref=f42e267] [cursor=pointer]:
+            - /url: "#top"
+            - text: merlin.computer
+          - generic [ref=f42e268]: © 2026 merlin computing inc
+        - navigation "Footer" [ref=f42e269]:
+          - link "Pricing" [ref=f42e270] [cursor=pointer]:
+            - /url: /pricing
+          - link "Manifesto" [ref=f42e271] [cursor=pointer]:
+            - /url: /manifesto
+          - link "Blog" [ref=f42e272] [cursor=pointer]:
+            - /url: /blog
+          - link "Privacy" [ref=f42e273] [cursor=pointer]:
+            - /url: /privacy
+          - link "Terms" [ref=f42e274] [cursor=pointer]:
+            - /url: /terms
+          - link "Contact" [ref=f42e275] [cursor=pointer]:
+            - /url: mailto:team@merlin.computer
+  - alert [ref=f42e279]

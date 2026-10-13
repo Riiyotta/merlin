@@ -1,0 +1,8 @@
+/* /manifesto route stylesheets, in the live <link> order (CLONE_SPEC_PAGES_A.md §0).
+   357da7cf… and 437c25af… are loaded globally by src/index.css. */
+@import './original/a5f02e9d0c6db7af.css';
+@import './original/922109019b2259fa.css';
+@import './original/f46c55d95248097e.css';
+@import './original/e2e0ba86a6b0d559.css';
+@import './original/ae725ea36c48b431.css';
+@import './original/ea3e27f6a69b5df4.css';

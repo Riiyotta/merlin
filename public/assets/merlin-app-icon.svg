@@ -1,0 +1,56 @@
+<svg width="1024" height="1024" viewBox="0 0 128 128" fill="none" color-interpolation-filters="sRGB" xmlns="http://www.w3.org/2000/svg">
+  <title>Merlin computer</title>
+  <defs>
+    <linearGradient id="rim" x1="25" y1="6" x2="100" y2="122" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#66666b"/><stop offset=".34" stop-color="#343438"/><stop offset="1" stop-color="#171719"/>
+    </linearGradient>
+    <linearGradient id="enamel" x1="44" y1="9" x2="86" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#363639"/><stop offset=".46" stop-color="#19191b"/><stop offset="1" stop-color="#050506"/>
+    </linearGradient>
+    <radialGradient id="surface-light" cx="0" cy="0" r="1" gradientTransform="translate(33 12) rotate(52) scale(94 101)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c0c0c4" stop-opacity=".24"/><stop offset="1" stop-color="#c0c0c4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="edge-light" x1="51" y1="8" x2="76" y2="118" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#dedee0" stop-opacity=".55"/><stop offset=".38" stop-color="#9a9a9f" stop-opacity=".08"/><stop offset="1" stop-color="#101011" stop-opacity=".5"/>
+    </linearGradient>
+    <linearGradient id="pearl" x1="30" y1="24" x2="68" y2="84" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fffefa"/><stop offset=".22" stop-color="#e8f9f7"/><stop offset=".43" stop-color="#d5e6ff"/><stop offset=".64" stop-color="#d8c5f4"/><stop offset=".83" stop-color="#f3ccec"/><stop offset="1" stop-color="#fff0dc"/>
+    </linearGradient>
+    <linearGradient id="pearl-edge" x1="30" y1="26" x2="66" y2="84" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#b3d4f4"/><stop offset=".55" stop-color="#867bc1"/><stop offset="1" stop-color="#bd90bd"/>
+    </linearGradient>
+    <filter color-interpolation-filters="sRGB" id="tile-shadow" x="0" y="0" width="128" height="128" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="1.7" flood-color="#000000" flood-opacity=".3"/>
+    </filter>
+    <filter color-interpolation-filters="sRGB" id="cast-shadow" x="8" y="12" width="86" height="86" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="2.8" flood-color="#000000" flood-opacity=".65"/>
+    </filter>
+    <filter color-interpolation-filters="sRGB" id="ceramic" x="15" y="15" width="72" height="80" filterUnits="userSpaceOnUse">
+      <feGaussianBlur in="SourceAlpha" stdDeviation=".55" result="surface"/>
+      <feSpecularLighting in="surface" surfaceScale="1.7" specularConstant=".65" specularExponent="22" lighting-color="#ffffff" result="shine">
+        <feDistantLight azimuth="225" elevation="52"/>
+      </feSpecularLighting>
+      <feComposite in="shine" in2="SourceAlpha" operator="in" result="clipped-shine"/>
+      <feBlend in="SourceGraphic" in2="clipped-shine" mode="screen"/>
+    </filter>
+    <g id="merlin" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 28 52 C 24 40 24 24 38 26 C 44 27 42 36 42 42 C 42 48 46 52 50 52 C 54 52 58 48 58 42 C 58 36 56 27 62 26 C 76 24 76 40 72 52" stroke-width="6.5" fill="none"/>
+      <circle cx="38" cy="66" r="4.5" stroke="none"/>
+      <circle cx="62" cy="66" r="4.5" stroke="none"/>
+      <path d="M 39 79 Q 50 88 61 79" stroke-width="5" fill="none"/>
+    </g>
+  </defs>
+  <rect x="6" y="6" width="116" height="116" rx="28" fill="#000000" filter="url(#tile-shadow)"/>
+  <g>
+    <rect x="6" y="6" width="116" height="116" rx="28" fill="url(#rim)"/>
+    <rect x="7.5" y="7.5" width="113" height="112.5" rx="26.5" fill="url(#enamel)"/>
+    <rect x="7.5" y="7.5" width="113" height="112.5" rx="26.5" fill="url(#surface-light)"/>
+    <rect x="8" y="8" width="112" height="111.5" rx="26" stroke="url(#edge-light)" stroke-width=".55"/>
+  </g>
+  <g transform="translate(8 2.4) scale(1.12)">
+    <g filter="url(#cast-shadow)">
+      <use href="#merlin" transform="translate(0 1.1)" fill="url(#pearl-edge)" stroke="url(#pearl-edge)"/>
+    </g>
+    <use href="#merlin" fill="url(#pearl)" stroke="url(#pearl)" filter="url(#ceramic)"/>
+  </g>
+</svg>

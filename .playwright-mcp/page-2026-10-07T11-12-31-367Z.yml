@@ -1,0 +1,98 @@
+- generic [active] [ref=f53e1]:
+  - main [ref=f53e2]:
+    - link "Read the manifesto" [ref=f53e3] [cursor=pointer]:
+      - /url: "#manifesto"
+    - navigation "Main navigation" [ref=f53e6]:
+      - link "merlin.computer" [ref=f53e7] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f53e9]:
+        - link "Pricing" [ref=f53e10] [cursor=pointer]:
+          - /url: /pricing
+        - link "Manifesto" [ref=f53e11] [cursor=pointer]:
+          - /url: /manifesto
+    - article [ref=f53e12]:
+      - generic [ref=f53e13]:
+        - generic [aria-hidden]: your time
+        - generic [ref=f53e14]:
+          - heading "Less managing. More living." [level=1] [ref=f53e15]: Less managing.More living.
+          - paragraph [ref=f53e16]: This afternoon, you have an idea. You find a quiet moment, open your laptop, and think you’ll finally get to it today.
+          - paragraph [ref=f53e17]:
+            - text: Then there’s a reply to write. A
+            - generic [ref=f53e18]: meeting
+            - text: to rearrange. A
+            - generic [ref=f53e25]:
+              - img [ref=f53e27]:
+                - generic [ref=f53e32]: PDF
+              - text: document
+            - text: somewhere in that thread. Before you know it, the afternoon is slipping away and the idea is still sitting where you left it.
+        - generic [aria-hidden]: yours again.
+      - figure [ref=f53e33]:
+        - img "Merlin sitting comfortably in an armchair with a laptop in a sunlit room." [ref=f53e34]
+      - region [ref=f53e35]:
+        - generic [ref=f53e36]:
+          - heading "We know that day. We’ve lived it too." [level=2] [ref=f53e37]: We know that day.We’ve lived it too.
+          - paragraph [ref=f53e38]: It’s why we’re building Merlin, an AI assistant for your Mac. Something you can turn to in the middle of all this and say, “Can you give me a hand?”
+          - paragraph [ref=f53e39]: So this time, you ask. Merlin finds the details in your connected apps. You open Companion beside the email you’re stuck on, work out a reply together, and move on.
+          - paragraph [ref=f53e40]:
+            - text: When your next
+            - generic [ref=f53e41]: meeting
+            - text: starts, you let Merlin take notes. Someone says something that sparks a thought, and you’re there to catch it. For once, you aren’t trying to listen and write at the same time.
+        - generic [aria-hidden] [ref=f53e48]: less on your mind
+      - figure [ref=f53e49]:
+        - img "Merlin sharing tea and a conversation with a friend at a sunny garden studio table." [ref=f53e50]
+      - region [ref=f53e51]:
+        - generic [ref=f53e52]:
+          - heading "And there it is. A little room." [level=2] [ref=f53e53]: And there it is.A little room.
+          - paragraph [ref=f53e54]:
+            - text: After the call, there’s a trip to sort out. Merlin looks through flights in your
+            - generic [ref=f53e55]: browser
+            - text: and helps with the booking, stopping for your approval before you commit. One more thing off your mind.
+          - paragraph [ref=f53e63]:
+            - text: You come back to that idea. You explain it, change your mind, try another direction. With Merlin, the first version becomes a
+            - generic [ref=f53e64]: deck
+            - text: ", a"
+            - generic [ref=f53e72]: spreadsheet
+            - text: ", or a working"
+            - generic [ref=f53e81]: website
+            - text: . Something you can open and keep making yours.
+        - generic [aria-hidden] [ref=f53e90]: more room for life
+      - figure [ref=f53e91]:
+        - img "Merlin enjoying a book under a beach umbrella beside the sea at sunset." [ref=f53e92]
+      - region [ref=f53e93]:
+        - generic [ref=f53e94]:
+          - paragraph [ref=f53e95]: Before you finish, you set up a routine for your next morning briefing. The familiar work has a place to go. It doesn’t all have to live in your head when you step away.
+          - paragraph [ref=f53e96]: Then you close your laptop. There’s some of the day left for you. You take the long way home, call someone back, or do absolutely nothing for a while. We’re building Merlin for this part, too.
+          - heading "Your time. Yours to spend." [level=2] [ref=f53e97]: Your time.Yours to spend.
+        - generic [ref=f53e98]:
+          - generic [ref=f53e99]: Yours
+          - text: ", Merlin"
+    - generic [ref=f53e100]:
+      - generic [ref=f53e102]:
+        - heading [level=2] [ref=f53e103]:
+          - text: Your next free moment
+          - generic [ref=f53e104]:
+            - text: starts at
+            - time [ref=f53e109]: 16:45
+        - paragraph [ref=f53e110]: In just three minutes, Merlin starts handling your to-dos. You decide what comes after.
+        - link "Get Merlin for Mac" [ref=f53e111] [cursor=pointer]:
+          - /url: /download?start=1
+      - generic [ref=f53e116]:
+        - generic [ref=f53e117]:
+          - link "merlin.computer — back to top" [ref=f53e118] [cursor=pointer]:
+            - /url: "#top"
+            - text: merlin.computer
+          - generic [ref=f53e119]: © 2026 merlin computing inc
+        - navigation "Footer" [ref=f53e120]:
+          - link "Pricing" [ref=f53e121] [cursor=pointer]:
+            - /url: /pricing
+          - link "Manifesto" [ref=f53e122] [cursor=pointer]:
+            - /url: /manifesto
+          - link "Blog" [ref=f53e123] [cursor=pointer]:
+            - /url: /blog
+          - link "Privacy" [ref=f53e124] [cursor=pointer]:
+            - /url: /privacy
+          - link "Terms" [ref=f53e125] [cursor=pointer]:
+            - /url: /terms
+          - link "Contact" [ref=f53e126] [cursor=pointer]:
+            - /url: mailto:team@merlin.computer
+  - alert [ref=f53e130]

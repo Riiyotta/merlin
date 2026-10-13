@@ -1,0 +1,113 @@
+body [0,0,1440,7913]
+  div [0,0,0,0]
+  main#top.merlin-story.site-layout.manifesto-page [0,0,1440,7913]
+    a.skip-link [12,-82,165,52] "Read the manifesto" href=#manifesto
+    div.site-container [120,0,1200,152]
+      header.manifesto-navigation [120,0,1200,152]
+        nav.hero-corner-nav [120,36,157,84]
+          span.hero-nav-dot [104,106,6,6] style="transform: translateX(-16px) translateY(70px);"
+          a.hero-site-name.hero-site-brand [120,36,157,26] href=/
+            img.hero-site-icon [120,39,20,20] src=/_next/image?url=%2Fmerlin-dock.png&w=3840&q=75 style="color:transparent"
+            span.hero-site-name [148,36,129,26] "merlin.computer"
+          div.hero-corner-links [120,70,65,50]
+            a [120,70,45,21] "Pricing" href=/pricing
+            a [120,99,65,21] "Manifesto" href=/manifesto
+    article#manifesto.manifesto-poster [0,152,1440,6855]
+      section.manifesto-poster-opening [0,152,1440,1091]
+        div.manifesto-handwriting.manifesto-handwriting-time [167,66,900,449] [2 words]
+        div.manifesto-poster-copy [360,372,720,641]
+          h1#manifesto-title [360,372,720,146] "Less managing. More living."
+            br [949,370,0,77]
+          p [360,566,720,157] [22 words]
+          p [360,752,720,261] [33 words]
+            span.manifesto-mention [891,756,178,44] [1 words]
+              svg 36x36
+            span.manifesto-mention [622,809,211,44] [1 words]
+              span.story-artifact-icons [622,813,36,36]
+                svg 36x36
+        div.manifesto-handwriting.manifesto-handwriting-back [248,868,1172,470] [2 words]
+      figure.manifesto-photo [280,1291,880,587]
+        img [280,1291,880,587] src=/_next/image?url=%2Fstory%2Fhandmade%2Fcompanion.webp&w=3840&q=75 style="color:transparent"
+      section.manifesto-poster-understanding [0,1878,1440,1414]
+        div.manifesto-poster-copy [280,1998,720,1037]
+          h2#manifesto-understanding-title [280,1998,720,146] "We know that day. We’ve lived it too."
+            br [908,1995,0,77]
+          p [280,2192,720,209] [30 words]
+          p [280,2430,720,261] [30 words]
+          p [280,2721,720,313] [35 words]
+            span.manifesto-mention [569,2725,178,44] [1 words]
+              svg 36x36
+        span.manifesto-handwritten-note [432,3045,576,180] [4 words]
+      figure.manifesto-photo [280,3340,880,587]
+        img [280,3340,880,587] src=/_next/image?url=%2Fstory%2Fhandmade%2Fmeeting-scene.webp&w=3840&q=75 style="color:transparent"
+      section.manifesto-poster-action [0,3926,1440,1175]
+        div.manifesto-poster-copy [440,4046,720,798]
+          h2#manifesto-action-title [440,4046,720,146] "And there it is. A little room."
+            br [1009,4044,0,77]
+          p [440,4240,720,261] [33 words]
+            span.manifesto-mention [473,4348,178,44] [1 words]
+              svg 36x36
+          p [440,4531,720,313] [37 words]
+            span.manifesto-mention [475,4692,123,44] [1 words]
+              span.story-artifact-icons [475,4696,36,36]
+                svg 36x36
+            span.manifesto-mention [646,4692,252,44] [1 words]
+              span.story-artifact-icons [646,4696,36,36]
+                svg 36x36
+            span.manifesto-mention [459,4744,173,44] [1 words]
+              span.story-artifact-icons [459,4748,36,36]
+                svg 36x36
+        span.manifesto-handwritten-note [420,4854,600,183] [4 words]
+      figure.manifesto-photo [280,5149,880,587]
+        img [280,5149,880,587] src=/_next/image?url=%2Fstory%2Fhandmade%2Fhero-beach-reading.webp&w=3840&q=75 style="color:transparent"
+      section.manifesto-poster-ending [0,5736,1440,1161]
+        div.manifesto-poster-copy [360,5866,720,695]
+          p [360,5866,720,209] [34 words]
+          p [360,6105,720,261] [36 words]
+          h2#manifesto-ending-title [360,6416,720,146] "Your time. Yours to spend."
+            br [867,6413,0,77]
+        div.manifesto-signature [563,6609,314,273] [2 words]
+          span.manifesto-circled-yours [563,6627,126,76] [1 words]
+            svg 188x133
+          img.manifesto-signature-mark [644,6712,163,163] src=/_next/image?url=%2Fstory%2Fhandmade%2Fmark.webp&w=3840&q=75 style="color:transparent"
+    footer.closing-footer [0,7007,1440,905]
+      div.closing-sky [0,7007,1440,905]
+        div.closing-bird-track.closing-bird-track-1 [0,7023,1440,100]
+          div.closing-bird [1263,7023,60,41]
+            div.closing-bird-drift [1263,7028,61,41]
+              div.closing-bird-shape [1263,7028,61,41]
+        div.closing-bird-track.closing-bird-track-2 [0,7037,1440,100]
+          div.closing-bird [236,7037,52,35]
+            div.closing-bird-drift [235,7046,54,38]
+              div.closing-bird-shape [235,7046,54,38]
+        div.closing-bird-track.closing-bird-track-3 [0,7053,1440,100]
+          div.closing-bird [934,7053,48,32]
+            div.closing-bird-drift [934,7060,48,33]
+              div.closing-bird-shape [934,7060,48,33]
+      div.closing-main [94,7007,1253,770]
+        div.closing-invitation [94,7243,538,364]
+          h2 [94,7243,538,186] "Your next free moment"
+            br [480,7295,0,77]
+            span.closing-start-time [94,7364,478,64] "starts at"
+              span.closing-clock-time [346,7364,225,61]
+                svg 51x51
+                time [405,7364,166,61] "16:45"
+          p [94,7453,370,54] [14 words]
+          a.download-button.download-button-primary [94,7539,288,68] href=/download?start=1
+            span [126,7565,168,17] "Get Merlin for Mac"
+            span.download-arrow [320,7545,56,56]
+              svg 24x24
+        div.closing-beach [689,7137,744,576]
+      div.closing-footer-links [94,7777,1253,88]
+        div.closing-brand [94,7812,165,53]
+          a.closing-wordmark.hero-site-name [94,7812,129,26] "merlin.computer" href=#top
+          span.closing-copyright [94,7845,165,19] "© 2026 merlin computing inc"
+        nav [891,7822,456,32]
+          a [891,7822,45,32] "Pricing" href=/pricing
+          a [967,7822,65,32] "Manifesto" href=/manifesto
+          a [1063,7822,29,32] "Blog" href=/blog
+          a [1124,7822,48,32] "Privacy" href=/privacy
+          a [1203,7822,41,32] "Terms" href=/terms
+          a [1275,7822,72,32] "Contact" href=mailto:team@merlin.computer
+            svg 14x14
+  next-route-announcer [0,7913,0,0] style="position: absolute;"
