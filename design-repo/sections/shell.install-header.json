@@ -1,6 +1,17 @@
 {
   "id": "shell.install-header",
   "category": "shell",
+  "source": {
+    "id": "src:Download.jsx#header.install-header",
+    "tag": "header",
+    "file": "src/pages/Download.jsx",
+    "lines": "48-63"
+  },
+  "semantic": {
+    "id": "shell.install-header",
+    "category": "SHELL"
+  },
+  "retrievalEligible": true,
   "description": "The /download page's own brand-only header: merlin-dock icon + 'merlin.computer' link home. It deliberately has NO navigation links and NO footer follows the page.",
   "evidenceLevel": "measured",
   "domAnchor": "main.install-page > header.install-header",
@@ -27,7 +38,9 @@
       "brandIcon": {
         "$ref": "#/definitions/assetRef",
         "x-allowedRoles": [
-          "brand.merlin-app-icon"
+          "brand.merlin-app-icon",
+          "brand.placeholder-mark",
+          "media.user-supplied"
         ]
       },
       "homeHref": {
@@ -96,5 +109,10 @@
   ],
   "implementedBy": [
     "src/pages/Download.jsx"
+  ],
+  "generatedAssetRoles": [
+    "brand.placeholder-mark",
+    "copy.original",
+    "media.user-supplied"
   ]
 }

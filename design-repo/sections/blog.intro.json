@@ -1,6 +1,17 @@
 {
   "id": "blog.intro",
   "category": "blog",
+  "source": {
+    "id": "src:Blog.jsx#header.blog_intro__ggRFG",
+    "tag": "header",
+    "file": "src/pages/Blog.jsx",
+    "lines": "26-36"
+  },
+  "semantic": {
+    "id": "blog.intro",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
   "description": "Blog index intro: centered 2-line serif H1 and a 2-line subtitle.",
   "evidenceLevel": "measured",
   "domAnchor": "header.blog_intro__ggRFG",
@@ -89,5 +100,8 @@
   ],
   "implementedBy": [
     "src/pages/Blog.jsx"
+  ],
+  "generatedAssetRoles": [
+    "copy.original"
   ]
 }

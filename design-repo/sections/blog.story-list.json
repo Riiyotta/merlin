@@ -1,6 +1,17 @@
 {
   "id": "blog.story-list",
   "category": "blog",
+  "source": {
+    "id": "src:Blog.jsx#section.blog_stories__Dlir_",
+    "tag": "section",
+    "file": "src/pages/Blog.jsx",
+    "lines": "53-72"
+  },
+  "semantic": {
+    "id": "blog.story-list",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
   "description": "'More from Merlin' flat list of story rows (category, title, author/date, arrow). No thumbnails, excerpts, filters, tags, search or pagination exist on the real page. Excludes the featured post.",
   "evidenceLevel": "measured",
   "domAnchor": "section.blog_stories__Dlir_",
@@ -133,5 +144,9 @@
   ],
   "implementedBy": [
     "src/pages/Blog.jsx"
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "link.placeholder-url"
   ]
 }

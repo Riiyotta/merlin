@@ -82,7 +82,7 @@
     ]
   },
   "liveSource": {
-    "summary": "REAL, LIVE COMPANY SOURCE. Copy, logos, felt-character art, photographs, product screenshots and brand marks belong to Merlin or third parties. This design-repo is NOT for public redistribution; the asset-role contract (tokens/llm/asset-roles.json) bans reproducing real third-party logos, the Merlin marks, real people's photos, real product screenshots and recordings.",
+    "summary": "REAL, LIVE COMPANY SOURCE. Copy, logos, felt-character art, photographs, product screenshots and brand marks belong to Merlin or third parties. This design-repo is NOT for public redistribution; the asset-role contract (assets/asset-roles.json) bans reproducing real third-party logos, the Merlin marks, real people's photos, real product screenshots and recordings.",
     "measuredFrom": [
       "CLONE_SPEC.md:3",
       "src/components/Companies.jsx:8"
@@ -774,6 +774,904 @@
           }
         ]
       }
+    }
+  },
+  "sectionHeights": {
+    "_note": "Measured from a LOCAL vite preview of the BUILT clone (not the live site) at 1440x900 by extraction/measure_sections.mjs. heightPx = getBoundingClientRect().height of the section contract domAnchor after a full scroll pass; position fixed/sticky elements are inFlow:false and take no page height. Consumed by extraction/wrapper_gate.py.",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "measuredAt": "2026-10-29",
+    "tool": "playwright chromium (headless), extraction/measure_sections.mjs",
+    "baseUrl": "local vite preview of the built clone",
+    "blogSlugMeasured": "how-to-share-a-google-calendar-on-iphone-in-2025",
+    "routes": {
+      "/": {
+        "template": "home",
+        "url": "/",
+        "pageHeight": 11899,
+        "sections": [
+          {
+            "section": "hero.marketing",
+            "variant": "home",
+            "domAnchor": "section.story-hero",
+            "heightPx": 554,
+            "position": "relative",
+            "inFlow": true
+          },
+          {
+            "section": "hero.landscape",
+            "variant": null,
+            "domAnchor": "section.hero-life.hero-landscape",
+            "heightPx": 835,
+            "position": "relative",
+            "inFlow": true
+          },
+          {
+            "section": "proof.company-logos",
+            "variant": null,
+            "domAnchor": "section.companies",
+            "heightPx": 231,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "story.context-routines",
+            "variant": null,
+            "domAnchor": "section#routines",
+            "heightPx": 2173,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "story.browser-tasks",
+            "variant": null,
+            "domAnchor": "section#browser.browser-showcase",
+            "heightPx": 1778,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "story.meetings-projects",
+            "variant": null,
+            "domAnchor": "section#meetings",
+            "heightPx": 1645,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "story.companion",
+            "variant": null,
+            "domAnchor": "section#companion",
+            "heightPx": 1876,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "scene.privacy-trust",
+            "variant": null,
+            "domAnchor": "section#privacy.privacy-scene",
+            "heightPx": 957,
+            "position": "relative",
+            "inFlow": true
+          },
+          {
+            "section": "faq.accordion",
+            "variant": null,
+            "domAnchor": "section#faq.merlin-faq",
+            "heightPx": 805,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "shell.footer-closing",
+            "variant": null,
+            "domAnchor": "footer.closing-footer",
+            "heightPx": 905,
+            "position": "relative",
+            "inFlow": true
+          },
+          {
+            "section": "shell.floating-nav",
+            "variant": null,
+            "domAnchor": "nav.floating-navigation_nav__y4vuM",
+            "heightPx": 46,
+            "position": "fixed",
+            "inFlow": false,
+            "measuredAfterScrollY": 1500
+          }
+        ]
+      },
+      "/pricing": {
+        "template": "pricing",
+        "url": "/pricing",
+        "pageHeight": 3551,
+        "sections": [
+          {
+            "section": "hero.marketing",
+            "variant": "pricing",
+            "domAnchor": "section.story-hero",
+            "heightPx": 466,
+            "position": "relative",
+            "inFlow": true
+          },
+          {
+            "section": "pricing.plans",
+            "variant": null,
+            "domAnchor": "section#plans.pricing-plans",
+            "heightPx": 502,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "pricing.included",
+            "variant": null,
+            "domAnchor": "section.pricing-included",
+            "heightPx": 887,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "pricing.faq",
+            "variant": null,
+            "domAnchor": "section.pricing-faq",
+            "heightPx": 791,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "shell.footer-closing",
+            "variant": null,
+            "domAnchor": "footer.closing-footer",
+            "heightPx": 905,
+            "position": "relative",
+            "inFlow": true
+          }
+        ]
+      },
+      "/download": {
+        "template": "install",
+        "url": "/download",
+        "pageHeight": 1000,
+        "sections": [
+          {
+            "section": "shell.install-header",
+            "variant": null,
+            "domAnchor": "main.install-page > header.install-header",
+            "heightPx": 100,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "install.intro",
+            "variant": null,
+            "domAnchor": "section.install-intro",
+            "heightPx": 292,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "install.steps",
+            "variant": null,
+            "domAnchor": "ol.install-steps",
+            "heightPx": 400,
+            "position": "static",
+            "inFlow": true
+          }
+        ]
+      },
+      "/manifesto": {
+        "template": "manifesto",
+        "url": "/manifesto",
+        "pageHeight": 7912,
+        "sections": [
+          {
+            "section": "shell.corner-nav",
+            "variant": "manifesto",
+            "domAnchor": "div.site-container > header",
+            "heightPx": 152,
+            "position": "relative",
+            "inFlow": true
+          },
+          {
+            "section": "manifesto.opening",
+            "variant": null,
+            "domAnchor": "section.manifesto-poster-opening",
+            "heightPx": 1091,
+            "position": "relative",
+            "inFlow": true
+          },
+          {
+            "section": "manifesto.photo",
+            "variant": "after-opening",
+            "domAnchor": "figure.manifesto-photo",
+            "heightPx": 587,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "manifesto.understanding",
+            "variant": null,
+            "domAnchor": "section.manifesto-poster-understanding",
+            "heightPx": 1414,
+            "position": "relative",
+            "inFlow": true
+          },
+          {
+            "section": "manifesto.photo",
+            "variant": "after-understanding",
+            "domAnchor": "figure.manifesto-photo",
+            "heightPx": 587,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "manifesto.action",
+            "variant": null,
+            "domAnchor": "section.manifesto-poster-action",
+            "heightPx": 1175,
+            "position": "relative",
+            "inFlow": true
+          },
+          {
+            "section": "manifesto.photo",
+            "variant": "after-action",
+            "domAnchor": "figure.manifesto-photo",
+            "heightPx": 587,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "manifesto.ending",
+            "variant": null,
+            "domAnchor": "section.manifesto-poster-ending",
+            "heightPx": 1161,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "shell.footer-closing",
+            "variant": null,
+            "domAnchor": "footer.closing-footer",
+            "heightPx": 905,
+            "position": "relative",
+            "inFlow": true
+          }
+        ]
+      },
+      "/blog": {
+        "template": "blog-index",
+        "url": "/blog",
+        "pageHeight": 4793,
+        "sections": [
+          {
+            "section": "shell.corner-nav",
+            "variant": "blog",
+            "domAnchor": "div.site-container > header",
+            "heightPx": 160,
+            "position": "relative",
+            "inFlow": true
+          },
+          {
+            "section": "blog.intro",
+            "variant": null,
+            "domAnchor": "header.blog_intro__ggRFG",
+            "heightPx": 421,
+            "position": "relative",
+            "inFlow": true
+          },
+          {
+            "section": "blog.featured",
+            "variant": null,
+            "domAnchor": "a.blog_featured__dQvxo",
+            "heightPx": 420,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "blog.story-list",
+            "variant": null,
+            "domAnchor": "section.blog_stories__Dlir_",
+            "heightPx": 2505,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "blog.manifesto-aside",
+            "variant": null,
+            "domAnchor": "aside.blog_manifesto__VgyoG",
+            "heightPx": 285,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "shell.footer-closing",
+            "variant": null,
+            "domAnchor": "footer.closing-footer",
+            "heightPx": 905,
+            "position": "relative",
+            "inFlow": true
+          }
+        ]
+      },
+      "/blog/:slug": {
+        "template": "blog-post",
+        "url": "/blog/how-to-share-a-google-calendar-on-iphone-in-2025",
+        "pageHeight": 12086,
+        "sections": [
+          {
+            "section": "shell.corner-nav",
+            "variant": "blog",
+            "domAnchor": "div.site-container > header",
+            "heightPx": 160,
+            "position": "relative",
+            "inFlow": true
+          },
+          {
+            "section": "blog.article-header",
+            "variant": null,
+            "domAnchor": "header.blog_articleHeader__3w7of",
+            "heightPx": 338,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "blog.prose",
+            "variant": null,
+            "domAnchor": "div.blog_prose__r_2py",
+            "instance": 0,
+            "instanceLabel": "(lead before first h2)",
+            "blocks": 7,
+            "heightPx": 872,
+            "position": "static",
+            "inFlow": true,
+            "measuredAs": "h2-bounded DOM range inside the domAnchor"
+          },
+          {
+            "section": "blog.prose",
+            "variant": null,
+            "domAnchor": "div.blog_prose__r_2py",
+            "instance": 1,
+            "instanceLabel": "Why Share Your Google Calendar?",
+            "blocks": 10,
+            "heightPx": 746,
+            "position": "static",
+            "inFlow": true,
+            "measuredAs": "h2-bounded DOM range inside the domAnchor"
+          },
+          {
+            "section": "blog.prose",
+            "variant": null,
+            "domAnchor": "div.blog_prose__r_2py",
+            "instance": 2,
+            "instanceLabel": "Sharing Methods: App vs. Browser on iPhone",
+            "blocks": 40,
+            "heightPx": 3553,
+            "position": "static",
+            "inFlow": true,
+            "measuredAs": "h2-bounded DOM range inside the domAnchor"
+          },
+          {
+            "section": "blog.prose",
+            "variant": null,
+            "domAnchor": "div.blog_prose__r_2py",
+            "instance": 3,
+            "instanceLabel": "Step-by-Step: Sharing a Google Calendar via Safari",
+            "blocks": 13,
+            "heightPx": 2257,
+            "position": "static",
+            "inFlow": true,
+            "measuredAs": "h2-bounded DOM range inside the domAnchor"
+          },
+          {
+            "section": "blog.prose",
+            "variant": null,
+            "domAnchor": "div.blog_prose__r_2py",
+            "instance": 4,
+            "instanceLabel": "Troubleshooting and Tips",
+            "blocks": 11,
+            "heightPx": 1413,
+            "position": "static",
+            "inFlow": true,
+            "measuredAs": "h2-bounded DOM range inside the domAnchor"
+          },
+          {
+            "section": "blog.prose",
+            "variant": null,
+            "domAnchor": "div.blog_prose__r_2py",
+            "instance": 5,
+            "instanceLabel": "Tips for iPhone Users",
+            "blocks": 7,
+            "heightPx": 711,
+            "position": "static",
+            "inFlow": true,
+            "measuredAs": "h2-bounded DOM range inside the domAnchor"
+          },
+          {
+            "section": "blog.prose",
+            "variant": null,
+            "domAnchor": "div.blog_prose__r_2py",
+            "instance": 6,
+            "instanceLabel": "Summary",
+            "blocks": 8,
+            "heightPx": 576,
+            "position": "static",
+            "inFlow": true,
+            "measuredAs": "h2-bounded DOM range inside the domAnchor"
+          },
+          {
+            "section": "blog.article-end",
+            "variant": null,
+            "domAnchor": "footer.blog_articleEnd__zI6hK",
+            "heightPx": 50,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "shell.footer-closing",
+            "variant": null,
+            "domAnchor": "footer.closing-footer",
+            "heightPx": 905,
+            "position": "relative",
+            "inFlow": true
+          }
+        ]
+      },
+      "/privacy": {
+        "template": "legal",
+        "url": "/privacy",
+        "pageHeight": 4297,
+        "sections": [
+          {
+            "section": "shell.corner-nav",
+            "variant": "legal",
+            "domAnchor": "div.site-container > header",
+            "heightPx": 160,
+            "position": "relative",
+            "inFlow": true
+          },
+          {
+            "section": "legal.heading",
+            "variant": null,
+            "domAnchor": "header.legal-heading",
+            "heightPx": 270,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "legal.contents",
+            "variant": null,
+            "domAnchor": "aside.legal-sidebar",
+            "heightPx": 312,
+            "position": "sticky",
+            "inFlow": false
+          },
+          {
+            "section": "legal.section",
+            "variant": null,
+            "domAnchor": "section.legal-section",
+            "instance": 0,
+            "instanceLabel": "local-and-cloud",
+            "heightPx": 302,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "legal.section",
+            "variant": null,
+            "domAnchor": "section.legal-section",
+            "instance": 1,
+            "instanceLabel": "information",
+            "heightPx": 273,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "legal.section",
+            "variant": null,
+            "domAnchor": "section.legal-section",
+            "instance": 2,
+            "instanceLabel": "permissions",
+            "heightPx": 405,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "legal.section",
+            "variant": null,
+            "domAnchor": "section.legal-section",
+            "instance": 3,
+            "instanceLabel": "providers",
+            "heightPx": 302,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "legal.section",
+            "variant": null,
+            "domAnchor": "section.legal-section",
+            "instance": 4,
+            "instanceLabel": "security",
+            "heightPx": 245,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "legal.section",
+            "variant": null,
+            "domAnchor": "section.legal-section",
+            "instance": 5,
+            "instanceLabel": "retention",
+            "heightPx": 273,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "legal.section",
+            "variant": null,
+            "domAnchor": "section.legal-section",
+            "instance": 6,
+            "instanceLabel": "website",
+            "heightPx": 417,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "legal.section",
+            "variant": null,
+            "domAnchor": "section.legal-section",
+            "instance": 7,
+            "instanceLabel": "contact",
+            "heightPx": 216,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "legal.document-footer",
+            "variant": null,
+            "domAnchor": "footer.legal-document-footer",
+            "heightPx": 48,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "shell.footer-closing",
+            "variant": null,
+            "domAnchor": "footer.closing-footer",
+            "heightPx": 905,
+            "position": "relative",
+            "inFlow": true
+          }
+        ]
+      },
+      "/terms": {
+        "template": "legal",
+        "url": "/terms",
+        "pageHeight": 7031,
+        "sections": [
+          {
+            "section": "shell.corner-nav",
+            "variant": "legal",
+            "domAnchor": "div.site-container > header",
+            "heightPx": 160,
+            "position": "relative",
+            "inFlow": true
+          },
+          {
+            "section": "legal.heading",
+            "variant": null,
+            "domAnchor": "header.legal-heading",
+            "heightPx": 186,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "legal.contents",
+            "variant": null,
+            "domAnchor": "aside.legal-sidebar",
+            "heightPx": 492,
+            "position": "sticky",
+            "inFlow": false
+          },
+          {
+            "section": "legal.section",
+            "variant": null,
+            "domAnchor": "section.legal-section",
+            "instance": 0,
+            "instanceLabel": "introduction",
+            "heightPx": 216,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "legal.section",
+            "variant": null,
+            "domAnchor": "section.legal-section",
+            "instance": 1,
+            "instanceLabel": "service-description",
+            "heightPx": 171,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "legal.section",
+            "variant": null,
+            "domAnchor": "section.legal-section",
+            "instance": 2,
+            "instanceLabel": "user-accounts",
+            "heightPx": 483,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "legal.section",
+            "variant": null,
+            "domAnchor": "section.legal-section",
+            "instance": 3,
+            "instanceLabel": "user-responsibilities",
+            "heightPx": 728,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "legal.section",
+            "variant": null,
+            "domAnchor": "section.legal-section",
+            "instance": 4,
+            "instanceLabel": "connected-services",
+            "heightPx": 512,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "legal.section",
+            "variant": null,
+            "domAnchor": "section.legal-section",
+            "instance": 5,
+            "instanceLabel": "intellectual-property",
+            "heightPx": 512,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "legal.section",
+            "variant": null,
+            "domAnchor": "section.legal-section",
+            "instance": 6,
+            "instanceLabel": "subscription-and-billing",
+            "heightPx": 603,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "legal.section",
+            "variant": null,
+            "domAnchor": "section.legal-section",
+            "instance": 7,
+            "instanceLabel": "limitation-of-liability",
+            "heightPx": 696,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "legal.section",
+            "variant": null,
+            "domAnchor": "section.legal-section",
+            "instance": 8,
+            "instanceLabel": "indemnification",
+            "heightPx": 200,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "legal.section",
+            "variant": null,
+            "domAnchor": "section.legal-section",
+            "instance": 9,
+            "instanceLabel": "modifications-to-terms",
+            "heightPx": 273,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "legal.section",
+            "variant": null,
+            "domAnchor": "section.legal-section",
+            "instance": 10,
+            "instanceLabel": "governing-law",
+            "heightPx": 171,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "legal.section",
+            "variant": null,
+            "domAnchor": "section.legal-section",
+            "instance": 11,
+            "instanceLabel": "severability",
+            "heightPx": 142,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "legal.section",
+            "variant": null,
+            "domAnchor": "section.legal-section",
+            "instance": 12,
+            "instanceLabel": "entire-agreement",
+            "heightPx": 171,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "legal.section",
+            "variant": null,
+            "domAnchor": "section.legal-section",
+            "instance": 13,
+            "instanceLabel": "contact-us",
+            "heightPx": 158,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "legal.document-footer",
+            "variant": null,
+            "domAnchor": "footer.legal-document-footer",
+            "heightPx": 48,
+            "position": "static",
+            "inFlow": true
+          },
+          {
+            "section": "shell.footer-closing",
+            "variant": null,
+            "domAnchor": "footer.closing-footer",
+            "heightPx": 905,
+            "position": "relative",
+            "inFlow": true
+          }
+        ]
+      }
+    },
+    "candidateParts": {
+      "/blog/:slug": [
+        {
+          "part": "prose chapter: (lead before first h2)",
+          "heightPx": 864
+        },
+        {
+          "part": "prose chapter: Why Share Your Google Calendar?",
+          "heightPx": 698
+        },
+        {
+          "part": "prose chapter: Sharing Methods: App vs. Browser on iPhone",
+          "heightPx": 3505
+        },
+        {
+          "part": "prose chapter: Step-by-Step: Sharing a Google Calendar via Safari",
+          "heightPx": 2209
+        },
+        {
+          "part": "prose chapter: Troubleshooting and Tips",
+          "heightPx": 1365
+        },
+        {
+          "part": "prose chapter: Tips for iPhone Users",
+          "heightPx": 663
+        },
+        {
+          "part": "prose chapter: Summary",
+          "heightPx": 512
+        }
+      ],
+      "/privacy": [
+        {
+          "part": "legal.sidebar (TOC aside)",
+          "heightPx": 312
+        },
+        {
+          "part": "legal.section#local-and-cloud",
+          "heightPx": 302
+        },
+        {
+          "part": "legal.section#information",
+          "heightPx": 273
+        },
+        {
+          "part": "legal.section#permissions",
+          "heightPx": 405
+        },
+        {
+          "part": "legal.section#providers",
+          "heightPx": 302
+        },
+        {
+          "part": "legal.section#security",
+          "heightPx": 245
+        },
+        {
+          "part": "legal.section#retention",
+          "heightPx": 273
+        },
+        {
+          "part": "legal.section#website",
+          "heightPx": 417
+        },
+        {
+          "part": "legal.section#contact",
+          "heightPx": 216
+        },
+        {
+          "part": "legal.document-footer",
+          "heightPx": 48
+        }
+      ],
+      "/terms": [
+        {
+          "part": "legal.sidebar (TOC aside)",
+          "heightPx": 492
+        },
+        {
+          "part": "legal.section#introduction",
+          "heightPx": 216
+        },
+        {
+          "part": "legal.section#service-description",
+          "heightPx": 171
+        },
+        {
+          "part": "legal.section#user-accounts",
+          "heightPx": 483
+        },
+        {
+          "part": "legal.section#user-responsibilities",
+          "heightPx": 728
+        },
+        {
+          "part": "legal.section#connected-services",
+          "heightPx": 512
+        },
+        {
+          "part": "legal.section#intellectual-property",
+          "heightPx": 512
+        },
+        {
+          "part": "legal.section#subscription-and-billing",
+          "heightPx": 603
+        },
+        {
+          "part": "legal.section#limitation-of-liability",
+          "heightPx": 696
+        },
+        {
+          "part": "legal.section#indemnification",
+          "heightPx": 200
+        },
+        {
+          "part": "legal.section#modifications-to-terms",
+          "heightPx": 273
+        },
+        {
+          "part": "legal.section#governing-law",
+          "heightPx": 171
+        },
+        {
+          "part": "legal.section#severability",
+          "heightPx": 142
+        },
+        {
+          "part": "legal.section#entire-agreement",
+          "heightPx": 171
+        },
+        {
+          "part": "legal.section#contact-us",
+          "heightPx": 158
+        },
+        {
+          "part": "legal.document-footer",
+          "heightPx": 48
+        }
+      ]
     }
   }
 }

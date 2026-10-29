@@ -1,0 +1,100 @@
+{
+  "pageSpecVersion": "2.0.0",
+  "mode": "generation",
+  "template": "install",
+  "route": "/download",
+  "theme": "light",
+  "tokens": {
+    "surface": "color.surface.page",
+    "text": "color.text.primary",
+    "headingType": "typography.display.section",
+    "bodyType": "typography.body.section",
+    "sectionSpacing": "layout.section.hero-padding",
+    "accent": "color.text.link",
+    "cardRadius": "radius.20",
+    "cardElevation": "elevation.card-offset"
+  },
+  "meta": {
+    "title": "Fernlight sample page (install)",
+    "description": "Generation-mode example for a fictional brand, built from this design-repo."
+  },
+  "nodes": [
+    {
+      "section": "shell.install-header",
+      "content": {
+        "brandLabel": "Fernlight",
+        "brandIcon": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "generate:original fern illustration, soft dusk palette"
+        },
+        "homeHref": "/"
+      },
+      "motion": {
+        "patterns": [
+          "none"
+        ],
+        "reducedMotionFallback": "no-animation"
+      }
+    },
+    {
+      "section": "install.intro",
+      "content": {
+        "headingLine1": "Built for slower",
+        "headingLine2": "mornings.",
+        "description": "Everyday planning help from a fictional sample brand.",
+        "retryPrefix": "Bring a rough",
+        "retryLabel": "Pick a starting",
+        "alternativeLabel": "Everything stays on your",
+        "installerSource": "local-stub",
+        "installerHref": "/installer-placeholder.txt?arch=arm64"
+      },
+      "motion": {
+        "patterns": [
+          "none"
+        ],
+        "reducedMotionFallback": "no-animation"
+      }
+    },
+    {
+      "section": "install.steps",
+      "content": {
+        "ariaLabel": "Everything stays on your own",
+        "steps": [
+          {
+            "number": "01",
+            "title": "Fernlight field notes",
+            "body": "Fernlight keeps your plans, notes and errands in one quiet place.",
+            "image": {
+              "assetRole": "screenshot.placeholder",
+              "assetRef": "generate:original fern illustration, soft dusk palette"
+            }
+          },
+          {
+            "number": "01",
+            "title": "Fernlight field notes",
+            "body": "Fernlight keeps your plans, notes and errands in one quiet place.",
+            "image": {
+              "assetRole": "screenshot.placeholder",
+              "assetRef": "generate:original fern illustration, soft dusk palette"
+            }
+          },
+          {
+            "number": "01",
+            "title": "Fernlight field notes",
+            "body": "Fernlight keeps your plans, notes and errands in one quiet place.",
+            "image": {
+              "assetRole": "screenshot.placeholder",
+              "assetRef": "generate:original fern illustration, soft dusk palette"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "none"
+        ],
+        "reducedMotionFallback": "no-animation"
+      }
+    }
+  ]
+}

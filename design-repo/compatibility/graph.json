@@ -135,9 +135,14 @@
     {
       "id": "NO_ADJACENT_SAME_SECTION_VARIANT",
       "severity": "error",
-      "description": "The same (section, variant) pair must not appear in two adjacent nodes. A category-level adjacency rule is deliberately NOT used: the real pages legitimately run same-category sections back to back (four story.* sections on home, three pricing.* sections, five manifesto.* sections).",
+      "description": "The same (section, variant) pair must not appear in two adjacent nodes. A category-level adjacency rule is deliberately NOT used: the real pages legitimately run same-category sections back to back (four story.* sections on home, three pricing.* sections, five manifesto.* sections). Named exception: template nodes marked repeatable:true (legal.section, blog.prose) repeat back to back BY DESIGN - one node per heading-bounded part/chapter; the list is read from exceptions.repeatableTemplateNodes and verify_all.py checks it equals the repeatable nodes in templates.json.",
       "enforcedBy": "semantic_validate.py",
-      "exceptions": [],
+      "exceptions": {
+        "repeatableTemplateNodes": [
+          "blog.prose",
+          "legal.section"
+        ]
+      },
       "measuredFrom": [
         "src/pages/Home.jsx:19-22"
       ],
@@ -352,6 +357,221 @@
           "contains": "**No monthly/annual toggle exists.**"
         }
       ]
+    },
+    {
+      "id": "LEGAL_SECTION_IDS_UNIQUE",
+      "severity": "error",
+      "description": "legal.section ids are unique on a page (each is the #anchor its derived legal.contents link targets and the h2 id prefix).",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "src/components/legal/LegalPage.jsx:116"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/components/legal/LegalPage.jsx:116",
+          "contains": "id={s.id}"
+        }
+      ]
+    },
+    {
+      "id": "BLOG_PROSE_CHAPTER_HEADING",
+      "severity": "error",
+      "description": "Each blog.prose node is one h2-bounded chapter: an h2 block may only be its FIRST block, and every chapter after the first must start with an h2 (only the lead chapter may lack one).",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:237"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:237",
+          "contains": "lists the direct children of `.blog_prose`, in order"
+        }
+      ]
+    },
+    {
+      "id": "ASSET_AVAILABILITY_PINNED",
+      "severity": "error",
+      "description": "assets/asset-roles.json availability must equal PINNED_AVAILABILITY in schema/semantic_validate.py (and extraction/verify_all.py): editing the registry alone cannot make a clone-only/blocked role generation-safe.",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [],
+      "measuredQuotes": []
+    },
+    {
+      "id": "RETRIEVAL_ELIGIBILITY_PINNED",
+      "severity": "error",
+      "description": "Every section contract's retrievalEligible equals the in-code RETRIEVAL_INELIGIBLE pin (runtime/utility UI: shell.floating-nav, legal.contents are false; everything else true).",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [],
+      "measuredQuotes": []
+    },
+    {
+      "id": "GENERATION_MODE_BRAND",
+      "severity": "error",
+      "description": "mode=generation: no source brand name/domain/email (schema/source-identity.json terms of category BRAND, derived from index.html <title> + hosts/emails containing it) in any copy string, and no brand.* source asset role.",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "schema/source-identity.json"
+      ],
+      "measuredQuotes": []
+    },
+    {
+      "id": "GENERATION_MODE_CUSTOMER",
+      "severity": "error",
+      "description": "mode=generation: no real customer/third-party brand named by the source (social-proof logos in Companies.jsx, browser-task brands in Browser.jsx) and no logo.third-party-wordmark / icon.third-party-app asset.",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "schema/source-identity.json"
+      ],
+      "measuredQuotes": []
+    },
+    {
+      "id": "GENERATION_MODE_PERSON",
+      "severity": "error",
+      "description": "mode=generation: no real or source-named person (blog author, named mock personas) and no photo.person-portrait asset; use photo.fictional-person + an invented name.",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "schema/source-identity.json"
+      ],
+      "measuredQuotes": []
+    },
+    {
+      "id": "GENERATION_MODE_URL",
+      "severity": "error",
+      "description": "mode=generation: no source host / download host / installer path, and every email or host must sit on the reserved .example / .invalid domains.",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "schema/source-identity.json"
+      ],
+      "measuredQuotes": []
+    },
+    {
+      "id": "GENERATION_MODE_CLAIM",
+      "severity": "error",
+      "description": "mode=generation: no source claim (social-proof claim heading) and no pricing plan reusing a real (price, credits) tier from src/components/pricing/pricingData.js.",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "schema/source-identity.json"
+      ],
+      "measuredQuotes": []
+    },
+    {
+      "id": "GENERATION_MODE_COPY",
+      "severity": "error",
+      "description": "mode=generation: no string may share a normalised 5-word shingle with the source copy (hashed in schema/source-identity.json copy.hashes).",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "schema/source-identity.json"
+      ],
+      "measuredQuotes": []
+    },
+    {
+      "id": "GENERATION_MODE_ASSET",
+      "severity": "error",
+      "description": "mode=generation: no reuse: of a registered source asset file, no source asset file name in any string, and no clone-only / blocked-for-generation asset role (availability pinned in code).",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "schema/source-identity.json"
+      ],
+      "measuredQuotes": []
+    },
+    {
+      "id": "GENERATION_MODE_SCREENSHOT",
+      "severity": "error",
+      "description": "mode=generation: no screenshot.os-install-step / screenshot.product-output (real OS UI / real product output); use screenshot.placeholder or media.user-supplied.",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "schema/source-identity.json"
+      ],
+      "measuredQuotes": []
+    },
+    {
+      "id": "TOKEN_UNKNOWN",
+      "severity": "error",
+      "description": "A PageSpec token slot value must be a path in tokens/llm/token-catalog.json.",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "tokens/llm/token-policy.json"
+      ],
+      "measuredQuotes": []
+    },
+    {
+      "id": "TOKEN_RAW_COLOR",
+      "severity": "error",
+      "description": "A raw colour (hex, rgb()/hsl()..., colour keyword) in a token slot is rejected (token-policy.json rawValueRestrictions).",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "tokens/llm/token-policy.json"
+      ],
+      "measuredQuotes": []
+    },
+    {
+      "id": "TOKEN_ARBITRARY_SPACING",
+      "severity": "error",
+      "description": "A raw length (px/rem/em/%/vh/vw, calc()/clamp()) in a token slot is rejected; spacing is a spacing-category token.",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "tokens/llm/token-policy.json"
+      ],
+      "measuredQuotes": []
+    },
+    {
+      "id": "TOKEN_UNSUPPORTED_FONT",
+      "severity": "error",
+      "description": "A raw font family / stack in a token slot is rejected; type is chosen as a typography.* role token.",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "tokens/llm/token-policy.json"
+      ],
+      "measuredQuotes": []
+    },
+    {
+      "id": "TOKEN_SLOT_MISMATCH",
+      "severity": "error",
+      "description": "A token must be in the slot's allowed categories/prefixes and not denied (token-policy.json pageSpecTokenSlots).",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "tokens/llm/token-policy.json"
+      ],
+      "measuredQuotes": []
+    },
+    {
+      "id": "TOKEN_NOT_APPROVED",
+      "severity": "error",
+      "description": "A catalog token that is not approvedForPageSpec (foundation colours, raw type primitives, component tokens, notApproved list) is rejected in a PageSpec.",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "tokens/llm/token-policy.json"
+      ],
+      "measuredQuotes": []
+    },
+    {
+      "id": "TOKEN_THEME_COMBINATION",
+      "severity": "error",
+      "description": "theme must be a catalog theme (only 'light'); semantic colours must be resolved by it; scene-dark scheme tokens are section-local and rejected as page tokens; text on surface must reach minTextContrast (4.5).",
+      "enforcedBy": "semantic_validate.py",
+      "exceptions": [],
+      "measuredFrom": [
+        "tokens/llm/token-policy.json"
+      ],
+      "measuredQuotes": []
     }
   ]
 }

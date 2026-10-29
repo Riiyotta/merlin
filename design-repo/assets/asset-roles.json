@@ -1,5 +1,5 @@
 {
-  "_note": "Closed assetRole registry built from a grep of real <img>/asset usage in src/**/*.jsx. NOT FOR PUBLIC REDISTRIBUTION: the source is a real company's site; the logos, felt-character art, product screenshots and photographs belong to Merlin or third parties.",
+  "_note": "Closed assetRole registry built from a grep of real <img>/asset usage in src/**/*.jsx. NOT FOR PUBLIC REDISTRIBUTION: the source is a real company's site; the logos, felt-character art, product screenshots and photographs belong to Merlin or third parties. Moved to assets/asset-roles.json (BASELINE R3 location). Every role has a closed availability (clone-only | generation-safe | blocked-for-generation), generationSafeSubstitutes and generatedModeGuidance.",
   "version": "1.0.0",
   "generationPolicies": {
     "must-reuse-exact": "Use only a registered exact file (assetRef reuse:<id>) or the neutral placeholder. Never regenerate, redraw, recolour or approximate it.",
@@ -20,13 +20,22 @@
     "media.audio-sample": "must-not-fabricate",
     "art.footer-ascii": "must-reuse-exact",
     "icon.generic-ui": "may-generate-new",
-    "art.line-illustration": "may-generate-new"
+    "art.line-illustration": "may-generate-new",
+    "brand.placeholder-mark": "may-generate-new",
+    "media.user-supplied": "must-not-fabricate",
+    "illustration.generated": "may-generate-new",
+    "screenshot.placeholder": "may-generate-new",
+    "photo.fictional-person": "may-generate-new",
+    "logo.placeholder-customer": "may-generate-new",
+    "link.placeholder-url": "may-generate-new",
+    "copy.original": "may-generate-new"
   },
   "pinnedPoliciesNote": "Load-bearing: verify_all.py and the adversarial suite pin each role to EXACTLY this policy (membership in the 3-value enum is necessary but not sufficient; e.g. flipping logo.third-party-wordmark to may-generate-new is still a valid enum value and must fail).",
   "refKinds": {
     "reuse": "reuse:<assetId> - id must exist in `assets` and its registered role must equal the declared assetRole",
     "generate": "generate:<brief> - allowed only for may-generate-new roles",
-    "placeholder": "placeholder:neutral - always allowed; renders a neutral empty box/label, the safe choice for must-not-fabricate roles"
+    "placeholder": "placeholder:neutral - always allowed; renders a neutral empty box/label, the safe choice for must-not-fabricate roles",
+    "user": "user:<id> - an operator/user-supplied file; allowed only for media.user-supplied"
   },
   "hardBans": [
     "Do not reproduce, redraw, trace or approximate any real third-party logo (Notion, Salesforce, Harvard, HubSpot, McKinsey, Qatar Airways, DoorDash, Instacart, Ashby, Google, Slack, Adobe, Zoom, Apple).",
@@ -64,7 +73,13 @@
           "cite": "src/components/browser/MockSites.jsx:19",
           "contains": "/assets/qatar-logo.webp"
         }
-      ]
+      ],
+      "availability": "blocked-for-generation",
+      "generationSafeSubstitutes": [
+        "logo.placeholder-customer"
+      ],
+      "generatedModeGuidance": "Never show a real company's logo or name on a generated page: use logo.placeholder-customer (a generated neutral wordmark of a fictional company) or placeholder:neutral.",
+      "kind": "media"
     },
     {
       "id": "icon.third-party-app",
@@ -94,7 +109,14 @@
           "cite": "src/components/Browser.jsx:13",
           "contains": "/assets/doordash.png"
         }
-      ]
+      ],
+      "availability": "blocked-for-generation",
+      "generationSafeSubstitutes": [
+        "icon.generic-ui",
+        "logo.placeholder-customer"
+      ],
+      "generatedModeGuidance": "Real app icons (Gmail, Slack, Notion, Zoom ...) are third-party marks: use a generic glyph (icon.generic-ui) or a fictional app mark.",
+      "kind": "media"
     },
     {
       "id": "brand.merlin-app-icon",
@@ -119,7 +141,14 @@
           "cite": "src/components/Routines.jsx:20",
           "contains": "function MerlinMark()"
         }
-      ]
+      ],
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "brand.placeholder-mark",
+        "media.user-supplied"
+      ],
+      "generatedModeGuidance": "The Merlin app icon / face mark identifies the source brand: in generation mode use the operator's own mark (media.user-supplied) or a generated placeholder mark.",
+      "kind": "media"
     },
     {
       "id": "brand.merlin-mascot-art",
@@ -139,7 +168,15 @@
           "cite": "src/components/companion/PhotoshopDemo.jsx:8",
           "contains": "const ART = '/assets/mark.webp'"
         }
-      ]
+      ],
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "brand.placeholder-mark",
+        "illustration.generated",
+        "media.user-supplied"
+      ],
+      "generatedModeGuidance": "The felt mascot is proprietary brand art: never redraw it; use an original generated illustration or the operator's own mark.",
+      "kind": "media"
     },
     {
       "id": "illustration.felt-scene",
@@ -169,7 +206,14 @@
           "cite": "src/components/meetings/MeetingLandscape.jsx:101",
           "contains": "/assets/meeting.webp"
         }
-      ]
+      ],
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "illustration.generated",
+        "media.user-supplied"
+      ],
+      "generatedModeGuidance": "Commissioned felt-character scenes are proprietary: generate an original illustration in a DIFFERENT style (no felt characters, no look-alike scenes) or use operator-supplied art.",
+      "kind": "media"
     },
     {
       "id": "screenshot.os-install-step",
@@ -189,7 +233,14 @@
           "cite": "src/pages/Download.jsx:30",
           "contains": "img: '/assets/launch-merlin.png'"
         }
-      ]
+      ],
+      "availability": "blocked-for-generation",
+      "generationSafeSubstitutes": [
+        "screenshot.placeholder",
+        "media.user-supplied"
+      ],
+      "generatedModeGuidance": "macOS UI captures reproduce Apple's interface: use a neutral placeholder screenshot frame or the operator's own captures of their product.",
+      "kind": "media"
     },
     {
       "id": "screenshot.product-output",
@@ -204,7 +255,14 @@
           "cite": "src/components/hero/NotificationDetail.jsx:83",
           "contains": "/assets/launch-deck-${slide.file}.png"
         }
-      ]
+      ],
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "screenshot.placeholder",
+        "media.user-supplied"
+      ],
+      "generatedModeGuidance": "Real Merlin product output: use a placeholder screenshot or the operator's own product captures.",
+      "kind": "media"
     },
     {
       "id": "photo.stock-cover",
@@ -219,7 +277,14 @@
           "cite": "src/pages/BlogPost.jsx:29",
           "contains": "post.cover && <img className=\"blog_articleImage__wj3kN\""
         }
-      ]
+      ],
+      "availability": "blocked-for-generation",
+      "generationSafeSubstitutes": [
+        "illustration.generated",
+        "media.user-supplied"
+      ],
+      "generatedModeGuidance": "Licensed third-party stock photography: use a generated illustration or operator-supplied imagery.",
+      "kind": "media"
     },
     {
       "id": "photo.person-portrait",
@@ -234,7 +299,14 @@
           "cite": "src/pages/BlogPost.jsx:22",
           "contains": "post.authorAvatar"
         }
-      ]
+      ],
+      "availability": "blocked-for-generation",
+      "generationSafeSubstitutes": [
+        "photo.fictional-person",
+        "media.user-supplied"
+      ],
+      "generatedModeGuidance": "A real, named person's likeness: use a generated avatar of a clearly fictional person (photo.fictional-person) or an operator-supplied, consented portrait.",
+      "kind": "media"
     },
     {
       "id": "photo.mock-product",
@@ -254,7 +326,14 @@
           "cite": "src/components/browser/MockSites.jsx:189",
           "contains": "image: 'avocado.webp'"
         }
-      ]
+      ],
+      "availability": "blocked-for-generation",
+      "generationSafeSubstitutes": [
+        "illustration.generated",
+        "media.user-supplied"
+      ],
+      "generatedModeGuidance": "Third-party product photography inside mock sites: use generated illustration or operator-supplied imagery.",
+      "kind": "media"
     },
     {
       "id": "media.audio-sample",
@@ -269,7 +348,13 @@
           "cite": "src/components/meetings/MeetingLandscape.jsx:65",
           "contains": "src=\"/assets/merlin-introduction.mp3\""
         }
-      ]
+      ],
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "media.user-supplied"
+      ],
+      "generatedModeGuidance": "A real recording: never synthesize an imitation; use the operator's own audio or omit.",
+      "kind": "media"
     },
     {
       "id": "art.footer-ascii",
@@ -289,7 +374,14 @@
           "cite": "src/styles/original/ea3e27f6a69b5df4.css:1",
           "contains": "footer-bird-ascii.svg"
         }
-      ]
+      ],
+      "availability": "clone-only",
+      "generationSafeSubstitutes": [
+        "art.line-illustration",
+        "illustration.generated"
+      ],
+      "generatedModeGuidance": "Merlin's own ASCII footer art: draw new original decorative art instead.",
+      "kind": "media"
     },
     {
       "id": "icon.generic-ui",
@@ -309,7 +401,11 @@
           "cite": "src/components/shared/DownloadButton.jsx:14",
           "contains": "<FiArrowRight />"
         }
-      ]
+      ],
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Generic glyphs are safe in both modes (any permissively licensed generic glyph by name, or a new one).",
+      "kind": "media"
     },
     {
       "id": "art.line-illustration",
@@ -329,7 +425,115 @@
           "cite": "src/components/Companion.jsx:14",
           "contains": "const ARROW_PATH"
         }
-      ]
+      ],
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "New decorative line art in the same stroke style is allowed; never trace the originals.",
+      "kind": "media"
+    },
+    {
+      "id": "brand.placeholder-mark",
+      "generationPolicy": "may-generate-new",
+      "kind": "media",
+      "description": "A placeholder brand mark for a fictional or not-yet-branded product: simple generated monogram/shape, no resemblance to the source or any real brand.",
+      "guidance": "Generic or decorative; a generator may create a new original asset (assetRef generate:<short brief>) or reuse a registered one.",
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Generate an original simple mark for the fictional brand named in the PageSpec; never a wizard, felt character, face mark or the source's letterforms.",
+      "measuredFrom": [],
+      "measuredQuotes": [],
+      "evidenceNote": "Generation-safe role added for mode=generation (BASELINE R3); no source asset exists for it by design."
+    },
+    {
+      "id": "media.user-supplied",
+      "generationPolicy": "must-not-fabricate",
+      "kind": "media",
+      "description": "An asset the operator/user supplies for their own product (their logo, screenshots, photos, audio). Referenced as user:<id>; the generator never invents it.",
+      "guidance": "Real third-party / real-person / proprietary-capture content. Use a registered exact file only for an internal, licensed reproduction, otherwise use the neutral placeholder. Never generate a logo, face, screenshot, photograph or recording that imitates it.",
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Reference the operator's file as user:<id> or use placeholder:neutral; never generate a stand-in that claims to be the operator's real asset.",
+      "measuredFrom": [],
+      "measuredQuotes": [],
+      "evidenceNote": "Generation-safe role added for mode=generation (BASELINE R3); no source asset exists for it by design."
+    },
+    {
+      "id": "illustration.generated",
+      "generationPolicy": "may-generate-new",
+      "kind": "media",
+      "description": "An original generated illustration (scene, cover art, product art) for a generated page.",
+      "guidance": "Generic or decorative; a generator may create a new original asset (assetRef generate:<short brief>) or reuse a registered one.",
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Generate new art from a short brief; must not imitate the source's felt-character style, mascot or any real brand's art.",
+      "measuredFrom": [],
+      "measuredQuotes": [],
+      "evidenceNote": "Generation-safe role added for mode=generation (BASELINE R3); no source asset exists for it by design."
+    },
+    {
+      "id": "screenshot.placeholder",
+      "generationPolicy": "may-generate-new",
+      "kind": "media",
+      "description": "A neutral placeholder product screenshot (wireframe-like UI frame with fictional content) for a generated page.",
+      "guidance": "Generic or decorative; a generator may create a new original asset (assetRef generate:<short brief>) or reuse a registered one.",
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Generate a generic UI frame with fictional content; no real OS chrome copied pixel-for-pixel, no real product UI, no real names.",
+      "measuredFrom": [],
+      "measuredQuotes": [],
+      "evidenceNote": "Generation-safe role added for mode=generation (BASELINE R3); no source asset exists for it by design."
+    },
+    {
+      "id": "photo.fictional-person",
+      "generationPolicy": "may-generate-new",
+      "kind": "media",
+      "description": "A generated avatar/portrait of a clearly fictional person, paired with a fictional name.",
+      "guidance": "Generic or decorative; a generator may create a new original asset (assetRef generate:<short brief>) or reuse a registered one.",
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Generate a fictional avatar (illustrated or initials preferred); never resemble a real person and never pair with a real person's name.",
+      "measuredFrom": [],
+      "measuredQuotes": [],
+      "evidenceNote": "Generation-safe role added for mode=generation (BASELINE R3); no source asset exists for it by design."
+    },
+    {
+      "id": "logo.placeholder-customer",
+      "generationPolicy": "may-generate-new",
+      "kind": "media",
+      "description": "A placeholder customer/partner logo: a generated neutral wordmark of a fictional company for social-proof rows.",
+      "guidance": "Generic or decorative; a generator may create a new original asset (assetRef generate:<short brief>) or reuse a registered one.",
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Generate a wordmark for an invented company name; never a real company's name, logo or look-alike.",
+      "measuredFrom": [],
+      "measuredQuotes": [],
+      "evidenceNote": "Generation-safe role added for mode=generation (BASELINE R3); no source asset exists for it by design."
+    },
+    {
+      "id": "link.placeholder-url",
+      "generationPolicy": "may-generate-new",
+      "kind": "link",
+      "description": "Placeholder links for generated pages: relative internal routes, or hosts/emails on the reserved .example / .invalid domains only (RFC 2606 / 6761).",
+      "guidance": "Generic or decorative; a generator may create a new original asset (assetRef generate:<short brief>) or reuse a registered one.",
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Use relative routes or *.example / *.invalid hosts and emails; never the source domains, download hosts, store links or social profiles.",
+      "measuredFrom": [],
+      "measuredQuotes": [],
+      "evidenceNote": "Generation-safe role added for mode=generation (BASELINE R3); no source asset exists for it by design."
+    },
+    {
+      "id": "copy.original",
+      "generationPolicy": "may-generate-new",
+      "kind": "text",
+      "description": "Original copy written for the generated page (headings, body, CTAs, FAQ, legal placeholder text).",
+      "guidance": "Generic or decorative; a generator may create a new original asset (assetRef generate:<short brief>) or reuse a registered one.",
+      "availability": "generation-safe",
+      "generationSafeSubstitutes": [],
+      "generatedModeGuidance": "Write new copy; never reuse source headings, taglines, CTAs, testimonials or claims (checked as 5-word shingles against the source).",
+      "measuredFrom": [],
+      "measuredQuotes": [],
+      "evidenceNote": "Generation-safe role added for mode=generation (BASELINE R3); no source asset exists for it by design."
     }
   ],
   "assets": [
@@ -704,5 +908,35 @@
       "role": "brand.merlin-app-icon",
       "note": "inline SVG (MerlinMark)"
     }
-  ]
+  ],
+  "availabilityValues": {
+    "clone-only": "The source's own (first-party) asset: allowed only in mode=clone PageSpecs (faithful reconstruction); rejected in mode=generation.",
+    "generation-safe": "Allowed in both modes; contains nothing that identifies or reproduces the source.",
+    "blocked-for-generation": "Third-party or real-person / OS-capture content: allowed only in mode=clone for an internal, licensed reproduction; rejected in mode=generation."
+  },
+  "pinnedAvailability": {
+    "logo.third-party-wordmark": "blocked-for-generation",
+    "icon.third-party-app": "blocked-for-generation",
+    "brand.merlin-app-icon": "clone-only",
+    "brand.merlin-mascot-art": "clone-only",
+    "illustration.felt-scene": "clone-only",
+    "screenshot.os-install-step": "blocked-for-generation",
+    "screenshot.product-output": "clone-only",
+    "photo.stock-cover": "blocked-for-generation",
+    "photo.person-portrait": "blocked-for-generation",
+    "photo.mock-product": "blocked-for-generation",
+    "media.audio-sample": "clone-only",
+    "art.footer-ascii": "clone-only",
+    "icon.generic-ui": "generation-safe",
+    "art.line-illustration": "generation-safe",
+    "brand.placeholder-mark": "generation-safe",
+    "media.user-supplied": "generation-safe",
+    "illustration.generated": "generation-safe",
+    "screenshot.placeholder": "generation-safe",
+    "photo.fictional-person": "generation-safe",
+    "logo.placeholder-customer": "generation-safe",
+    "link.placeholder-url": "generation-safe",
+    "copy.original": "generation-safe"
+  },
+  "pinnedAvailabilityNote": "Mirrors PINNED_AVAILABILITY in schema/semantic_validate.py and extraction/verify_all.py: editing availability here alone cannot loosen a role (both validators compare the registry with their own in-code pin)."
 }

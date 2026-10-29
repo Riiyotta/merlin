@@ -1,0 +1,203 @@
+{
+  "id": "legal.section",
+  "category": "legal",
+  "source": {
+    "id": "src:LegalPage.jsx#section.legal-section",
+    "tag": "section",
+    "file": "src/components/legal/LegalPage.jsx",
+    "lines": "116-121"
+  },
+  "semantic": {
+    "id": "legal.section",
+    "category": "LEGAL"
+  },
+  "retrievalEligible": true,
+  "description": "One heading-bounded part of a legal document (section#<id>.legal-section: h2 then p / h3 / ul / contact-link blocks). Repeatable: one node per h2, in document order (8 on /privacy, 14 on /terms). Decomposed out of the former whole-document legal.body (R6). BODY TEXT IS PLACEHOLDER in the clone.",
+  "evidenceLevel": "measured",
+  "domAnchor": "section.legal-section",
+  "variants": [],
+  "constraints": {},
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "title",
+      "blocks"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+        "x-sample": "information"
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 6
+      },
+      "blocks": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 8,
+        "items": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "type",
+                "text"
+              ],
+              "properties": {
+                "type": {
+                  "const": "p"
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 82
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "type",
+                "text"
+              ],
+              "properties": {
+                "type": {
+                  "const": "h3"
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 3
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "type",
+                "items"
+              ],
+              "properties": {
+                "type": {
+                  "const": "ul"
+                },
+                "items": {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 6,
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "x-maxWords": 79
+                  },
+                  "x-maxWordsTotal": 79
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "type",
+                "label",
+                "email"
+              ],
+              "properties": {
+                "type": {
+                  "const": "contact-link"
+                },
+                "label": {
+                  "type": "string",
+                  "minLength": 1,
+                  "x-maxWords": 3
+                },
+                "email": {
+                  "type": "string",
+                  "pattern": "^[^@\\s]+@[^@\\s]+$",
+                  "x-sample": "contact@example.com"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "anchor-smooth-scroll",
+      "hover-transition"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {
+      "tocHover": "color + translateX(2px) .16s",
+      "scrollSpy": "none"
+    },
+    "motionEvidence": {
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:347"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:347",
+          "contains": "There is **no scroll-spy**"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "640",
+      "change": "padding-bottom 28px, margin-bottom 28px, scroll-margin-top 24px; h2 21px",
+      "measuredFrom": [
+        "src/styles/original/e261c04d0a2d5dfe.css:1"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "src/styles/original/e261c04d0a2d5dfe.css:1",
+          "contains": "#top .legal-section{padding-bottom:28px;margin-bottom:28px;scroll-margin-top:24px}"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [],
+    "components": []
+  },
+  "implementedBy": [
+    "src/components/legal/LegalPage.jsx"
+  ],
+  "measuredFrom": [
+    "src/components/legal/LegalPage.jsx:116",
+    "CLONE_SPEC_PAGES_B.md:302",
+    "src/components/legal/privacyData.js:24"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/legal/LegalPage.jsx:116",
+      "contains": "className=\"legal-section\" id={s.id}"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_B.md:302",
+      "contains": "section#<id>.legal-section x8"
+    },
+    {
+      "cite": "src/components/legal/privacyData.js:24",
+      "contains": "id: 'local-and-cloud'"
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "link.placeholder-url"
+  ]
+}

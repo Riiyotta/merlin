@@ -1,0 +1,255 @@
+{
+ "_note": "Rules for using tokens in PageSpecs. Hand-authored policy over the GENERATED catalog: every category name here is a real key of tokens/llm/token-catalog.json counts.byCategory, every slot is a real property of the PageSpec `tokens` object, every listed token path exists in the catalog - extraction/verify_all.py resolves all three and fails on a dangling name. schema/semantic_validate.py enforces the rules (TOKEN_* in compatibility/graph.json).",
+ "version": "1.0.0",
+ "catalog": "tokens/llm/token-catalog.json",
+ "pageSpecTokenSlots": {
+  "surface": {
+   "required": true,
+   "allowCategories": [
+    "semanticColor"
+   ],
+   "allowPrefixes": [
+    "color.surface."
+   ],
+   "deny": [
+    "color.surface.scene-dark",
+    "color.surface.cta",
+    "color.surface.cta-wipe"
+   ],
+   "role": "page background"
+  },
+  "text": {
+   "required": true,
+   "allowCategories": [
+    "semanticColor"
+   ],
+   "allowPrefixes": [
+    "color.text.primary",
+    "color.text.story",
+    "color.text.muted",
+    "color.text.page-"
+   ],
+   "deny": [
+    "color.text.muted-hero",
+    "color.text.muted-section"
+   ],
+   "role": "body ink"
+  },
+  "border": {
+   "required": false,
+   "allowCategories": [
+    "semanticColor"
+   ],
+   "allowPrefixes": [
+    "color.border."
+   ],
+   "deny": [
+    "color.border.on-dark"
+   ],
+   "role": "rules / card borders"
+  },
+  "accent": {
+   "required": false,
+   "allowCategories": [
+    "semanticColor"
+   ],
+   "allowPrefixes": [
+    "color.text.link",
+    "color.highlight.",
+    "color.focus.",
+    "color.signal."
+   ],
+   "deny": [],
+   "role": "links, highlights, focus"
+  },
+  "headingType": {
+   "required": true,
+   "allowCategories": [
+    "typography"
+   ],
+   "allowPrefixes": [
+    "typography.display."
+   ],
+   "deny": [],
+   "role": "display headings"
+  },
+  "bodyType": {
+   "required": true,
+   "allowCategories": [
+    "typography"
+   ],
+   "allowPrefixes": [
+    "typography.body."
+   ],
+   "deny": [],
+   "role": "body copy"
+  },
+  "labelType": {
+   "required": false,
+   "allowCategories": [
+    "typography"
+   ],
+   "allowPrefixes": [
+    "typography.label."
+   ],
+   "deny": [],
+   "role": "labels / CTA text"
+  },
+  "sectionSpacing": {
+   "required": true,
+   "allowCategories": [
+    "spacing"
+   ],
+   "allowPrefixes": [
+    "layout.section."
+   ],
+   "deny": [],
+   "role": "vertical section padding"
+  },
+  "gap": {
+   "required": false,
+   "allowCategories": [
+    "spacing"
+   ],
+   "allowPrefixes": [
+    "layout.grid.gap",
+    "component."
+   ],
+   "deny": [],
+   "role": "grid gap / card padding"
+  },
+  "contentWidth": {
+   "required": false,
+   "allowCategories": [
+    "layout"
+   ],
+   "allowPrefixes": [
+    "layout.container.content-",
+    "layout.blog.",
+    "layout.legal.document-width"
+   ],
+   "deny": [],
+   "role": "content column width"
+  },
+  "cardRadius": {
+   "required": false,
+   "allowCategories": [
+    "radius"
+   ],
+   "allowPrefixes": [
+    "radius."
+   ],
+   "deny": [],
+   "role": "card corner radius"
+  },
+  "cardElevation": {
+   "required": false,
+   "allowCategories": [
+    "elevation"
+   ],
+   "allowPrefixes": [
+    "elevation."
+   ],
+   "deny": [],
+   "role": "card shadow"
+  },
+  "motionDuration": {
+   "required": false,
+   "allowCategories": [
+    "motion"
+   ],
+   "allowPrefixes": [
+    "duration."
+   ],
+   "deny": [],
+   "role": "transition duration"
+  },
+  "motionEasing": {
+   "required": false,
+   "allowCategories": [
+    "motion"
+   ],
+   "allowPrefixes": [
+    "easing."
+   ],
+   "deny": [],
+   "role": "transition easing"
+  }
+ },
+ "approvedCategoriesForPageSpec": [
+  "semanticColor",
+  "typography",
+  "spacing",
+  "layout",
+  "radius",
+  "elevation",
+  "motion"
+ ],
+ "catalogOnlyCategories": {
+  "color": "Foundation colours are catalogued for traceability; a PageSpec names the semantic alias (semanticColor) the theme resolves, never the foundation path.",
+  "fontFamily": "Families are reached through typography.* roles only (a role pins family + weight + size + line-height + tracking together).",
+  "fontSize": "Reached through typography.* roles only.",
+  "fontWeight": "Reached through typography.* roles only.",
+  "lineHeight": "Reached through typography.* roles only.",
+  "letterSpacing": "Reached through typography.* roles only.",
+  "breakpoint": "Breakpoints belong to section contracts' responsive[] (structured, cited); a PageSpec cannot set them.",
+  "component": "Component tokens are owned by the primitive/component contracts; a PageSpec cannot restyle a component.",
+  "motionPattern": "Motion patterns are chosen per node in node.motion.patterns (closed per section), not in the tokens slot."
+ },
+ "notApproved": {
+  "fontFamily.mock-web": "Arial is only used inside the third-party mock sites of the browser-task scene; not a site font.",
+  "fontFamily.demo-system": "System UI stack of the scripted desktop demos; not a site font.",
+  "layout.section.root-font-size": "62.5% root sizing is a stylesheet mechanism, not a design choice a page can make."
+ },
+ "rawValueRestrictions": {
+  "summary": "No raw values in any PageSpec token slot: every slot value must be a catalog token path that is approvedForPageSpec. Raw values are classified so the error says what was wrong.",
+  "forbiddenPatterns": {
+   "TOKEN_RAW_COLOR": [
+    "^#[0-9a-fA-F]{3,8}$",
+    "^(rgb|rgba|hsl|hsla|hwb|lab|lch|oklab|oklch|color)\\(",
+    "^(transparent|currentcolor|black|white|red|green|blue|gray|grey|cyan|teal|orange|purple|pink|yellow)$"
+   ],
+   "TOKEN_ARBITRARY_SPACING": [
+    "^-?[0-9.]+\\s*(px|rem|em|%|vh|vw|vmin|vmax|ch|ex|pt)?(\\s+-?[0-9.]+\\s*(px|rem|em|%|vh|vw)?)*$",
+    "^(calc|clamp|min|max)\\("
+   ],
+   "TOKEN_UNSUPPORTED_FONT": [
+    "[\"',]",
+    "^(serif|sans-serif|monospace|cursive|system-ui|ui-monospace|ui-sans-serif)$",
+    "^[A-Z][A-Za-z0-9]*( [A-Z][A-Za-z0-9]*)*$"
+   ]
+  },
+  "tokenPathPattern": "^[a-z][a-zA-Z0-9]*(\\.[a-z0-9][a-z0-9_-]*)+$"
+ },
+ "aliasAndFallbackRules": {
+  "aliasDirection": "PageSpec -> semantic alias (color.text.*, color.surface.*, typography.*) -> foundation token -> value. A PageSpec never names the foundation target of an alias; verify_all.py checks every semantic $ref resolves and the theme resolves every semantic colour.",
+  "noRawFallback": "There is no fallback to a raw value: an unknown or unapproved path is an error (TOKEN_UNKNOWN / TOKEN_NOT_APPROVED), never silently replaced.",
+  "fontFallback": "Font fallbacks live INSIDE the fontFamily token value (Exposure -> Georgia -> serif; Open Runde -> sans-serif). Exposure and Open Runde are font files shipped with the clone (ASSET_MANIFEST.json fonts); a mode=generation renderer without its own licence for them must render the token's fallback stack. A PageSpec cannot name a fallback family itself.",
+  "componentRefs": "Component tokens reference semantic colours with {surface.cta-wipe}-style refs; verify_all.py resolves them."
+ },
+ "themeRestrictions": {
+  "themes": [
+   "light"
+  ],
+  "defaultTheme": "light",
+  "note": "The source has ONE theme (light). There is no dark theme; the black privacy scene is a section-local 'scene-dark' scheme rendered only by scene.privacy-trust, not a theme.",
+  "schemes": {
+   "light": "all other semanticColor tokens",
+   "scene-dark": [
+    "color.surface.scene-dark",
+    "color.text.on-dark",
+    "color.border.on-dark"
+   ]
+  },
+  "rules": [
+   "theme must be a theme of the catalog (only 'light'); a token must be resolved by that theme",
+   "page-level surface/text/border must all be in the theme's base scheme ('light'); scene-dark tokens are section-local to scene.privacy-trust and are rejected as page tokens",
+   "text on surface must reach a WCAG contrast ratio of at least minTextContrast in the theme's resolved values"
+  ],
+  "minTextContrast": 4.5
+ },
+ "modeRules": {
+  "clone": "All approvedForPageSpec tokens allowed.",
+  "generation": "All approvedForPageSpec tokens allowed: tokens are the reusable design system, not source identity. Brand identity is carried by assets/copy (blocked by GENERATION_MODE_* rules), and font licensing follows aliasAndFallbackRules.fontFallback."
+ }
+}

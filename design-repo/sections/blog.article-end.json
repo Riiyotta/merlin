@@ -1,6 +1,17 @@
 {
   "id": "blog.article-end",
   "category": "blog",
+  "source": {
+    "id": "src:BlogPost.jsx#footer.blog_articleEnd__zI6hK",
+    "tag": "footer",
+    "file": "src/pages/BlogPost.jsx",
+    "lines": "31-36"
+  },
+  "semantic": {
+    "id": "blog.article-end",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
   "description": "Article end rule with a thank-you line and a 'Back to all stories' link.",
   "evidenceLevel": "measured",
   "domAnchor": "footer.blog_articleEnd__zI6hK",
@@ -78,5 +89,8 @@
   ],
   "implementedBy": [
     "src/pages/BlogPost.jsx"
+  ],
+  "generatedAssetRoles": [
+    "copy.original"
   ]
 }

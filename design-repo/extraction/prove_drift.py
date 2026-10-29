@@ -3,7 +3,8 @@
 
 For each injected defect: copy design-repo/ to a scratch dir, inject the defect, run the copy's own
 verify_all.py (against the real source tree when present) and require a FAIL naming the defect. Finally
-confirm the untouched repo still passes. Run:  python3 extraction/prove_drift.py [--source <project root>]
+confirm the untouched repo still passes. Run:  python3 extraction/prove_drift.py [--source <project root>] [--scratch DIR]
+(--scratch: parent directory for the scratch copies; default: a fresh OS temp dir. Removed afterwards.)
 
 Without a source tree the source-dependent injections (out-of-range citation, wrong-content citation,
 stylesheet order, App.jsx route set, blog maxima) are SKIPPED with a notice, never silently passed.
@@ -32,9 +33,12 @@ def run_verify(root, source):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--source", default=os.path.dirname(REPO))
+    ap.add_argument("--scratch", default=None)
     a = ap.parse_args()
     have_src = os.path.isfile(os.path.join(a.source, "CLONE_SPEC.md"))
-    tmp = tempfile.mkdtemp(prefix="drift-")
+    if a.scratch:
+        os.makedirs(a.scratch, exist_ok=True)
+    tmp = tempfile.mkdtemp(prefix="drift-", dir=a.scratch)
     results = []
 
     def case(name, mutate, expect, needs_src=False):
@@ -90,21 +94,21 @@ def main():
         m = jload(r, "registry.manifest.json"); m["allowlistVersion"] = "9.9.9"; jsave(r, "registry.manifest.json", m)
 
     def m_pinned(r):
-        d = jload(r, "tokens/llm/asset-roles.json")
+        d = jload(r, "assets/asset-roles.json")
         for x in d["roles"]:
             if x["id"] == "logo.third-party-wordmark": x["generationPolicy"] = "may-generate-new"
-        jsave(r, "tokens/llm/asset-roles.json", d)
+        jsave(r, "assets/asset-roles.json", d)
 
     def m_pinned_both(r):
-        d = jload(r, "tokens/llm/asset-roles.json")
+        d = jload(r, "assets/asset-roles.json")
         for x in d["roles"]:
             if x["id"] == "photo.person-portrait": x["generationPolicy"] = "may-generate-new"
         d["pinnedPolicies"]["photo.person-portrait"] = "may-generate-new"
-        jsave(r, "tokens/llm/asset-roles.json", d)
+        jsave(r, "assets/asset-roles.json", d)
 
     def m_role_enum(r):
-        d = jload(r, "tokens/llm/asset-roles.json")
-        d["roles"][0]["generationPolicy"] = "free-for-all"; jsave(r, "tokens/llm/asset-roles.json", d)
+        d = jload(r, "assets/asset-roles.json")
+        d["roles"][0]["generationPolicy"] = "free-for-all"; jsave(r, "assets/asset-roles.json", d)
 
     def m_rule_phantom(r):
         g = jload(r, "compatibility/graph.json"); g["rules"][0]["id"] = "ONE_HERO_RENAMED"; jsave(r, "compatibility/graph.json", g)
@@ -164,7 +168,7 @@ def main():
         d = jload(r, "templates/templates.json"); n = d["templates"]["home"]["nodes"]; n[3], n[4] = n[4], n[3]; jsave(r, "templates/templates.json", d)
 
     def m_readme(r):
-        t = open(os.path.join(r, "README.md"), encoding="utf-8").read().replace("sections=32", "sections=31"); open(os.path.join(r, "README.md"), "w", encoding="utf-8").write(t)
+        t = open(os.path.join(r, "README.md"), encoding="utf-8").read(); assert "sections=34" in t; t = t.replace("sections=34", "sections=33"); open(os.path.join(r, "README.md"), "w", encoding="utf-8").write(t)
 
     def m_mv_sheet(r):
         d = jload(r, "extraction/measured-values.json"); o = d["routeStylesheets"]["lists"]["home"]["order"]; o[3], o[4] = o[4], o[3]; jsave(r, "extraction/measured-values.json", d)
@@ -203,6 +207,53 @@ def main():
     case("example loses a required field", m_example, "example.pagespec.json")
     case("motion schema opened (additionalProperties true)", m_open_motion, "no open additionalProperties")
     case("legal grouping verdict flipped (comparison)", m_legal_cmp, "SAME_TEMPLATE")
+
+    # ---- 2.0.0 baseline pins / gates / registries
+    def edit(rel, fn):
+        def m(r):
+            d = jload(r, rel); fn(d); jsave(r, rel, d)
+        return m
+
+    def text_edit(rel, a_, b_):
+        def m(r):
+            fp = os.path.join(r, rel); s = open(fp, encoding="utf-8").read(); assert a_ in s, a_
+            open(fp, "w", encoding="utf-8").write(s.replace(a_, b_, 1))
+        return m
+
+    def role(d, rid):
+        return next(x for x in d["roles"] if x["id"] == rid)
+
+    case("token catalog hand-edited (value differs from token files)", edit("tokens/llm/token-catalog.json", lambda d: d["tokens"]["color.text.primary"].update(value="#000000")), "token-catalog.json == rebuild")
+    case("token file changed without rebuilding the catalog", edit("tokens/10-semantic/semantic.json", lambda d: d["color"]["text.primary"].update({"$ref": "color.ink.story"})), "token-catalog.json == rebuild")
+    case("token catalog gains an invented token", edit("tokens/llm/token-catalog.json", lambda d: d["tokens"].update({"color.surface.neon": {"category": "semanticColor", "value": "#39ff14", "approvedForPageSpec": True}})), "token-catalog.json == rebuild")
+    case("token policy names a non-existent category", edit("tokens/llm/token-policy.json", lambda d: d["pageSpecTokenSlots"]["gap"]["allowCategories"].append("spacingScale")), "token-policy category names")
+    case("token policy slot prefix matches no approved token", edit("tokens/llm/token-policy.json", lambda d: d["pageSpecTokenSlots"]["cardRadius"].update(allowPrefixes=["radii."])), "token-policy names resolve")
+    case("token policy slot not in the PageSpec schema", edit("tokens/llm/token-policy.json", lambda d: d["pageSpecTokenSlots"].update(fontSize=dict(d["pageSpecTokenSlots"]["gap"], required=False))), "token-policy slots == PageSpec")
+    case("manifest stops registering token-policy.json", edit("registry.manifest.json", lambda d: d["entryPoints"].pop("tokenPolicy")), "registers token-catalog.json + token-policy.json")
+    case("manifest token catalog count wrong", edit("registry.manifest.json", lambda d: d["counts"]["tokenCatalog"].update(tokens=999)), "registers token-catalog.json + token-policy.json")
+    case("registry availability flipped (felt scene -> generation-safe)", edit("assets/asset-roles.json", lambda d: role(d, "illustration.felt-scene").update(availability="generation-safe")), "availability == PINNED_AVAILABILITY")
+    case("registry availability + its mirror flipped TOGETHER (portrait)", edit("assets/asset-roles.json", lambda d: (role(d, "photo.person-portrait").update(availability="generation-safe"), d["pinnedAvailability"].update({"photo.person-portrait": "generation-safe"}))), "availability == PINNED_AVAILABILITY")
+    case("pin removed from semantic_validate.py only", text_edit("schema/semantic_validate.py", '"brand.merlin-app-icon": "clone-only", ', ""), "PINNED_AVAILABILITY (verify_all.py) == PINNED_AVAILABILITY (semantic_validate.py)")
+    case("substitute points at a non-safe role", edit("assets/asset-roles.json", lambda d: role(d, "photo.person-portrait").update(generationSafeSubstitutes=["photo.stock-cover"])), "generation-safe substitutes")
+    case("contract + allowlist flip floating nav to retrievable TOGETHER", lambda r: (edit("sections/shell.floating-nav.json", lambda d: (d.update(retrievalEligible=True), d.pop("retrievalIneligibleReason")))(r), edit("tokens/llm/component-allowlist.json", lambda d: next(e for e in d["sections"] if e["id"] == "shell.floating-nav").update(retrievalEligible=True))(r)), "RETRIEVAL_INELIGIBLE pin")
+    case("retrieval pin removed from semantic_validate.py only", text_edit("schema/semantic_validate.py", 'RETRIEVAL_INELIGIBLE = {"shell.floating-nav", "legal.contents"}', 'RETRIEVAL_INELIGIBLE = {"shell.floating-nav"}'), "RETRIEVAL_INELIGIBLE (verify_all.py) == RETRIEVAL_INELIGIBLE (semantic_validate.py)")
+    case("allowlist retrievalEligible drifts from the contract", edit("tokens/llm/component-allowlist.json", lambda d: next(e for e in d["sections"] if e["id"] == "faq.accordion").update(retrievalEligible=False)), "allowlist retrievalEligible")
+    case("contract gains a key the closed contract schema forbids", edit("sections/faq.accordion.json", lambda d: d.update(inventedKey=1)), "CLOSED schema/section-contract.schema.json")
+    case("contract source.lines shifted off the real element", edit("sections/faq.accordion.json", lambda d: d["source"].update(lines="12-50")), "source {file, tag, lines} re-derived", True)
+    case("contract semantic category flipped (FAQ -> FEATURES)", edit("sections/faq.accordion.json", lambda d: d["semantic"].update(category="FEATURES")), "source {file, tag, lines} re-derived", True)
+    case("measured height inflated: legal.section part at 5000px", edit("extraction/measured-values.json", lambda d: next(s for s in d["sectionHeights"]["routes"]["/terms"]["sections"] if s["section"] == "legal.section").update(heightPx=5000)), "wrapper gate")
+    case("measurement missing for a route (/pricing)", edit("extraction/measured-values.json", lambda d: d["sectionHeights"]["routes"].pop("/pricing")), "wrapper gate")
+    case("measured at the wrong viewport (1280)", edit("extraction/measured-values.json", lambda d: d["sectionHeights"]["viewport"].update(width=1280)), "wrapper gate")
+    case("whitelist entry without agent attestation wording", edit("extraction/wrapper-gate-whitelist.json", lambda d: d["entries"].append({"route": "/blog", "section": "blog.story-list", "rule": "SECTION_SHARE", "maxHeightPx": 9000, "justification": "flat list of every post, one continuous index", "reviewedBy": "review agent"})), "wrapper gate")
+    case("repeatable exception list drifts from templates", edit("compatibility/graph.json", lambda d: next(x for x in d["rules"] if x["id"] == "NO_ADJACENT_SAME_SECTION_VARIANT")["exceptions"]["repeatableTemplateNodes"].remove("legal.section")), "repeatable exception")
+    case("blog chapter maxRepeat drifts from blog-posts.json", edit("templates/templates.json", lambda d: next(n for n in d["templates"]["blog-post"]["nodes"] if n["section"] == "blog.prose").update(maxRepeat=20)), "blog.prose maxRepeat", True)
+    case("source-identity registry hand-edited (term dropped)", edit("schema/source-identity.json", lambda d: d["terms"].pop(0)), "source-identity.json == rebuild", True)
+    case("source-identity evidence points at the wrong line", edit("schema/source-identity.json", lambda d: next(x for x in d["terms"] if x["term"] == "Salesforce")["evidence"].__setitem__(0, "src/components/Companies.jsx:2")), "evidence really contains the term", True)
+    case("generation example leaks the source brand", edit("schema/examples/generated.home.pagespec.json", lambda d: d["meta"].update(title="Merlin for teams")), "generated.home.pagespec.json")
+    case("generation example for a template family deleted", lambda r: os.remove(os.path.join(r, "schema/examples/generated.legal.pagespec.json")), "EVERY template family")
+    case("design-policy contentHash stale after a rule edit", edit("compatibility/graph.json", lambda d: d["rules"][0].update(description=d["rules"][0]["description"] + " (edited)")), "contentHash")
+    case("manifest category flipped to consumer-app", edit("registry.manifest.json", lambda d: d.update(category="consumer-app")), "binds category=saas")
+    case("design policy file removed", lambda r: os.remove(os.path.join(r, "policy/design-policy.json")), "designPolicy.ref")
 
     shutil.rmtree(tmp, ignore_errors=True)
     code, fails, out = run_verify(REPO, a.source)

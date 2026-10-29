@@ -4,11 +4,14 @@
   "title": "Merlin design-repo PageSpec",
   "type": "object",
   "additionalProperties": false,
-  "description": "Machine contract for a generated page. Draft-07. Closed everywhere (additionalProperties:false). The semantic layer (semantic_validate.py) enforces template/node cross-reference, rhythm rules, maxWords, asset policies. There is deliberately NO per-instance token/style override field: styling is owned by the section contracts (MASTER-GUIDE 3.21).",
+  "description": "Machine contract for a generated page. Draft-07. Closed everywhere (additionalProperties:false). The semantic layer (semantic_validate.py) enforces template/node cross-reference, rhythm rules, maxWords, asset policies. Styling is owned by the section contracts; the only token surface is the closed page-level `tokens` slot set (token-policy.json pageSpecTokenSlots), whose values must be approved catalog token paths. pageSpecVersion 2.0.0 added the required `mode`, `theme` and `tokens`.",
   "required": [
     "pageSpecVersion",
+    "mode",
     "template",
     "route",
+    "theme",
+    "tokens",
     "meta",
     "nodes"
   ],
@@ -17,6 +20,13 @@
       "type": "string",
       "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
       "description": "DOCUMENTATION ONLY marker; nothing machine-checks it."
+    },
+    "mode": {
+      "enum": [
+        "clone",
+        "generation"
+      ],
+      "description": "REQUIRED generation context (BASELINE R1). clone = faithful reconstruction of the source (real brand, copy and assets may be reused for fidelity). generation = a new page for someone else built from this design-repo: schema/semantic_validate.py rejects source identity and content (GENERATION_MODE_* rules)."
     },
     "template": {
       "enum": [
@@ -40,6 +50,110 @@
         "/privacy",
         "/terms"
       ]
+    },
+    "theme": {
+      "enum": [
+        "light"
+      ],
+      "description": "Theme of tokens/llm/token-catalog.json the page renders in (the source has one theme). TOKEN_THEME_COMBINATION checks every token against it."
+    },
+    "tokens": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Page-level design tokens, each a catalog path from tokens/llm/token-catalog.json. Closed set of slots = tokens/llm/token-policy.json pageSpecTokenSlots. Whether a value is a real, approved, slot-compatible, theme-valid token is checked by schema/semantic_validate.py (TOKEN_* rules): raw colours, lengths and font names are rejected there.",
+      "required": [
+        "bodyType",
+        "headingType",
+        "sectionSpacing",
+        "surface",
+        "text"
+      ],
+      "properties": {
+        "surface": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "description": "page background"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "description": "body ink"
+        },
+        "border": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "description": "rules / card borders"
+        },
+        "accent": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "description": "links, highlights, focus"
+        },
+        "headingType": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "description": "display headings"
+        },
+        "bodyType": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "description": "body copy"
+        },
+        "labelType": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "description": "labels / CTA text"
+        },
+        "sectionSpacing": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "description": "vertical section padding"
+        },
+        "gap": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "description": "grid gap / card padding"
+        },
+        "contentWidth": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "description": "content column width"
+        },
+        "cardRadius": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "description": "card corner radius"
+        },
+        "cardElevation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "description": "card shadow"
+        },
+        "motionDuration": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "description": "transition duration"
+        },
+        "motionEasing": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "description": "transition easing"
+        }
+      }
     },
     "meta": {
       "type": "object",
@@ -113,12 +227,18 @@
             "media.audio-sample",
             "art.footer-ascii",
             "icon.generic-ui",
-            "art.line-illustration"
+            "art.line-illustration",
+            "brand.placeholder-mark",
+            "media.user-supplied",
+            "illustration.generated",
+            "screenshot.placeholder",
+            "photo.fictional-person",
+            "logo.placeholder-customer"
           ]
         },
         "assetRef": {
           "type": "string",
-          "pattern": "^(reuse:(asset|inline)\\.[A-Za-z0-9._-]+|generate:[^\\s][^\\n]{0,79}|placeholder:neutral)$"
+          "pattern": "^(reuse:(asset|inline)\\.[A-Za-z0-9._-]+|generate:[^\\s][^\\n]{0,79}|placeholder:neutral|user:[a-z0-9][a-z0-9._-]{0,63})$"
         },
         "alt": {
           "type": "string",
@@ -150,14 +270,18 @@
               "properties": {
                 "assetRole": {
                   "enum": [
-                    "brand.merlin-app-icon"
+                    "brand.merlin-app-icon",
+                    "brand.placeholder-mark",
+                    "media.user-supplied"
                   ]
                 }
               }
             }
           ],
           "x-allowedRoles": [
-            "brand.merlin-app-icon"
+            "brand.merlin-app-icon",
+            "brand.placeholder-mark",
+            "media.user-supplied"
           ]
         }
       }
@@ -210,14 +334,18 @@
               "properties": {
                 "assetRole": {
                   "enum": [
-                    "brand.merlin-app-icon"
+                    "brand.merlin-app-icon",
+                    "brand.placeholder-mark",
+                    "media.user-supplied"
                   ]
                 }
               }
             }
           ],
           "x-allowedRoles": [
-            "brand.merlin-app-icon"
+            "brand.merlin-app-icon",
+            "brand.placeholder-mark",
+            "media.user-supplied"
           ]
         },
         "homeHref": {
@@ -268,14 +396,18 @@
               "properties": {
                 "assetRole": {
                   "enum": [
-                    "brand.merlin-app-icon"
+                    "brand.merlin-app-icon",
+                    "brand.placeholder-mark",
+                    "media.user-supplied"
                   ]
                 }
               }
             }
           ],
           "x-allowedRoles": [
-            "brand.merlin-app-icon"
+            "brand.merlin-app-icon",
+            "brand.placeholder-mark",
+            "media.user-supplied"
           ]
         },
         "links": {
@@ -407,14 +539,18 @@
               "properties": {
                 "assetRole": {
                   "enum": [
-                    "art.footer-ascii"
+                    "art.footer-ascii",
+                    "art.line-illustration",
+                    "illustration.generated"
                   ]
                 }
               }
             }
           ],
           "x-allowedRoles": [
-            "art.footer-ascii"
+            "art.footer-ascii",
+            "art.line-illustration",
+            "illustration.generated"
           ]
         },
         "brandWordmark": {
@@ -583,14 +719,18 @@
               "properties": {
                 "assetRole": {
                   "enum": [
-                    "illustration.felt-scene"
+                    "illustration.felt-scene",
+                    "illustration.generated",
+                    "media.user-supplied"
                   ]
                 }
               }
             }
           ],
           "x-allowedRoles": [
-            "illustration.felt-scene"
+            "illustration.felt-scene",
+            "illustration.generated",
+            "media.user-supplied"
           ]
         },
         "notifications": {
@@ -692,14 +832,16 @@
                     "properties": {
                       "assetRole": {
                         "enum": [
-                          "logo.third-party-wordmark"
+                          "logo.third-party-wordmark",
+                          "logo.placeholder-customer"
                         ]
                       }
                     }
                   }
                 ],
                 "x-allowedRoles": [
-                  "logo.third-party-wordmark"
+                  "logo.third-party-wordmark",
+                  "logo.placeholder-customer"
                 ]
               }
             }
@@ -778,14 +920,18 @@
                     "properties": {
                       "assetRole": {
                         "enum": [
-                          "icon.third-party-app"
+                          "icon.third-party-app",
+                          "icon.generic-ui",
+                          "logo.placeholder-customer"
                         ]
                       }
                     }
                   }
                 ],
                 "x-allowedRoles": [
-                  "icon.third-party-app"
+                  "icon.third-party-app",
+                  "icon.generic-ui",
+                  "logo.placeholder-customer"
                 ]
               }
             }
@@ -971,14 +1117,18 @@
                       "properties": {
                         "assetRole": {
                           "enum": [
-                            "illustration.felt-scene"
+                            "illustration.felt-scene",
+                            "illustration.generated",
+                            "media.user-supplied"
                           ]
                         }
                       }
                     }
                   ],
                   "x-allowedRoles": [
-                    "illustration.felt-scene"
+                    "illustration.felt-scene",
+                    "illustration.generated",
+                    "media.user-supplied"
                   ]
                 },
                 "caption": {
@@ -1071,7 +1221,9 @@
                       "assetRole": {
                         "enum": [
                           "logo.third-party-wordmark",
-                          "icon.third-party-app"
+                          "icon.third-party-app",
+                          "logo.placeholder-customer",
+                          "icon.generic-ui"
                         ]
                       }
                     }
@@ -1079,7 +1231,9 @@
                 ],
                 "x-allowedRoles": [
                   "logo.third-party-wordmark",
-                  "icon.third-party-app"
+                  "icon.third-party-app",
+                  "logo.placeholder-customer",
+                  "icon.generic-ui"
                 ]
               },
               "lead": {
@@ -1170,14 +1324,18 @@
                 "properties": {
                   "assetRole": {
                     "enum": [
-                      "icon.third-party-app"
+                      "icon.third-party-app",
+                      "icon.generic-ui",
+                      "logo.placeholder-customer"
                     ]
                   }
                 }
               }
             ],
             "x-allowedRoles": [
-              "icon.third-party-app"
+              "icon.third-party-app",
+              "icon.generic-ui",
+              "logo.placeholder-customer"
             ]
           }
         },
@@ -1235,14 +1393,18 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "illustration.felt-scene"
+                        "illustration.felt-scene",
+                        "illustration.generated",
+                        "media.user-supplied"
                       ]
                     }
                   }
                 }
               ],
               "x-allowedRoles": [
-                "illustration.felt-scene"
+                "illustration.felt-scene",
+                "illustration.generated",
+                "media.user-supplied"
               ]
             },
             "recording": {
@@ -1254,14 +1416,16 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "media.audio-sample"
+                        "media.audio-sample",
+                        "media.user-supplied"
                       ]
                     }
                   }
                 }
               ],
               "x-allowedRoles": [
-                "media.audio-sample"
+                "media.audio-sample",
+                "media.user-supplied"
               ]
             },
             "transcriptTitle": {
@@ -1482,14 +1646,18 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "illustration.felt-scene"
+                        "illustration.felt-scene",
+                        "illustration.generated",
+                        "media.user-supplied"
                       ]
                     }
                   }
                 }
               ],
               "x-allowedRoles": [
-                "illustration.felt-scene"
+                "illustration.felt-scene",
+                "illustration.generated",
+                "media.user-supplied"
               ]
             },
             "caption": {
@@ -1529,14 +1697,18 @@
                     "properties": {
                       "assetRole": {
                         "enum": [
-                          "icon.third-party-app"
+                          "icon.third-party-app",
+                          "icon.generic-ui",
+                          "logo.placeholder-customer"
                         ]
                       }
                     }
                   }
                 ],
                 "x-allowedRoles": [
-                  "icon.third-party-app"
+                  "icon.third-party-app",
+                  "icon.generic-ui",
+                  "logo.placeholder-customer"
                 ]
               },
               "caption": {
@@ -2130,8 +2302,9 @@
         },
         "installerHref": {
           "type": "string",
-          "pattern": "^/download-stub\\.txt(\\?arch=(arm64|x64))?$",
-          "x-sample": "/download-stub.txt?arch=arm64"
+          "pattern": "^/(download-stub|installer-placeholder)\\.txt(\\?arch=(arm64|x64))?$",
+          "x-sample": "/download-stub.txt?arch=arm64",
+          "description": "mode=clone: the clone's local stub /download-stub.txt (stands in for the real installer host). mode=generation: /installer-placeholder.txt (the stub path is source identity, GENERATION_MODE_URL)."
         }
       }
     },
@@ -2209,14 +2382,18 @@
                     "properties": {
                       "assetRole": {
                         "enum": [
-                          "screenshot.os-install-step"
+                          "screenshot.os-install-step",
+                          "screenshot.placeholder",
+                          "media.user-supplied"
                         ]
                       }
                     }
                   }
                 ],
                 "x-allowedRoles": [
-                  "screenshot.os-install-step"
+                  "screenshot.os-install-step",
+                  "screenshot.placeholder",
+                  "media.user-supplied"
                 ]
               }
             }
@@ -2445,14 +2622,18 @@
               "properties": {
                 "assetRole": {
                   "enum": [
-                    "illustration.felt-scene"
+                    "illustration.felt-scene",
+                    "illustration.generated",
+                    "media.user-supplied"
                   ]
                 }
               }
             }
           ],
           "x-allowedRoles": [
-            "illustration.felt-scene"
+            "illustration.felt-scene",
+            "illustration.generated",
+            "media.user-supplied"
           ]
         },
         "alt": {
@@ -2672,14 +2853,20 @@
                   "properties": {
                     "assetRole": {
                       "enum": [
-                        "brand.merlin-mascot-art"
+                        "brand.merlin-mascot-art",
+                        "brand.placeholder-mark",
+                        "illustration.generated",
+                        "media.user-supplied"
                       ]
                     }
                   }
                 }
               ],
               "x-allowedRoles": [
-                "brand.merlin-mascot-art"
+                "brand.merlin-mascot-art",
+                "brand.placeholder-mark",
+                "illustration.generated",
+                "media.user-supplied"
               ]
             }
           }
@@ -2818,14 +3005,18 @@
               "properties": {
                 "assetRole": {
                   "enum": [
-                    "illustration.felt-scene"
+                    "illustration.felt-scene",
+                    "illustration.generated",
+                    "media.user-supplied"
                   ]
                 }
               }
             }
           ],
           "x-allowedRoles": [
-            "illustration.felt-scene"
+            "illustration.felt-scene",
+            "illustration.generated",
+            "media.user-supplied"
           ]
         }
       }
@@ -3035,14 +3226,18 @@
               "properties": {
                 "assetRole": {
                   "enum": [
-                    "photo.person-portrait"
+                    "photo.person-portrait",
+                    "photo.fictional-person",
+                    "media.user-supplied"
                   ]
                 }
               }
             }
           ],
           "x-allowedRoles": [
-            "photo.person-portrait"
+            "photo.person-portrait",
+            "photo.fictional-person",
+            "media.user-supplied"
           ]
         },
         "cover": {
@@ -3054,14 +3249,18 @@
               "properties": {
                 "assetRole": {
                   "enum": [
-                    "photo.stock-cover"
+                    "photo.stock-cover",
+                    "illustration.generated",
+                    "media.user-supplied"
                   ]
                 }
               }
             }
           ],
           "x-allowedRoles": [
-            "photo.stock-cover"
+            "photo.stock-cover",
+            "illustration.generated",
+            "media.user-supplied"
           ]
         },
         "coverAlt": {
@@ -3104,7 +3303,7 @@
         "blocks": {
           "type": "array",
           "minItems": 1,
-          "maxItems": 243,
+          "maxItems": 160,
           "items": {
             "oneOf": [
               {
@@ -3321,168 +3520,209 @@
         }
       }
     },
-    "content_legal_body": {
+    "content_legal_contents": {
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "tocLabel",
-        "sections",
-        "footer"
+        "tocLabel"
       ],
       "properties": {
         "tocLabel": {
           "type": "string",
           "minLength": 1,
           "x-maxWords": 3
-        },
-        "sections": {
+        }
+      }
+    },
+    "motion_legal_contents": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
           "type": "array",
           "minItems": 1,
-          "maxItems": 14,
+          "uniqueItems": true,
           "items": {
-            "type": "object",
-            "additionalProperties": false,
-            "required": [
-              "id",
-              "title",
-              "blocks"
-            ],
-            "properties": {
-              "id": {
-                "type": "string",
-                "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
-                "x-sample": "information"
-              },
-              "title": {
-                "type": "string",
-                "minLength": 1,
-                "x-maxWords": 6
-              },
-              "blocks": {
-                "type": "array",
-                "minItems": 1,
-                "maxItems": 8,
-                "items": {
-                  "oneOf": [
-                    {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "required": [
-                        "type",
-                        "text"
-                      ],
-                      "properties": {
-                        "type": {
-                          "const": "p"
-                        },
-                        "text": {
-                          "type": "string",
-                          "minLength": 1,
-                          "x-maxWords": 82
-                        }
-                      }
-                    },
-                    {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "required": [
-                        "type",
-                        "text"
-                      ],
-                      "properties": {
-                        "type": {
-                          "const": "h3"
-                        },
-                        "text": {
-                          "type": "string",
-                          "minLength": 1,
-                          "x-maxWords": 3
-                        }
-                      }
-                    },
-                    {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "required": [
-                        "type",
-                        "items"
-                      ],
-                      "properties": {
-                        "type": {
-                          "const": "ul"
-                        },
-                        "items": {
-                          "type": "array",
-                          "minItems": 1,
-                          "maxItems": 6,
-                          "items": {
-                            "type": "string",
-                            "minLength": 1,
-                            "x-maxWords": 79
-                          },
-                          "x-maxWordsTotal": 79
-                        }
-                      }
-                    },
-                    {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "required": [
-                        "type",
-                        "label",
-                        "email"
-                      ],
-                      "properties": {
-                        "type": {
-                          "const": "contact-link"
-                        },
-                        "label": {
-                          "type": "string",
-                          "minLength": 1,
-                          "x-maxWords": 3
-                        },
-                        "email": {
-                          "type": "string",
-                          "pattern": "^[^@\\s]+@[^@\\s]+$",
-                          "x-sample": "contact@example.com"
-                        }
-                      }
-                    }
-                  ]
-                }
-              }
-            }
+            "enum": [
+              "anchor-smooth-scroll",
+              "hover-transition"
+            ]
           }
         },
-        "footer": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": [
-            "contactLabel",
-            "contactEmail",
-            "topLabel"
-          ],
-          "properties": {
-            "contactLabel": {
-              "type": "string",
-              "minLength": 1,
-              "x-maxWords": 3
-            },
-            "contactEmail": {
-              "type": "string",
-              "pattern": "^[^@\\s]+@[^@\\s]+$",
-              "x-sample": "contact@example.com"
-            },
-            "topLabel": {
-              "type": "string",
-              "minLength": 1,
-              "x-maxWords": 3
-            }
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "content_legal_section": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "blocks"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+          "x-sample": "information"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 6
+        },
+        "blocks": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "items": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "type",
+                  "text"
+                ],
+                "properties": {
+                  "type": {
+                    "const": "p"
+                  },
+                  "text": {
+                    "type": "string",
+                    "minLength": 1,
+                    "x-maxWords": 82
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "type",
+                  "text"
+                ],
+                "properties": {
+                  "type": {
+                    "const": "h3"
+                  },
+                  "text": {
+                    "type": "string",
+                    "minLength": 1,
+                    "x-maxWords": 3
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "type",
+                  "items"
+                ],
+                "properties": {
+                  "type": {
+                    "const": "ul"
+                  },
+                  "items": {
+                    "type": "array",
+                    "minItems": 1,
+                    "maxItems": 6,
+                    "items": {
+                      "type": "string",
+                      "minLength": 1,
+                      "x-maxWords": 79
+                    },
+                    "x-maxWordsTotal": 79
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "type",
+                  "label",
+                  "email"
+                ],
+                "properties": {
+                  "type": {
+                    "const": "contact-link"
+                  },
+                  "label": {
+                    "type": "string",
+                    "minLength": 1,
+                    "x-maxWords": 3
+                  },
+                  "email": {
+                    "type": "string",
+                    "pattern": "^[^@\\s]+@[^@\\s]+$",
+                    "x-sample": "contact@example.com"
+                  }
+                }
+              }
+            ]
           }
         }
       }
     },
-    "motion_legal_body": {
+    "motion_legal_section": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "properties": {
+        "patterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "anchor-smooth-scroll",
+              "hover-transition"
+            ]
+          }
+        },
+        "reducedMotionFallback": {
+          "const": "no-animation"
+        }
+      }
+    },
+    "content_legal_document-footer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "contactLabel",
+        "contactEmail",
+        "topLabel"
+      ],
+      "properties": {
+        "contactLabel": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 3
+        },
+        "contactEmail": {
+          "type": "string",
+          "pattern": "^[^@\\s]+@[^@\\s]+$",
+          "x-sample": "contact@example.com"
+        },
+        "topLabel": {
+          "type": "string",
+          "minLength": 1,
+          "x-maxWords": 3
+        }
+      }
+    },
+    "motion_legal_document-footer": {
       "type": "object",
       "additionalProperties": false,
       "required": [
@@ -3552,7 +3792,9 @@
             "blog.prose",
             "blog.article-end",
             "legal.heading",
-            "legal.body"
+            "legal.contents",
+            "legal.section",
+            "legal.document-footer"
           ]
         },
         "variant": {
@@ -4580,7 +4822,7 @@
           "if": {
             "properties": {
               "section": {
-                "const": "legal.body"
+                "const": "legal.contents"
               }
             },
             "required": [
@@ -4590,10 +4832,64 @@
           "then": {
             "properties": {
               "content": {
-                "$ref": "#/definitions/content_legal_body"
+                "$ref": "#/definitions/content_legal_contents"
               },
               "motion": {
-                "$ref": "#/definitions/motion_legal_body"
+                "$ref": "#/definitions/motion_legal_contents"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "legal.section"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_legal_section"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_legal_section"
+              }
+            },
+            "not": {
+              "required": [
+                "variant"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "section": {
+                "const": "legal.document-footer"
+              }
+            },
+            "required": [
+              "section"
+            ]
+          },
+          "then": {
+            "properties": {
+              "content": {
+                "$ref": "#/definitions/content_legal_document-footer"
+              },
+              "motion": {
+                "$ref": "#/definitions/motion_legal_document-footer"
               }
             },
             "not": {

@@ -4,7 +4,7 @@
 Run:  python3 schema/tests/adversarial_test.py
 Exit code 0 only if all mutations are rejected and all controls pass.
 
-Controls: the unmutated example, plus one synthesized minimal-valid PageSpec per real route (every real
+Controls: the unmutated clone example, the seven mode=generation examples (schema/examples/), plus one synthesized minimal-valid PageSpec per real route (every real
 template is covered by iterating templates.json, so a new template is auto-covered), plus both directions of
 every graph rule that had a named exception (accepted: the real, correct structure; rejected: the bug).
 """
@@ -18,6 +18,9 @@ import semantic_validate as sv  # noqa: E402
 
 CTX = sv.Ctx(REPO)
 EXAMPLE = json.load(open(os.path.join(REPO, "schema", "example.pagespec.json"), encoding="utf-8"))
+GEN = {os.path.basename(f).split(".")[1]: json.load(open(f, encoding="utf-8")) for f in sorted(glob.glob(os.path.join(REPO, "schema", "examples", "generated.*.pagespec.json")))}
+BASE_TOKENS = {"surface": "color.surface.page", "text": "color.text.primary", "headingType": "typography.display.section",
+               "bodyType": "typography.body.section", "sectionSpacing": "layout.section.hero-padding"}
 RESULTS = {"mut": [0, 0], "ctl": [0, 0]}
 FAILS = []
 
@@ -73,7 +76,7 @@ def synth_node(entry, route):
 def synth_spec(template, route):
     t = CTX.templates[template]
     nodes = [synth_node(e, route) for e in t["nodes"]]
-    spec = {"pageSpecVersion": "1.0.0", "template": template, "route": route, "meta": {"title": "Sample title", "description": "Sample description"}, "nodes": nodes}
+    spec = {"pageSpecVersion": "2.0.0", "mode": "clone", "template": template, "route": route, "theme": "light", "tokens": dict(BASE_TOKENS), "meta": {"title": "Sample title", "description": "Sample description"}, "nodes": nodes}
     # cross-field fixups the generic synthesizer cannot know (each is a graph rule, proven both ways below)
     for n in nodes:
         if n["section"] == "pricing.plans":
@@ -130,6 +133,153 @@ def clone(x):
 
 def node(spec, section, variant=None):
     return next(n for n in spec["nodes"] if n["section"] == section and (variant is None or n.get("variant") == variant))
+
+
+def gen(name):
+    return clone(GEN[name])
+
+
+def extra_suites():
+    print("== CONTROLS: generation examples (one per template family) + clone mode keeps real content ==")
+    for name, spec in sorted(GEN.items()):
+        must_pass("generation example %-12s (mode=generation, fictional brand)" % name, spec)
+    real_home = clone(synth_spec("home", "/"))
+    real_home["meta"]["title"] = "Merlin \u2014 Your AI assistant for Mac"
+    node(real_home, "hero.marketing")["content"]["cta"]["label"] = "Get Merlin for Mac"
+    node(real_home, "hero.landscape")["content"]["image"] = {"assetRole": "illustration.felt-scene", "assetRef": "reuse:asset.quiet-lakeside.webp"}
+    node(real_home, "proof.company-logos")["content"]["logos"][0] = {"name": "Notion", "mark": {"assetRole": "logo.third-party-wordmark", "assetRef": "reuse:asset.notion.svg"}}
+    must_pass("CONTROL clone mode: real brand, CTA, felt scene and customer logo accepted", real_home)
+    must_pass("CONTROL clone mode: real pricing example (real tiers, 'Plans | Merlin')", EXAMPLE)
+    m = clone(real_home); m["mode"] = "generation"; must_reject("same real home page in mode=generation is rejected", m, "GENERATION_MODE_")
+
+    print("== MUTATIONS: generation-mode leakage (each must be rejected by its named rule) ==")
+    G = lambda: gen("home")
+    m = G(); m["meta"]["title"] = "Merlin for teams"; must_reject("brand name in meta.title", m, "GENERATION_MODE_BRAND", sem=True)
+    m = G(); node(m, "hero.marketing")["content"]["cta"]["label"] = "Get Merlin for Mac"; must_reject("source CTA 'Get Merlin for Mac'", m, "GENERATION_MODE_BRAND", sem=True)
+    m = G(); m["meta"]["title"] = "\uff2d\uff45\uff52\uff4c\uff49\uff4e planner"; must_reject("brand in fullwidth letters (NFKC)", m, "GENERATION_MODE_BRAND", sem=True)
+    m = G(); m["meta"]["title"] = "Mer\u200blin planner"; must_reject("brand split by a zero-width space", m, "GENERATION_MODE_BRAND", sem=True)
+    m = G(); node(m, "hero.marketing")["content"]["subtitle"] = "Visit www.merlin.computer today"; must_reject("source domain in copy", m, "GENERATION_MODE_URL", sem=True)
+    m = G(); node(m, "shell.footer-closing")["content"]["brandWordmark"] = "merlin.computer"; must_reject("source wordmark/domain in footer", m, "GENERATION_MODE_BRAND", sem=True)
+    m = G(); node(m, "hero.marketing")["content"]["subtitle"] = "Grab it from download.merlin.computer"; must_reject("Mac download host", m, "GENERATION_MODE_URL", sem=True)
+    m = gen("install"); node(m, "install.intro")["content"]["installerHref"] = "/download-stub.txt?arch=arm64"; must_reject("source installer stub path (Mac download link)", m, "GENERATION_MODE_URL", sem=True)
+    m = G(); node(m, "hero.marketing")["content"]["subtitle"] = "Images from cdn.sanity.io"; must_reject("source CMS host", m, "GENERATION_MODE_URL", sem=True)
+    m = gen("legal"); node(m, "legal.document-footer")["content"]["contactEmail"] = "team@merlin.computer"; must_reject("source contact email", m, "GENERATION_MODE_BRAND", sem=True)
+    m = gen("legal"); node(m, "legal.document-footer")["content"]["contactEmail"] = "hello@fernlight.com"; must_reject("email on a non-reserved domain", m, "GENERATION_MODE_URL", sem=True)
+    m = G(); node(m, "proof.company-logos")["content"]["logos"][0]["name"] = "Salesforce"; must_reject("real customer name in the logo row", m, "GENERATION_MODE_CUSTOMER", sem=True)
+    m = G(); node(m, "proof.company-logos")["content"]["logos"][0]["name"] = "McKinsey \u0026 Company"; must_reject("real customer with ampersand", m, "GENERATION_MODE_CUSTOMER", sem=True)
+    m = G(); node(m, "proof.company-logos")["content"]["logos"][0]["mark"] = {"assetRole": "logo.third-party-wordmark", "assetRef": "placeholder:neutral"}; must_reject("third-party logo role (blocked-for-generation)", m, "GENERATION_MODE_CUSTOMER", sem=True)
+    m = G(); node(m, "proof.company-logos")["content"]["logos"][0]["mark"] = {"assetRole": "logo.placeholder-customer", "assetRef": "generate:a Notion-style logo"}; must_reject("generate brief naming a real brand", m, "GENERATION_MODE_CUSTOMER", sem=True)
+    m = G(); node(m, "proof.company-logos")["content"]["heading"] = "Used by professionals at"; must_reject("source social-proof claim", m, "GENERATION_MODE_CLAIM", sem=True)
+    m = gen("pricing"); node(m, "pricing.plans")["content"]["plans"][1].update(price="99", credits="85,000"); must_reject("real plan tier (price + credits)", m, "GENERATION_MODE_CLAIM", sem=True)
+    m = gen("blog-post"); node(m, "blog.article-header")["content"]["author"] = "Adeola Adeoti"; must_reject("real blog author name", m, "GENERATION_MODE_PERSON", sem=True)
+    m = G(); node(m, "hero.marketing")["content"]["subtitle"] = "Sophie Hayes loves it"; must_reject("source mock persona name (testimonial-style)", m, "GENERATION_MODE_PERSON", sem=True)
+    m = gen("blog-post"); node(m, "blog.article-header")["content"]["avatar"] = {"assetRole": "photo.person-portrait", "assetRef": "placeholder:neutral"}; must_reject("real-person portrait role", m, "GENERATION_MODE_PERSON", sem=True)
+    m = G(); node(m, "hero.marketing")["content"]["subtitle"] = "Your AI assistant for Mac"; must_reject("source tagline (5-word shingle)", m, "GENERATION_MODE_COPY", sem=True)
+    m = G(); node(m, "hero.marketing")["content"]["subtitle"] = "Book flights, order groceries, and fill out forms in your browser"; must_reject("source feature copy", m, "GENERATION_MODE_COPY", sem=True)
+    m = G(); node(m, "hero.marketing")["content"]["subtitle"] = "Book flights \u2014 order groceries, and fill out forms in your browser"; must_reject("source copy with an em dash variant", m, "GENERATION_MODE_COPY", sem=True)
+    m = G(); node(m, "hero.marketing")["content"]["subtitle"] = "Rewrite a reply, explain selected text, or ask about what\u2019s on your screen"; must_reject("source copy with a curly apostrophe", m, "GENERATION_MODE_COPY", sem=True)
+    m = G(); node(m, "hero.landscape")["content"]["image"] = {"assetRole": "illustration.felt-scene", "assetRef": "reuse:asset.quiet-lakeside.webp"}; must_reject("proprietary felt scene (clone-only)", m, "GENERATION_MODE_ASSET", sem=True)
+    m = G(); node(m, "hero.landscape")["content"]["image"] = {"assetRole": "illustration.generated", "assetRef": "reuse:asset.quiet-lakeside.webp"}; must_reject("reuse of a source asset file under a safe role", m, "GENERATION_MODE_ASSET", sem=True)
+    m = G(); node(m, "hero.marketing")["content"]["subtitle"] = "see quiet-lakeside.webp for the mood"; must_reject("source asset file name in a string", m, "GENERATION_MODE_ASSET", sem=True)
+    m = gen("install"); node(m, "install.steps")["content"]["steps"][0]["image"] = {"assetRole": "screenshot.os-install-step", "assetRef": "placeholder:neutral"}; must_reject("macOS install screenshot role", m, "GENERATION_MODE_SCREENSHOT", sem=True)
+    m = gen("legal"); node(m, "shell.corner-nav")["content"]["brandIcon"] = {"assetRole": "brand.merlin-app-icon", "assetRef": "reuse:asset.merlin-dock-32.png"}; must_reject("source app icon / brand mark", m, "GENERATION_MODE_BRAND", sem=True)
+    m = gen("manifesto"); node(m, "manifesto.ending")["content"]["signature"]["mark"] = {"assetRole": "brand.merlin-mascot-art", "assetRef": "placeholder:neutral"}; must_reject("mascot art role", m, "GENERATION_MODE_BRAND", sem=True)
+    m = G(); node(m, "hero.landscape")["content"]["image"] = {"assetRole": "illustration.generated", "assetRef": "user:my-art"}; must_reject("user: ref on a non user-supplied role", m, "ASSET_REF_POLICY", sem=True)
+    m = G(); node(m, "hero.landscape")["content"]["image"] = {"assetRole": "media.user-supplied", "assetRef": "generate:fake operator logo"}; must_reject("generating a stand-in for a user-supplied asset", m, "ASSET_REF_POLICY", sem=True)
+    m = G(); node(m, "hero.landscape")["content"]["image"] = {"assetRole": "media.user-supplied", "assetRef": "user:operator-hero"}; must_pass("CONTROL generation: operator-supplied asset via user:<id>", m)
+
+    print("== MUTATIONS: tokens (token-policy.json) ==")
+    T = lambda: clone(EXAMPLE)
+    def tok(slot, val, rule, name, sem=True, base=None):
+        m = base or T(); m["tokens"][slot] = val; must_reject(name, m, rule, sem=sem)
+    tok("text", "#333333", "TOKEN_RAW_COLOR", "raw hex colour in text")
+    tok("surface", "rgb(255, 255, 255)", "TOKEN_RAW_COLOR", "raw rgb() colour in surface")
+    tok("accent", "hsl(190 80% 40%)", "TOKEN_RAW_COLOR", "raw hsl() colour in accent")
+    tok("surface", "white", "TOKEN_RAW_COLOR", "colour keyword in surface")
+    tok("sectionSpacing", "96px", "TOKEN_ARBITRARY_SPACING", "arbitrary spacing 96px")
+    tok("sectionSpacing", "160px 0 96px", "TOKEN_ARBITRARY_SPACING", "raw padding shorthand (the real value, untokenised)")
+    tok("gap", "1.5rem", "TOKEN_ARBITRARY_SPACING", "arbitrary gap 1.5rem")
+    tok("sectionSpacing", "clamp(24px,5vw,80px)", "TOKEN_ARBITRARY_SPACING", "clamp() spacing")
+    tok("headingType", "Inter", "TOKEN_UNSUPPORTED_FONT", "unsupported font family Inter")
+    tok("bodyType", "Georgia, serif", "TOKEN_UNSUPPORTED_FONT", "raw font stack")
+    tok("headingType", "\"Open Runde\"", "TOKEN_UNSUPPORTED_FONT", "real family name written raw")
+    tok("surface", "color.surface.neon", "TOKEN_UNKNOWN", "unknown token path")
+    tok("bodyType", "typography.body.huge", "TOKEN_UNKNOWN", "unknown typography role")
+    tok("text", "color.ink.primary", "TOKEN_NOT_APPROVED", "foundation colour instead of the semantic alias")
+    tok("bodyType", "fontFamily.sans", "TOKEN_NOT_APPROVED", "raw type primitive (fontFamily) in a type slot")
+    tok("gap", "component.download-button.radius", "TOKEN_NOT_APPROVED", "component token in a PageSpec")
+    tok("surface", "typography.display.hero", "TOKEN_SLOT_MISMATCH", "typography token in a colour slot")
+    tok("sectionSpacing", "layout.container.content-max", "TOKEN_SLOT_MISMATCH", "layout width in the spacing slot")
+    tok("text", "color.text.muted-hero", "TOKEN_SLOT_MISMATCH", "denied role colour as body ink")
+    tok("surface", "color.surface.scene-dark", "TOKEN_THEME_COMBINATION", "scene-dark surface as a light-theme page surface")
+    tok("text", "color.text.on-dark", "TOKEN_THEME_COMBINATION", "on-dark ink as page text in the light theme")
+    m = T(); m["tokens"]["surface"] = "color.surface.footer"; m["tokens"]["text"] = "color.text.muted"; must_reject("text/surface contrast 3.8 < 4.5", m, "TOKEN_THEME_COMBINATION", sem=True)
+    m = T(); m["theme"] = "dark"; must_reject("invalid theme 'dark' (schema)", m)
+    m = T(); m["theme"] = "dark"; must_reject("invalid theme 'dark' (semantic layer alone)", m, "TOKEN_THEME_COMBINATION", sem=True)
+    m = T(); del m["tokens"]["surface"]; must_reject("missing required token slot (schema)", m)
+    m = T(); m["tokens"]["fontSize"] = "fontSize.16"; must_reject("invented token slot (closed schema)", m)
+    m = gen("home"); m["tokens"]["text"] = "#000"; must_reject("raw colour in a generation example", m, "TOKEN_RAW_COLOR", sem=True)
+    print("== CONTROLS: every approved token in every slot ==")
+    cat = CTX.catalog["tokens"]; pol = CTX.tpolicy["pageSpecTokenSlots"]; n_ok = n_all = 0
+    for slot, sd in pol.items():
+        for path, e in cat.items():
+            if e["approvedForPageSpec"] and e["category"] in sd["allowCategories"] and any(path.startswith(px) for px in sd["allowPrefixes"]) and path not in sd["deny"]:
+                m = T(); m["tokens"][slot] = path; n_all += 1
+                errs = run(m)[0]
+                if not errs: n_ok += 1
+                else: FAILS.append("token control %s=%s" % (slot, path)); print("  !! token control failed", slot, path, errs[:1])
+    RESULTS["ctl"][1] += 1
+    if n_ok == n_all: RESULTS["ctl"][0] += 1
+    print("  PASS      %d/%d (slot, approved token) combinations accepted" % (n_ok, n_all))
+
+    print("== MUTATIONS: pins in code (availability R3, retrieval R8) ==")
+    ctx2 = sv.Ctx(REPO); ctx2.roles = copy.deepcopy(ctx2.roles); ctx2.roles["illustration.felt-scene"]["availability"] = "generation-safe"
+    _pin("registry flips felt-scene to generation-safe", ctx2, "ASSET_AVAILABILITY_PINNED")
+    ctx2 = sv.Ctx(REPO); ctx2.roles = copy.deepcopy(ctx2.roles); ctx2.roles["photo.person-portrait"]["availability"] = "clone-only"
+    _pin("registry changes a blocked role to another valid value", ctx2, "ASSET_AVAILABILITY_PINNED")
+    ctx2 = sv.Ctx(REPO); ctx2.roles = copy.deepcopy(ctx2.roles); del ctx2.roles["copy.original"]["availability"]
+    _pin("registry drops an availability", ctx2, "ASSET_AVAILABILITY_PINNED")
+    ctx2 = sv.Ctx(REPO); ctx2.sections = copy.deepcopy(ctx2.sections); ctx2.sections["shell.floating-nav"]["retrievalEligible"] = True
+    _pin("contract flips floating nav to retrievable", ctx2, "RETRIEVAL_ELIGIBILITY_PINNED")
+    ctx2 = sv.Ctx(REPO); ctx2.sections = copy.deepcopy(ctx2.sections); ctx2.sections["legal.contents"]["retrievalEligible"] = True
+    _pin("contract flips the legal TOC to retrievable", ctx2, "RETRIEVAL_ELIGIBILITY_PINNED")
+    ctx2 = sv.Ctx(REPO); ctx2.sections = copy.deepcopy(ctx2.sections); ctx2.sections["faq.accordion"]["retrievalEligible"] = False
+    _pin("content section marked ineligible", ctx2, "RETRIEVAL_ELIGIBILITY_PINNED")
+
+    print("== R6 decomposition: repeatable legal.section / blog.prose chapters ==")
+    lg = gen("legal"); ls = node(lg, "legal.section")
+    m = clone(lg); i = m["nodes"].index(node(m, "legal.section")); s2 = clone(ls); s2["content"]["id"] = "second-part"; m["nodes"].insert(i + 1, s2)
+    must_pass("CONTROL two legal.section parts with distinct ids", m)
+    m2 = clone(m); m2["nodes"][i + 1]["content"]["id"] = ls["content"]["id"]; must_reject("duplicate legal.section id", m2, "LEGAL_SECTION_IDS_UNIQUE", sem=True)
+    m = clone(lg); i = m["nodes"].index(node(m, "legal.section")); m["nodes"][i + 1:i + 1] = [dict(clone(ls), content=dict(ls["content"], id="part-%d" % k)) for k in range(14)]
+    must_reject("15 legal.section parts (maxRepeat 14)", m, "TEMPLATE_ORDER", sem=True)
+    bp = gen("blog-post"); ch = node(bp, "blog.prose")
+    m = clone(bp); i = m["nodes"].index(node(m, "blog.prose"))
+    c2 = clone(ch); c2["content"]["blocks"] = [{"type": "h2", "text": "A second chapter"}, {"type": "p", "text": "Fernlight notes."}]
+    m["nodes"].insert(i + 1, c2); must_pass("CONTROL lead chapter + an h2 chapter", m)
+    m2 = clone(m); m2["nodes"][i + 1]["content"]["blocks"] = [{"type": "p", "text": "No heading here."}]; must_reject("second chapter without its h2", m2, "BLOG_PROSE_CHAPTER_HEADING", sem=True)
+    m2 = clone(m); m2["nodes"][i]["content"]["blocks"].append({"type": "h2", "text": "Hidden chapter"}); must_reject("h2 in the middle of a chapter", m2, "BLOG_PROSE_CHAPTER_HEADING", sem=True)
+    m = clone(bp); m["nodes"][i:i + 1] = [clone(c2) for _ in range(13)]; must_reject("13 chapters (maxRepeat 12)", m, "TEMPLATE_ORDER", sem=True)
+
+    print("== R9 wrapper gate (extraction/wrapper_gate.py self-test) ==")
+    sys.path.insert(0, os.path.join(REPO, "extraction"))
+    import io, contextlib, wrapper_gate
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        rc = wrapper_gate.self_test()
+    ok = [l for l in buf.getvalue().splitlines() if l.startswith("OK  ")]; bad = [l for l in buf.getvalue().splitlines() if l.startswith("FAIL")]
+    RESULTS["mut"][1] += len(ok) + len(bad); RESULTS["mut"][0] += len(ok)
+    print("  wrapper gate cases: %d OK, %d FAIL (HERO 1900/3100, majority share, whitelist rules, missing measurement, wrong viewport)" % (len(ok), len(bad)))
+    if rc or bad: FAILS.append("wrapper gate self-test")
+
+
+def _pin(name, ctx2, rule):
+    errs = sv.validate(EXAMPLE, ctx2)[0]
+    RESULTS["mut"][1] += 1
+    if any(rule in e for e in errs):
+        RESULTS["mut"][0] += 1; print("  REJECTED  %-62s -> %s" % (name, [e for e in errs if rule in e][0][:92]))
+    else:
+        FAILS.append(name); print("  !! NOT REJECTED %s: %s" % (name, errs[:2]))
 
 
 def main():
@@ -218,7 +368,7 @@ def main():
     m = clone(post); node(m, "blog.prose")["content"]["blocks"] = [{"type": "ul", "items": [" ".join(["word"] * 900), " ".join(["word"] * 492)]}]; must_reject("maxWordsTotal overflow (blog list 1392 > 1391)", m, "MAX_WORDS")
     m = clone(post); node(m, "blog.prose")["content"]["blocks"] = [{"type": "img", "src": "x"}]; must_reject("blog prose: invented block type (img)", m)
     m = clone(post); node(m, "blog.prose")["content"]["blocks"] = [{"type": "p", "text": "ok", "extra": 1}]; must_reject("blog prose: invented block property", m)
-    m = clone(leg); node(m, "legal.body")["content"]["sections"][0]["blocks"] = [{"type": "p", "text": " ".join(["word"] * 83)}]; must_reject("maxWords overflow (legal paragraph 83 > 82)", m, "MAX_WORDS")
+    m = clone(leg); node(m, "legal.section")["content"]["blocks"] = [{"type": "p", "text": " ".join(["word"] * 83)}]; must_reject("maxWords overflow (legal paragraph 83 > 82)", m, "MAX_WORDS")
     m = clone(man); node(m, "manifesto.opening")["content"]["openingParagraph"] = " ".join(["word"] * 29); must_reject("maxWords overflow (manifesto opening 29 > 28)", m, "MAX_WORDS")
 
     print("== MUTATIONS: asset roles (pinned-value / policy) ==")
@@ -291,7 +441,8 @@ def main():
     RESULTS["mut"][1] += 1
     if errs: RESULTS["mut"][0] += 1; print("  REJECTED  duplicate of an optional non-repeatable node                 -> %s" % errs[0][:80])
     else: FAILS.append("dup optional"); print("  !! duplicate optional node accepted")
-    print("  (note: repeatable is false on every real template node - no real section repeats adjacently - so only the required flag needs a machinery proof)")
+    print("  (repeatable:true nodes - legal.section, blog.prose chapters - are proven in the R6 decomposition block)")
+    extra_suites()
 
     mp, mt = RESULTS["mut"]; cp, ct = RESULTS["ctl"]
     print("\nMUTATIONS rejected: %d/%d   CONTROLS passed: %d/%d" % (mp, mt, cp, ct))

@@ -1,6 +1,17 @@
 {
   "id": "story.context-routines",
   "category": "story",
+  "source": {
+    "id": "src:Routines.jsx#section#routines",
+    "tag": "section",
+    "file": "src/components/Routines.jsx",
+    "lines": "67-210"
+  },
+  "semantic": {
+    "id": "story.context-routines",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
   "description": "'First, a little [app tiles] context.' heading, copy column, a Gmail email preview card, then the Routines row (handwritten note, intro, auto-playing 'Weekly studio update' timeline, felt-scene figure). The timeline internals (tool steps, durations) are a scripted walkthrough.",
   "evidenceLevel": "measured",
   "domAnchor": "section#routines",
@@ -51,7 +62,9 @@
             "icon": {
               "$ref": "#/definitions/assetRef",
               "x-allowedRoles": [
-                "icon.third-party-app"
+                "icon.third-party-app",
+                "icon.generic-ui",
+                "logo.placeholder-customer"
               ]
             }
           }
@@ -231,7 +244,9 @@
               "image": {
                 "$ref": "#/definitions/assetRef",
                 "x-allowedRoles": [
-                  "illustration.felt-scene"
+                  "illustration.felt-scene",
+                  "illustration.generated",
+                  "media.user-supplied"
                 ]
               },
               "caption": {
@@ -338,5 +353,14 @@
   ],
   "implementedBy": [
     "src/components/Routines.jsx"
+  ],
+  "generatedAssetRoles": [
+    "art.line-illustration",
+    "copy.original",
+    "icon.generic-ui",
+    "illustration.generated",
+    "link.placeholder-url",
+    "logo.placeholder-customer",
+    "media.user-supplied"
   ]
 }

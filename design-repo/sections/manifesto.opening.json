@@ -1,6 +1,17 @@
 {
   "id": "manifesto.opening",
   "category": "manifesto",
+  "source": {
+    "id": "src:Manifesto.jsx#section.manifesto-poster-opening",
+    "tag": "section",
+    "file": "src/pages/Manifesto.jsx",
+    "lines": "48-63"
+  },
+  "semantic": {
+    "id": "manifesto.opening",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
   "description": "Poster opening: two Caveat handwriting overlays behind the title, H1 'Less managing. More living.', a time-of-day opening paragraph and a second paragraph with two inline mentions (meeting, document) plus a time-of-day interruption tail. BODY TEXT IS PLACEHOLDER (the live essay is not reproduced).",
   "evidenceLevel": "measured",
   "domAnchor": "section.manifesto-poster-opening",
@@ -259,5 +270,11 @@
   ],
   "implementedBy": [
     "src/pages/Manifesto.jsx"
+  ],
+  "generatedAssetRoles": [
+    "art.line-illustration",
+    "copy.original",
+    "icon.generic-ui",
+    "logo.placeholder-customer"
   ]
 }

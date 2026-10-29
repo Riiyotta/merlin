@@ -1,6 +1,17 @@
 {
   "id": "manifesto.ending",
   "category": "manifesto",
+  "source": {
+    "id": "src:Manifesto.jsx#section.manifesto-poster-ending",
+    "tag": "section",
+    "file": "src/pages/Manifesto.jsx",
+    "lines": "112-123"
+  },
+  "semantic": {
+    "id": "manifesto.ending",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
   "description": "Poster ending: paragraph eight, the time-of-day 'finish' paragraph, H2 'Your time. Yours to spend.', and the signature ('Yours' circled by a drawn path, ', Merlin', mascot mark). The circle draws once when 50% in view.",
   "evidenceLevel": "measured",
   "domAnchor": "section.manifesto-poster-ending",
@@ -62,7 +73,10 @@
           "mark": {
             "$ref": "#/definitions/assetRef",
             "x-allowedRoles": [
-              "brand.merlin-mascot-art"
+              "brand.merlin-mascot-art",
+              "brand.placeholder-mark",
+              "illustration.generated",
+              "media.user-supplied"
             ]
           }
         }
@@ -141,5 +155,12 @@
   ],
   "implementedBy": [
     "src/pages/Manifesto.jsx"
+  ],
+  "generatedAssetRoles": [
+    "art.line-illustration",
+    "brand.placeholder-mark",
+    "copy.original",
+    "illustration.generated",
+    "media.user-supplied"
   ]
 }

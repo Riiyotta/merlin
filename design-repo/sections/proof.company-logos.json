@@ -1,6 +1,17 @@
 {
   "id": "proof.company-logos",
   "category": "proof",
+  "source": {
+    "id": "src:Companies.jsx#section.companies",
+    "tag": "section",
+    "file": "src/components/Companies.jsx",
+    "lines": "4-21"
+  },
+  "semantic": {
+    "id": "proof.company-logos",
+    "category": "PROOF"
+  },
+  "retrievalEligible": true,
   "description": "'Used by professionals at' monochrome logo row (opacity .48, grayscale). Every mark is a REAL third-party company logo: the generator must never draw or approximate them. Use placeholder:neutral.",
   "evidenceLevel": "measured",
   "domAnchor": "section.companies",
@@ -42,7 +53,8 @@
             "mark": {
               "$ref": "#/definitions/assetRef",
               "x-allowedRoles": [
-                "logo.third-party-wordmark"
+                "logo.third-party-wordmark",
+                "logo.placeholder-customer"
               ]
             }
           }
@@ -104,5 +116,9 @@
   ],
   "implementedBy": [
     "src/components/Companies.jsx"
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "logo.placeholder-customer"
   ]
 }

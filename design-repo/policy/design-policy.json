@@ -1,0 +1,73 @@
+{
+  "policyId": "n0-saas-design-constraints-common",
+  "policyVersion": "0.1.0",
+  "commonIrVersion": "0.5",
+  "enforcementMode": "hard-and-soft",
+  "title": "Binding of the Merlin clone design-repo to the N0 common SaaS design-constraint policy",
+  "classification": {
+    "productCategory": "saas",
+    "productDomain": "ai-assistant-desktop-productivity",
+    "marketModel": "subscription software (monthly plans with usage credits) delivered as a downloadable Mac client, sold to individual professionals (prosumer, self-serve)",
+    "isSaaS": true,
+    "surfaces": [
+      "marketing-site",
+      "pricing",
+      "download-install",
+      "editorial-blog",
+      "manifesto",
+      "legal"
+    ],
+    "audiences": [
+      "individual professionals / knowledge workers on macOS"
+    ],
+    "decision": "SaaS. Recurring subscription pricing tiers with monthly credits, subscription/billing terms and a professional (work-tool) audience are the SaaS markers the common policy assumes. It is self-serve prosumer SaaS with a desktop client rather than sales-led B2B: there is no dashboard, demo-booking or team-admin surface in the clone, so the policy's B2B-only constructs must not be introduced by a generator (see generationRules).",
+    "evidence": [
+      {
+        "cite": "src/components/pricing/pricingData.js:5-30",
+        "fact": "three paid plans Pro / Ultra / Max at 29 / 99 / 299 with 25,000 / 85,000 / 250,000 credits"
+      },
+      {
+        "cite": "src/components/pricing/PricingPlans.jsx:19",
+        "fact": "price shown per '/ month' (recurring subscription)"
+      },
+      {
+        "cite": "src/components/pricing/PricingPlans.jsx:30",
+        "fact": "'credits each month' usage allowance"
+      },
+      {
+        "cite": "src/components/legal/termsData.js:61-62",
+        "fact": "Terms section 'Subscription and Billing'"
+      },
+      {
+        "cite": "src/components/Companies.jsx:5",
+        "fact": "social proof 'Used by professionals at' (Notion, Salesforce, Harvard, HubSpot, McKinsey) - professional/work audience"
+      },
+      {
+        "cite": "src/pages/Download.jsx:41",
+        "fact": "'Download Merlin for Mac' - software delivered as a desktop client, not a consumer service or marketplace"
+      }
+    ],
+    "consideredAlternative": "consumer-app (a downloadable Mac app for individuals). Rejected: the product is monetised as a recurring software subscription with usage tiers and positioned as a work tool, which is the SaaS policy's scope; nothing in the clone is a consumer service or marketplace."
+  },
+  "generationRules": [
+    "Pages are drawn only from the 7 templates and the section contracts of this design-repo; the common policy's B2B constructs that the source does not have (dashboards, demo booking, feature matrices, integration directories, changelog) must not be invented.",
+    "Pricing pages keep the real structure (3 monthly plans, exactly one primary CTA, no billing toggle); in mode=generation the tiers, prices and credits must be original (GENERATION_MODE_CLAIM).",
+    "mode=generation pages carry no Merlin brand, domain, CTA, copy, people, customers or proprietary assets (GENERATION_MODE_* rules, assets/asset-roles.json availability).",
+    "PageSpecs use approved token paths only (tokens/llm/token-policy.json, TOKEN_* rules)."
+  ],
+  "enforcedBy": [
+    "schema/pagespec.schema.json",
+    "schema/semantic_validate.py",
+    "schema/source-identity.json",
+    "assets/asset-roles.json",
+    "tokens/llm/token-policy.json",
+    "compatibility/graph.json",
+    "policy/design-policy.json"
+  ],
+  "contentHashRule": "registry.manifest.json designPolicy.contentHash = 'sha256:' + sha256 over, for each enforcedBy path in this order, the UTF-8 path, a newline, the file bytes and a newline. extraction/verify_all.py recomputes it.",
+  "approval": {
+    "policyDecision": "defined-pending-architecture-review",
+    "architectureDecisionRecorded": false,
+    "note": "The SaaS classification was made by an agent from the evidence above (agent attestation, not a human sign-off). A human architecture owner must ratify the binding."
+  }
+}

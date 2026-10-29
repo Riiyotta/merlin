@@ -1,0 +1,4 @@
+{
+  "_note": "Reviewed exceptions for extraction/wrapper_gate.py. Each entry: route or template, section, variant?, rule HERO_HEIGHT|SECTION_SHARE, maxHeightPx (> measured), maxShare?, justification (>= 30 chars), reviewedBy (an agent must write: agent attestation, not a human sign-off).",
+  "entries": []
+}

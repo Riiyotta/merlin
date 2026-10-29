@@ -1,9 +1,9 @@
 {
   "repositoryId": "merlin-clone-design-repo",
-  "repositoryVersion": "1.0.0",
-  "pageSpecVersion": "1.0.0",
-  "allowlistVersion": "1.0.0",
-  "versionFieldNote": "allowlistVersion is MACHINE-CHECKED: extraction/verify_all.py fails if it differs from tokens/llm/component-allowlist.json. repositoryVersion and pageSpecVersion are documentation-only, hand-maintained markers that nothing checks automatically - do not read them as an enforcement guarantee.",
+  "repositoryVersion": "2.0.0",
+  "pageSpecVersion": "2.0.0",
+  "allowlistVersion": "2.0.0",
+  "versionFieldNote": "allowlistVersion is MACHINE-CHECKED: extraction/verify_all.py fails if it differs from tokens/llm/component-allowlist.json. designPolicy.contentHash is MACHINE-CHECKED (recomputed over the policy's enforcedBy files). repositoryVersion and pageSpecVersion are documentation-only, hand-maintained markers that nothing checks automatically - do not read them as an enforcement guarantee.",
   "status": "design-review-pending",
   "productionApproved": false,
   "notForPublicRedistribution": true,
@@ -22,16 +22,22 @@
     },
     "primitives": 13,
     "components": 21,
-    "sections": 32,
+    "sections": 34,
     "templates": 7,
     "routes": 8,
     "routingBehaviors": 2,
-    "assetRoles": 14,
+    "assetRoles": 22,
     "registeredAssets": 73,
-    "graphRules": 19,
+    "graphRules": 38,
     "motionPatterns": 26,
     "reducedMotionFallbacks": 5,
-    "jsonFiles": 88
+    "jsonFiles": 103,
+    "tokenCatalog": {
+      "tokens": 375,
+      "approvedForPageSpec": 145,
+      "categories": 16,
+      "pageSpecTokenSlots": 14
+    }
   },
   "entryPoints": {
     "readme": "README.md",
@@ -51,7 +57,7 @@
     "routes": "templates/routes.json",
     "compatibilityGraph": "compatibility/graph.json",
     "allowlist": "tokens/llm/component-allowlist.json",
-    "assetRoles": "tokens/llm/asset-roles.json",
+    "assetRoles": "assets/asset-roles.json",
     "theme": "tokens/themes/light.json",
     "tokens": [
       "tokens/00-foundation/color.json",
@@ -67,6 +73,37 @@
     ],
     "primitives": "primitives/",
     "components": "components/",
-    "sections": "sections/"
+    "sections": "sections/",
+    "tokenCatalog": "tokens/llm/token-catalog.json",
+    "tokenPolicy": "tokens/llm/token-policy.json",
+    "buildTokenCatalog": "extraction/build_token_catalog.py",
+    "sourceIdentity": "schema/source-identity.json",
+    "buildSourceIdentity": "extraction/build_source_identity.py",
+    "textNormalization": "schema/textnorm.py",
+    "generationExamples": [
+      "schema/examples/generated.blog-index.pagespec.json",
+      "schema/examples/generated.blog-post.pagespec.json",
+      "schema/examples/generated.home.pagespec.json",
+      "schema/examples/generated.install.pagespec.json",
+      "schema/examples/generated.legal.pagespec.json",
+      "schema/examples/generated.manifesto.pagespec.json",
+      "schema/examples/generated.pricing.pagespec.json"
+    ],
+    "sectionContractSchema": "schema/section-contract.schema.json",
+    "sectionProvenance": "extraction/build_section_provenance.py",
+    "wrapperGate": "extraction/wrapper_gate.py",
+    "wrapperGateWhitelist": "extraction/wrapper-gate-whitelist.json",
+    "measureSections": "extraction/measure_sections.mjs",
+    "designPolicy": "policy/design-policy.json"
+  },
+  "category": "saas",
+  "designPolicy": {
+    "ref": "policy/design-policy.json",
+    "policyId": "n0-saas-design-constraints-common",
+    "policyVersion": "0.1.0",
+    "commonIrVersion": "0.5",
+    "enforcementMode": "hard-and-soft",
+    "contentHash": "sha256:5b420ba92f206d7ff1f4e0a4fe4dc8c5c08b2c750c33e59eabc21b0badcf9dd5",
+    "categoryEvidence": "policy/design-policy.json classification.evidence (monthly subscription tiers, subscription/billing terms, professional audience, desktop client)"
   }
 }

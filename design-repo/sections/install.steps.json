@@ -1,6 +1,17 @@
 {
   "id": "install.steps",
   "category": "install",
+  "source": {
+    "id": "src:Download.jsx#ol.install-steps",
+    "tag": "ol",
+    "file": "src/pages/Download.jsx",
+    "lines": "67-90"
+  },
+  "semantic": {
+    "id": "install.steps",
+    "category": "INSTALL"
+  },
+  "retrievalEligible": true,
   "description": "Numbered ordered list of 3 install steps: step number + title, a macOS screenshot in a bordered art box, and a one-line instruction.",
   "evidenceLevel": "measured",
   "domAnchor": "ol.install-steps",
@@ -54,7 +65,9 @@
             "image": {
               "$ref": "#/definitions/assetRef",
               "x-allowedRoles": [
-                "screenshot.os-install-step"
+                "screenshot.os-install-step",
+                "screenshot.placeholder",
+                "media.user-supplied"
               ]
             }
           }
@@ -130,5 +143,10 @@
   ],
   "implementedBy": [
     "src/pages/Download.jsx"
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "media.user-supplied",
+    "screenshot.placeholder"
   ]
 }

@@ -1,6 +1,17 @@
 {
   "id": "shell.footer-closing",
   "category": "shell",
+  "source": {
+    "id": "src:Footer.jsx#footer.closing-footer",
+    "tag": "footer",
+    "file": "src/components/Footer.jsx",
+    "lines": "29-61"
+  },
+  "semantic": {
+    "id": "shell.footer-closing",
+    "category": "SHELL"
+  },
+  "retrievalEligible": true,
   "description": "Closing footer: 3 ASCII-bird tracks, a live clock invitation ('starts at HH:MM' = now + 3 minutes), download CTA, ASCII beach, brand wordmark + copyright, 6 footer links. Present on every route except /download.",
   "evidenceLevel": "measured",
   "domAnchor": "footer.closing-footer",
@@ -65,7 +76,9 @@
       "beachArt": {
         "$ref": "#/definitions/assetRef",
         "x-allowedRoles": [
-          "art.footer-ascii"
+          "art.footer-ascii",
+          "art.line-illustration",
+          "illustration.generated"
         ]
       },
       "brandWordmark": {
@@ -186,5 +199,13 @@
   ],
   "implementedBy": [
     "src/components/Footer.jsx"
+  ],
+  "generatedAssetRoles": [
+    "art.line-illustration",
+    "copy.original",
+    "icon.generic-ui",
+    "illustration.generated",
+    "link.placeholder-url",
+    "logo.placeholder-customer"
   ]
 }

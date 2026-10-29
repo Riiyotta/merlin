@@ -1,6 +1,17 @@
 {
   "id": "faq.accordion",
   "category": "faq",
+  "source": {
+    "id": "src:Faq.jsx#section#faq.merlin-faq",
+    "tag": "section",
+    "file": "src/components/Faq.jsx",
+    "lines": "10-50"
+  },
+  "semantic": {
+    "id": "faq.accordion",
+    "category": "FAQ"
+  },
+  "retrievalEligible": true,
   "description": "Home FAQ: two-column layout, single-open accordion of 5 Q&A (buttons, chevron rotates) plus the Ask-Merlin form. The ask form talks to a LOCAL MOCK (no network); the live site POSTs /api/faq.",
   "evidenceLevel": "measured",
   "domAnchor": "section#faq.merlin-faq",
@@ -174,5 +185,10 @@
   ],
   "implementedBy": [
     "src/components/Faq.jsx"
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "icon.generic-ui",
+    "logo.placeholder-customer"
   ]
 }

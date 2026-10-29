@@ -1,5 +1,5 @@
 {
-  "_note": "One entry per distinct PAGE SHAPE. nodes are structured {section, required, repeatable[, variant]} objects in DOM order. Manifesto lists manifesto.photo three times with distinct variants (a section legitimately repeating with different variants).",
+  "_note": "One entry per distinct PAGE SHAPE. nodes are structured {section, required, repeatable[, variant]} objects in DOM order. Manifesto lists manifesto.photo three times with distinct variants (a section legitimately repeating with different variants). repeatable:true marks a node that legitimately repeats back to back (one legal.section per h2 part, one blog.prose per h2 chapter); maxRepeat is the real maximum (14 parts on /terms; 12 chapters = 11 h2 + lead, recomputed from src/data/blog-posts.json by verify_all.py).",
   "templates": {
     "home": {
       "title": "Home (long-scroll marketing)",
@@ -376,7 +376,8 @@
         {
           "section": "blog.prose",
           "required": true,
-          "repeatable": false
+          "repeatable": true,
+          "maxRepeat": 12
         },
         {
           "section": "blog.article-end",
@@ -437,7 +438,18 @@
           "repeatable": false
         },
         {
-          "section": "legal.body",
+          "section": "legal.contents",
+          "required": true,
+          "repeatable": false
+        },
+        {
+          "section": "legal.section",
+          "required": true,
+          "repeatable": true,
+          "maxRepeat": 14
+        },
+        {
+          "section": "legal.document-footer",
           "required": true,
           "repeatable": false
         },

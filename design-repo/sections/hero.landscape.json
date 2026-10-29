@@ -1,6 +1,17 @@
 {
   "id": "hero.landscape",
   "category": "hero",
+  "source": {
+    "id": "src:Hero.jsx#section.hero-life.hero-landscape",
+    "tag": "section",
+    "file": "src/components/Hero.jsx",
+    "lines": "36-45"
+  },
+  "semantic": {
+    "id": "hero.landscape",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
   "description": "Rounded photo landscape under the hero with a parallax photo and the notification stack (3 FLIP-animated notification cards; sound toggle; replay). Clicking a card opens a detail sheet (meeting brief / launch-deck slider / email draft) - those detail views are fixed scenes, not generator-editable.",
   "evidenceLevel": "measured",
   "domAnchor": "section.hero-life.hero-landscape",
@@ -26,7 +37,9 @@
       "image": {
         "$ref": "#/definitions/assetRef",
         "x-allowedRoles": [
-          "illustration.felt-scene"
+          "illustration.felt-scene",
+          "illustration.generated",
+          "media.user-supplied"
         ]
       },
       "notifications": {
@@ -142,5 +155,15 @@
   ],
   "implementedBy": [
     "src/components/Hero.jsx"
+  ],
+  "generatedAssetRoles": [
+    "brand.placeholder-mark",
+    "copy.original",
+    "icon.generic-ui",
+    "illustration.generated",
+    "link.placeholder-url",
+    "logo.placeholder-customer",
+    "media.user-supplied",
+    "screenshot.placeholder"
   ]
 }

@@ -1,6 +1,17 @@
 {
   "id": "hero.marketing",
   "category": "hero",
+  "source": {
+    "id": "src:Hero.jsx#section.story-hero",
+    "tag": "section",
+    "file": "src/components/Hero.jsx",
+    "lines": "22-35"
+  },
+  "semantic": {
+    "id": "hero.marketing",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
   "description": "Marketing hero: embedded corner nav, two-line serif H1 (second line muted), subtitle, and (home only) the download button. Variants: `home` (chroma sweep on load, CTA) and `pricing` (server-rendered title: NO chroma sweep, NO button).",
   "evidenceLevel": "measured",
   "domAnchor": "section.story-hero",
@@ -184,5 +195,9 @@
     "src/components/Hero.jsx",
     "src/pages/Pricing.jsx",
     "src/components/hero/HeroNav.jsx"
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "link.placeholder-url"
   ]
 }

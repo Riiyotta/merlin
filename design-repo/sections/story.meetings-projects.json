@@ -1,6 +1,17 @@
 {
   "id": "story.meetings-projects",
   "category": "story",
+  "source": {
+    "id": "src:Meetings.jsx#section#meetings",
+    "tag": "section",
+    "file": "src/components/Meetings.jsx",
+    "lines": "75-137"
+  },
+  "semantic": {
+    "id": "story.meetings-projects",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
   "description": "Two-panel handoff: Meetings (felt-scene landscape with a transcript/notes window and an audio player of a real recording) and Projects (4 file 'folders' with tilted sheets). Heading carries Google Meet/Zoom logos and artifact icons.",
   "evidenceLevel": "measured",
   "domAnchor": "section#meetings",
@@ -44,7 +55,9 @@
         "items": {
           "$ref": "#/definitions/assetRef",
           "x-allowedRoles": [
-            "icon.third-party-app"
+            "icon.third-party-app",
+            "icon.generic-ui",
+            "logo.placeholder-customer"
           ]
         }
       },
@@ -96,13 +109,16 @@
           "scene": {
             "$ref": "#/definitions/assetRef",
             "x-allowedRoles": [
-              "illustration.felt-scene"
+              "illustration.felt-scene",
+              "illustration.generated",
+              "media.user-supplied"
             ]
           },
           "recording": {
             "$ref": "#/definitions/assetRef",
             "x-allowedRoles": [
-              "media.audio-sample"
+              "media.audio-sample",
+              "media.user-supplied"
             ]
           },
           "transcriptTitle": {
@@ -280,5 +296,13 @@
   ],
   "implementedBy": [
     "src/components/Meetings.jsx"
+  ],
+  "generatedAssetRoles": [
+    "art.line-illustration",
+    "copy.original",
+    "icon.generic-ui",
+    "illustration.generated",
+    "logo.placeholder-customer",
+    "media.user-supplied"
   ]
 }

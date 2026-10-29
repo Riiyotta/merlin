@@ -1,6 +1,17 @@
 {
   "id": "story.browser-tasks",
   "category": "story",
+  "source": {
+    "id": "src:Browser.jsx#section#browser.browser-showcase",
+    "tag": "section",
+    "file": "src/components/Browser.jsx",
+    "lines": "124-176"
+  },
+  "semantic": {
+    "id": "story.browser-tasks",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
   "description": "'If it happens in a browser, Merlin can help.' - a GSAP ScrollTrigger-pinned 4-card 3D deck (scrub + snap) of interactive mock websites. The mock sites replicate REAL third-party sites (Qatar Airways, DoorDash, Instacart, Ashby); their logos and food photos are must-not-fabricate.",
   "evidenceLevel": "measured",
   "domAnchor": "section#browser.browser-showcase",
@@ -59,7 +70,9 @@
               "$ref": "#/definitions/assetRef",
               "x-allowedRoles": [
                 "logo.third-party-wordmark",
-                "icon.third-party-app"
+                "icon.third-party-app",
+                "logo.placeholder-customer",
+                "icon.generic-ui"
               ]
             },
             "lead": {
@@ -177,5 +190,13 @@
   ],
   "implementedBy": [
     "src/components/Browser.jsx"
+  ],
+  "generatedAssetRoles": [
+    "art.line-illustration",
+    "copy.original",
+    "icon.generic-ui",
+    "illustration.generated",
+    "logo.placeholder-customer",
+    "media.user-supplied"
   ]
 }

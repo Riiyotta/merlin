@@ -1,6 +1,17 @@
 {
   "id": "blog.article-header",
   "category": "blog",
+  "source": {
+    "id": "src:BlogPost.jsx#header.blog_articleHeader__3w7of",
+    "tag": "header",
+    "file": "src/pages/BlogPost.jsx",
+    "lines": "18-28"
+  },
+  "semantic": {
+    "id": "blog.article-header",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
   "description": "Article header: back link, eyebrow, serif H1, author row (36px avatar), and an optional 3:2 cover (max-height 600px). The featured post has no cover and the img is omitted.",
   "evidenceLevel": "measured",
   "domAnchor": "header.blog_articleHeader__3w7of",
@@ -49,13 +60,17 @@
       "avatar": {
         "$ref": "#/definitions/assetRef",
         "x-allowedRoles": [
-          "photo.person-portrait"
+          "photo.person-portrait",
+          "photo.fictional-person",
+          "media.user-supplied"
         ]
       },
       "cover": {
         "$ref": "#/definitions/assetRef",
         "x-allowedRoles": [
-          "photo.stock-cover"
+          "photo.stock-cover",
+          "illustration.generated",
+          "media.user-supplied"
         ]
       },
       "coverAlt": {
@@ -128,5 +143,11 @@
   ],
   "implementedBy": [
     "src/pages/BlogPost.jsx"
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "illustration.generated",
+    "media.user-supplied",
+    "photo.fictional-person"
   ]
 }

@@ -1,0 +1,121 @@
+{
+  "id": "legal.contents",
+  "category": "legal",
+  "source": {
+    "id": "src:LegalPage.jsx#aside.legal-sidebar",
+    "tag": "aside",
+    "file": "src/components/legal/LegalPage.jsx",
+    "lines": "104-113"
+  },
+  "semantic": {
+    "id": "legal.contents",
+    "category": "LEGAL"
+  },
+  "retrievalEligible": false,
+  "retrievalIneligibleReason": "Derived in-page navigation: a sticky table of contents whose links are generated from the legal.section titles; it carries no content of its own.",
+  "description": "Sticky 'On this page' table of contents (aside.legal-sidebar, position sticky top 32px, no scroll-spy). Its links are DERIVED from the page's legal.section nodes (label = h2 title, href = #id); only the label is settable. Decomposed out of the former whole-document legal.body (R6).",
+  "evidenceLevel": "measured",
+  "domAnchor": "aside.legal-sidebar",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "tocLabel"
+    ],
+    "properties": {
+      "tocLabel": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 3
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "anchor-smooth-scroll",
+      "hover-transition"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {
+      "tocHover": "color + translateX(2px) .16s",
+      "scrollSpy": "none"
+    },
+    "motionEvidence": {
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:347"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:347",
+          "contains": "There is **no scroll-spy**"
+        }
+      ]
+    }
+  },
+  "responsive": [
+    {
+      "query": "max-width",
+      "breakpoint": "640",
+      "change": "columns become block; sidebar static with block borders; TOC becomes a horizontal scroll row",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:342"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:342",
+          "contains": "the sidebar becomes static"
+        }
+      ]
+    },
+    {
+      "query": "max-width",
+      "breakpoint": "900",
+      "change": "columns 170px minmax(0,1fr), gap 32px",
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:342"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:342",
+          "contains": "columns `170px minmax(0,1fr)`"
+        }
+      ]
+    }
+  ],
+  "uses": {
+    "primitives": [],
+    "components": [
+      "legal-toc"
+    ]
+  },
+  "implementedBy": [
+    "src/components/legal/LegalPage.jsx"
+  ],
+  "measuredFrom": [
+    "src/components/legal/LegalPage.jsx:104",
+    "CLONE_SPEC_PAGES_B.md:297",
+    "CLONE_SPEC_PAGES_B.md:346"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/legal/LegalPage.jsx:104",
+      "contains": "<aside className=\"legal-sidebar\">"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_B.md:297",
+      "contains": "position sticky; top 32px"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_B.md:346",
+      "contains": "### 4.5 Motion"
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original"
+  ]
+}

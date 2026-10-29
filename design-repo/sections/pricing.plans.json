@@ -1,6 +1,17 @@
 {
   "id": "pricing.plans",
   "category": "pricing",
+  "source": {
+    "id": "src:PricingPlans.jsx#section#plans.pricing-plans",
+    "tag": "section",
+    "file": "src/components/pricing/PricingPlans.jsx",
+    "lines": "8-41"
+  },
+  "semantic": {
+    "id": "pricing.plans",
+    "category": "PRICING"
+  },
+  "retrievalEligible": true,
   "description": "Three plan cards (Pro, Ultra, Max) with subgrid alignment, a hard-offset shadow, a per-plan accent, and a Download CTA each. MONTHLY ONLY: there is NO monthly/annual toggle on the real page (annual billing is only mentioned in an FAQ answer).",
   "evidenceLevel": "measured",
   "domAnchor": "section#plans.pricing-plans",
@@ -163,5 +174,10 @@
   ],
   "implementedBy": [
     "src/components/pricing/PricingPlans.jsx"
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "icon.generic-ui",
+    "logo.placeholder-customer"
   ]
 }

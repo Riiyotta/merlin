@@ -1,6 +1,17 @@
 {
   "id": "pricing.included",
   "category": "pricing",
+  "source": {
+    "id": "src:PricingIncluded.jsx#section.pricing-included",
+    "tag": "section",
+    "file": "src/components/pricing/PricingIncluded.jsx",
+    "lines": "7-25"
+  },
+  "semantic": {
+    "id": "pricing.included",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
   "description": "'All the places your day takes you.' intro + 6 feature cards (section-label icon, title, body) in a 2-column grid.",
   "evidenceLevel": "measured",
   "domAnchor": "section.pricing-included",
@@ -145,5 +156,10 @@
   ],
   "implementedBy": [
     "src/components/pricing/PricingIncluded.jsx"
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "icon.generic-ui",
+    "logo.placeholder-customer"
   ]
 }

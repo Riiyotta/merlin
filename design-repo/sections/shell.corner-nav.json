@@ -1,6 +1,17 @@
 {
   "id": "shell.corner-nav",
   "category": "shell",
+  "source": {
+    "id": "src:HeroNav.jsx#nav.hero-corner-nav",
+    "tag": "nav",
+    "file": "src/components/hero/HeroNav.jsx",
+    "lines": "125-167"
+  },
+  "semantic": {
+    "id": "shell.corner-nav",
+    "category": "SHELL"
+  },
+  "retrievalEligible": true,
   "description": "Stand-alone corner navigation (brand + Pricing + Manifesto + sliding dot) inside a relative header wrapper, used on manifesto, blog and legal. On home and pricing the same nav is embedded in hero.marketing instead. The wrapper class differs per route (manifesto-navigation / blog_navigation__bQ9ND / legal-navigation); class names are load-bearing.",
   "evidenceLevel": "measured",
   "domAnchor": "div.site-container > header",
@@ -54,7 +65,9 @@
       "brandIcon": {
         "$ref": "#/definitions/assetRef",
         "x-allowedRoles": [
-          "brand.merlin-app-icon"
+          "brand.merlin-app-icon",
+          "brand.placeholder-mark",
+          "media.user-supplied"
         ]
       }
     }
@@ -152,5 +165,12 @@
   ],
   "implementedBy": [
     "src/components/hero/HeroNav.jsx"
+  ],
+  "generatedAssetRoles": [
+    "brand.placeholder-mark",
+    "copy.original",
+    "icon.generic-ui",
+    "logo.placeholder-customer",
+    "media.user-supplied"
   ]
 }

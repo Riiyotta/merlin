@@ -1,6 +1,17 @@
 {
   "id": "story.companion",
   "category": "story",
+  "source": {
+    "id": "src:Companion.jsx#section#companion",
+    "tag": "section",
+    "file": "src/components/Companion.jsx",
+    "lines": "40-141"
+  },
+  "semantic": {
+    "id": "story.companion",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
   "description": "'And when you’re working somewhere else…' handwritten bridge, 'No need to leave what you’re doing.' headline styled as a text selection (Ask Merlin / Rephrase word popover that cycles 3 headline pairs), intro copy, felt-scene figure, and the tabbed auto-playing Photoshop / Slack / Chrome Companion demo.",
   "evidenceLevel": "measured",
   "domAnchor": "section#companion",
@@ -98,7 +109,9 @@
           "image": {
             "$ref": "#/definitions/assetRef",
             "x-allowedRoles": [
-              "illustration.felt-scene"
+              "illustration.felt-scene",
+              "illustration.generated",
+              "media.user-supplied"
             ]
           },
           "caption": {
@@ -132,7 +145,9 @@
             "icon": {
               "$ref": "#/definitions/assetRef",
               "x-allowedRoles": [
-                "icon.third-party-app"
+                "icon.third-party-app",
+                "icon.generic-ui",
+                "logo.placeholder-customer"
               ]
             },
             "caption": {
@@ -258,5 +273,14 @@
   ],
   "implementedBy": [
     "src/components/Companion.jsx"
+  ],
+  "generatedAssetRoles": [
+    "art.line-illustration",
+    "brand.placeholder-mark",
+    "copy.original",
+    "icon.generic-ui",
+    "illustration.generated",
+    "logo.placeholder-customer",
+    "media.user-supplied"
   ]
 }

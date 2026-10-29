@@ -1,6 +1,17 @@
 {
   "id": "manifesto.photo",
   "category": "manifesto",
+  "source": {
+    "id": "src:Manifesto.jsx#figure.manifesto-photo",
+    "tag": "figure",
+    "file": "src/pages/Manifesto.jsx",
+    "lines": "14-26"
+  },
+  "semantic": {
+    "id": "manifesto.photo",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
   "description": "Full-width rounded felt-scene figure between poster sections. Appears exactly three times with different variants (after-opening, after-understanding, after-action); (section, variant) is the unit that must be unique.",
   "evidenceLevel": "measured",
   "domAnchor": "figure.manifesto-photo",
@@ -24,7 +35,9 @@
       "image": {
         "$ref": "#/definitions/assetRef",
         "x-allowedRoles": [
-          "illustration.felt-scene"
+          "illustration.felt-scene",
+          "illustration.generated",
+          "media.user-supplied"
         ]
       },
       "alt": {
@@ -88,5 +101,10 @@
   ],
   "implementedBy": [
     "src/pages/Manifesto.jsx"
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "illustration.generated",
+    "media.user-supplied"
   ]
 }

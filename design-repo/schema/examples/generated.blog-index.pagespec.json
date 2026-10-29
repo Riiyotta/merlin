@@ -1,0 +1,158 @@
+{
+  "pageSpecVersion": "2.0.0",
+  "mode": "generation",
+  "template": "blog-index",
+  "route": "/blog",
+  "theme": "light",
+  "tokens": {
+    "surface": "color.surface.page",
+    "text": "color.text.primary",
+    "headingType": "typography.display.section",
+    "bodyType": "typography.body.section",
+    "sectionSpacing": "layout.section.hero-padding",
+    "accent": "color.text.link",
+    "cardRadius": "radius.20",
+    "cardElevation": "elevation.card-offset"
+  },
+  "meta": {
+    "title": "Fernlight sample page (blog-index)",
+    "description": "Generation-mode example for a fictional brand, built from this design-repo."
+  },
+  "nodes": [
+    {
+      "section": "shell.corner-nav",
+      "content": {
+        "activeLink": "none",
+        "brandIcon": {
+          "assetRole": "brand.placeholder-mark",
+          "assetRef": "generate:original fern illustration, soft dusk palette"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "nav-dot-spring"
+        ],
+        "reducedMotionFallback": "instant-no-spring"
+      },
+      "variant": "blog"
+    },
+    {
+      "section": "blog.intro",
+      "content": {
+        "titleLine1": "Plan the week",
+        "titleLine2": "around the good",
+        "subtitle": "Fernlight is a calm desk companion for lists, drafts and errands."
+      },
+      "motion": {
+        "patterns": [
+          "none"
+        ],
+        "reducedMotionFallback": "no-animation"
+      }
+    },
+    {
+      "section": "blog.featured",
+      "content": {
+        "slug": "how-to-write-a-formal-email",
+        "category": "Field",
+        "pillLabel": "Everything stays",
+        "title": "Fernlight field notes",
+        "author": "Juniper Vale",
+        "date": "May 13, 2025",
+        "readLabel": "Ask Fernlight to",
+        "image": {
+          "assetRole": "illustration.generated",
+          "assetRef": "generate:original fern illustration, soft dusk palette"
+        }
+      },
+      "motion": {
+        "patterns": [
+          "hover-transition"
+        ],
+        "reducedMotionFallback": "no-animation"
+      }
+    },
+    {
+      "section": "blog.story-list",
+      "content": {
+        "heading": "Quiet tools for",
+        "aside": "Bring a rough idea; leave",
+        "stories": [
+          {
+            "slug": "another-story",
+            "category": "Field",
+            "title": "Fernlight field notes",
+            "author": "Juniper Vale",
+            "date": "May 13, 2025"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "hover-transition"
+        ],
+        "reducedMotionFallback": "no-animation"
+      }
+    },
+    {
+      "section": "blog.manifesto-aside",
+      "content": {
+        "handwritten": "Ask Fernlight to gather receipts, draft a note",
+        "linkLabel": "Fernlight keeps your plans,",
+        "href": "/manifesto"
+      },
+      "motion": {
+        "patterns": [
+          "hover-transition"
+        ],
+        "reducedMotionFallback": "no-animation"
+      }
+    },
+    {
+      "section": "shell.footer-closing",
+      "content": {
+        "headingLine1": "Built for slower",
+        "headingLine2Prefix": "Small helpers",
+        "body": "Fernlight keeps your plans, notes and errands in one quiet place.",
+        "cta": {
+          "label": "Try Fernlight",
+          "href": "/download?start=1"
+        },
+        "beachArt": {
+          "assetRole": "art.line-illustration",
+          "assetRef": "generate:original fern illustration, soft dusk palette"
+        },
+        "brandWordmark": "fernlight.example",
+        "copyrightHolder": "Fernlight Studio (fictional)",
+        "links": [
+          {
+            "label": "Try",
+            "href": "/pricing"
+          },
+          {
+            "label": "Try",
+            "href": "/pricing"
+          },
+          {
+            "label": "Try",
+            "href": "/pricing"
+          },
+          {
+            "label": "Try",
+            "href": "/pricing"
+          },
+          {
+            "label": "Try",
+            "href": "/pricing"
+          }
+        ]
+      },
+      "motion": {
+        "patterns": [
+          "css-bird-loop"
+        ],
+        "reducedMotionFallback": "no-animation"
+      }
+    }
+  ]
+}

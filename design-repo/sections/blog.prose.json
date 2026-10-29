@@ -1,13 +1,22 @@
 {
   "id": "blog.prose",
   "category": "blog",
-  "description": "Article body (max-width 680px): direct children are p, h2, h3, h4, ul, ol, blockquote only (no images, tables, code or figures in any of the 20 posts). Spacer paragraphs (0 words) are real. BODY TEXT IS PLACEHOLDER in the clone; budgets come from per-block recorded word counts.",
+  "source": {
+    "id": "src:Prose.jsx#div.blog_prose__r_2py",
+    "tag": "div",
+    "file": "src/components/blog/Prose.jsx",
+    "lines": "85-113"
+  },
+  "semantic": {
+    "id": "blog.prose",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "description": "ONE h2-bounded chapter of the article body (max-width 680px column): an optional leading h2 followed by p, h3, h4, ul, ol, blockquote blocks (no images, tables, code or figures in any of the 20 posts). Repeatable: one node per chapter in document order; the first chapter is the lead (no h2) when the post opens with prose, every later chapter starts with its h2. Decomposed from the former whole-article node (R6). Spacer paragraphs (0 words) are real. BODY TEXT IS PLACEHOLDER in the clone; budgets come from per-block recorded word counts.",
   "evidenceLevel": "measured-sample",
   "domAnchor": "div.blog_prose__r_2py",
   "variants": [],
-  "constraints": {
-    "onePerPage": true
-  },
+  "constraints": {},
   "variantRules": [],
   "content": {
     "type": "object",
@@ -19,7 +28,7 @@
       "blocks": {
         "type": "array",
         "minItems": 1,
-        "maxItems": 243,
+        "maxItems": 160,
         "items": {
           "oneOf": [
             {
@@ -174,5 +183,8 @@
   "notes": "Template measured on 2 of 20 posts (how-to-write-a-formal-email, what-does-cc-and-bcc-mean-in-email); the other 18 follow the same template per CLONE_SPEC_PAGES_B.md 2 ('All 20 posts render with this template (checked by posts.js)'). Block maxima are derived from all 20 outlines in src/data/blog-posts.json.",
   "implementedBy": [
     "src/components/blog/Prose.jsx"
+  ],
+  "generatedAssetRoles": [
+    "copy.original"
   ]
 }

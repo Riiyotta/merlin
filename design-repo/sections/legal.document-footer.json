@@ -1,0 +1,97 @@
+{
+  "id": "legal.document-footer",
+  "category": "legal",
+  "source": {
+    "id": "src:LegalPage.jsx#footer.legal-document-footer",
+    "tag": "footer",
+    "file": "src/components/legal/LegalPage.jsx",
+    "lines": "123-130"
+  },
+  "semantic": {
+    "id": "legal.document-footer",
+    "category": "LEGAL"
+  },
+  "retrievalEligible": true,
+  "description": "End-of-document row inside the legal article (footer.legal-document-footer): contact link + back-to-top link. Decomposed out of the former whole-document legal.body (R6).",
+  "evidenceLevel": "measured",
+  "domAnchor": "footer.legal-document-footer",
+  "variants": [],
+  "constraints": {
+    "onePerPage": true
+  },
+  "variantRules": [],
+  "content": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "contactLabel",
+      "contactEmail",
+      "topLabel"
+    ],
+    "properties": {
+      "contactLabel": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 3
+      },
+      "contactEmail": {
+        "type": "string",
+        "pattern": "^[^@\\s]+@[^@\\s]+$",
+        "x-sample": "contact@example.com"
+      },
+      "topLabel": {
+        "type": "string",
+        "minLength": 1,
+        "x-maxWords": 3
+      }
+    }
+  },
+  "motion": {
+    "allowedPatterns": [
+      "anchor-smooth-scroll",
+      "hover-transition"
+    ],
+    "reducedMotionFallback": "no-animation",
+    "timing": {
+      "tocHover": "color + translateX(2px) .16s",
+      "scrollSpy": "none"
+    },
+    "motionEvidence": {
+      "measuredFrom": [
+        "CLONE_SPEC_PAGES_B.md:347"
+      ],
+      "measuredQuotes": [
+        {
+          "cite": "CLONE_SPEC_PAGES_B.md:347",
+          "contains": "There is **no scroll-spy**"
+        }
+      ]
+    }
+  },
+  "responsive": [],
+  "uses": {
+    "primitives": [],
+    "components": []
+  },
+  "implementedBy": [
+    "src/components/legal/LegalPage.jsx"
+  ],
+  "measuredFrom": [
+    "src/components/legal/LegalPage.jsx:123",
+    "CLONE_SPEC_PAGES_B.md:305"
+  ],
+  "measuredQuotes": [
+    {
+      "cite": "src/components/legal/LegalPage.jsx:123",
+      "contains": "<footer className=\"legal-document-footer\">"
+    },
+    {
+      "cite": "CLONE_SPEC_PAGES_B.md:305",
+      "contains": "footer.legal-document-footer"
+    }
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "link.placeholder-url"
+  ]
+}

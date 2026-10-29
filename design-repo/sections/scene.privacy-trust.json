@@ -1,6 +1,17 @@
 {
   "id": "scene.privacy-trust",
   "category": "scene",
+  "source": {
+    "id": "src:Privacy.jsx#section#privacy.privacy-scene",
+    "tag": "section",
+    "file": "src/components/Privacy.jsx",
+    "lines": "26-101"
+  },
+  "semantic": {
+    "id": "scene.privacy-trust",
+    "category": "TRUST"
+  },
+  "retrievalEligible": true,
   "description": "Black privacy scene: eyebrow link, 2-line headline that 'decodes' glyph-by-glyph, intro copy, and 4 trust cards with hover-only line-art animation. Dark surface (surface.scene-dark) is a section-local scheme, not a theme.",
   "evidenceLevel": "measured",
   "domAnchor": "section#privacy.privacy-scene",
@@ -158,5 +169,9 @@
   ],
   "implementedBy": [
     "src/components/Privacy.jsx"
+  ],
+  "generatedAssetRoles": [
+    "art.line-illustration",
+    "copy.original"
   ]
 }

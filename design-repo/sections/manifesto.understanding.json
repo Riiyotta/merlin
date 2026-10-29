@@ -1,6 +1,17 @@
 {
   "id": "manifesto.understanding",
   "category": "manifesto",
+  "source": {
+    "id": "src:Manifesto.jsx#section.manifesto-poster-understanding",
+    "tag": "section",
+    "file": "src/pages/Manifesto.jsx",
+    "lines": "68-86"
+  },
+  "semantic": {
+    "id": "manifesto.understanding",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
   "description": "'We know that day. We’ve lived it too.' with three placeholder paragraphs (one has a 'meeting' mention) and a Caveat handwritten note.",
   "evidenceLevel": "measured",
   "domAnchor": "section.manifesto-poster-understanding",
@@ -100,5 +111,8 @@
   ],
   "implementedBy": [
     "src/pages/Manifesto.jsx"
+  ],
+  "generatedAssetRoles": [
+    "copy.original"
   ]
 }

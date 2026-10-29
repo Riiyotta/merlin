@@ -1,6 +1,18 @@
 {
   "id": "shell.floating-nav",
   "category": "shell",
+  "source": {
+    "id": "src:FloatingNav.jsx#nav.floating-navigation_nav__y4vuM",
+    "tag": "nav",
+    "file": "src/components/FloatingNav.jsx",
+    "lines": "57-79"
+  },
+  "semantic": {
+    "id": "shell.floating-nav",
+    "category": "SHELL"
+  },
+  "retrievalEligible": false,
+  "retrievalIneligibleReason": "Runtime utility overlay: a position:fixed navigation pill that only mounts after scrolling and hides over the privacy scene; it carries no page content worth retrieving.",
   "description": "Fixed bottom pill navigation (logo tile, Pricing, Manifesto, Download). HOME ONLY: pricing, manifesto, blog, legal and download all omit it. Visible only when scrollY > 100, not within 100px of the page end, and #privacy is not intersecting.",
   "evidenceLevel": "measured",
   "domAnchor": "nav.floating-navigation_nav__y4vuM",
@@ -23,7 +35,9 @@
       "logo": {
         "$ref": "#/definitions/assetRef",
         "x-allowedRoles": [
-          "brand.merlin-app-icon"
+          "brand.merlin-app-icon",
+          "brand.placeholder-mark",
+          "media.user-supplied"
         ]
       },
       "links": {
@@ -157,5 +171,11 @@
   ],
   "implementedBy": [
     "src/components/FloatingNav.jsx"
+  ],
+  "generatedAssetRoles": [
+    "brand.placeholder-mark",
+    "copy.original",
+    "link.placeholder-url",
+    "media.user-supplied"
   ]
 }

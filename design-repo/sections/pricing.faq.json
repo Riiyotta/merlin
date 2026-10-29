@@ -1,6 +1,17 @@
 {
   "id": "pricing.faq",
   "category": "pricing",
+  "source": {
+    "id": "src:PricingFaq.jsx#section.pricing-faq",
+    "tag": "section",
+    "file": "src/components/pricing/PricingFaq.jsx",
+    "lines": "28-48"
+  },
+  "semantic": {
+    "id": "pricing.faq",
+    "category": "FAQ"
+  },
+  "retrievalEligible": true,
   "description": "Pricing FAQ: native <details> list (several can be open), plus the shared Ask-Merlin form. Answers in the CLONE are original placeholder text; the live site's answers are not reproduced.",
   "evidenceLevel": "measured",
   "domAnchor": "section.pricing-faq",
@@ -172,5 +183,10 @@
   ],
   "implementedBy": [
     "src/components/pricing/PricingFaq.jsx"
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "icon.generic-ui",
+    "logo.placeholder-customer"
   ]
 }

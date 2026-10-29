@@ -1,6 +1,17 @@
 {
   "id": "legal.heading",
   "category": "legal",
+  "source": {
+    "id": "src:LegalPage.jsx#header.legal-heading",
+    "tag": "header",
+    "file": "src/components/legal/LegalPage.jsx",
+    "lines": "89-102"
+  },
+  "semantic": {
+    "id": "legal.heading",
+    "category": "LEGAL"
+  },
+  "retrievalEligible": true,
   "description": "Legal heading: Privacy/Terms tab pill (aria-current on the active tab), serif H1, optional intro paragraph (/privacy has one, /terms has none), 'Last updated · date'.",
   "evidenceLevel": "measured",
   "domAnchor": "header.legal-heading",
@@ -119,5 +130,8 @@
   ],
   "implementedBy": [
     "src/components/legal/LegalPage.jsx"
+  ],
+  "generatedAssetRoles": [
+    "copy.original"
   ]
 }

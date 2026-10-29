@@ -1,6 +1,17 @@
 {
   "id": "install.intro",
   "category": "install",
+  "source": {
+    "id": "src:Download.jsx#section.install-intro",
+    "tag": "section",
+    "file": "src/pages/Download.jsx",
+    "lines": "64-66"
+  },
+  "semantic": {
+    "id": "install.intro",
+    "category": "CONVERSION"
+  },
+  "retrievalEligible": true,
   "description": "Install page intro: H1 'Thanks for choosing Merlin.' + muted second line, state-dependent description, retry link, alternative-architecture link, hidden installer iframe. INSTALLER LINKS POINT AT A LOCAL STUB (/download-stub.txt); the live site's real installer host is never contacted.",
   "evidenceLevel": "measured",
   "domAnchor": "section.install-intro",
@@ -61,8 +72,9 @@
       },
       "installerHref": {
         "type": "string",
-        "pattern": "^/download-stub\\.txt(\\?arch=(arm64|x64))?$",
-        "x-sample": "/download-stub.txt?arch=arm64"
+        "pattern": "^/(download-stub|installer-placeholder)\\.txt(\\?arch=(arm64|x64))?$",
+        "x-sample": "/download-stub.txt?arch=arm64",
+        "description": "mode=clone: the clone's local stub /download-stub.txt (stands in for the real installer host). mode=generation: /installer-placeholder.txt (the stub path is source identity, GENERATION_MODE_URL)."
       }
     }
   },
@@ -139,5 +151,8 @@
   ],
   "implementedBy": [
     "src/components/download/InstallIntro.jsx"
+  ],
+  "generatedAssetRoles": [
+    "copy.original"
   ]
 }

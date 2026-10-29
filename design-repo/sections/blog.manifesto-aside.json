@@ -1,6 +1,17 @@
 {
   "id": "blog.manifesto-aside",
   "category": "blog",
+  "source": {
+    "id": "src:Blog.jsx#aside.blog_manifesto__VgyoG",
+    "tag": "aside",
+    "file": "src/pages/Blog.jsx",
+    "lines": "73-78"
+  },
+  "semantic": {
+    "id": "blog.manifesto-aside",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
   "description": "Centered Caveat handwritten aside (rotate -3deg) and a 'Why we’re building Merlin' arrow link to /manifesto. The handwritten line in the CLONE is an original placeholder of the same word count.",
   "evidenceLevel": "measured",
   "domAnchor": "aside.blog_manifesto__VgyoG",
@@ -92,5 +103,10 @@
   ],
   "implementedBy": [
     "src/pages/Blog.jsx"
+  ],
+  "generatedAssetRoles": [
+    "art.line-illustration",
+    "copy.original",
+    "link.placeholder-url"
   ]
 }

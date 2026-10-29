@@ -1,7 +1,18 @@
 {
-  "pageSpecVersion": "1.0.0",
+  "pageSpecVersion": "2.0.0",
+  "mode": "clone",
   "template": "pricing",
   "route": "/pricing",
+  "theme": "light",
+  "tokens": {
+    "surface": "color.surface.page",
+    "text": "color.text.primary",
+    "headingType": "typography.display.plan-name",
+    "bodyType": "typography.body.section",
+    "sectionSpacing": "layout.section.hero-padding",
+    "cardRadius": "radius.12",
+    "cardElevation": "elevation.plan-offset"
+  },
   "meta": {
     "title": "Plans | Merlin",
     "description": "Placeholder description for the plans page of a sample site.",

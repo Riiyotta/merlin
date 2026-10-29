@@ -1,6 +1,17 @@
 {
   "id": "manifesto.action",
   "category": "manifesto",
+  "source": {
+    "id": "src:Manifesto.jsx#section.manifesto-poster-action",
+    "tag": "section",
+    "file": "src/pages/Manifesto.jsx",
+    "lines": "91-107"
+  },
+  "semantic": {
+    "id": "manifesto.action",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
   "description": "'And there it is. A little room.' with paragraph six (one 'browser' mention), the time-of-day 'return' paragraph (a fixed 6-word sentence + 3 artifact mentions: deck, spreadsheet, website) and a handwritten note.",
   "evidenceLevel": "measured",
   "domAnchor": "section.manifesto-poster-action",
@@ -110,5 +121,8 @@
   ],
   "implementedBy": [
     "src/pages/Manifesto.jsx"
+  ],
+  "generatedAssetRoles": [
+    "copy.original"
   ]
 }

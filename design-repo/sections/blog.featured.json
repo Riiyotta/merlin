@@ -1,6 +1,17 @@
 {
   "id": "blog.featured",
   "category": "blog",
+  "source": {
+    "id": "src:Blog.jsx#a.blog_featured__dQvxo",
+    "tag": "a",
+    "file": "src/pages/Blog.jsx",
+    "lines": "37-52"
+  },
+  "semantic": {
+    "id": "blog.featured",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
   "description": "The 'Latest story' card: 4:3 image (scales 1.025 on hover), eyebrow + pill, serif title, meta, 'Read the story' link. The featured post has NO cover; the index uses the static felt-scene hero-beach-reading image instead. The featured post is NOT repeated in the story list.",
   "evidenceLevel": "measured",
   "domAnchor": "a.blog_featured__dQvxo",
@@ -61,7 +72,9 @@
       "image": {
         "$ref": "#/definitions/assetRef",
         "x-allowedRoles": [
-          "illustration.felt-scene"
+          "illustration.felt-scene",
+          "illustration.generated",
+          "media.user-supplied"
         ]
       }
     }
@@ -138,5 +151,11 @@
   ],
   "implementedBy": [
     "src/pages/Blog.jsx"
+  ],
+  "generatedAssetRoles": [
+    "copy.original",
+    "illustration.generated",
+    "link.placeholder-url",
+    "media.user-supplied"
   ]
 }

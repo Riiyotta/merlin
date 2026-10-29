@@ -1,7 +1,7 @@
 {
-  "allowlistVersion": "1.0.0",
-  "_note": "Closed list of what a generator may set. allowlistVersion is MACHINE-CHECKED against registry.manifest.json by verify_all.py. Every id must have a matching contract file and every contract file an entry (parity is checked both ways). settableContentFields are cross-checked against each section's content contract. NOTE: the PageSpec schema has no style/token override field, so there is nothing token-related to allow (MASTER-GUIDE 3.21).",
-  "tokenOverrides": "none - PageSpec carries no style or token field; styling is owned by section contracts",
+  "allowlistVersion": "2.0.0",
+  "_note": "Closed list of what a generator may set. allowlistVersion is MACHINE-CHECKED against registry.manifest.json by verify_all.py. Every id must have a matching contract file and every contract file an entry (parity is checked both ways). settableContentFields are cross-checked against each section's content contract. NOTE: the PageSpec schema has no style/token override field, so there is nothing token-related to allow (MASTER-GUIDE 3.21). 2.0.0: legal.body decomposed (legal.contents / legal.section / legal.document-footer), blog.prose is one chapter per node, 8 generation-safe asset roles, retrievalEligible mirrored per section (pinned in code). tokenOverrides: the closed page-level `tokens` slots (tokens/llm/token-policy.json) are the only token surface.",
+  "tokenOverrides": "page-level only: PageSpec.tokens (closed slot set, values = approved token paths from tokens/llm/token-catalog.json, rules in tokens/llm/token-policy.json); no per-node style/token override",
   "settableNodeProperties": [
     "content",
     "id",
@@ -23,7 +23,15 @@
     "media.audio-sample",
     "art.footer-ascii",
     "icon.generic-ui",
-    "art.line-illustration"
+    "art.line-illustration",
+    "brand.placeholder-mark",
+    "media.user-supplied",
+    "illustration.generated",
+    "screenshot.placeholder",
+    "photo.fictional-person",
+    "logo.placeholder-customer",
+    "link.placeholder-url",
+    "copy.original"
   ],
   "primitives": [
     {
@@ -315,7 +323,8 @@
         "manifesto",
         "blog",
         "legal"
-      ]
+      ],
+      "retrievalEligible": true
     },
     {
       "id": "shell.install-header",
@@ -329,7 +338,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "shell.floating-nav",
@@ -343,7 +353,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": false
     },
     {
       "id": "shell.footer-closing",
@@ -362,7 +373,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "hero.marketing",
@@ -380,7 +392,8 @@
       "variants": [
         "home",
         "pricing"
-      ]
+      ],
+      "retrievalEligible": true
     },
     {
       "id": "hero.landscape",
@@ -394,7 +407,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "proof.company-logos",
@@ -407,7 +421,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "story.context-routines",
@@ -424,7 +439,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "story.browser-tasks",
@@ -439,7 +455,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "story.meetings-projects",
@@ -457,7 +474,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "story.companion",
@@ -475,7 +493,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "scene.privacy-trust",
@@ -492,7 +511,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "faq.accordion",
@@ -508,7 +528,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "pricing.plans",
@@ -521,7 +542,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "pricing.included",
@@ -536,7 +558,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "pricing.faq",
@@ -551,7 +574,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "install.intro",
@@ -570,7 +594,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "install.steps",
@@ -583,7 +608,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "manifesto.opening",
@@ -601,7 +627,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "manifesto.photo",
@@ -618,7 +645,8 @@
         "after-opening",
         "after-understanding",
         "after-action"
-      ]
+      ],
+      "retrievalEligible": true
     },
     {
       "id": "manifesto.understanding",
@@ -633,7 +661,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "manifesto.action",
@@ -650,7 +679,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "manifesto.ending",
@@ -666,7 +696,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "blog.intro",
@@ -680,7 +711,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "blog.featured",
@@ -699,7 +731,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "blog.story-list",
@@ -713,7 +746,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "blog.manifesto-aside",
@@ -727,7 +761,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "blog.article-header",
@@ -746,7 +781,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "blog.prose",
@@ -758,7 +794,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "blog.article-end",
@@ -771,7 +808,8 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
       "id": "legal.heading",
@@ -786,21 +824,51 @@
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": true
     },
     {
-      "id": "legal.body",
-      "file": "sections/legal.body.json",
+      "id": "legal.contents",
+      "file": "sections/legal.contents.json",
       "settableContentFields": [
-        "footer",
-        "sections",
         "tocLabel"
       ],
       "settableMotionFields": [
         "patterns",
         "reducedMotionFallback"
       ],
-      "variants": []
+      "variants": [],
+      "retrievalEligible": false
+    },
+    {
+      "id": "legal.section",
+      "file": "sections/legal.section.json",
+      "settableContentFields": [
+        "blocks",
+        "id",
+        "title"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": [],
+      "retrievalEligible": true
+    },
+    {
+      "id": "legal.document-footer",
+      "file": "sections/legal.document-footer.json",
+      "settableContentFields": [
+        "contactEmail",
+        "contactLabel",
+        "topLabel"
+      ],
+      "settableMotionFields": [
+        "patterns",
+        "reducedMotionFallback"
+      ],
+      "variants": [],
+      "retrievalEligible": true
     }
   ]
 }
