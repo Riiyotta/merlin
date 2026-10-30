@@ -1,2 +1,22 @@
 # Build artifact: regenerate fresh with the CLI zip tool after any design-repo change; never track it.
 design-repo.zip
+
+# Dependencies: install with `npm ci` from package-lock.json; never commit them
+node_modules/
+
+# Build output
+dist/
+.vite/
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python caches
+__pycache__/
+*.pyc
+
+# Browser-automation captures and logs (local recon output, not evidence)
+.playwright-mcp/
+*.log
